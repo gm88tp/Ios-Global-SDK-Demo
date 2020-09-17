@@ -1,0 +1,111 @@
+/* 
+  wfnji.strings
+  loginSDK
+
+  Created by xyting on 2019/4/25.
+  Copyright © 2019 gumo. All rights reserved.
+*/
+"change_acount"="Ganti Akun";
+"choose_logintype"="Pilih channel Login";
+"login_fast"="Guest";
+"userinfo"="Pengguna Terhormat:";
+"email_info"="尊Silakan menghubungi kami melalui Email jika menemui masalah. Kami akan selalu hadir untuk Anda.";
+"email_address"="Alamat Email:";
+"login_fast_tips"="Seluruh data di Akun Guest akan hilang apabila menghapus atau install ulang app. Lanjutkan?";
+"login_cancel"="Batal";
+"exit_tips"="Pengumuman";
+"loading_tips"="Sedang Loading...";
+"login_loading"="Loading...";
+"wecolome"="Selamat datang di Game";
+"payinfo"="Operasi terlalu sering, coba lagi setelah beberapa saat~";
+"orderfailur"="Pembuatan order gagal";
+"update"="Pengumuman Update";
+"update_detaile"="Update Versi Game";
+"update_yes"="OK";
+"P_cancel"="Batal Beli";
+"p_success"="Pembelian Sukses";
+"p_failure"="Pembelian Gagal";
+"Line"="Line";
+"FaceBook"="Facebook";
+"Google"="Google";
+"Twitter"="Twitter";
+"Guest"="Guest";
+"load"="Masuk";
+"regist"="Pendaftaran nomor akun";
+"accplaceholder"="Silakan masukkan nomor akun";
+"pasplaceholder"="Silakan masukkan sandi";
+"emaplaceholder"="Silakan masukkan email";
+"changetologin"="Sudah ada nomor akun, silakan klik sini";
+"style"="Cara masuk lain";
+"rgeistload"="Daftar dan masuk";
+"accbind"="Mengikat nomor akun";
+"confimbind"="Yakin dan ikat";
+"accpromot"="Silakan masukkan sandi";
+"paspromot"="Silakan masukkan nomor akun";
+"emailpromot"="Silakan masukkan email";
+"jump" ="Lewati";
+"strat"="Mulai pengalaman";
+"mark_confirm"="Beri nilai";
+"mark_content"="Sudahkah Anda bermain begitu lama, apa yang ingin Anda katakan dengan kami?";
+"end_veiw" ="Tutup";
+"bind_account"="Bind Akun";
+"bind_no"="Akun tidak perlu bind";
+"pass_same"="Password yang dimasukkan tidak sama.";
+"bind_success"="Bind sukses";
+"bind_failed"="Bind gagal";
+"agree_top"="Login means agreeing to";
+"agree_bottom"="the terms of service";
+"nextLogin"="Last login";
+"bind"="Bind";
+"band"="Bound";
+"link"="Register & Link Account";
+"accpwd"="Account";
+
+"wcode"="Enter Verification Code";
+"getCode"="Send";
+"forget"="Forgot Password";
+"account_s"="Sign Up Successfully";
+"code_err"="Incorrect Code";
+"email"="Enter correct email address";
+"pass"="The password is between 6-30 letters, digits and symbols, please enter.";
+"pass_re"="The password is between 6-30 letters,digits and symbols, please re-enter.";
+"tran_load"="Login Page";
+ "reset_pas"="Reset Password";
+"paspromotsec"="Confirm Password";
+"equal"="Password must match";
+"pass_succ"="Password has been reset";
+"send_email"="Verification Code has been sent";
+"user_center"="Service Center";
+"user_protext"="Please contact us if you have any questions! We will be glad to help !";
+"user_back"="Return";
+"user_leavefor"="Public Site";
+
+"user_question" = "FAQ";
+"question_search" = "Search";
+"answer_title" = "Article";
+"answer_comment" = "Is this article helpful?";
+"answer_good" = "Thank you for your feedback!";
+"answer_bad" = "Sorry it doesn't help";
+"search_noresult" = "No result";
+"search_notext" = "Can not be empty";
+
+"to_cust" = "Customer Service";
+"to_close_title"="Quit";
+
+"turn_user_role" = "Can't find your account? Click to check existed account on this device";
+"user_role_title" = "Recent Login history";
+"login_error" = "Abnormal login detected,please click  \"View Account List\" to check history login accounts。";
+"check_user_list" = "View account list";
+"role_name" = "Username";
+"role_serve" = "Server";
+"apple" = "Apple";
+"apple_ulogin" = "Your phone system does not support this login method, please use another method to login.";
+
+"user_fix" = "Self-help to fix issues";
+"fix_ord" = "Fix payment issues";
+"fix_odsuccess" = "Issue is fixed,please try to pay again!";
+
+"vip_title" = "VIP Customer Service";
+"vip_tips" = "Dear VIP User, here are your VIP Customer Service, please click below to communicate";
+"copy_tip" = "Copied";
+"fbui"="Please install the Facebook app first for further action.";

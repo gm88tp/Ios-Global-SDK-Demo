@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1034790889558-f7huiv2if18gi070p6v2d58b9aqkbnm6.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1034790889558-f7huiv2if18gi070p6v2d58b9aqkbnm6</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAA1VqcWIaiMVI4_kU_O0xj4och68BYDSY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1034790889558</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>life.UniversalLinks</string>
+	<key>PROJECT_ID</key>
+	<string>links-48504</string>
+	<key>STORAGE_BUCKET</key>
+	<string>links-48504.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1034790889558:ios:9d1bb7ceb1579e1260f3f7</string>
+	<key>DATABASE_URL</key>
+	<string>https://links-48504.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,111 @@
+/* 
+  wfnji.strings
+  loginSDK
+
+  Created by xyting on 2019/5/23.
+  Copyright © 2019 gumo. All rights reserved.
+*/
+"change_acount"="Сменить уч. запись";
+"choose_logintype"="Войти через";
+"login_fast"="ГОСТЬ";
+"userinfo"="Пользователь:";
+"email_info"="Свяжитесь с нами, если у вас возникнут вопросы! Мы всегда рады помочь!";
+"email_address"="Эл. почта:";
+"login_fast_tips"="Если вы будете играть в гостевом режиме, то при удалении и переустановке игры все данные пропадут. Вы точно хотите войти в режиме гостя?";
+"login_cancel"="Отмена";
+"exit_tips"="Уведомления";
+"loading_tips"="Загрузка...";
+"login_loading"="Загрузка...";
+"wecolome"="Добро пожаловать в игру";
+"payinfo"="Слишком много попыток. Попробуйте позже.";
+"orderfailur"="Не удалось создать заказ.";
+"update"="Уведомл. об обновлении";
+"update_detaile"="Обновление версии";
+"update_yes"="Подтвердить";
+"P_cancel"="Отмена";
+"p_success"="Куплено";
+"p_failure"="Покупка не удалась.";
+"Line"="Line";
+"FaceBook"="Facebook";
+"Google"="Google";
+"Twitter"="Twitter";
+"load"="Войти";
+"regist"="Регистрация аккаунта";
+"accplaceholder"="Введите логин";
+"pasplaceholder"="Введите пароль";
+"emaplaceholder"="Введите почту";
+"changetologin"="Уже есть аккаунт, нажмите здесь";
+"style"="Войти другим способом";
+"rgeistload"="Зарегистрироваться и войти";
+"accbind"="Привязка аккаунта";
+"confimbind"="Подтвердить и привязать";
+"accpromot"="Введите логин";
+"paspromot"="Введите пароль";
+"emailpromot"="Введите почту";
+"jump" ="скакать";
+"strat"="Начните опыт";
+"mark_confirm"="Оцените его";
+"mark_content"="Так долго играли,хотите ли вы что-нибудь сказать нам?";
+"end_veiw" ="близко";
+"bind_account"="Привязать уч. запись";
+"bind_no"="Эту уч. запись не нужно привязывать.";
+"pass_same"="Пароли должны совпадать";
+"bind_success"="Привязано";
+"bind_failed"="Не удалось привязать";
+"agree_top"="Login means agreeing to";
+"agree_bottom"="the terms of service";
+"nextLogin"="Last login";
+"bind"="Bind";
+"band"="Bound";
+"link"="Register & Link Account";
+"accpwd"="Account";
+
+"wcode"="Enter Verification Code";
+"getCode"="Send";
+"forget"="Forgot Password";
+"account_s"="Sign Up Successfully";
+"code_err"="Incorrect Code";
+"email"="Enter correct email address";
+"pass"="The password is between 6-30 letters, digits and symbols, please enter.";
+"pass_re"="The password is between 6-30 letters,digits and symbols, please re-enter.";
+"tran_load"="Login Page";
+ "reset_pas"="Reset Password";
+"paspromotsec"="Confirm Password";
+"equal"="Password must match";
+"pass_succ"="Password has been reset";
+ 
+"send_email"="Verification Code has been sent";
+"user_center"="Service Center";
+"user_protext"="Please contact us if you have any questions! We will be glad to help !";
+"user_back"="Return";
+"user_leavefor"="Public Site";
+
+"user_question" = "FAQ";
+"question_search" = "Search";
+"answer_title" = "Article";
+"answer_comment" = "Is this article helpful?";
+"answer_good" = "Thank you for your feedback!";
+"answer_bad" = "Sorry it doesn't help";
+"search_noresult" = "No result";
+"search_notext" = "Can not be empty";
+
+"to_cust" = "Customer Service";
+"to_close_title"="Quit";
+
+"turn_user_role" = "Can't find your account? Click to check existed account on this device";
+"user_role_title" = "Recent Login history";
+"login_error" = "Abnormal login detected,please click  \"View Account List\" to check history login accounts。";
+"check_user_list" = "View account list";
+"role_name" = "Username";
+"role_serve" = "Server";
+"apple" = "Apple";
+"apple_ulogin" = "Your phone system does not support this login method, please use another method to login.";
+
+"user_fix" = "Self-help to fix issues";
+"fix_ord" = "Fix payment issues";
+"fix_odsuccess" = "Issue is fixed,please try to pay again!";
+
+"vip_title" = "VIP Customer Service";
+"vip_tips" = "Dear VIP User, here are your VIP Customer Service, please click below to communicate";
+"copy_tip" = "Copied";
+"fbui"="Please install the Facebook app first for further action.";

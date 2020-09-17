@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>requestUrl</key>
+	<string></string>
+	<key>version</key>
+	<string>3.0</string>
+	<key>consumerSecret</key>
+	<string>lGoFe4yYVug52LcNiAptoABgb14k5seN9XMJq6L0ggSzUmIevP</string>
+	<key>ConsumerKey</key>
+	<string>SALb45SZfATPS8ILSYAvnB4ic</string>
+	<key>urlScheme</key>
+	<string>dynamic.links</string>
+	<key>channel</key>
+	<string>GM</string>
+	<key>gameid</key>
+	<string>1700</string>
+	<key>GGkClientID</key>
+	<string>726483388833-nejr29g354f0p3sieg18gmehkhljuerv.apps.googleusercontent.com</string>
+	<key>appsFlyerDevKey</key>
+	<string>g7ZP9TqQ4S8AF9zeQD9Koe</string>
+	<key>appleAppID</key>
+	<string>1475870720</string>
+	<key>Promote</key>
+	<string>17</string>
+	<key>rolelevel</key>
+	<string>0</string>
+	<key>facebookADID</key>
+	<string>1137373959766493_1137395966430959</string>
+	<key>GoogleADID</key>
+	<string>ca-app-pub-7496069579613989~8545461470</string>
+	<key>IronsourceAppKey</key>
+	<string>bf464905</string>
+</dict>
+</plist>

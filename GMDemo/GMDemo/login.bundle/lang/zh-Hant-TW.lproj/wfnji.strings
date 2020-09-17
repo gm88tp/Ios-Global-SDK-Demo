@@ -1,0 +1,109 @@
+
+/*wfnji.strings
+  loginSDK
+
+  Created by GM on 2019/1/2.
+  Copyright © 2019年 gumo. All rights reserved.*/
+"change_acount" = "切換賬號";
+"choose_logintype" = "請選擇登入方式";
+"login_fast" = "遊客訪問";
+"userinfo" = "尊敬的使用者：";
+"email_info" = "如果您有任何問題，請發郵件聯繫我們，我們很樂意為您提供幫助。";
+"email_address" = "郵箱地址：";
+"login_fast_tips" = "以遊客訪問方式登入，在卸載APP或是重新安裝遊戲，將會丟失遊戲內所有數據，確定以遊客訪問登入嗎？";
+"login_cancel" = "取消";
+"exit_tips" = "溫馨提示";
+"loading_tips" = "玩命載入中...";
+"login_loading" = "載入中...";
+"wecolome" = "歡迎進入遊戲";
+"payinfo" = "操作訂單過於頻繁請稍後重試~";
+"orderfailur" = "生成訂單失敗～";
+"update" = "更新通知";
+"update_detaile" = "遊戲版本更新";
+"update_yes" = "確認";
+"P_cancel" = "取消購買";
+"p_success" = "購買成功";
+"p_failure" = "購買失敗";
+"Line" = "Line";
+"FaceBook" = "Facebook";
+"Google" = "Google";
+"Twitter" = "Twitter";
+"load" = "登入";
+"regist" = "賬號註冊";
+"accplaceholder" = "請輸入賬號";
+"pasplaceholder" = "請輸入密碼";
+"emaplaceholder" = "請輸入郵箱";
+"changetologin" = "已有賬號,點擊此處";
+"style" = "其他登入方式";
+"rgeistload" = "註冊並登入";
+"accbind" = "賬號綁定";
+"confimbind" = "确认并绑定";
+"accpromot" = "請輸入賬號";
+"paspromot" = "請輸入密碼";
+"emailpromot" = "請輸入郵箱";
+"jump" = "跳過";
+"strat" = "開始體驗";
+"mark_confirm" = "評價";
+"mark_content" = "您玩了這麼長時間，對我們有什麼想要說的嗎？";
+"end_veiw" = "關閉";
+"bind_account" = "平臺帳號";
+"bind_no" = "此賬號無需綁定";
+"pass_same" = "兩次輸入密碼必須一致";
+"bind_success" = "綁定成功";
+"bind_failed" = "綁定失敗";
+"agree_top" = "登入即代表閱讀並同意";
+"agree_bottom" = "服務協議";
+"nextLogin" = "最近登入";
+"bind" = "去綁定";
+"band" = "已綁定";
+"link" = "賬號註冊綁定";
+"accpwd" = "賬號登入";
+"forget" = "忘記密碼？";
+"wcode" = "請輸入驗證碼";
+"getCode" = "獲取";
+"account_s" = "賬號註冊成功！";
+"code_err" = "輸入的驗證碼錯誤";
+"email" = "請輸入正確的郵箱";
+"pass" = "請輸入6-30位數字、字母或符號的密碼";
+"pass_re" = "密碼是6-30位數字、字母或符號，請重新輸入";
+"tran_load" = "前往登入";
+"reset_pas" = "重置密碼";
+"paspromotsec" = "請再次輸入密碼";
+"equal" = "兩次輸入的密碼不壹致";
+"pass_succ" = "重置密碼成功!";
+"send_email" = "驗證碼已發送";
+"regist_load" = "註冊";
+"user_center" = "客服中心";
+"user_protext" = "如果您有任何問題，請發郵件聯系我們，我們很樂意為您提供幫助。";
+"user_back" = "返回";
+"user_leavefor" = "前往粉絲頁";
+
+"user_question" = "常見問題";
+"question_search" = "搜索";
+"answer_title" = "文章";
+"answer_comment" = "這篇文章是否對您有幫助？";
+"answer_good" = "感謝您的反饋！";
+"answer_bad" = "很抱歉沒有幫助到您";
+"search_noresult" = "沒有找到相關結果";
+"search_notext" = "搜索內容不能為空";
+
+"to_cust" = "聯系客服";
+"to_close_title"="退出遊戲";
+
+"turn_user_role" = "還沒有找到賬戶？點擊查看設備登入角色";
+"user_role_title" = "近期賬戶登錄列表";
+"login_error" = "系統檢測到您的登入出現異常，請點擊“查看賬戶列表”，查看過往登錄賬戶。";
+"check_user_list" = "查看賬戶列表";
+"role_name" = "角色名";
+"role_serve" = "區服";
+"apple" = "Apple";
+"apple_ulogin" = "您的手機系統不支持此登入方式，請使用其他方式登入";
+
+"user_fix" = "自助問題修復";
+"fix_ord" = "支付問題修復";
+"fix_odsuccess" = "問題修復成功，請重新嘗試支付！";
+
+"vip_title" = "VIP專屬客服";
+"vip_tips" = "尊敬的VIP用戶您好，我們為您挑選了專屬客服，請點擊下方進行溝通";
+"copy_tip" = "已復制";
+"fbui"="請先安裝Facebook App後再嘗試分享，謝謝!";

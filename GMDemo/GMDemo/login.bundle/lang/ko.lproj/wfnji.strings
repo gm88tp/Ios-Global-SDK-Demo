@@ -1,0 +1,109 @@
+
+/*wfnji.strings
+  loginSDK
+
+  Created by GM on 2019/1/2.
+  Copyright © 2019年 gumo. All rights reserved.*/
+"change_acount" = "계정 전환";
+"choose_logintype" = "로그인 방식을 선택하세요.";
+"login_fast" = "게스트 로그인";
+"userinfo" = "존경하는 유저님:";
+"email_info" = "궁금한 점이 있으시면 이메일로 연락주세요. 기꺼이 도와드리겠습니다.";
+"email_address" = "이메일 주소:";
+"login_fast_tips" = "게스트 계정으로 로그인 시, 앱을 삭제하거나 게임을 다시 설치할 경우 모든 데이터가 사라집니다. 게스트로 로그인 하시겠습니까?";
+"login_cancel" = "취소";
+"exit_tips" = "알림";
+"loading_tips" = "데이터 로딩 중…";
+"login_loading" = "로딩 중…";
+"wecolome" = "게임에 오신것을 환영합니다.";
+"payinfo" = "조작 주문이 너무 잦아서 잠시 후에 다시 시도해 주십시오~";
+"orderfailur" = "주문 생성 실패";
+"update" = "업데이트 공지";
+"update_detaile" = "게임 버전 업데이트";
+"update_yes" = "확정";
+"P_cancel" = "구입 취소";
+"p_success" = "구입 성공";
+"p_failure" = "구입 실패";
+"Line" = "Line";
+"FaceBook" = "Facebook";
+"Google" = "Google";
+"Twitter" = "Twitter";
+"load" = "로그인";
+"regist" = "계정 등록";
+"accplaceholder" = "계좌번호를 입력해 주세요.";
+"pasplaceholder" = "비밀번호를 입력해 주세요.";
+"emaplaceholder" = "이메일을 입력해 주세요.";
+"changetologin" = "이미 계정이 있으면 여기를 클릭하세요.";
+"style" = "기타 로그인 방식";
+"rgeistload" = "등록하고 로그인";
+"accbind" = "계정 연동";
+"confimbind" = "확인하여 연동함";
+"accpromot" = "아이디를 입력해 주세요.";
+"paspromot" = "비밀번호를 입력해 주세요.";
+"emailpromot" = "이메일을 입력해 주세요.";
+"jump" = "건너뛰기";
+"strat" = "게임시작";
+"mark_confirm" = "평가하기";
+"mark_content" = "즐거운 시간 보내고 계신가요? 게임 리뷰와 별점을 남겨주시면 업데이트에 큰 힘이 됩니다!";
+"end_veiw" = "닫기";
+"bind_account" = "계좌번호 바인딩";
+"bind_no" = "이 계정에는 바인딩이 필요하지 않습니다";
+"pass_same" = "입력한 암호가 같아야 함";
+"bind_success" = "바인딩 성공";
+"bind_failed" = "바인딩 실패";
+"agree_top" = "로그인 하면<이용약관>,<개인 정보 처리 방침> 및 <홍보성 야간 알림 수신>에 동의합니다.";
+"agree_bottom" = "이용약관";
+"nextLogin" = "최근 로그인";
+"bind" = "연동하기";
+"band" = "연동완료";
+"link" = "계정 가입 및 연동";
+"accpwd" = "계정 로그인";
+"forget" = "비밀번호를 잊으셨나요?";
+"wcode" = "인증 코드를 입력해 주세요";
+"getCode" = "인증 코드";
+"account_s" = "계정 만들기 성공!";
+"code_err" = "인증 코드가 틀렸습니다";
+"email" = "올바른 이메일 주소를 입력해 주세요";
+"pass" = "6~30자 영문,숫자,기호가 포함된 비밀번호를 입력해 주세요";
+"pass_re" = "비밀번호는 6~30자 영문,숫자,기호 조합입니다. 다시 입력해 주세요";
+"tran_load" = "로그인 하기";
+"reset_pas" = "비밀번호 재설정";
+"paspromotsec" = "비밀번호를 다시 입력하십시오";
+"equal" = "비밀번호가 일치하지 않습니다";
+"pass_succ" = "비밀번호 재설정 성공";
+"send_email" = "인증 코드 발송 완료";
+"regist_load" = "가입";
+"user_center" = "고객센터";
+"user_protext" = "궁금한 점이 있으시면 이메일로 연락주세요.최선을 다해 도와드리겠습니다.";
+"user_back" = "돌아가기";
+"user_leavefor" = "공식 링크";
+
+"user_question" = "자주 묻는 질문";
+"question_search" = "검색";
+"answer_title" = "문장";
+"answer_comment" = "해당 문장이 도움이 되셨나요?";
+"answer_good" = "피드백 감사드립니다!";
+"answer_bad" = "도와드리지 못해 죄송합니다.";
+"search_noresult" = "해당 결과를 찾지 못했습니다.";
+"search_notext" = "검색 내용은 비워둘 수 없습니다.";
+
+"to_cust" = "고객센터";
+"to_close_title"="게임종료";
+
+"turn_user_role" = "계정을 분실하셨나요? 클릭하여 로그인 계정 목록을 확인하세요.";
+"user_role_title" = "최근 로그인";
+"login_error" = "귀하의 로그인에 오류가 발생하였습니다. \"계정 목록보기\"를 클릭하여 과거의 로그인 계정 목록을 확인하세요.";
+"check_user_list" = "계정 목록 보기";
+"role_name" = "닉네임";
+"role_serve" = "서버";
+"apple" = "Apple";
+"apple_ulogin" = "귀하의 모바일 시스템이 해당 로그인 방식을 지원하지 않습니다. 다른 방식으로 로그인하십시오.";
+
+"user_fix" = "셀프 오류 복구";
+"fix_ord" = "결제 오류 복구 완료";
+"fix_odsuccess" = "오류 복구 완료, 지불을 다시 시도하십시오!";
+
+"vip_title" = "VIP 고객 전용 서비스";
+"vip_tips" = "존경하는 VIP 고객님 안녕하세요. 고객님을 위해 전용 상담 서비스를 준비하였습니다. 아래를 클릭하여 상담을 시작하세요";
+"copy_tip" = "복제 성공";
+"fbui"="먼저 Facebook 앱을 설치하신후에 다시 공유해보시기 바랍니다.";

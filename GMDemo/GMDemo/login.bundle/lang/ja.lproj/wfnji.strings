@@ -1,0 +1,109 @@
+
+/*wfnji.strings
+  loginSDK
+
+  Created by GM on 2019/1/2.
+  Copyright © 2019年 gumo. All rights reserved.*/
+"change_acount" = "アカウントを切り替える";
+"choose_logintype" = "ログイン方法を選択してください";
+"login_fast" = "ゲストログイン";
+"userinfo" = "ユーザー様：";
+"email_info" = "ご不明な点やご質問がありましたら、どうぞメールにてお気軽にご連絡ください。喜んでお答えします。";
+"email_address" = "メールアドレス：";
+"login_fast_tips" = "ゲストとしてログインすると、アプリをアンインストールするまたはゲームを再インストールする場合、ゲームデータが無くなります。本当にゲストとしてログインしますか？";
+"login_cancel" = "キャンセル";
+"exit_tips" = "ヒント";
+"loading_tips" = "ロード中…";
+"login_loading" = "ロード中…";
+"wecolome" = "ゲームへようこそ";
+"payinfo" = "注文申請は頻繁すぎます。あと少しでもう一度注文してください";
+"orderfailur" = "注文失敗～";
+"update" = "アップデート通告";
+"update_detaile" = "ゲームバージョンアップ";
+"update_yes" = "確認";
+"P_cancel" = "キャンセル";
+"p_success" = "購入成功";
+"p_failure" = "購入失敗";
+"Line" = "Line";
+"FaceBook" = "Facebook";
+"Google" = "Google";
+"Twitter" = "Twitter";
+"load" = "ログイン";
+"regist" = "アカウント登録";
+"accplaceholder" = "アカウントをご入力ください";
+"pasplaceholder" = "暗証番号をご入力ください";
+"emaplaceholder" = "メールボックスをご入力ください";
+"changetologin" = "既存アカウントでログイン";
+"style" = "その他の登録方法";
+"rgeistload" = "登録してからログインします";
+"accbind" = "アカウントバインディング";
+"confimbind" = "バインディングをご確認ください";
+"accpromot" = "アカウントをご入力ください";
+"paspromot" = "暗証番号をご入力ください";
+"emailpromot" = "メールボックスをご入力ください";
+"jump" = "スキップ";
+"strat" = "インストール";
+"mark_confirm" = "評価";
+"mark_content" = "貴方はこんなに長く遊んで、私達に言いたい事がありますか？";
+"end_veiw" = "閉じる";
+"bind_account" = "アカウント連携";
+"bind_no" = "このアカウントは連携する必要はありません";
+"pass_same" = "再入力のパスワードは一度目の入力と一致する必要があります";
+"bind_success" = "データ連携成功";
+"bind_failed" = "データ連携失敗";
+"agree_top" = "利用規約とプライバシーポリシーの";
+"agree_bottom" = "確認";
+"nextLogin" = "最近登録";
+"bind" = "連携実施へ";
+"band" = "連携済";
+"link" = "新規登録と連携";
+"accpwd" = "アカウント";
+"forget" = "パスワードをお忘れですか?";
+"wcode" = "検証コードを入力";
+"getCode" = "送信";
+"account_s" = "登録完了";
+"code_err" = "正しいコードではありません";
+"email" = "メールアドレスを正しく入力して下さい";
+"pass" = "6～30文字以内のパスワードを入力して下さい";
+"pass_re" = "6～30文字以内のパスワードを入力して下さい";
+"tran_load" = "ログインへ";
+"reset_pas" = "パスワードをリセット";
+"paspromotsec" = "パスワードを確認";
+"equal" = "メールアドレスは存在しません";
+"pass_succ" = "パスワードのリセットに成功!";
+"send_email" = "コードは送信されました";
+"regist_load" = "新規登録";
+"user_center" = "お問合せ";
+"user_protext" = "ご疑問がございましたら、何時でもご連絡下さい";
+"user_back" = "リターン";
+"user_leavefor" = "SNSへ移動";
+
+"user_question" = "よくある質問";
+"question_search" = "サーチ";
+"answer_title" = "記事";
+"answer_comment" = "この記事はお役に立てましたか。";
+"answer_good" = "ご意見有難うございます。";
+"answer_bad" = "お役に立たずに申し訳ございません。";
+"search_noresult" = "関連する記事はありません。";
+"search_notext" = "検索内容を入力して下さい";
+
+"to_cust" = "お問合せ";
+"to_close_title"="ゲーム終了";
+
+"turn_user_role" = "アカウントを紛失しましたか？クリックしてログインしたアカウントの履歴を確認できます。";
+"user_role_title" = "最近ログインしたアカウントリスト";
+"login_error" = "ログインに異常が検出しました。「アカウントリストを見る」をクリックして、ログインしたアカウントの履歴をご確認ください。";
+"check_user_list" = "アカウントリストを見る";
+"role_name" = "キャラ―名";
+"role_serve" = "サーバー";
+"apple" = "Apple";
+"apple_ulogin" = "この端末はこのログイン方式をサポートしていません。ほかの方式でログインして下さい。";
+
+"user_fix" = "エラーの修復へ";
+"fix_ord" = "支払いエラーの修復";
+"fix_odsuccess" = "エラーの修復が完了しました。再度支払いをお試しください。";
+
+"vip_title" = "VIP専用サービス";
+"vip_tips" = "VIPのお客様のために、専用の相談サービスをご用意しました。下をクリックしてご利用ください。";
+"copy_tip" = "コピー済み";
+"fbui"="Facebookアプリが必要";

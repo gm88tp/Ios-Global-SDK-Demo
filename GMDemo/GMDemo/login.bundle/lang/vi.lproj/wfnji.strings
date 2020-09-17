@@ -1,0 +1,109 @@
+
+/*wfnji.strings
+  loginSDK
+
+  Created by GM on 2019/1/2.
+  Copyright © 2019年 gumo. All rights reserved.*/
+"change_acount" = "Đổi tài khoản";
+"choose_logintype" = "Chọn cổng đăng nhập";
+"login_fast" = "Chơi Ngay";
+"userinfo" = "Xin chào:";
+"email_info" = "Nếu bạn có vấn đề, hãy gửi email đến CSKH, rất vui lòng khi được giúp đỡ bạn";
+"email_address" = "Email:";
+"login_fast_tips" = "Khi chọn cổng Chơi Ngay, sau khi xóa hoặc cài đặt lại App, tất cả dữ liệu tài khoản sẽ bị xóa, bạn có muốn chọn cổng Chơi Ngay không?";
+"login_cancel" = "Hủy";
+"exit_tips" = "Gợi ý";
+"loading_tips" = "Đang cố gắng tải...";
+"login_loading" = "Đang tải...";
+"wecolome" = "Chào mừng vào game";
+"payinfo" = "Thao tác giao dịch quá nhanh hãy thử lại sau~";
+"orderfailur" = "Tạo giao dịch thất bại~";
+"update" = "Cập nhật mới";
+"update_detaile" = "Cập nhật phiên bản";
+"update_yes" = "Xác định";
+"P_cancel" = "Hủy mua";
+"p_success" = "Mua thành công";
+"p_failure" = "Mua thất bại";
+"Line" = "Line";
+"FaceBook" = "Facebook";
+"Google" = "Google";
+"Twitter" = "Twitter";
+"load" = "Đăng Nhập";
+"regist" = "Đăng Ký";
+"accplaceholder" = "Nhập tài khoản";
+"pasplaceholder" = "Nhập mật khẩu";
+"emaplaceholder" = "Nhập email";
+"changetologin" = "Đã có tài khoản, nhấn vào đây";
+"style" = "Cách đăng nhập khác";
+"rgeistload" = "Đăng ký";
+"accbind" = "Cố định tài khoản";
+"confimbind" = "Cố định";
+"accpromot" = "Tài khoản không thể để trống";
+"paspromot" = "Mật khẩu không thể để trống";
+"emailpromot" = "Địa chị email không thể để trống";
+"jump" = "Skip";
+"strat" = "Start";
+"mark_confirm" = "Đánh giá";
+"mark_content" = "Bạn có gì muốn góp ý cho chúng tôi không?";
+"end_veiw" = "Hủy";
+"bind_account" = "tài khoản diễn đàn";
+"bind_no" = "tài khoản này không cần liên kết";
+"pass_same" = "2 lần nhập mật khẩu phải giống nhau";
+"bind_success" = "Cố định thành công";
+"bind_failed" = "Cố định thất bại";
+"agree_top" = "đăng nhập là đã đọc điều khoản và đồng ý";
+"agree_bottom" = "Thỏa thuận dịch vụ";
+"nextLogin" = "Đăng nhập lần cuối";
+"bind" = "Chưa liên kết";
+"band" = "Đã liên kết";
+"link" = "Cố định tài khoản đăng ký";
+"accpwd" = "đăng nhập tài khoản";
+"forget" = "Quên mật khẩu?";
+"wcode" = "Nhập mã xác minh";
+"getCode" = "Nhận";
+"account_s" = "Đăng nhập tài khoản thành công";
+"code_err" = "Mã xác minh không chính xác";
+"email" = "Mời đăng nhập chính xác email";
+"pass" = "Vui lòng nhập 6-30 số hoặc kí tự";
+"pass_re" = "Mật khẩu gồm 6-30 số hoặc kí tự, hãy nhập lại";
+"tran_load" = "Đăng nhập";
+"reset_pas" = "Cài đặt lại mật khẩu";
+"paspromotsec" = "Mời nhập lại mật khẩu";
+"equal" = "Hai lần nhập mật khẩu phải khớp";
+"pass_succ" = "Cài đặt mật khẩu thành công";
+"send_email" = "Mã xác minh đã gửi";
+"regist_load" = "Đăng Ký";
+"user_center" = "Trung tâm CSKH";
+"user_protext" = "Nếu có bất kì vấn đề  gì, vui lòng phản hồi tới địa chỉ email của chúng tôi. Rất hân hạnh được phục vụ các bạn.";
+"user_back" = "Quay lại";
+"user_leavefor" = "Đến trang thông tin";
+
+"user_question" = "Vấn đề thường gặp";
+"question_search" = "Tìm kiếm";
+"answer_title" = "Bài viết";
+"answer_comment" = "Bài viết này có hữu ích không?";
+"answer_good" = "Cảm ơn phản hồi của bạn!";
+"answer_bad" = "Rất xin lỗi, không giúp gì được cho bạn";
+"search_noresult" = "Không tìm thấy kết quả";
+"search_notext" = "Nội dung tìm kiếm không được để trống";
+
+"to_cust" = "Liên hệ CSKH";
+"to_close_title"="Thoát game";
+
+"turn_user_role" = "Bạn vẫn chưa tìm thấy tài khoản? Nhấn vào đây để kiểm tra lịch sử thiết bị đăng nhập";
+"user_role_title" = "Danh sách tài khoản đăng nhập gần đây";
+"login_error" = "Hệ thống nhận thấy hoạt động bất thường trong tài khoản của bạn, vui lòng nhấp vào \"Kiểm tra danh sách tài khoản\" để xem tài khoản đăng nhập trước đó.";
+"check_user_list" = "Kiểm tra danh sách tài khoản";
+"role_name" = "Tên nhân vật";
+"role_serve" = "Server";
+"apple" = "Apple";
+"apple_ulogin" = "Điện thoại của bạn không hỗ trợ phương thức đăng nhập này, vui lòng sử dụng cách khác để đăng nhập. ";
+
+"user_fix" = "Tự động khắc phục sự cố";
+"fix_ord" = "Khắc phục lỗi thanh toán";
+"fix_odsuccess" = "Vấn đề đã được khắc phục, vui lòng thử thanh toán lại!";
+
+"vip_title" = "CSKH độc quyền VIP";
+"vip_tips" = "Xin chào VIP, chúng tôi đã dành riêng cho bạn dịch vụ CSKH độc quyền, nhấp bên dưới để liên lạc.";
+"copy_tip" = "Đã sao chép";
+"fbui"="Vui lòng cài đặt Facebook sau đó chia sẻ, cảm ơn!";
