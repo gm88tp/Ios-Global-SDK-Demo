@@ -31,11 +31,11 @@
 
 **1、在工程的 Build Setting 中找到 Other Linker Flags 添加  -ObjC**
 
-![flags](https://github.com/gm88tp/Ios-Global-SDK-Demo/raw/master/docs/assets/images/p1.png)
+![flags](assets/images/p1.png)
 
 **2、在工程的 Build Setting 中找到 Enable Bitcode  设置成NO**
 
-![bitcode](https://github.com/gm88tp/Ios-Global-SDK-Demo/raw/master/docs/assets/images/p2.png)
+![bitcode](assets/images/p2.png)
 
 **3、由于iOS 9 改为https，如果您的项目有使用http，可在Info.plist中添加如下代码：**（右键Info.plist用source code打开）
 
@@ -47,9 +47,9 @@
 
 **4、如有游戏需要推送，请开启推送Capabilities中打开Background Modes（勾选Remote notifications）和Push Notifications**如下图所示：
 
-![background](https://github.com/gm88tp/Ios-Global-SDK-Demo/raw/master/docs/assets/images/p3.png)
+![background](assets/images/p3.png)
 
-![push](https://github.com/gm88tp/Ios-Global-SDK-Demo/raw/master/docs/assets/images/p4.png)
+![push](assets/images/p4.png)
 
 **5、Info.plist文件配置，此配置项是为了line，Facebook，Google登录**
 
