@@ -1,4 +1,4 @@
-# 怪猫海外SDK IOS 使用文档
+# 海外SDK IOS 使用文档
 
 # 环境要求
 
@@ -6,7 +6,7 @@
 > - Xcode 7.0以上版本
 > - iOS 9.0以上版本
 
-- 怪猫SDK集成了登录，支付等功能。本文档详细说明相关功能在技术对接与使用过程中需要注意的地方，以便贵方能快速对接。阅读后如有疑问，请联系怪猫游戏相关技术支持。
+- SDK集成了登录，支付等功能。本文档详细说明相关功能在技术对接与使用过程中需要注意的地方，以便贵方能快速对接。阅读后如有疑问，请联系GM88游戏相关技术支持。
 - SDK目前支持语言有：简体中文，繁体中文，繁体中文（台湾），繁体中文（香港），英语，西班牙语，德语，法语，印度尼西亚语，越南语，韩语，日语，意大利语，马来语，葡萄牙语，俄语，泰语
 
 # 准备工作
@@ -14,7 +14,7 @@
 ## 导入SDK
 
 ```
-将怪猫(给到的SDK).framework、GoogleSignIn.bundle、LineSDKReesource.bundle和(根据给到SDK添加).bundle导入到您的工程中。
+将(给到的SDK).framework、GoogleSignIn.bundle、LineSDKReesource.bundle和(根据给到SDK添加).bundle导入到您的工程中。
 ```
 
 操作：
@@ -237,7 +237,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 ## 定义代理
 
-怪猫SDK使用统一的代理方法来获得各接口的响应，涉及的接口包括：
+
+SDK使用统一的代理方法来获得各接口的响应，涉及的接口包括：
 
 - 登陆
 - 登出
@@ -275,7 +276,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 ## 定义通知
 
-怪猫SDK使用通知来接收部分接口的结果，涉及的接口包括：
+SDK使用通知来接收部分接口的结果，涉及的接口包括：
 
 - 帐号绑定
 - 分享
@@ -452,7 +453,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 | zoneID       | string | 是       | 服务器ID，若无，请填写“1”                                    |
 | zoneName     | string | 否       | 服务器名称                                                   |
 | text         | string | 否       | 文本                                                         |
-| notifyURL    | string | 否       | 回调地址，可传可不传，不传会使用怪猫后台配置的回调地址，请将地址提供给怪猫运营 |
+| notifyURL    | string | 否       | 回调地址，可传可不传，不传会使用后台配置的回调地址，请将地址提供给运营 |
 
 **示例代码**
 
@@ -679,7 +680,7 @@ mPayInfo.notifyURL = @"http://demo.wfnji88.com/ok.php?gameid=1156&promote=2";
 
 ## 拉起帐号绑定页面
 
-- 此接口用于显示绑定页面，游客可以绑定怪猫账号
+- 此接口用于显示绑定页面，游客可以绑定GM88账号
 
 - 绑定结果在通知中，通知名称为@"SDKCenterNotifition"，详见**SDK通知**
 

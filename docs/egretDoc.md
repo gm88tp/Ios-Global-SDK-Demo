@@ -1,11 +1,11 @@
-# 怪猫海外H5游戏SDK 对接文档
+# Gm88海外H5游戏SDK 对接文档
 
-本文档旨在帮忙CP对接怪猫游戏的登陆和支付，怪猫也会提供相应SDK需要的技术文件。
+本文档旨在帮忙CP对接Gm88游戏的登陆和支付，Gm88也会提供相应SDK需要的技术文件。
 
 ## 1. 适用范围
 
 * 只面向使用白鹭(Egret)引擎开发的H5游戏
-* 只面向海外地区，国内地区请联系对接的怪猫运营
+* 只面向海外地区，国内地区请联系对接的Gm88运营
 
 ## 对接流程
 
@@ -15,16 +15,16 @@ CP应先提供相应信息给到运营，然后进行后端对接，完成后再
 
 ```
     graph TD
-    信息提供[CP提供对接游戏信息] --> 加密信息[怪猫提供appId和appSecret]
+    信息提供[CP提供对接游戏信息] --> 加密信息[Gm88提供appId和appSecret]
     加密信息 --> 后端对接[CP进行对接后端对接]
     后端对接 --> H5端对接[CP进行H5端对接]
     后端对接 --> Android端对接
     后端对接 --> IOS端对接
-    H5端对接 --> 怪猫输出H5端游戏地址
+    H5端对接 --> Gm88输出H5端游戏地址
     Android端对接 --> Android端输出[CP使用白鹭引擎输出Android工程]
-    Android端输出 --> Android端发布[怪猫前端输出Android包,提审Google Play]
+    Android端输出 --> Android端发布[Gm88前端输出Android包,提审Google Play]
     IOS端对接 --> IOS端输出[CP使用白鹭引擎输出IOS工程]
-    IOS端输出 --> IOS端发布[怪猫前端输出IOS包,提审Apple Store]
+    IOS端输出 --> IOS端发布[Gm88前端输出IOS包,提审Apple Store]
 ```
 
 ## 2. 前期信息对接
@@ -43,9 +43,9 @@ CP应先提供相应信息给到运营，然后进行后端对接，完成后再
 
 请将以上信息提供给对接的运营人员
 
-### 2.2 怪猫方提供加密信息
+### 2.2 Gm88方提供加密信息
 
-怪猫的运营人员根据第一步提供的信息，生成appId和appSecret，并提供给CP，这两者会在加密传输时用到。
+Gm88的运营人员根据第一步提供的信息，生成appId和appSecret，并提供给CP，这两者会在加密传输时用到。
 
 ## 3. 后端对接
 
@@ -53,7 +53,7 @@ CP应先提供相应信息给到运营，然后进行后端对接，完成后再
 
 #### 3.1 AccessToken传递
 
-怪猫会在游戏访问地址之后，使用GET方式传输AccessToken，这引参数将在下一步登陆接口调用时用到，CP方可将此AccessToken临时存储。
+Gm88会在游戏访问地址之后，使用GET方式传输AccessToken，这引参数将在下一步登陆接口调用时用到，CP方可将此AccessToken临时存储。
 
 #### 3.2 登陆接口
 
@@ -89,7 +89,7 @@ https://open.hkpctimes.com/UserInfo
 
 #### 3.2 支付回调
 
-这是用户支付完成之后，怪猫方确认用户已经付款完成时，发起的异步支付成功通知，CP方应有后端程序接收此请求，并在接收到此通知后，在游戏内向用户发货，并返回正确的响应，以便怪猫后端知晓发放成功。
+这是用户支付完成之后，Gm88方确认用户已经付款完成时，发起的异步支付成功通知，CP方应有后端程序接收此请求，并在接收到此通知后，在游戏内向用户发货，并返回正确的响应，以便Gm88后端知晓发放成功。
 
 异步通知 
 
@@ -99,7 +99,7 @@ https://open.hkpctimes.com/UserInfo
 
 | 字段            | 类型     | 说明                                |
 | ------------- | ------ | --------------------------------- |
-| order\_id     | int    | 怪猫订单号                             |
+| order\_id     | int    | Gm88订单号                             |
 | server\_id    | int    | H5                                |
 | role\_id      | int    | 用户唯一ID，和用户openId相同                |
 | developerinfo | string | 自定义参数，和下单的extra相同，请参数4.1章节的发起支付接口 |
@@ -279,8 +279,8 @@ shareInfo 示例:
 
 | 字段        | 类型     | 说明               |
 | --------- | ------ | ---------------- |
-| shareID   | int    | 分享内容Id(怪猫运营提供)   |
-| shareName | string | 分享内容Name(怪猫运营提供) |
+| shareID   | int    | 分享内容Id(Gm88运营提供)   |
+| shareName | string | 分享内容Name(Gm88运营提供) |
 | uName     | string | 分享者游戏名           |
 | server    | string | 分享者所在区服          |
 | code      | string | 邀请码(可供接受分享者使用等)  |
@@ -342,7 +342,7 @@ doAdShowDone("{"status":"1","extra":"info"}")
 
 | 字段        | 类型     | 说明               |
 | --------- | ------ | ---------------- |
-| eventInfo | string | 行为事件名(该值由怪猫运营提供) |
+| eventInfo | string | 行为事件名(该值由Gm88运营提供) |
 
  Java调用示例： 
 
@@ -736,10 +736,10 @@ sign = md5(appId=1&extra=123&price=123&productId=123APP_SECRET)
 * 创建⻆角⾊色数据:如果游戏设计有⻆角⾊色存在，必须接⼊入 
 * 新⼿手引导完成:如果游戏有新⼿手引导，则必须接⼊入 
 * 玩家等级数据:如果游戏设计中有等级，则必须在⽤用户等级变化时上报 
-* 展示选区界⾯面:尽量量接⼊入
-* 点击选区按钮:尽量量接⼊入 
-* 展示创⻆角界⾯面:尽量量接⼊入 
-* 点击创⻆角按钮:尽量量接⼊入
+* 展示选区界⾯面:尽量量接⼊入
+* 点击选区按钮:尽量量接⼊入 
+* 展示创⻆角界⾯面:尽量量接⼊入 
+* 点击创⻆角按钮:尽量量接⼊入
 
 **接口定义**
 
@@ -778,13 +778,13 @@ extra {'roleName':'⻆角⾊色名称', 'roleServer':'⻆角⾊色区服', 'role
     start((开始流程)) --> doPay[调用doPay接口]
     end
 
-    subgraph 怪猫前端
+    subgraph Gm88前端
     doPay --> pay{用户Google/Apple支付}
     pay --> |支付失败|failEnd((流程结束))
     end
 
 
-    subgraph 怪猫后端
+    subgraph Gm88后端
     BSuccess[向Google/Apple验证支付]
     BResponseSuccess[发货成功] -->
     successEnd((流程成功))
