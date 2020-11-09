@@ -521,6 +521,7 @@ mPayInfo.notifyURL = @"http://demo.wfnji88.com/ok.php?gameid=1156&promote=2";
   * @param serverID 区服ID
   * @param roleid   角色ID
   * @param status   1:创建角色 2:完成新手引导 3:等级升级  状态值默认选择<3>
+  * @param vipLevel 游戏VIP等级
   */
 + (void)wfnjiRoleName:(NSString *)name
             gameLevel:(NSString *)level
