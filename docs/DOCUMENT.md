@@ -526,7 +526,8 @@ mPayInfo.notifyURL = @"http://demo.wfnji88.com/ok.php?gameid=1156&promote=2";
             gameLevel:(NSString *)level
              serverID:(NSString *)serverID
                roleID:(NSString *)roleid
-               status:(NSString *)status;
+               status:(NSString *)status
+	     vipLevel:(NSString *)vipLevel;
 
 ```
 
@@ -539,12 +540,13 @@ mPayInfo.notifyURL = @"http://demo.wfnji88.com/ok.php?gameid=1156&promote=2";
 | severID | string | 是   | 区服ID                               |
 | roleID  | string | 是   | 角色ID                               |
 | status  | string | 是   | 1:创建角色 2:完成新手引导 3:等级升级 |
+| vipLevel| string | 否   | 游戏内Vip等级，没有可以传空         |
 
 **示例**
 此处示例为角色升级
 
 ```objc
-[wfnjiPlat wfnjiRoleName:@"角色名字" gameLevel:@"角色等级" serverID:@"区服ID" roleID:@"角色ID" status:@"3"];
+[wfnjiPlat wfnjiRoleName:@"角色名字" gameLevel:@"角色等级" serverID:@"区服ID" roleID:@"角色ID" status:@"3" vipLevel:@""];
 
 ```
 
