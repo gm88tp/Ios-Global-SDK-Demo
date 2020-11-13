@@ -249,7 +249,7 @@ SDK使用统一的代理方法来获得各接口的响应，涉及的接口包�
 **定义**
 
 ```objc
--(void)onFinish:(GMStatus)code   Data:(NSDictionary*)Data
+-(void)onFinish:(wfnjiStatus)code   Data:(NSDictionary*)Data
 {
     NSLog(@"回调状态值：%ld",(long)code);
     NSLog(@"回调：%@",Data);
@@ -390,7 +390,7 @@ SDK使用通知来接收部分接口的结果，涉及的接口包括：
 **示例**
 
 ```objc
-[wfnjiPlatlogOut];
+[wfnjiPlat logOut];
 ```
 
 **回调**
@@ -406,13 +406,13 @@ SDK使用通知来接收部分接口的结果，涉及的接口包括：
 此接口用于游戏中用户可以切换账号的入口，使得用户可以在游戏中切换登录的账号。
 
 ```objc
-+ (void) ApplicationLogout
++ (void) WithInApplicationSwitch;
 ```
 
 **示例**
 
 ```objc
-[ApplicationLogout];
+[wfnjiPlat WithInApplicationSwitch];
 
 ```
 
@@ -832,7 +832,8 @@ mPayInfo.notifyURL = @"http://demo.wfnji88.com/ok.php?gameid=1156&promote=2";
       LOGIN_SWITCH = 4,
       /** 退出成功*/
       LOGOUT_SUCCESS = 5,
-
+      /** 账号被封*/
+      LOGIN_UNUSE = 6,
 
       /** 支付成功 */
       PAY_SUCCESS = 10,
@@ -1013,7 +1014,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 当游戏需要获取当前用户手机时间所在时区时，调用此方法
 
 ```objectivec
-+ (NSString *)returnTimeZome
++ (NSString *)returnTimeZome;
 
 ```
 
