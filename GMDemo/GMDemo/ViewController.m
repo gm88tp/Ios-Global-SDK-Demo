@@ -80,12 +80,15 @@
     
     
     NSLog(@"回调：%@",Data);
-    if(code == LOGIN_SUCCESS){
-        
-        //登录成功
-    }
-    else if(code == LOGOUT_SUCCESS){
-        //登出成功
+    if(code==LOGIN_SUCCESS){
+    //登陆成功
+    }else if(code ==LOGIN_SWITCH){
+    //切换账号无需特殊处理
+    }else if(code== LOGOUT_SUCCESS){
+    //退出账号 需要主动拉起登陆
+    }else if (code == LOGIN_UNUSE) {
+    //封号退出程序
+    exit(0);
     }
 }
 
