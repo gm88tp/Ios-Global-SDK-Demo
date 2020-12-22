@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import <loginSDK/wfnjiPlat.h>
+#import <loginSDK/platInit.h>
 @interface AppDelegate ()
 
 @end
@@ -21,11 +21,12 @@
      *方式一：
      *参数全部在bundle中
      **/
-    [wfnjiPlat initSDKapplication:application didFinishLaunchingWithOptions:launchOptions Applede:self];
+    [platInit initSDKapplication:application didFinishLaunchingWithOptions:launchOptions Applede:self];
     
     /**
     *方式二：
     * 自行传入相关参数
+     此方法已废弃
     **/
 //    [wfnjiPlat
 //    initSDK : @"游戏id"
@@ -45,15 +46,15 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    [wfnjiPlat applicationDidEnterBackground:application];
+    [platInit applicationDidEnterBackground:application];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    [wfnjiPlat applicationWillEnterForeground:application];
+    [platInit applicationWillEnterForeground:application];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    [wfnjiPlat applicationDidBecomeActive:application];
+    [platInit applicationDidBecomeActive:application];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -62,27 +63,27 @@
 
 
 -(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
-    return [wfnjiPlat application:app openURL:url options:options];
+    return [platInit application:app openURL:url options:options];
 }
 
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
    
-    return  [wfnjiPlat application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+    return  [platInit application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(nonnull NSData *)deviceToken{
-    [wfnjiPlat application:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+    [platInit application:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
 }
 
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary * _Nonnull)userInfo{
-    [wfnjiPlat application:application didReceiveRemoteNotification:userInfo];
+    [platInit application:application didReceiveRemoteNotification:userInfo];
 }
 
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-    [wfnjiPlat application:application didReceiveRemoteNotification:userInfo];
+    [platInit application:application didReceiveRemoteNotification:userInfo];
 }
 
 @end

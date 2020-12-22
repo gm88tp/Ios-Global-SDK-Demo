@@ -7,11 +7,23 @@
 //
 
 #import "ViewController.h"
-#import <loginSDK/wfnjiPlat.h>
-@interface ViewController ()<wfnjiLoginCallBack,wfnjiPayCallBack>
-@property (weak, nonatomic) IBOutlet UITextField *eventTF;
-@property (weak, nonatomic) IBOutlet UITextField *textTF;
-@property (weak, nonatomic) IBOutlet UILabel *translatedLb;
+
+//登录
+#import <loginSDK/platLogin.h>
+
+//支付
+#import <loginSDK/platPurchase.h>
+
+//工具类
+#import <loginSDK/platTools.h>
+
+//支付需要传递对象的头文件
+#import <loginSDK/purchaseModel.h>
+
+//PurchaseCallBack 支付回调；LoginCallBack 登录回调
+@interface ViewController ()<PurchaseCallBack,LoginCallBack,UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *mTable;
+@property (strong, nonatomic) NSArray *dataArray;
 
 @end
 
@@ -21,8 +33,12 @@
     [super viewDidLoad];
     //设置SDK 通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifitionCenter:)  name:@"SDKCenterNotifition" object:nil];
+    
+    //demo
+    self.dataArray = @[@"登录",@"登出",@"切换账号",@"支付",@"广告",@"社交",@"分享",@"客服中心",@"常见问题",@"vip客服",@"角色信息上报",@"自定义打点上报",@"打开webview",@"其他"];
 }
 
+#pragma mark - SDKCenterNotifition 通知回调结果
 - (void)notifitionCenter:(NSNotification *)notification {
     NSDictionary * Info = (NSDictionary *)notification.object;
        
@@ -47,7 +63,7 @@
         //可以根据code的值，当值为1时，表示获取到翻译。翻译内容是translate的值
            if([[Info objectForKey:@"code"]isEqualToString:@"1"]){
                 NSString *str = [Info objectForKey:@"translate"];
-               self.translatedLb.text = str;
+               NSLog(@"翻译完内容：%@",str);
            }
     }else if ([[Info objectForKey:@"status"] isEqualToString:@"13"]) {
         //vip客服不可显示
@@ -58,48 +74,60 @@
     }
 }
 
-#pragma mark - wfnjiLoginCallBack,wfnjiPayCallBack
--(void)onFinish:(wfnjiStatus)code   Data:(NSDictionary*)Data {
-    NSLog(@"回调状态值：%ld",(long)code);
+#pragma mark - LoginCallBack
+- (void)loginOnFinish:(loginStatus)code Data:(NSDictionary *)Data {
+    NSLog(@"《登录》回调状态值：%ld",(long)code);
     
     
     NSLog(@"回调：%@",Data);
-    if(code==LOGIN_SUCCESS){
+    if(code == LOGIN_SUCCESS){
         
         //登录成功
     }
-    else if(code== LOGOUT_SUCCESS){
+    else if(code == LOGOUT_SUCCESS){
         //登出成功
-    }else if (code ==PAY_SUCCESS){
+    }
+}
+
+#pragma mark - PurchaseCallBack
+- (void)purchaseOnFinish:(purchaseStatus)code Data:(NSDictionary *)Data {
+    NSLog(@"《支付》回调状态值：%ld",(long)code);
+    
+    
+    NSLog(@"回调：%@",Data);
+    
+    if (code == PURCHASE_SUCCESS){
         //支付成功
-    } else if (code== PAY_FAILED){
+    } else if (code == PURCHASE_FAILED){
         //支付失败
-    } else if (code==PAY_CANCEL){
+    } else if (code == PURCHASE_CANCEL){
         //支付取消
-    } else if (code==PAY_UNKNOWN){
+    } else if (code == PURCHASE_UNKNOWN){
         //支付未知
     }
 }
 
-- (IBAction)login:(id)sender {
+#pragma mark - 登录模块接口调用示例
+- (void)login {
     //登录
-    [wfnjiPlat login:self];
+    [platLogin login:self];
 }
 
-- (IBAction)logout:(id)sender {
+- (void)logout {
     //登出
-    [wfnjiPlat logout];
+    [platLogin logout];
 }
-- (IBAction)switchAccount:(id)sender {
+
+
+- (void)switchAccount {
     //切换账号
-    [wfnjiPlat WithInApplicationSwitch];
+    [platLogin WithInApplicationSwitch];
 }
 
-
-
-- (IBAction)pay:(id)sender {
+#pragma mark - 支付模块接口调用示例
+- (void)pay {
     //支付
-    wfnjiOrderModel* mPayInfo = [[wfnjiOrderModel alloc] init];
+    purchaseModel * mPayInfo = [[purchaseModel alloc] init];
     /** 商品id */
     mPayInfo.productID=@"商品id";
     /** Y 商品名 */
@@ -131,33 +159,38 @@
      */
      mPayInfo. notifyURL = @"1234567890-123456789";
     
-    [wfnjiPlat wfnjipay:mPayInfo CallBack:self];
+    [platPurchase purchase:mPayInfo CallBack:self];
     
 }
-- (IBAction)share:(id)sender {
-    [wfnjiPlat ShareInfoName:@"请传入分享信息"
+
+#pragma mark - 工具型接口调用示例
+#pragma 分享
+- (void)share {
+    [platTools ShareInfoName:@"请传入分享信息"
                  ShareInfoID:@"分享id"
                   shareUname:@"角色名称"
                  shareServer:@"角色区服"
                    shareCode:@"角色code"
      ];
 }
-- (IBAction)ad:(id)sender {
+
+#pragma 广告
+- (void)ad {
     //广告有两种接入方式，如下所示，可以任意选择其中一种激励视频的接入
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"广告" message:@"请选择广告类型" preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *ad1 = [UIAlertAction actionWithTitle:@"激励视频1" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [wfnjiPlat choseADPlatForm];
+        [platTools choseADPlatForm];
     }];
     
     UIAlertAction *ad4 = [UIAlertAction actionWithTitle:@"激励视频2" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [wfnjiPlat choseADPlatForm:0];
+        [platTools choseADPlatForm:0];
     }];
         
     UIAlertAction *ad2 = [UIAlertAction actionWithTitle:@"插页广告" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [wfnjiPlat choseADPlatForm:1];
+        [platTools choseADPlatForm:1];
     }];
     UIAlertAction *ad3 = [UIAlertAction actionWithTitle:@"横幅广告" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [wfnjiPlat choseADPlatForm:2];
+        [platTools choseADPlatForm:2];
     }];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             
@@ -170,7 +203,8 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
-- (IBAction)role:(id)sender {
+#pragma 角色信息上报
+- (void)role {
     /**
     
     获取当前游戏的角色
@@ -182,22 +216,22 @@
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"上报角色打点" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *ad1 = [UIAlertAction actionWithTitle:@"新手引导" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //新手引导
-        [wfnjiPlat wfnjiRoleName:@"a" gameLevel:@"1" serverID:@"1" roleID:@"1" status:@"2"];
+        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" roleID:@"1" status:@"2" vipLevel:@""];
     }];
         
     UIAlertAction *ad2 = [UIAlertAction actionWithTitle:@"角色等级" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //角色等级
-        [wfnjiPlat wfnjiRoleName:@"b" gameLevel:@"" serverID:@"1" roleID:@"2" status:@"3"];
+        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" roleID:@"1" status:@"3" vipLevel:@""];
     }];
     
     UIAlertAction *ad3 = [UIAlertAction actionWithTitle:@"创建角色" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //创建角色
-        [wfnjiPlat wfnjiRoleName:@"b" gameLevel:@"" serverID:@"1" roleID:@"2" status:@"1"];
+        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" roleID:@"1" status:@"1" vipLevel:@""];
     }];
     
     UIAlertAction *ad4 = [UIAlertAction actionWithTitle:@"进入游戏" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //进入游戏
-        [wfnjiPlat wfnjiRoleName:@"b" gameLevel:@"" serverID:@"1" roleID:@"2" status:@"4"];
+        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" roleID:@"1" status:@"4" vipLevel:@""];
     }];
 
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
@@ -212,12 +246,15 @@
 
 }
 
-- (IBAction)upEvent:(id)sender {
-    [wfnjiPlat LogInfo:self.eventTF.text EventDic:nil];
+#pragma 打点上报
+- (void)upEvent:(NSString *)event {
+    //自定义打点名称+参数
+    [platTools LogInfo:event EventDic:@{}];
    
 }
 
-- (IBAction)social:(id)sender {
+#pragma 打开社交平台
+- (void)social {
     //打开社交有两种调用，cp可根据自己需要调用，详见接入文档
     //方法一：
     /**
@@ -226,49 +263,65 @@
      *      info：链接地址/包名/应用ID(无参数默认给个空字符)
      *      pageId：粉丝页ID（无参数默认给个空字符）
      **/
-    [wfnjiPlat toastplatformCode:@"2" Info:@"" pageID:@""];
+    [platTools toastplatformCode:@"2" Info:@"" pageID:@""];
     
     //方法二：
     /**
     *param:
     *      type:1--应用商店, 2--三方平台
     **/
-    [wfnjiPlat showMarkViewType:1];
+    [platTools showMarkViewType:1];
 }
 
-- (IBAction)tran:(id)sender {
+#pragma 翻译
+- (void)translate {
     /**
-     *param
+     *@param
      *     text:需要翻译的文本（必传）
      *     identifier：文本标识符（可不传）
      **/
-    [wfnjiPlat translateText:self.textTF.text identifier:@"2"];
+    [platTools translateText:@"要翻译的文案" identifier:@"2"];
 }
 
-- (IBAction)vipCS:(id)sender {
-    [wfnjiPlat VIPCustomService];
+#pragma 客服中心
+- (void)service {
+    [platTools showCustomView];
 }
 
-- (IBAction)tools:(id)sender {
+#pragma vip客服
+- (void)vipCS {
+    //vip客服
+    [platTools VIPCustomService];
+}
+
+#pragma 常见问题
+- (void)FAQ {
+    [platTools showFAQView];
+}
+
+
+#pragma 其他工具型接口
+- (void)tools {
     
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"工具型接口" message:@"请选择需求自行接入相关接口" preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *language = [UIAlertAction actionWithTitle:@"获取当前手机系统语言和地区" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-       NSString *str = [wfnjiPlat returnLanguageCode];
+       NSString *str = [platTools returnLanguageCode];
         //此接口是弹出相应文字,将获取到的手机系统语言和地区弹出做示例
-        [wfnjiPlat toastInfo:str];
+        [platTools toastInfo:str];
         
     }];
         
     UIAlertAction *version = [UIAlertAction actionWithTitle:@"获取SDK版本" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        NSString *str = [wfnjiPlat versions];
+        NSString *str = [platTools versions];
         //此接口是弹出相应文字,将SDK版本弹出做示例
-        [wfnjiPlat toastInfo:str];
+        [platTools toastInfo:str];
     }];
     UIAlertAction *zome = [UIAlertAction actionWithTitle:@"获取手机所在时区" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        NSString *str = [wfnjiPlat returnTimeZome];
+        NSString *str = [platTools returnTimeZome];
         //此接口是弹出相应文字,将获取手机所在时区弹出做示例
-        [wfnjiPlat toastInfo:str];
+        [platTools toastInfo:str];
     }];
+    
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             
     }];
@@ -277,6 +330,97 @@
     [alert addAction:zome];
     [alert addAction:cancel];
     [self presentViewController:alert animated:YES completion:nil];
+}
+
+#pragma mark - tableview
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellid"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellid"];
+    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.textLabel.text = self.dataArray[indexPath.row];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        //登录
+        [self login];
+    } else if (indexPath.row == 1) {
+        //登出
+        [self logout];
+    } else if (indexPath.row == 2) {
+        //切换账号
+        [self switchAccount];
+    } else if (indexPath.row == 3) {
+        //支付
+        [self pay];
+    } else if (indexPath.row == 4) {
+        //广告
+        [self ad];
+    } else if (indexPath.row == 5) {
+        //社交
+        [self social];
+    } else if (indexPath.row == 6) {
+        //分享
+        [self share];
+    } else if (indexPath.row == 7) {
+        //客服中心
+        [self service];
+    } else if (indexPath.row == 8) {
+        //常见问题
+        [self FAQ];
+    } else if (indexPath.row == 9) {
+        //vip客服
+        [self vipCS];
+    } else if (indexPath.row == 10) {
+        //角色信息上报
+        [self role];
+    } else if (indexPath.row == 11) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"自定义打点" message:@"请输入点名" preferredStyle:UIAlertControllerStyleAlert];
+        __block UITextField *input;
+        [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+            input = textField;
+        }];
+        
+        UIAlertAction *up = [UIAlertAction actionWithTitle:@"上报" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            //自定义打点上报
+            [self upEvent:input.text];
+        }];
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                
+        }];
+        [alert addAction:up];
+        [alert addAction:cancel];
+        [self presentViewController:alert animated:YES completion:nil];
+    } else if (indexPath.row == 12) {
+        //打开链接
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"打开webview" message:@"请输入链接" preferredStyle:UIAlertControllerStyleAlert];
+        __block UITextField *input;
+        [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+            input = textField;
+        }];
+        
+        UIAlertAction *open = [UIAlertAction actionWithTitle:@"打开" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            //打开webview接口
+            [platTools showViewWithStr:input.text];
+        }];
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                
+        }];
+        [alert addAction:open];
+        [alert addAction:cancel];
+        [self presentViewController:alert animated:YES completion:nil];
+    } else if (indexPath.row == 13) {
+        //其他工具类方法
+        [self tools];
+    }
 }
 
 @end
