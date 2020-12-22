@@ -234,7 +234,7 @@ SDK使用通知来接收部分接口的结果，涉及的接口包括：
 
 **定义**
 
-```obj
+```objc
 @"SDKCenterNotifition"
 ```
 
@@ -319,7 +319,7 @@ SDK使用通知来接收部分接口的结果，涉及的接口包括：
 
 ###### 代理
 
-```objectivec
+```objc
 LoginCallBack
 ```
 
@@ -363,7 +363,7 @@ LoginCallBack
 
 ## 回调
 
-```objectivec
+```objc
 -(void)loginOnFinish:(loginStatus)code   Data:(NSDictionary*)Data
 {
     NSLog(@"回调状态值：%ld",(long)code);
@@ -404,6 +404,9 @@ LoginCallBack
 ```
 
 **响应** 使用通知来接收回调，请参考[通知](#%E5%AE%9A%E4%B9%89%E9%80%9A%E7%9F%A5)
+=======
+[wfnjiPlat WithInApplicationSwitch];
+>>>>>>> f57115ae41c36b9a20ea38bea973ac0897d23e4e
 
 | 状态值 | 含义   |
 | --- | ---- |
@@ -444,7 +447,7 @@ LoginCallBack
 
 ###### 代理
 
-```objectivec
+```objc
 PurchaseCallBack
 ```
 
@@ -497,7 +500,7 @@ platPurchase purchase:mPayInfo CallBack:self];
 
 ###### 回调
 
-```objectivec
+```objc
 - (void)purchaseOnFinish:(purchaseStatus)code Data:(NSDictionary *)Data{
  if (code ==PURCHASE_SUCCESS){
  //支付成功
@@ -808,6 +811,35 @@ platPurchase purchase:mPayInfo CallBack:self];
 
 ```
 
+**响应**
+使用通知来接收回调，请参考[通知](#定义通知)
+
+- 简介：用于通知贵方登录和支付的状态
+
+```objc
+  typedef NS_ENUM(NSInteger, wfnjiStatus){
+      /** 登陆成功 */
+      LOGIN_SUCCESS = 0,
+      /** 切换账号*/
+      LOGIN_SWITCH = 4,
+      /** 退出成功*/
+      LOGOUT_SUCCESS = 5,
+      /** 账号被封*/
+      LOGIN_UNUSE = 6,
+
+      /** 支付成功 */
+      PAY_SUCCESS = 10,
+      /** 支付失败*/
+      PAY_FAILED = 11,
+      /** 支付取消 */
+      PAY_CANCEL = 12,
+      /** 未知支付状态*/
+      PAY_UNKNOWN = 13
+  };
+>>>>>>> f57115ae41c36b9a20ea38bea973ac0897d23e4e
+
+```
+
 # 推送
 
 推送是服务端用特定的条件（比如：给特定用户）发送消息，可以在用户关闭应用或者在开启时收到特定的消息（比如：最新活动等）。用户点击即可打开相关内容页。
@@ -903,7 +935,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 - 此接口用来获取当前SDK的版本，请按需接入
 
-```objective-c
+```objc
 +(NSString*)versions;
 ```
 
@@ -916,7 +948,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 ## 打开社交平台
 
-```objectivec
+```objc
 方式一：
 + (void) toastplatformCode:(NSString *)code Info:(NSString *)info  pageID:(NSString *)pageid;
 ```
@@ -931,7 +963,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 **示例**
 
-```objectivec
+```objc
 [platTools toastplatformCode:@"2" Info:@"https://123" pageID:[info objectForKey:@"12345678"]]
 ```
 
@@ -956,13 +988,13 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 当游戏需要获取当前用户手机时间所在时区时，调用此方法
 
-```objectivec
+```objc
 + (NSString *)returnTimeZome
 ```
 
 **示例**
 
-```objectivec
+```objc
 [platTools returnTimeZome ];
 ```
 
@@ -972,7 +1004,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 第一个参数text是传入需要的翻译的文本，identifier是cp传来的透传字段。
 
-```objectivec
+```objc
 + (void)translateText:(NSString *)text identifier:(NSString *)identifier;
 ```
 
@@ -985,7 +1017,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 **示例**
 
-```objectivec
+```objc
 [platTools translateText:@"你好" identifier:@"2"];
 ```
 
