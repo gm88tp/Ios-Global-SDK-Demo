@@ -185,45 +185,6 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 **注：1、issueVersion—发布版本：iOS SDK 1.3版本及其以上版本才有，必须设值，每次出包均需像运营相关人员确认其值；2、version：iOS SDK 1.3版本及其以上版本可以直接设置成1.0；其余版本此值请于相关技术人员确认**
 
 
-## 定义代理
-
-怪猫SDK使用统一的代理方法来获得各接口的响应，涉及的接口包括：
-
-* 登陆
-* 登出
-* 支付
-
-> 注意：登录（包含登出，切换账号等）和支付的代理方法均为“onFinish:Data:”，回调的code不同
-
-**定义**
-
-```objc
--(void)onFinish:(wfnjiStatus)code   Data:(NSDictionary*)Data
-{
-    NSLog(@"回调状态值：%ld",(long)code);
-    NSLog(@"回调：%@",Data);
-
-    if(code==LOGIN_SUCCESS){
-      //登陆成功 do something
-    }else if(code== LOGOUT_SUCCESS){
-      //登出 do something
-    }else if(code== LOGIN_SWITCH){
-      //切换账号 do something
-    } else if (code ==PAY_SUCCESS){
-      //支付成功 do something
-    } else if (code== PAY_FAILED){
-      //支付失败 do something
-    }else if (code==PAY_CANCEL){
-      //支付取消 do something
-    }else if (code==PAY_UNKNOWN){
-      //支付未知 do something 
-    } else if (code == LOGIN_UNUSE) {
-      //账号被封 do something
-    }
-}
-```
-
-
 ## 定义通知
 
 SDK使用通知来接收部分接口的结果，涉及的接口包括：
@@ -231,10 +192,13 @@ SDK使用通知来接收部分接口的结果，涉及的接口包括：
 - 帐号绑定
 - 分享
 - 变现广告
+- 获取商品多语言列表
+- 翻译
+- vip客服
 
 **定义**
 
-```objc
+```obj
 @"SDKCenterNotifition"
 ```
 
@@ -319,7 +283,7 @@ SDK使用通知来接收部分接口的结果，涉及的接口包括：
 
 ###### 代理
 
-```objc
+```objectivec
 LoginCallBack
 ```
 
@@ -363,7 +327,7 @@ LoginCallBack
 
 ## 回调
 
-```objc
+```objectivec
 -(void)loginOnFinish:(loginStatus)code   Data:(NSDictionary*)Data
 {
     NSLog(@"回调状态值：%ld",(long)code);
@@ -403,9 +367,7 @@ LoginCallBack
 [platLogin userInfoBindView];
 ```
 
-**响应** 
-使用通知来接收回调，请参考[通知](#%E5%AE%9A%E4%B9%89%E9%80%9A%E7%9F%A5)
-
+**响应** 使用通知来接收回调，请参考[通知](#%E5%AE%9A%E4%B9%89%E9%80%9A%E7%9F%A5)
 
 | 状态值 | 含义   |
 | --- | ---- |
@@ -446,7 +408,7 @@ LoginCallBack
 
 ###### 代理
 
-```objc
+```objectivec
 PurchaseCallBack
 ```
 
@@ -499,7 +461,7 @@ platPurchase purchase:mPayInfo CallBack:self];
 
 ###### 回调
 
-```objc
+```objectivec
 - (void)purchaseOnFinish:(purchaseStatus)code Data:(NSDictionary *)Data{
  if (code ==PURCHASE_SUCCESS){
  //支付成功
@@ -810,35 +772,6 @@ platPurchase purchase:mPayInfo CallBack:self];
 
 ```
 
-**响应**
-使用通知来接收回调，请参考[通知](#定义通知)
-
-- 简介：用于通知贵方登录和支付的状态
-
-```objc
-  typedef NS_ENUM(NSInteger, wfnjiStatus){
-      /** 登陆成功 */
-      LOGIN_SUCCESS = 0,
-      /** 切换账号*/
-      LOGIN_SWITCH = 4,
-      /** 退出成功*/
-      LOGOUT_SUCCESS = 5,
-      /** 账号被封*/
-      LOGIN_UNUSE = 6,
-
-      /** 支付成功 */
-      PAY_SUCCESS = 10,
-      /** 支付失败*/
-      PAY_FAILED = 11,
-      /** 支付取消 */
-      PAY_CANCEL = 12,
-      /** 未知支付状态*/
-      PAY_UNKNOWN = 13
-  };
->>>>>>> f57115ae41c36b9a20ea38bea973ac0897d23e4e
-
-```
-
 # 推送
 
 推送是服务端用特定的条件（比如：给特定用户）发送消息，可以在用户关闭应用或者在开启时收到特定的消息（比如：最新活动等）。用户点击即可打开相关内容页。
@@ -934,7 +867,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 - 此接口用来获取当前SDK的版本，请按需接入
 
-```objc
+```objective-c
 +(NSString*)versions;
 ```
 
@@ -947,7 +880,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 ## 打开社交平台
 
-```objc
+```objectivec
 方式一：
 + (void) toastplatformCode:(NSString *)code Info:(NSString *)info  pageID:(NSString *)pageid;
 ```
@@ -962,7 +895,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 **示例**
 
-```objc
+```objectivec
 [platTools toastplatformCode:@"2" Info:@"https://123" pageID:[info objectForKey:@"12345678"]]
 ```
 
@@ -987,13 +920,13 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 当游戏需要获取当前用户手机时间所在时区时，调用此方法
 
-```objc
+```objectivec
 + (NSString *)returnTimeZome
 ```
 
 **示例**
 
-```objc
+```objectivec
 [platTools returnTimeZome ];
 ```
 
@@ -1003,7 +936,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 第一个参数text是传入需要的翻译的文本，identifier是cp传来的透传字段。
 
-```objc
+```objectivec
 + (void)translateText:(NSString *)text identifier:(NSString *)identifier;
 ```
 
@@ -1016,7 +949,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 **示例**
 
-```objc
+```objectivec
 [platTools translateText:@"你好" identifier:@"2"];
 ```
 
