@@ -403,10 +403,9 @@ LoginCallBack
 [platLogin userInfoBindView];
 ```
 
-**响应** 使用通知来接收回调，请参考[通知](#%E5%AE%9A%E4%B9%89%E9%80%9A%E7%9F%A5)
-=======
-[wfnjiPlat WithInApplicationSwitch];
->>>>>>> f57115ae41c36b9a20ea38bea973ac0897d23e4e
+**响应** 
+使用通知来接收回调，请参考[通知](#%E5%AE%9A%E4%B9%89%E9%80%9A%E7%9F%A5)
+
 
 | 状态值 | 含义   |
 | --- | ---- |
