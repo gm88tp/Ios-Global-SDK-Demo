@@ -107,3 +107,65 @@
 "vip_tips" = "Dear VIP User, here are your VIP Customer Service, please click below to communicate";
 "copy_tip" = "Copied";
 "fbui"="Please install the Facebook app first for further action.";
+
+//H-1.4
+"h_choose_account" = "Please choose an account";
+"h_add_tip" = "New A/C";
+"h_item_tip" = "Log in to this account";
+"h_google" = "Sign in with Google";
+"h_facebook" = "Sign in with Facebook";
+"h_twitter" = "Sign in with Twitter";
+"h_line" = "Sign in with Line";
+"h_email" = "Sign in with Email";
+"h_apple" = "Sign in with Apple";
+"h_email_tip" = "Please make sure your E-mail is available.";
+"h_last_login" = "Last login: ";
+"h_role" = "character（s）";
+
+//guest
+"h_guest_tip" = "Guest accounts are risky, it is recommended that you register an account.";
+"h_guest_content" = "\tYou are using a guest login, which will lose game data when you uninstall or reinstall the game.";
+"h_guest_cancel"= "Register";
+"h_guest_sure" = "Continue";
+
+//email
+"h_email_code" = "Enter Verification Code";
+"h_email_new_tip_code"= "This is the first time you login account, we have sent a verification code to your E-mail, please check it and fill in the code accordingly.";
+"h_code_no_tip" = "Didn't receive the verification code? ";
+"h_code_again" = "Send again.";
+"h_new_pass_tip" = "Assign a new password to your account";
+"h_pass_tip1" = "Enter your password to complete the login. If you forget your password,";
+"h_email_old_tip" = "For your account safety, please verify your email first.";
+"h_code_tip" = "We have sent a verification email to your email address, please fill in the verification code in the email.";
+"h_reset_pass" = "Password confirm";
+"h_sure_change" = "Confirm of changes";
+"h_change_finish" = "Your password change is complete";
+"h_enter_game" = "Return to the game";
+
+
+"h_mark_tip" = "After playing the game for so long, do you have anything to say?";
+"h_center_tip" = "If you have any questions, you can get help in the following ways.";
+"h_center_faq" = "FAQ";
+"h_center_fan" = "Visit Social Meida";
+"h_center_email" = "Click to send E-mail";
+"h_center_fix" = "Fix";
+"h_fix_content" = "If you fail to login or have payment issue and other issues, you can click \"Fix\"  and try to restart the game.";
+"h_fix" = "Fix";
+"h_fix_sucess" = "Issue fixed";
+"h_vip_tip" = "Dear VIP user, we have selected a dedicated customer service for you.";
+"h_faq_good" = "Helpful";
+"h_faq_bad" = "Useless";
+"h_feed" = "Thanks for your feedback.";
+"h_go_feed" = "Sorry for not helping you,";
+"h_feed_fan" = " Suggest to leave a message on the Facebook page.";
+"h_chose_social" = "Share";
+"h_real_name_tip" = "按照通知号24/2014/TT-BTTTT，请您填写这些个人信息";
+"h_vi_change" = "更换登录帐号";
+"h_vi_info" = "继续填写信息";
+
+"h_vip_fb" = "Facebook VIP SERVICE";
+"h_vip_twitter" = "Twitter VIP SERVICE";
+"h_vip_line" = "Line VIP SERVICE";
+"h_vip_cafe" = "Cafe VIP SERVICE";
+"h_vip_zalo" = "Zalo VIP SERVICE";
+"h_vip_discord" = "Discord VIP SERVICE";

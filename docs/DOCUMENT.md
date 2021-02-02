@@ -23,6 +23,77 @@
 
 方式二：直接将上述文件拖入Xcode工程目录结构中，在弹出的界面中勾选**Copy items into destination group's folder(if needed)**，并确保**Add To Targets勾选相应target**。
 
+## 设置应用方向
+
+SDK V1.4开始，同时支持横竖版，并且两版流程不一致，因此在出包之前必须设置应用方向。
+
+### 1、横版游戏
+
+方法一：
+
+1、**【General】—>【Deployment Info】—>【Device Orientation】**，勾选Landscape Left和Landscape Right。
+
+2、Info.plist中   
+
+```css
+  <key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+```
+
+ 方式二：
+
+在AppDelegate中添加
+
+```objectivec
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+   return  UIInterfaceOrientationMaskLandscape;
+}
+```
+
+  
+
+### 2、竖版游戏
+
+方法一：
+
+1、**【General】—>【Deployment Info】—>【Device Orientation】**，勾选Portrait。
+
+2、Info.plist中   
+
+```css
+  <key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+	</array>
+```
+
+
+
+方式二：
+
+在AppDelegate中添加
+
+```objectivec
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    return  UIInterfaceOrientationMaskPortrait|UIInterfaceOrientationMaskPortraitUpsideDown;
+}
+```
+
+
+
 ## 添加工程依赖库
 
 当前版本SDK不需要额外依赖库。
@@ -127,7 +198,7 @@
 
 ## 引入头文件
 
-```objc
+```objectivec
 #import <loginSDK/platInit.h>
 ```
 
@@ -137,7 +208,7 @@
 
 > 此方法默认读取bundle中的参数，如使用此初始化方法，请确认给到的SDK的bundle中的infoset.plist所有参数是否与提供的参数表一致。
 
-```objc
+```objectivec
 + (void) initSDKapplication:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
                     Applede:(id) app;
@@ -153,7 +224,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 **示例**
 
-```objc
+```objectivec
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
    [platInit initSDKapplication:application didFinishLaunchingWithOptions:launchOptions Applede:self];
     return YES;
@@ -167,22 +238,23 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 - 如对配置参数的key有任何疑问，请联系相关技术人员
 - 详见下表，未出现在表中的参数key，则一般不需要修改，如有疑问，请联系相关技术人员
 
-| 参数名              | 参数类型   | 描述                                      | 示例                                                                       |
-| ---------------- | ------ | --------------------------------------- | ------------------------------------------------------------------------ |
-| gameid           | String | 游戏id                                    | 1634                                                                     |
-| channel          | String | 渠道名称，默认GM，一般不需要修改                       | GM                                                                       |
-| GGkClientID      | String | google客户端id                             | 726483388833-nejr29g354f0p3sieg18gmehkhljuerv.apps.googleusercontent.com |
-| appsFlyerDevKey  | String | appsflyer的key                           | g7ZP9TqQ4S8AF9zeQD9Koe                                                   |
-| appleAppID       | String | 苹果应用id                                  | 1528141305                                                               |
-| Promote          | String | 渠道id，默认17，代表iOS，无需修改                    | 17                                                                       |
-| GoogleADID       | String | admob广告id                               | ca-app-pub-7496069579613989~9003527017                                   |
-| IronsourceAppKey | String | ironsource的key                          | ce0a7e2d                                                                 |
-| issueVersion     | String | 发布版本                                    | 1634011                                                                  |
-| consumerSecret   | String | twitter的Secret                          | lGoFe4yYVug52LcNiAptoABgb14k5seN9XMJq6L0ggSzUmIevP                       |
-| ConsumerKey      | String | twitter的key（如果无需twitter相关功能，这两个参数可以不修改） | SALb45SZfATPS8ILSYAvnB4ic                                                |
-| version          | String | 相对应配置版本                                 | 3.0                                                                      |
+| 参数名           | 参数类型 | 描述                                                         | 示例                                                         |
+| ---------------- | -------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| gameid           | String   | 游戏id                                                       | 1634                                                         |
+| channel          | String   | 渠道名称，默认GM，一般不需要修改                             | GM                                                           |
+| GGkClientID      | String   | google客户端id                                               | 726483388833-nejr29g354f0p3sieg18gmehkhljuerv.apps.googleusercontent.com |
+| appsFlyerDevKey  | String   | appsflyer的key                                               | g7ZP9TqQ4S8AF9zeQD9Koe                                       |
+| appleAppID       | String   | 苹果应用id                                                   | 1528141305                                                   |
+| Promote          | String   | 渠道id，默认17，代表iOS，无需修改                            | 17                                                           |
+| GoogleADID       | String   | admob广告id                                                  | ca-app-pub-7496069579613989~9003527017                       |
+| IronsourceAppKey | String   | ironsource的key                                              | ce0a7e2d                                                     |
+| issueVersion     | String   | 发布版本                                                     | 1634011                                                      |
+| consumerSecret   | String   | twitter的Secret                                              | lGoFe4yYVug52LcNiAptoABgb14k5seN9XMJq6L0ggSzUmIevP           |
+| ConsumerKey      | String   | twitter的key（如果无需twitter相关功能，这两个参数可以不修改） | SALb45SZfATPS8ILSYAvnB4ic                                    |
+| version          | String   | 相对应配置版本                                               | 3.0                                                          |
+| iconControl      | String   | 登录页面是否显示app的icon，1表示使用应用icon，其他表示使用默认图片。 | 1                                                            |
 
-**注：1、issueVersion—发布版本：iOS SDK 1.3版本及其以上版本才有，必须设值，每次出包均需像运营相关人员确认其值；2、version：iOS SDK 1.3版本及其以上版本可以直接设置成1.0；其余版本此值请于相关技术人员确认**
+**注：1、issueVersion—发布版本：iOS SDK 1.3版本及其以上版本才有，必须设值，每次出包均需像运营相关人员确认其值；2、version：iOS SDK 1.3版本及其以上版本可以直接设置成1.0；其余版本此值请于相关技术人员确认；3、iconControl：iOS SDK 1.4及其以上版本才有，用于控制登录页面的logo图，请与相关人员联系确认**
 
 
 ## 定义通知
@@ -225,7 +297,7 @@ SDK使用通知来接收部分接口的结果，涉及的接口包括：
 
 **示例**
 
-```objc
+```objectivec
 //在viewDidLoad中添加通知
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifitionCenter:)  name:@"SDKCenterNotifition" object:nil];
 
@@ -275,7 +347,7 @@ SDK使用通知来接收部分接口的结果，涉及的接口包括：
 
 ## 引入头文件
 
-```objc
+```objectivec
 #import <loginSDK/platLogin>
 ```
 
@@ -289,25 +361,25 @@ LoginCallBack
 
 ###### **接口**
 
-```objc
+```objectivec
 + (void) login:(id<LoginCallBack>)mLoginCallBack;
 ```
 
 **示例**
 
-```objc
+```objectivec
 [platLogin login:self];
 ```
 
 ## 登出
 
-```objc
+```objectivec
 + (void)logOut;
 ```
 
 **示例**
 
-```objc
+```objectivec
 [platLogin logOut];
 ```
 
@@ -315,13 +387,13 @@ LoginCallBack
 
 此接口用于游戏中用户可以切换账号的入口，使得用户可以在游戏中切换登录的账号。
 
-```objc
+```objectivec
 + (void) WithInApplicationSwitch
 ```
 
 **示例**
 
-```objc
+```objectivec
 [platLogin WithInApplicationSwitch];
 ```
 
@@ -357,13 +429,13 @@ LoginCallBack
   
   ##### 接口
 
-```objc
+```objectivec
 + (void)userInfoBindView;
 ```
 
 **示例**
 
-```objc
+```objectivec
 [platLogin userInfoBindView];
 ```
 
@@ -379,13 +451,13 @@ LoginCallBack
 
 - 此接口用于查询账号是否已绑定，（绑定邮箱，三方之类，只要绑定任何一项即返回绑定状态）
   
-```objc
+```objectivec
 + (void) isCanBind;
 ```
 
 **示例**
 
-```objc
+```objectivec
 [platLogin isCanBind];
 ```
 
@@ -400,7 +472,7 @@ LoginCallBack
 
 ## 引入头文件
 
-```objc
+```objectivec
 #import <loginSDK/platPurchase.h>
 ```
 
@@ -416,7 +488,7 @@ PurchaseCallBack
 
 **定义**
 
-```objc
+```objectivec
 + (void) purchase:(purchaseModel *)payInfo CallBack:(id<PurchaseCallBack>) callBack;
 ```
 
@@ -440,7 +512,7 @@ PurchaseCallBack
 
 **示例代码**
 
-```objc
+```objectivec
 purchaseModel* mPayInfo = [[purchaseModel alloc] init];
 mPayInfo.productID=@"xxxxx";
 mPayInfo.productName=@"商品名称";
@@ -477,7 +549,7 @@ platPurchase purchase:mPayInfo CallBack:self];
 
 ## 引入头文件
 
-```objc
+```objectivec
 #import <loginSDK/platTools.h>
 ```
 
@@ -487,7 +559,7 @@ platPurchase purchase:mPayInfo CallBack:self];
 
 **接口**
 
-```objc
+```objectivec
 + (void)setPurchaseInfo;
 ```
 
@@ -506,7 +578,7 @@ platPurchase purchase:mPayInfo CallBack:self];
 
 - 上传和角色相关的打点，状态值：1、创建角色，2、完成新手引导，3、等级升级
 
-```objc
+```objectivec
 /**
   * 当前游戏的角色打点
   * @param name     角色名字
@@ -538,7 +610,7 @@ platPurchase purchase:mPayInfo CallBack:self];
 **示例**
 此处示例为角色升级
 
-```objc
+```objectivec
 [platTools platRoleName:@"角色名字" gameLevel:@"角色等级" serverID:@"区服ID" roleID:@"角色ID" status:@"3" vipLevel:@""];
 ```
 
@@ -549,7 +621,7 @@ platPurchase purchase:mPayInfo CallBack:self];
 - 此接口用于接入分享
 - 分享的结果在通知中，通知名称为@"SDKCenterNotifition"，详见**SDK通知**
 
-```objc
+```objectivec
 /**
  分享使用的方法
 
@@ -571,7 +643,7 @@ platPurchase purchase:mPayInfo CallBack:self];
 
 > 相关参数如有不清楚，请与相关人员联系
 
-```objc
+```objectivec
 [platTools ShareInfoName:@"分享" ShareInfoID:@"1" shareUname:@"w" shareServer:@"w" shareCode:@"w"];
 ```
 
@@ -584,19 +656,77 @@ platPurchase purchase:mPayInfo CallBack:self];
 | 2   | 分享失败 |
 | 3   | 分享成功 |
 
+
+
+## 分享方式
+
+此接口用于接入分享
+
+分享的结果在通知中，通知名称为@"SDKCenterNotifition"，详见**SDK通知**
+
+```objectivec
+/**
+ 分享使用的方法
+ 
+ @param text 分享文本
+ @param image 图片，可以传空，传一张
+ @param link 分享链接
+ @param type 分享类型：1 引文分享（链接），2 图片分享,3 使用SDK后台配置分享
+ @param info SDK后台配置分享，需要传入参数格式如下：
+            @{@"shareName":@"分享名称",
+                @"shareID":@"分享ID",
+             @"shareUName":@"角色名",
+            @"shareServer":@"角色区服",
+              @"shareCode":@"角色code"
+ 
+             }
+ */
++ (void)shareInfo:(NSString *)text image:(UIImage *)image link:(NSString *)link type:(NSString *)type otherInfo:(NSDictionary *)info;
+
+```
+
+参数
+
+| 参数名 | 类型         | 说明                                                         |
+| ------ | ------------ | ------------------------------------------------------------ |
+| type   | NSString     | 分享类型：1、 引文分享（链接分享），2、图片分享，3、使用SDK后台配置的分享 |
+| text   | NSString     | 分享文本（没有可以传空）                                     |
+| image  | UIImage      | 图片（没有可以传空，分享类型为2、图片分享时，请传递图片）    |
+| link   | NSString     | 分享链接                                                     |
+| info   | NSDictionary | 分享类型为3时，必须设置相关内容SDK后台配置分享，需要传入参数格式如下：<br/>            @{@"shareName":@"分享名称",<br/>                       @"shareID":@"分享ID",<br/>             @"shareUName":@"角色名",<br/>               @"shareServer":@"角色区服",<br/>                 @"shareCode":@"角色code" }<br/>其余类型时可以传空。 |
+
+**示例**
+
+> 相关参数如有不清楚，请与相关人员联系
+
+```objectivec
+[platTools shareInfo:@"分享测试" image:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"wait" ofType:@"png"]] link:@"https://www.baidu.com" type:@"2" otherInfo:@{}];
+```
+
+**响应**
+
+使用通知来接收回调，请参考[通知](#定义通知)
+
+| 状态值 | 含义     |
+| ------ | -------- |
+| 2      | 分享失败 |
+| 3      | 分享成功 |
+
+
+
 # 变现广告
 
 ## 拉起激励视频接口
 
 此接口是用于接入广告的，目前只用于激励视频。
 
-```objc
+```objectivec
 + (void)choseADPlatForm;
 ```
 
 **示例**
 
-```objc
+```objectivec
 [platTools choseADPlatForm];
 ```
 
@@ -614,13 +744,13 @@ platPurchase purchase:mPayInfo CallBack:self];
 
 此接口用于设置广告剩余次数，用于减少广告预加载。不设置，默认加载。
 
-```objc
+```objectivec
 + (void)ADCounts:(NSString *)str;
 ```
 
 **示例**
 
-```objc
+```objectivec
 [platTools ADCounts:@"3"];
 ```
 
@@ -628,7 +758,7 @@ platPurchase purchase:mPayInfo CallBack:self];
 
 此接口适用于接入广告的。
 
-```objc
+```objectivec
 + (void)choseADPlatForm:(NSInteger)type;
 ```
 
@@ -644,7 +774,7 @@ platPurchase purchase:mPayInfo CallBack:self];
 
 **示例**
 
-```objc
+```objectivec
 [platTools choseADPlatForm:0];
 ```
 
@@ -664,13 +794,13 @@ platPurchase purchase:mPayInfo CallBack:self];
 
 此接口用于显示客服中心
 
-```objc
+```objectivec
 + (void)showCustomView;
 ```
 
 **示例**
 
-```objc
+```objectivec
 [platTools showCustomView];
 ```
 
@@ -685,13 +815,13 @@ platPurchase purchase:mPayInfo CallBack:self];
 - 此接口用于查询是否可显示VIP专属客服（只有符合相关条件的vip，才会返回可以显示）
 - 结果在通知中，通知名称为@"SDKCenterNotifition"，详见**SDK通知**
 
-```objc
+```objectivec
 + (void)isCanVip;
 ```
 
 **示例**
 
-```objc
+```objectivec
 [platTools isCanVip];
 ```
 
@@ -709,13 +839,13 @@ platPurchase purchase:mPayInfo CallBack:self];
 - 此接口用于显示VIP专属客服
 - 结果在通知中，通知名称为@"SDKCenterNotifition"，详见**SDK通知**
 
-```objc
+```objectivec
 + (void)VIPCustomService;
 ```
 
 **示例**
 
-```objc
+```objectivec
 [platTools VIPCustomService];
 ```
 
@@ -733,13 +863,13 @@ platPurchase purchase:mPayInfo CallBack:self];
 
 此接口用于打开常见问题页面。
 
-```objc
+```objectivec
 + (void)showFAQView;
 ```
 
 **示例**
 
-```objc
+```objectivec
 [platTools showFAQView];
 ```
 
@@ -753,7 +883,7 @@ platPurchase purchase:mPayInfo CallBack:self];
 
 - 除特定打点外，所有自定义打点的事件都通过此接口传递。
 
-```objc
+```objectivec
 + (void)LogInfo:(NSString *)eventName EventDic:(NSDictionary *)info;
 ```
 
@@ -766,7 +896,7 @@ platPurchase purchase:mPayInfo CallBack:self];
 
 **示例**
 
-```objc
+```objectivec
 //如无其他额外信息，EventDic请传nil(空)
 [platTools LogInfo:@"achieve xxx"  EventDic:nil];
 
@@ -782,7 +912,7 @@ platPurchase purchase:mPayInfo CallBack:self];
 
 ## 发送推送接口
 
-```objc
+```objectivec
 // 推送相关，注册设备信息
 + (void)application:(UIApplication *)application
 didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
@@ -794,7 +924,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 - 原生项目的AppDelegate（或者是引擎生成类似方法）如下方法中调用SDK的推送相关的接口
 
-```objc
+```objectivec
 //注册远程通知的设备token
 -(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     [platInit application:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
@@ -812,7 +942,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 ## 示例代码
 
-```objc
+```objectivec
 //这些方法需在AppDelegate（引擎生成相对应的类）中实现，这些方法必须接入，不接入会影响数据打点，推送以及Facebook等相关功能
 //记录应用进入后台
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -846,7 +976,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 ## 获取当前手机系统语言和地区
 
-```objc
+```objectivec
 + (NSString *)returnLanguageCode;
 ```
 
@@ -867,13 +997,13 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 - 此接口用来获取当前SDK的版本，请按需接入
 
-```objective-c
+```objectivec
 +(NSString*)versions;
 ```
 
 **示例**
 
-```objc
+```objectivec
 //返回版本号，是string类型
 [platTools versions];
 ```
@@ -899,7 +1029,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 [platTools toastplatformCode:@"2" Info:@"https://123" pageID:[info objectForKey:@"12345678"]]
 ```
 
-```objc
+```objectivec
 方式二：
 + (void)showMarkViewType:(NSInteger)type;
 ```
@@ -912,7 +1042,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 **示例**
 
-```
+```objectivec
 [platTools showMarkViewType:2];
 ```
 
@@ -961,7 +1091,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 当接入需要开启日志时，请调用此方法
 
-```objc
+```objectivec
 + (void)openLog:(BOOL)isOn;
 ```
 
@@ -973,7 +1103,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 **示例**
 
-```objc
+```objectivec
 [platTools openLog:YES];
 ```
 
@@ -985,7 +1115,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 当需要在游戏内打点某个链接，请调用此方法
 
-```objc
+```objectivec
 + (void)showViewWithStr:(NSString *)str;
 ```
 
@@ -997,10 +1127,11 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 **示例**
 
-```objc
+```objectivec
 [platTools showViewWithStr:@"链接"];
 ```
 
 **响应**
 
 在游戏中弹出链接指向web页面。
+

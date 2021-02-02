@@ -169,12 +169,34 @@
 #pragma mark - 工具型接口调用示例
 #pragma 分享
 - (void)share {
+    //分享有两种接入方式，如下所示，可以按需接入
+    //分享方法1：此方法cp接入ShareInfoName和ShareInfoID必须和我们后台配置相符合
     [platTools ShareInfoName:@"请传入分享信息"
                  ShareInfoID:@"分享id"
                   shareUname:@"角色名称"
                  shareServer:@"角色区服"
                    shareCode:@"角色code"
      ];
+    
+    //分享方法2：
+    /**
+     分享使用的方法
+     
+     @param text 分享文本
+     @param image 图片列表，可以传空，传一张
+     @param link 分享链接
+     @param type 分享类型：1 引文分享（链接），2 图片分享,3 使用SDK后台配置分享
+     @param info SDK后台配置分享，需要传入参数格式如下：
+                @{@"shareName":@"分享名称",
+                    @"shareID":@"分享ID",
+                 @"shareUName":@"角色名",
+                @"shareServer":@"角色区服",
+                  @"shareCode":@"角色code"
+     
+                 }
+     */
+    //示例：图片分享
+//    [platTools shareInfo:@"请输入需要分享文案" image:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.biaobaiju.com%2Fuploads%2F20180210%2F23%2F1518276333-RXexUJcntC.jpg&refer=http%3A%2F%2Fimage.biaobaiju.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1614306450&t=e1c9d6c5223192f3f335c377048882bf"]] ] link:@"此处示例图片分享，链接可以传空" type:@"2" otherInfo:@{}];
 }
 
 #pragma 广告
@@ -203,6 +225,8 @@
     [alert addAction:ad2];
     [alert addAction:ad3];
     [alert addAction:cancel];
+    alert.popoverPresentationController.sourceView = self.mTable;
+    alert.popoverPresentationController.sourceRect = CGRectMake(10, 10, 100, 100);
     [self presentViewController:alert animated:YES completion:nil];
 }
 
@@ -214,7 +238,7 @@
     角色名字：name
     游戏等级：level
     区服:   serverID
-    状态值默认选择<3>:status 1:创建角色 2:完成新手引导 3:等级升级 4：进入游戏
+    状态值默认选择<3>:status 1:创建角色 2:完成新手引导 3:等级升级
     */
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"上报角色打点" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *ad1 = [UIAlertAction actionWithTitle:@"新手引导" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -232,10 +256,6 @@
         [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" roleID:@"1" status:@"1" vipLevel:@""];
     }];
     
-    UIAlertAction *ad4 = [UIAlertAction actionWithTitle:@"进入游戏" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        //进入游戏
-        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" roleID:@"1" status:@"4" vipLevel:@""];
-    }];
 
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             
@@ -243,8 +263,9 @@
     [alert addAction:ad1];
     [alert addAction:ad2];
     [alert addAction:ad3];
-    [alert addAction:ad4];
     [alert addAction:cancel];
+    alert.popoverPresentationController.sourceView = self.mTable;
+    alert.popoverPresentationController.sourceRect = CGRectMake(10, 10, 100, 100);
     [self presentViewController:alert animated:YES completion:nil];
 
 }
@@ -332,6 +353,8 @@
     [alert addAction:version];
     [alert addAction:zome];
     [alert addAction:cancel];
+    alert.popoverPresentationController.sourceView = self.mTable;
+    alert.popoverPresentationController.sourceRect = CGRectMake(10, 10, 100, 100);
     [self presentViewController:alert animated:YES completion:nil];
 }
 
@@ -401,6 +424,10 @@
         }];
         [alert addAction:up];
         [alert addAction:cancel];
+        
+        alert.popoverPresentationController.sourceView = self.mTable;
+        alert.popoverPresentationController.sourceRect = CGRectMake(10, 10, 100, 100);
+        
         [self presentViewController:alert animated:YES completion:nil];
     } else if (indexPath.row == 12) {
         //打开链接
@@ -419,6 +446,8 @@
         }];
         [alert addAction:open];
         [alert addAction:cancel];
+        alert.popoverPresentationController.sourceView = self.mTable;
+        alert.popoverPresentationController.sourceRect = CGRectMake(10, 10, 100, 100);
         [self presentViewController:alert animated:YES completion:nil];
     } else if (indexPath.row == 13) {
         //其他工具类方法

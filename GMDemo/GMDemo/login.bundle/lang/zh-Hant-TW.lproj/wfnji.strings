@@ -107,3 +107,66 @@
 "vip_tips" = "尊敬的VIP用戶您好，我們為您挑選了專屬客服，請點擊下方進行溝通";
 "copy_tip" = "已復制";
 "fbui"="請先安裝Facebook App後再嘗試分享，謝謝!";
+
+
+//H-1.4
+"h_choose_account" = "請選擇賬號";
+"h_add_tip" = "添加新賬號";
+"h_item_tip" = "登入此賬號";
+"h_google" = "使用Google登入";
+"h_facebook" = "使用Facebook登入";
+"h_twitter" = "使用Twitter登入";
+"h_line" = "使用Line登入";
+"h_email" = "使用郵箱登入";
+"h_apple" = "使用Apple登入";
+"h_email_tip" = "請確保您的郵箱可用";
+"h_last_login" = "最後登入於：";
+"h_role" = "角色";
+
+//guest
+"h_guest_tip" = "遊客賬號存在風險，建議您註冊賬號";
+"h_guest_content" = "\t您正在使用遊客登入，這將會在您卸載或重新安裝遊戲時丟失遊戲數據";
+"h_guest_cancel"= "前往註冊";
+"h_guest_sure" = "繼續遊戲";
+
+//email
+"h_email_code" = "請輸入郵件驗證碼";
+"h_email_new_tip_code"= "您的郵箱是首次登入，我們已經向您的郵箱發送了一封驗證郵件，請您查收，並將郵件中的驗證碼填寫到上方的輸入框中。";
+"h_code_no_tip" = "未收到驗證碼？";
+"h_code_again" = "再次發送";
+"h_new_pass_tip" = "為您的賬號指定一個新密碼";
+"h_pass_tip1" = "輸入密碼以完成登入。如果忘記密碼，請";
+"h_email_old_tip" = "為了您的賬號安全，請先驗證郵箱";
+"h_code_tip" = "我們已向您的郵箱中發送了一封驗證郵件，請填入郵件中的驗證碼";
+"h_reset_pass" = "請再次輸入密碼";
+"h_sure_change" = "確認修改";
+"h_change_finish" = "您的密碼已修改完成";
+"h_enter_game" = "返回游戲";
+
+
+"h_mark_tip" = "玩了這麼久的遊戲，您有什麼想說的嗎？";
+"h_center_tip" = "如果您有任何問題，可以通過以下方式得到幫助";
+"h_center_faq" = "查閱FAQ";
+"h_center_fan" = "訪問粉絲頁";
+"h_center_email" = "點擊發送郵件";
+"h_center_fix" = "問題修復";
+"h_fix_content" = "遇到無法登入、無法購買商品或者其它問題時，可嘗試點擊下方的“修復”按鈕進行修復，並嘗試重新啟動遊戲。";
+"h_fix" = "修復";
+"h_fix_sucess" = "問題修復成功。";
+"h_vip_tip" = "尊敬的VIP用戶，您好，我們為您挑選了專屬客服";
+"h_faq_good" = "很有幫助";
+"h_faq_bad" = "毫無幫助";
+"h_feed" = "感谢您的反馈";
+"h_go_feed" = "抱歉沒有幫到您，";
+"h_feed_fan" = "去粉絲頁留言";
+"h_chose_social" = "選擇社交平台";
+"h_real_name_tip" = "按照通知号24/2014/TT-BTTTT，请您填写这些个人信息";
+"h_vi_change" = "更换登录帐号";
+"h_vi_info" = "继续填写信息";
+
+"h_vip_fb" = "Facebook VIP客服";
+"h_vip_twitter" = "Twitter VIP客服";
+"h_vip_line" = "Line VIP客服";
+"h_vip_cafe" = "Cafe VIP客服";
+"h_vip_zalo" = "Zalo VIP客服";
+"h_vip_discord" = "Discord VIP客服";

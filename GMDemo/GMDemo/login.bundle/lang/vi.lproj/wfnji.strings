@@ -54,8 +54,8 @@
 "agree_top" = "đăng nhập là đã đọc điều khoản và đồng ý";
 "agree_bottom" = "Thỏa thuận dịch vụ";
 "nextLogin" = "Đăng nhập lần cuối";
-"bind" = "Chưa liên kết";
-"band" = "Đã liên kết";
+"bind" = "Chưa LK";
+"band" = "Đã LK";
 "link" = "Cố định tài khoản đăng ký";
 "accpwd" = "đăng nhập tài khoản";
 "forget" = "Quên mật khẩu?";
@@ -107,3 +107,65 @@
 "vip_tips" = "Xin chào VIP, chúng tôi đã dành riêng cho bạn dịch vụ CSKH độc quyền, nhấp bên dưới để liên lạc.";
 "copy_tip" = "Đã sao chép";
 "fbui"="Vui lòng cài đặt Facebook sau đó chia sẻ, cảm ơn!";
+
+//H-1.4
+"h_choose_account" = "Vui lòng chọn tài khoản";
+"h_add_tip" = "Thêm acc";
+"h_item_tip" = "Đăng nhập tài khoản này";
+"h_google" = "Sign in with Google";
+"h_facebook" = "Sign in with Facebook";
+"h_twitter" = "Sign in with Twitter";
+"h_line" = "Sign in with Line";
+"h_email" = "Sign in with Email";
+"h_apple" = "Sign in with Apple";
+"h_email_tip" = "Hãy đảm bảo rằng email của bạn hữu dụng";
+"h_last_login" = "Last login:";
+"h_role" = "Nhân vật";
+
+//guest
+"h_guest_tip" = "Tài khoản khách tồn tại rủi ro, gợi ý bạn nên đăng ký tài khoản";
+"h_guest_content" = "\tBạn đang đăng nhập bằng tài khoản khách, điều này sẽ làm mất dữ liệu khi bạn gỡ cài đặt hoặc tải lại trò chơi";
+"h_guest_cancel"= "Đến đăng ký";
+"h_guest_sure" = "Tiếp tục";
+
+//email
+"h_email_code" = "Vui lòng nhập mã xác minh";
+"h_email_new_tip_code"= "Email của bạn lần đầu đăng nhập, chúng tôi đã gửi mã xác minh tới email của bạn, vui lòng kiểm tra và điền mã xác minh vào ô bên trên";
+"h_code_no_tip" = "Không nhận được mã xác minh? ";
+"h_code_again" = "Gửi lại";
+"h_new_pass_tip" = "Đặt lại mật khẩu mới";
+"h_pass_tip1" = "Nhập mật khẩu để hoàn tất đăng nhập. Nếu quên mật khẩu, vui lòng ";
+"h_email_old_tip" = "Để bảo mật tài khoản, vui lòng xác nhận email";
+"h_code_tip" = "Chúng tôi đã gửi mã xác minh tới email của bạn, vui lòng nhập mã xác minh";
+"h_reset_pass" = "Mời nhập lại mật khẩu";
+"h_sure_change" = "Xác nhận thay đổi";
+"h_change_finish" = "Mật khẩu của bạn đã được thay đổi";
+"h_enter_game" = "Trở lại trò chơi";
+
+
+"h_mark_tip" = "Chơi game lâu như vậy rồi, bạn có điều gì muốn nói không?";
+"h_center_tip" = "Nếu gặp vấn đề có thể nhận trợ giúp bằng những cách sau";
+"h_center_faq" = "Đọc FAQ";
+"h_center_fan" = "Ghé thăm Fanpage";
+"h_center_email" = "Nhấp để gửi email";
+"h_center_fix" = "Sửa lỗi";
+"h_fix_content" = "Khi không thể đăng nhập, không thể mua vật phẩm hoặc gặp các vấn đề khác, có thể nhấp vào \"Khắc phục\" bên dưới và khởi động lại trò chơi.";
+"h_fix" = "Khắc phục";
+"h_fix_sucess" = "Vấn đề khắc phục thành công";
+"h_vip_tip" = "Thân gửi khách hàng VIP, chúng tôi đã chuẩn bị dịch vụ CSKH dành riêng cho bạn";
+"h_faq_good" = "Rất hữu ích";
+"h_faq_bad" = "Không hữu dụng";
+"h_feed" = "Cảm ơn phản hồi của bạn!";
+"h_go_feed" = "Mạng xã hội ";
+"h_feed_fan" = "Inbox Fanpage";
+"h_chose_social" = "Mạng xã hội";
+"h_real_name_tip" = "Theo thông tư Số: 24/2014/TT-BTTT,  bạn vui lòng cập nhật thông tin cá nhân để chơi game";
+"h_vi_change" = "Đổi account";
+"h_vi_info" = "Điền thông tin";
+
+"h_vip_fb" = "CSKH VIP Facebook";
+"h_vip_twitter" = "CSKH VIP Twitter";
+"h_vip_line" = "CSKH VIP Line";
+"h_vip_cafe" = "CSKH VIP Cafe";
+"h_vip_zalo" = "CSKH VIP Zalo";
+"h_vip_discord" = "CSKH VIP Discord";

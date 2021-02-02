@@ -123,6 +123,25 @@ style 1 至 5
                   shareServer:(NSString *)share_server
                    shareCode :(NSString *)share_code;
 
+/**
+ 分享使用的方法
+ 
+ @param text 分享文本
+ @param image 图片列表，可以传空，传一张
+ @param link 分享链接
+ @param type 分享类型：1 引文分享（链接），2 图片分享,3 使用SDK后台配置分享
+ @param info SDK后台配置分享，需要传入参数格式如下：
+            @{@"shareName":@"分享名称",
+                @"shareID":@"分享ID",
+             @"shareUName":@"角色名",
+            @"shareServer":@"角色区服",
+              @"shareCode":@"角色code"
+ 
+             }
+ */
++ (void)shareInfo:(NSString *)text image:(UIImage *)image link:(NSString *)link type:(NSString *)type otherInfo:(NSDictionary *)info;
+
+
 
 /**
  返回渠道号

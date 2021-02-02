@@ -111,3 +111,69 @@
 
 "fbui"="请先安装Facebook App后再尝试分享，谢谢!";
 
+
+
+
+//H-1.4
+"h_choose_account" = "请选择账号";
+"h_add_tip" = "添加新账号";
+"h_item_tip" = "登录此账号";
+"h_google" = "使用Google登录";
+"h_facebook" = "使用Facebook登录";
+"h_twitter" = "使用Twitter登录";
+"h_line" = "使用Line登录";
+"h_email" = "使用邮箱登录";
+"h_apple" = "使用Apple登录";
+"h_email_p" = "请输入您的邮箱";
+"h_email_tip" = "请确保您的邮箱可用";
+"h_last_login" = "最后登录于：";
+"h_role" = "角色";
+
+//guest
+"h_guest_tip" = "游客账号存在风险，建议您注册账号";
+"h_guest_content" = "\t您正在使用游客登录，这将会在您卸载或重新安装游戏时丢失游戏数据";
+"h_guest_cancel"= "前往注册";
+"h_guest_sure" = "继续游戏";
+
+//email
+"h_email_code" = "请输入邮件验证码";
+"h_email_new_tip_code"= "您的邮箱是首次登录，我们已经向您的邮箱发送了一封验证邮件，请您查收，并将邮件中的验证码填写到上方的输入框中。";
+"h_code_no_tip" = "未收到验证码？";
+"h_code_again" = "再次发送";
+"h_new_pass_tip" = "为您的账号指定一个新密码";
+"h_pass_tip1" = "输入密码以完成登录。如果忘记密码，请";
+"h_email_old_tip" = "为了您的账号安全，请先验证邮箱";
+"h_code_tip" = "我们已向您的邮箱中发送了一封验证邮件，请填入邮件中的验证码。";
+"h_reset_pass" = "请再次输入密码";
+"h_sure_change" = "确认修改";
+"h_change_finish" = "您的密码已修改完成";
+"h_enter_game" = "返回游戏";
+
+
+"h_mark_tip" = "玩了这么久的游戏，您有什么想说的吗？";
+"h_center_tip" = "如果您有任何问题，可以通过以下方式得到帮助";
+"h_center_faq" = "查阅FAQ";
+"h_center_fan" = "访问粉丝页";
+"h_center_email" = "点击发送邮件";
+"h_center_fix" = "问题修复";
+"h_fix_content" = "遇到无法登录、无法购买商品或者其它问题时，可尝试点击下方的“修复”按钮进行修复，并尝试重新启动游戏。";
+"h_fix" = "修复";
+"h_fix_sucess" = "问题修复成功。";
+"h_vip_tip" = "尊敬的VIP用户，您好，我们为您挑选了专属客服";
+"h_faq_good" = "很有帮助";
+"h_faq_bad" = "毫无帮助";
+"h_feed" = "感谢您的反馈";
+"h_go_feed" = "抱歉没有帮到您，";
+"h_feed_fan" = "去粉丝页留言";
+"h_chose_social" = "选择社交平台";
+
+"h_real_name_tip" = "按照通知号24/2014/TT-BTTTT，请您填写这些个人信息";
+"h_vi_change" = "更换登录帐号";
+"h_vi_info" = "继续填写信息";
+
+"h_vip_fb" = "Facebook VIP客服";
+"h_vip_twitter" = "Twitter VIP客服";
+"h_vip_line" = "Line VIP客服";
+"h_vip_cafe" = "Cafe VIP客服";
+"h_vip_zalo" = "Zalo VIP客服";
+"h_vip_discord" = "Discord VIP客服";

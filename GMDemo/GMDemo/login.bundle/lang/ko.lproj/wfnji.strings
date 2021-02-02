@@ -5,7 +5,7 @@
   Created by GM on 2019/1/2.
   Copyright © 2019年 gumo. All rights reserved.*/
 "change_acount" = "계정 전환";
-"choose_logintype" = "로그인 방식을 선택하세요.";
+"choose_logintype" = "로그인 방식을 선택하세요";
 "login_fast" = "게스트 로그인";
 "userinfo" = "존경하는 유저님:";
 "email_info" = "궁금한 점이 있으시면 이메일로 연락주세요. 기꺼이 도와드리겠습니다.";
@@ -107,3 +107,67 @@
 "vip_tips" = "존경하는 VIP 고객님 안녕하세요. 고객님을 위해 전용 상담 서비스를 준비하였습니다. 아래를 클릭하여 상담을 시작하세요";
 "copy_tip" = "복제 성공";
 "fbui"="먼저 Facebook 앱을 설치하신후에 다시 공유해보시기 바랍니다.";
+
+
+//H-1.4
+"h_choose_account" = "계정 선택";
+"h_add_tip" = "새 계정 추가";
+"h_item_tip" = "해당 계정 로그인";
+"h_google" = "Google 로그인";
+"h_facebook" = "Facebook 로그인";
+"h_twitter" = "Twitter 로그인";
+"h_line" = "Line 로그인";
+"h_email" = "이메일 로그인";
+"h_apple" = "Apple 로그인";
+"h_email_tip" = "이메일 사용 가능 여부를 확인해 주세요.";
+"h_last_login" = "최근 로그인 ";
+"h_role" = "캐릭터";
+
+//guest
+"h_guest_tip" = "게스트 계정은 분실 리스크가 있습니다, 계정 연동을 해주시기 바랍니다.";
+"h_guest_content" = "\t유저님께서는 현재 게스트 계정을 사용하고 계십니다.게임을 삭제 또는 재설치 시 데이터를 분실 할 수 있습니다.";
+"h_guest_cancel"= "계정연동";
+"h_guest_sure" = "계속하기";
+
+//email
+"h_email_code" = "이메일 인증번호를 입력해주세요";
+"h_email_new_tip_code"= "입력한 이메일 주소는 첫 로그인 이므로 해당 이메일에 인증번호를 보냈습니다. 확인하시고 해당이메일로 받은 인증번호를 위의 입력창에 입력해 주십시오.";
+"h_code_no_tip" = "인증번호 못 받았나요? ";
+"h_code_again" = "재전송";
+"h_new_pass_tip" = "당신의 계정을 위해 새로운 비밀번호를 설정해주세요.";
+"h_pass_tip1" = "비밀번호를 입력하여 로그인을 완료합니다.비밀 번호 분실 시";
+"h_email_old_tip" = "계정 안전을 위해 먼저 이메일 인증을 해주시기 바랍니다.";
+"h_code_tip" = "이미 이메일 주소로 인증 이메일을 보냈으니 확인하시고 인증번호를 입력해 주십시오.";
+"h_reset_pass" = "비밀번호를 다시 입력하십시오";
+"h_sure_change" = "수정 확인";
+"h_change_finish" = "비밀번호가 수정되었습니다";
+"h_enter_game" = "돌아가기";
+
+
+"h_mark_tip" = "리뷰를 남겨주시면 업데이트에 큰 힘이 됩니다!";
+"h_center_tip" = "게임 중 문의가 있을 시 아래의 방법으로 해결하시기 바랍니다.";
+"h_center_faq" = "FAQ";
+"h_center_fan" = "공식 페이지";
+"h_center_email" = "클릭하여 메일 보내기";
+"h_center_fix" = "오류 수정";
+"h_fix_content" = "로그인 실패, 상품 구매 실패 또는 다른 문제가 있을 경우 아래의 \"복구\" 버튼을 터치하여 복구를 시도하고 게임을 재부팅 할 수 있습니다. ";
+"h_fix" = "복구";
+"h_fix_sucess" = "복구 성공";
+"h_vip_tip" = "안녕하세요,존경하는 VIP 유저님. 유저님을 위해 전용 고객 서비스를 준비했습니다.";
+"h_faq_good" = "도움이 된다";
+"h_faq_bad" = "도움되지 않는다";
+"h_feed" = "피드백 감사합니다";
+"h_go_feed" = "도와드리지 못해 죄송합니다. ";
+"h_feed_fan" = "공식 카페에 글쓰기";
+"h_chose_social" = "공식 채널 선택";
+
+"h_real_name_tip" = "按照通知号24/2014/TT-BTTTT，请您填写这些个人信息";
+"h_vi_change" = "更换登录帐号";
+"h_vi_info" = "继续填写信息";
+
+"h_vip_fb" = "Facebook vip 서비스";
+"h_vip_twitter" = "Twitter vip 서비스";
+"h_vip_line" = "Line vip 서비스";
+"h_vip_cafe" = "Cafe vip 서비스";
+"h_vip_zalo" = "Zalo vip 서비스";
+"h_vip_discord" = "Discord vip 서비스";
