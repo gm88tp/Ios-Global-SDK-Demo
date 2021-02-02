@@ -196,7 +196,11 @@
                  }
      */
     //示例：图片分享
-//    [platTools shareInfo:@"请输入需要分享文案" image:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.biaobaiju.com%2Fuploads%2F20180210%2F23%2F1518276333-RXexUJcntC.jpg&refer=http%3A%2F%2Fimage.biaobaiju.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1614306450&t=e1c9d6c5223192f3f335c377048882bf"]] ] link:@"此处示例图片分享，链接可以传空" type:@"2" otherInfo:@{}];
+    [platTools shareInfo:@"请输入需要分享文案"
+                   image:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.biaobaiju.com%2Fuploads%2F20180210%2F23%2F1518276333-RXexUJcntC.jpg&refer=http%3A%2F%2Fimage.biaobaiju.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1614306450&t=e1c9d6c5223192f3f335c377048882bf"]] ]
+                    link:@"此处示例图片分享，链接可以传空"
+                    type:@"2"
+               otherInfo:@{}];
 }
 
 #pragma 广告
