@@ -171,3 +171,16 @@
 "h_vip_cafe" = "Cafe vip 서비스";
 "h_vip_zalo" = "Zalo vip 서비스";
 "h_vip_discord" = "Discord vip 서비스";
+
+"agree1" = "로그인 하면";
+"agree2" = "<이용약관>";
+"agree3" = ",";
+"agree4" = "<개인 정보 처리 방침>";
+"agree5" = "에 동의합니다.";
+
+"limited_tip" = "이 지역은 잠시 재생할 수 있는 광고가 없습니다.";
+"on_cust" = "온라인 고객센터";
+"set_library" = "사진첩에 접근할 수 있는 권한이 없습니다. 시스템 \"설정 > 앱 권한> 사진\"으로 이동하여 사진첩 액세스 권한을 부여하십시오.";
+"cust_faq_tip" = "상세한 이슈 설명 부탁드립니다.";
+"turn_setting" = "이동하기";
+"time_limit" = "업로드할 영상 길이는 10분 이상을 초과할 수 없습니다";

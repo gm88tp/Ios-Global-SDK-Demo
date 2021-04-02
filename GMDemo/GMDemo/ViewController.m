@@ -71,6 +71,8 @@
         //vip客服可显示
     }else if ([[Info objectForKey:@"status"] isEqualToString:@"15"]) {
         //vip客服已关闭
+    }else if ([[Info objectForKey:@"status"] isEqualToString:@"16"]) {
+        //ip限制
     }
 }
 

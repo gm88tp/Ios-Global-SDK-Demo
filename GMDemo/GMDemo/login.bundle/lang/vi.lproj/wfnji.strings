@@ -169,3 +169,10 @@
 "h_vip_cafe" = "CSKH VIP Cafe";
 "h_vip_zalo" = "CSKH VIP Zalo";
 "h_vip_discord" = "CSKH VIP Discord";
+
+"limited_tip" = "Khu vực này hiện không có quảng cáo có thể phát";
+"on_cust" = "CSKH trực tuyến";
+"set_library" = "Không được quyền truy cập Thư Viện Ảnh, bạn có thể vào hệ thống \"Cài đặt > Quyền riêng tư > Ảnh\" để cho phép quyền truy cập Thư Viện Ảnh";
+"cust_faq_tip" = "Vui lòng nhập vấn đề bạn gặp phải";
+"turn_setting" = "Đi tới";
+"time_limit" = "Thời lượng video tải lên không được vượt quá 10 phút";

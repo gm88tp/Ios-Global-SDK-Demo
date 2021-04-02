@@ -1,0 +1,7 @@
+{
+    "states" : [{
+        "id": 13,
+        "type": "att",
+        "is_initial_state": true,
+    }]
+}

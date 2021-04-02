@@ -169,3 +169,11 @@
 "h_vip_cafe" = "Cafe VIP客服";
 "h_vip_zalo" = "Zalo VIP客服";
 "h_vip_discord" = "Discord VIP客服";
+
+"limited_tip" = "該地區暫無可播放的廣告。";
+"on_cust" = "在線客服";
+"set_library" = "沒有權限訪問您的相冊，您可以進入系統“設置>隱私>照片”，允許訪問您的相冊";
+"cust_faq_tip" = "請輸入您遇到的問題";
+"time_yesterday" = "昨天";
+"turn_setting" = "前往";
+"time_limit" = "上傳的視頻時長不可超過10分鐘";

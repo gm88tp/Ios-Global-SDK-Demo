@@ -9,7 +9,7 @@
 	<key>lightViewColor</key>
 	<string>#FFFFFF</string>
 	<key>versions</key>
-	<string>1.4.0</string>
+	<string>1.4.1</string>
 	<key>facebookfs</key>
 	<string>com.immortals.tw</string>
 	<key>fbappid</key>
@@ -21,7 +21,7 @@
 	<key>markH</key>
 	<string>330</string>
 	<key>promptH</key>
-	<string>230</string>
+	<string>240</string>
 	<key>ja</key>
 	<string>https://dl03.gm88.com/terms/privacy_ja.html</string>
 	<key>cn</key>

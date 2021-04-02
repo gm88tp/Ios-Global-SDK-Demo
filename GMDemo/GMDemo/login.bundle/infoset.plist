@@ -15,7 +15,7 @@
 	<key>channel</key>
 	<string>GM</string>
 	<key>gameid</key>
-	<string>1700</string>
+	<string>1696</string>
 	<key>GGkClientID</key>
 	<string>726483388833-nejr29g354f0p3sieg18gmehkhljuerv.apps.googleusercontent.com</string>
 	<key>appsFlyerDevKey</key>
@@ -31,9 +31,9 @@
 	<key>GoogleADID</key>
 	<string>ca-app-pub-7496069579613989~8545461470</string>
 	<key>IronsourceAppKey</key>
-	<string>ce0a7e2d</string>
+	<string>bf464905</string>
 	<key>issueVersion</key>
-	<string>1700006</string>
+	<string>1696006</string>
 	<key>iconControl</key>
 	<string>1</string>
 </dict>

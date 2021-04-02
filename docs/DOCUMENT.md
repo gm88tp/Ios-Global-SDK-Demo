@@ -2,8 +2,8 @@
 
 # 环境要求
 
-> - Mac OS X 10.10以上版本
-> - Xcode 7.0以上版本
+> - Mac OS X 11.0以上版本
+> - Xcode 12.0以上版本
 > - iOS 9.0以上版本
 
 - SDK集成了登录，支付等功能。本文档详细说明相关功能在技术对接与使用过程中需要注意的地方，以便贵方能快速对接。阅读后如有疑问，请联系GM88游戏相关技术支持。
@@ -184,6 +184,44 @@ SDK V1.4开始，同时支持横竖版，并且两版流程不一致，因此在
       <key>AppLovinSdkKey</key>
       <!---需要替换成对应参数-->
        <string>OixDcmXAyNNGd4zM3r-h0fsGvPzKc8k0sfETQmdM80dn4b77R6qSmfif4f-hpiheMw7ogl9plnZqNhyqomGTQz</string>
+
+<!---iOS 14以上，SDK版本1.4.1及其以上版本需要设置-->
+<!---与广告相关-->
+<key>SKAdNetworkItems</key>
+	<array>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>su67r6k2v3.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>cstr6suwn9.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>ludvb6z3bs.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>v9wttpbfk9.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>n38lu8286q.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>4dzt52r2t5.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>gta9lk7p23.skadnetwork</string>
+		</dict>
+	</array>
+
+<key>NSUserTrackingUsageDescription</key>
+<!---广告追踪权限，需要替换成对应描述文本-->
+	<string>相关描述文本</string>
 ```
 
 **6、设置Build Options**
@@ -734,11 +772,14 @@ platPurchase purchase:mPayInfo CallBack:self];
 
 使用通知来接收回调，请参考[通知](#定义通知)
 
-| 状态值 | 含义   |
-| --- | ---- |
-| 0   | 广告失败 |
-| 1   | 广告成功 |
-| 9   | 取消广告 |
+| 状态值 | 含义     |
+| ------ | -------- |
+| 0      | 广告失败 |
+| 1      | 广告成功 |
+| 9      | 取消广告 |
+| 16     | ip限制   |
+
+**注：v1.4.1及其以上版本，广告新增回调16，表明用户的ip所属地区限制广告加载（无广告）。**
 
 ## 设置广告次数接口
 
@@ -782,11 +823,14 @@ platPurchase purchase:mPayInfo CallBack:self];
 
 使用通知来接收回调，请参考[通知](#定义通知)
 
-| 状态值 | 含义   |
-| --- | ---- |
-| 0   | 广告失败 |
-| 1   | 广告成功 |
-| 9   | 取消广告 |
+| 状态值 | 含义     |
+| ------ | -------- |
+| 0      | 广告失败 |
+| 1      | 广告成功 |
+| 9      | 取消广告 |
+| 16     | ip限制   |
+
+**注：v1.4.1及其以上版本，广告新增回调16，表明用户的ip所属地区限制广告加载（无广告）。**
 
 # 客服
 

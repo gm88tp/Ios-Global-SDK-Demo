@@ -170,3 +170,10 @@
 "h_vip_cafe" = "Cafe vipサービス";
 "h_vip_zalo" = "Zalo vipサービス";
 "h_vip_discord" = "Discord vipサービス";
+
+"limited_tip" = "再生できる広告はありません。";
+"on_cust" = "オンラインCS";
+"set_library" = "アルバムを訪問する権限はありません。システム設定よりアプリがアルバムへ訪問できるように設定して下さい。";
+"cust_faq_tip" = "お問合せしたい問題をご入力して下さい";
+"turn_setting" = "移動";
+"time_limit" = "再生時間10分以上のビデオはアップロードできません";

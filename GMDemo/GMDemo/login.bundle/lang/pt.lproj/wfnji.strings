@@ -170,3 +170,10 @@
 "h_vip_cafe" = "Cafe VIP SERVICE";
 "h_vip_zalo" = "Zalo VIP SERVICE";
 "h_vip_discord" = "Discord VIP SERVICE";
+
+"limited_tip" = "No ads available in the area at this time";
+"on_cust" = "Online Customer Service ";
+"set_library" = "If there is no access to your albums, you can go to \"Settings > Privacy > Photos\" to allow access to your albums";
+"cust_faq_tip" = "Please describe the issue you encountered";
+"turn_setting" = "Go";
+"time_limit" = "The length of the uploaded video should not exceed 10 minutes";
