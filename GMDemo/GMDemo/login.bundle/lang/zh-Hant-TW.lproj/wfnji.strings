@@ -178,3 +178,4 @@
 "time_yesterday" = "昨天";
 "turn_setting" = "前往";
 "time_limit" = "上傳的視頻時長不可超過10分鐘";
+"video_load_error" = "視頻播放錯誤，請稍後重試";

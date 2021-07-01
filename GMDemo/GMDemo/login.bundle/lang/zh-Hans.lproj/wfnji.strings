@@ -185,3 +185,5 @@
 "time_yesterday" = "昨天";
 "turn_setting" = "前往";
 "time_limit" = "上传的视频时长不可超过10分钟";
+
+"video_load_error" = "视频播放异常，请稍后再试";

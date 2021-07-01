@@ -178,3 +178,4 @@
 "cust_faq_tip" = "Please describe the issue you encountered";
 "turn_setting" = "Go";
 "time_limit" = "The length of the uploaded video should not exceed 10 minutes";
+"video_load_error" = "Video fails to play, please try again later";

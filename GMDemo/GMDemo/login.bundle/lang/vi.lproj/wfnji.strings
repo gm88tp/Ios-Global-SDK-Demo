@@ -176,3 +176,4 @@
 "cust_faq_tip" = "Vui lòng nhập vấn đề bạn gặp phải";
 "turn_setting" = "Đi tới";
 "time_limit" = "Thời lượng video tải lên không được vượt quá 10 phút";
+"video_load_error" = "Phát video lỗi, vui lòng thử lại sau";

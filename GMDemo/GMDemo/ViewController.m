@@ -35,7 +35,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifitionCenter:)  name:@"SDKCenterNotifition" object:nil];
     
     //demo
-    self.dataArray = @[@"登录",@"登出",@"切换账号",@"支付",@"广告",@"社交",@"分享",@"客服中心",@"常见问题",@"vip客服",@"角色信息上报",@"自定义打点上报",@"打开webview",@"其他"];
+    self.dataArray = @[@"登录",@"登出",@"切换账号",@"支付",@"广告",@"社交",@"分享",@"客服中心",@"常见问题",@"vip客服",@"角色信息上报",@"自定义打点上报",@"打开webview",@"其他",@"播放视频"];
 }
 
 #pragma mark - SDKCenterNotifition 通知回调结果
@@ -73,6 +73,14 @@
         //vip客服已关闭
     }else if ([[Info objectForKey:@"status"] isEqualToString:@"16"]) {
         //ip限制
+    }else if ([[Info objectForKey:@"status"] isEqualToString:@"17"]) {
+        //播放完成后用户点击关闭
+        
+    } else if ([[Info objectForKey:@"status"] isEqualToString:@"18"]) {
+        //未播放完毕用户点击关闭
+       
+    } else if ([[Info objectForKey:@"status"] isEqualToString:@"19"]) {
+        //视频播放失败
     }
 }
 
@@ -329,6 +337,36 @@
     [platTools showFAQView];
 }
 
+#pragma 播放视频
+- (void)playVideo {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"视频" message:@"请选择播放视频" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *ad1 = [UIAlertAction actionWithTitle:@"本地视频" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [platTools playVideo:[[NSBundle mainBundle] pathForResource:@"1" ofType:@"mp4"]];
+            
+        }];
+    __block UITextField *shareName;
+    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.text =
+        @"https://vd2.bdstatic.com/mda-mcg9h3vutekp38ua/cae_h264_clips/1615940899/mda-mcg9h3vutekp38ua.mp4?auth_key=1624950790-0-0-f48d491ec39e5d0dded6230910d27cb0&bcevod_channel=searchbox_feed&pd=1&pt=3&abtest=";
+
+        shareName = textField;
+    }];
+        UIAlertAction *ad2 = [UIAlertAction actionWithTitle:@"网络视频" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [platTools playVideo:shareName.text];
+        }];
+        
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    
+        }];
+        [alert addAction:ad1];
+        [alert addAction:ad2];
+        [alert addAction:cancel];
+    
+        alert.popoverPresentationController.sourceView = self.mTable;
+        alert.popoverPresentationController.sourceRect = CGRectMake(10, 10, 100, 100);
+        [self presentViewController:alert animated:YES completion:nil];
+}
+
 
 #pragma 其他工具型接口
 - (void)tools {
@@ -352,12 +390,24 @@
         [platTools toastInfo:str];
     }];
     
+    UIAlertAction *device = [UIAlertAction actionWithTitle:@"设备信息" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        /**
+         返回设备信息
+         @return @{
+                  @"system":设备系统信息,
+                  @"model":  设备型号,
+                  @"idfv":      设备idfv  }
+         */
+       NSLog(@"设备信息：%@",[platTools deviceInfo]);
+    }];
+    
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             
     }];
     [alert addAction:language];
     [alert addAction:version];
     [alert addAction:zome];
+    [alert addAction:device];
     [alert addAction:cancel];
     alert.popoverPresentationController.sourceView = self.mTable;
     alert.popoverPresentationController.sourceRect = CGRectMake(10, 10, 100, 100);
@@ -458,6 +508,8 @@
     } else if (indexPath.row == 13) {
         //其他工具类方法
         [self tools];
+    } else if (indexPath.row == 14) {
+        [self playVideo];
     }
 }
 

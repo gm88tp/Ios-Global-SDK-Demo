@@ -67,14 +67,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSString*)getInfoString:(NSString*)str;
 
- 
-
-/*
- 注册Google广告测试设备
- */
-+(void)regisetAdGoogleDevice:(NSArray*)arr;
-
-
 /*
 加载等待loading页面
 style 1 至 5
@@ -288,6 +280,21 @@ style 1 至 5
  @param str 链接
  */
 + (void)showViewWithStr:(NSString *)str;
+
+/**
+ 返回设备信息
+ @return @{
+          @"system":设备系统信息,
+          @"model":  设备型号,
+          @"idfv":      设备idfv  }
+ */
++ (NSDictionary *)deviceInfo;
+
+/**
+播放视频
+ @param str 视频地址
+ */
++ (void)playVideo:(NSString *)str;
 
 @end
 

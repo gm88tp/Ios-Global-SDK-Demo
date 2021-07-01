@@ -185,6 +185,10 @@ SDK V1.4开始，同时支持横竖版，并且两版流程不一致，因此在
       <!---需要替换成对应参数-->
        <string>OixDcmXAyNNGd4zM3r-h0fsGvPzKc8k0sfETQmdM80dn4b77R6qSmfif4f-hpiheMw7ogl9plnZqNhyqomGTQz</string>
 
+<!---admob 广告id-->
+<key>GADApplicationIdentifier</key>
+<string>ca-app-pub-7496069579613989~9003527017</string>
+
 <!---iOS 14以上，SDK版本1.4.1及其以上版本需要设置-->
 <!---与广告相关-->
 <key>SKAdNetworkItems</key>
@@ -284,15 +288,15 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 | appsFlyerDevKey  | String   | appsflyer的key                                               | g7ZP9TqQ4S8AF9zeQD9Koe                                       |
 | appleAppID       | String   | 苹果应用id                                                   | 1528141305                                                   |
 | Promote          | String   | 渠道id，默认17，代表iOS，无需修改                            | 17                                                           |
-| GoogleADID       | String   | admob广告id                                                  | ca-app-pub-7496069579613989~9003527017                       |
 | IronsourceAppKey | String   | ironsource的key                                              | ce0a7e2d                                                     |
 | issueVersion     | String   | 发布版本                                                     | 1634011                                                      |
 | consumerSecret   | String   | twitter的Secret                                              | lGoFe4yYVug52LcNiAptoABgb14k5seN9XMJq6L0ggSzUmIevP           |
 | ConsumerKey      | String   | twitter的key（如果无需twitter相关功能，这两个参数可以不修改） | SALb45SZfATPS8ILSYAvnB4ic                                    |
-| version          | String   | 相对应配置版本                                               | 3.0                                                          |
+| sdkVersion       | String   | 此为SDK版本号，无需修改                                      | 1.4.3                                                        |
 | iconControl      | String   | 登录页面是否显示app的icon，1表示使用应用icon，其他表示使用默认图片。 | 1                                                            |
+| admobInit        | String   | 广告是否使用admob，1表示使用admob，其他表示使用ironsource    | 1                                                            |
 
-**注：1、issueVersion—发布版本：iOS SDK 1.3版本及其以上版本才有，必须设值，每次出包均需像运营相关人员确认其值；2、version：iOS SDK 1.3版本及其以上版本可以直接设置成1.0；其余版本此值请于相关技术人员确认；3、iconControl：iOS SDK 1.4及其以上版本才有，用于控制登录页面的logo图，请与相关人员联系确认**
+**注：1、issueVersion—发布版本：iOS SDK 1.3版本及其以上版本才有，必须设值，每次出包均需像运营相关人员确认其值；2、version：iOS SDK 1.3版本及其以上版本可以直接设置成1.0；其余版本此值请于相关技术人员确认（v1.4.3已废弃此参数）；3、iconControl：iOS SDK 1.4及其以上版本才有，用于控制登录页面的logo图，请与相关人员联系确认**
 
 
 ## 定义通知
@@ -305,6 +309,7 @@ SDK使用通知来接收部分接口的结果，涉及的接口包括：
 - 获取商品多语言列表
 - 翻译
 - vip客服
+- 视频播放
 
 **定义**
 
@@ -314,24 +319,28 @@ SDK使用通知来接收部分接口的结果，涉及的接口包括：
 
 **状态值**
 
-| 状态值 | 含义             |
-| --- | -------------- |
-| 0   | 广告失败           |
-| 1   | 广告成功           |
-| 2   | 分享失败           |
-| 3   | 分享成功           |
-| 4   | 绑定失败           |
-| 5   | 绑定成功           |
-| 6   | 未绑定            |
-| 7   | 已绑定            |
-| 8   | 绑定取消           |
-| 9   | 取消广告           |
-| 10  | 返回product多语言   |
-| 11  | 返回product多语言失败 |
-| 12  | 返回翻译           |
-| 13  | VIP专属客服不可显示    |
-| 14  | VIP专属客服可显示     |
-| 15  | VIP专属客服关闭      |
+| 状态值 | 含义                  |
+| ------ | --------------------- |
+| 0      | 广告失败              |
+| 1      | 广告成功              |
+| 2      | 分享失败              |
+| 3      | 分享成功              |
+| 4      | 绑定失败              |
+| 5      | 绑定成功              |
+| 6      | 未绑定                |
+| 7      | 已绑定                |
+| 8      | 绑定取消              |
+| 9      | 取消广告              |
+| 10     | 返回product多语言     |
+| 11     | 返回product多语言失败 |
+| 12     | 返回翻译              |
+| 13     | VIP专属客服不可显示   |
+| 14     | VIP专属客服可显示     |
+| 15     | VIP专属客服关闭       |
+| 16     | ip限制                |
+| 17     | 视频播放完成并关闭    |
+| 18     | 视频未播放完成关闭    |
+| 19     | 视频播放失败          |
 
 **示例**
 
@@ -367,6 +376,14 @@ SDK使用通知来接收部分接口的结果，涉及的接口包括：
         //已绑定 do something
     }else  if([[Info objectForKey:@"status"] isEqualToString:@"8"]) {
         //绑定取消 do something
+    }else  if([[Info objectForKey:@"status"] isEqualToString:@"16"]) {
+        //广告ip限制
+    }else if ([[Info objectForKey:@"status"] isEqualToString:@"17"]) {
+        //播放完成后用户点击关闭
+    } else if ([[Info objectForKey:@"status"] isEqualToString:@"18"]) {
+        //未播放完毕用户点击关闭
+    } else if ([[Info objectForKey:@"status"] isEqualToString:@"19"]) {
+        //视频播放失败"
     }
 }
 
@@ -1178,4 +1195,57 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 **响应**
 
 在游戏中弹出链接指向web页面。
+
+## 播放视频
+
+当游戏内需要播放本地或者网络视频时，可调用此方法
+
+暂不支持webm格式
+
+```objectivec
++ (void)playVideo:(NSString *)str;
+```
+
+**参数**
+
+| 参数 | 类型     | 必须 | 说明     |
+| ---- | -------- | ---- | -------- |
+| str  | NSString | 是   | 视频地址 |
+
+**示例**
+
+```objectivec
+[platTools playVideo:[[NSBundle mainBundle] pathForResource:@"1" ofType:@"mp4"]];
+```
+
+**响应**
+
+使用通知来接收回调，请参考[通知](#定义通知)
+
+| 状态值 | 含义               |
+| ------ | ------------------ |
+| 17     | 视频播放完成关闭   |
+| 18     | 视频播放未完成关闭 |
+| 19     | 视频播放失败       |
+
+## 设备信息
+
+返回用户的设备型号，系统版本和idfv
+
+```objectivec
+/**
+ 返回设备信息
+ @return @{
+          @"system":设备系统信息,
+          @"model": 设备型号,
+          @"idfv":  设备idfv  }
+ */
++ (NSDictionary *)deviceInfo;
+```
+
+**示例**
+
+```objectivec
+[platTools deviceInfo];
+```
 

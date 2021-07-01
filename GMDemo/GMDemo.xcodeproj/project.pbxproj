@@ -19,6 +19,7 @@
 		53D3D78324DBF6F300AD508E /* login.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 53D3D78124DBF6F300AD508E /* login.bundle */; };
 		53D3D78524DBF6F900AD508E /* loginSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53D3D78224DBF6F300AD508E /* loginSDK.framework */; };
 		53D3D78624DBF6F900AD508E /* loginSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 53D3D78224DBF6F300AD508E /* loginSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		83B968D0268D668C008C5B4F /* 1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 83B968CF268D668C008C5B4F /* 1.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,7 @@
 		53D3D78124DBF6F300AD508E /* login.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = login.bundle; sourceTree = "<group>"; };
 		53D3D78224DBF6F300AD508E /* loginSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = loginSDK.framework; sourceTree = "<group>"; };
 		53D71A252591D3E5004879DD /* GMDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GMDemo.entitlements; sourceTree = "<group>"; };
+		83B968CF268D668C008C5B4F /* 1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				5367CB5B24C59DF5005E86B8 /* GoogleSignIn.bundle */,
 				5367CB5C24C59DF5005E86B8 /* LineSDKResource.bundle */,
 				53BEE5A3245A66B5006B4C53 /* GoogleService-Info.plist */,
+				83B968CF268D668C008C5B4F /* 1.mp4 */,
 				53BEE58324598FC0006B4C53 /* AppDelegate.h */,
 				53BEE58424598FC0006B4C53 /* AppDelegate.m */,
 				53BEE58924598FC0006B4C53 /* ViewController.h */,
@@ -167,6 +170,7 @@
 				53BEE59024598FC5006B4C53 /* Assets.xcassets in Resources */,
 				5367CB5F24C59DF6005E86B8 /* GoogleSignIn.bundle in Resources */,
 				53D3D78324DBF6F300AD508E /* login.bundle in Resources */,
+				83B968D0268D668C008C5B4F /* 1.mp4 in Resources */,
 				5367CB6024C59DF6005E86B8 /* LineSDKResource.bundle in Resources */,
 				53BEE58E24598FC0006B4C53 /* Main.storyboard in Resources */,
 			);
