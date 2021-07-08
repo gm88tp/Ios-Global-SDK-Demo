@@ -29,68 +29,19 @@ SDK V1.4开始，同时支持横竖版，并且两版流程不一致，因此在
 
 ### 1、横版游戏
 
-方法一：
 
-1、**【General】—>【Deployment Info】—>【Device Orientation】**，勾选Landscape Left和Landscape Right。
 
-2、Info.plist中   
+**【General】—>【Deployment Info】—>【Device Orientation】**，勾选Landscape Left和Landscape Right。
 
-```css
-  <key>UISupportedInterfaceOrientations</key>
-	<array>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UISupportedInterfaceOrientations~ipad</key>
-	<array>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-```
-
- 方式二：
-
-在AppDelegate中添加
-
-```objectivec
-- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
-   return  UIInterfaceOrientationMaskLandscape;
-}
-```
+ ![flags](assets/images/p7.png)
 
   
 
 ### 2、竖版游戏
 
-方法一：
+**【General】—>【Deployment Info】—>【Device Orientation】**，勾选Portrait。
 
-1、**【General】—>【Deployment Info】—>【Device Orientation】**，勾选Portrait。
-
-2、Info.plist中   
-
-```css
-  <key>UISupportedInterfaceOrientations</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-	</array>
-	<key>UISupportedInterfaceOrientations~ipad</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-	</array>
-```
-
-
-
-方式二：
-
-在AppDelegate中添加
-
-```objectivec
-- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
-    return  UIInterfaceOrientationMaskPortrait|UIInterfaceOrientationMaskPortraitUpsideDown;
-}
-```
+![flags](assets/images/p6.png)
 
 
 
@@ -339,7 +290,7 @@ SDK使用通知来接收部分接口的结果，涉及的接口包括：
 | 15     | VIP专属客服关闭       |
 | 16     | ip限制                |
 | 17     | 视频播放完成并关闭    |
-| 18     | 视频未播放完成关闭    |
+| 18     | 视频取消播放          |
 | 19     | 视频播放失败          |
 
 **示例**
@@ -381,7 +332,7 @@ SDK使用通知来接收部分接口的结果，涉及的接口包括：
     }else if ([[Info objectForKey:@"status"] isEqualToString:@"17"]) {
         //播放完成后用户点击关闭
     } else if ([[Info objectForKey:@"status"] isEqualToString:@"18"]) {
-        //未播放完毕用户点击关闭
+        //未播放完毕用户点击关闭（取消播放）
     } else if ([[Info objectForKey:@"status"] isEqualToString:@"19"]) {
         //视频播放失败"
     }
@@ -1222,11 +1173,11 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 使用通知来接收回调，请参考[通知](#定义通知)
 
-| 状态值 | 含义               |
-| ------ | ------------------ |
-| 17     | 视频播放完成关闭   |
-| 18     | 视频播放未完成关闭 |
-| 19     | 视频播放失败       |
+| 状态值 | 含义             |
+| ------ | ---------------- |
+| 17     | 视频播放完成关闭 |
+| 18     | 取消视频播放     |
+| 19     | 视频播放失败     |
 
 ## 设备信息
 
