@@ -33,6 +33,10 @@
 	<string>fb应用id</string>
 	<key>FacebookDisplayName</key>
 	<string>fb应用名称</string>
+    <key>FacebookClientToken</key>
+    <string>fb的clienttoken</string>
+    <key>GADApplicationIdentifier</key>
+    <string>ca-app-pub-7496069579613989~8545461470</string>
 	<key>GADIsAdManagerApp</key>
 	<true/>
 	<key>LSApplicationQueriesSchemes</key>

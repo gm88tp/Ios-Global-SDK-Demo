@@ -13,7 +13,7 @@
 	<key>channel</key>
 	<string>GM</string>
 	<key>gameid</key>
-	<string>1696</string>
+	<string>1746</string>
 	<key>GGkClientID</key>
 	<string>726483388833-nejr29g354f0p3sieg18gmehkhljuerv.apps.googleusercontent.com</string>
 	<key>appsFlyerDevKey</key>
@@ -29,12 +29,12 @@
 	<key>IronsourceAppKey</key>
 	<string>bf464905</string>
 	<key>issueVersion</key>
-	<string>1696006</string>
+	<string>1746001</string>
 	<key>iconControl</key>
 	<string>1</string>
 	<key>admobInit</key>
 	<string>1</string>
 	<key>sdkVersion</key>
-	<string>1.4.3</string>
+	<string>1.4.3.1</string>
 </dict>
 </plist>

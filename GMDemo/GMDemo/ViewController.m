@@ -77,7 +77,7 @@
         //播放完成后用户点击关闭
         
     } else if ([[Info objectForKey:@"status"] isEqualToString:@"18"]) {
-        //未播放完毕用户点击关闭
+        //未播放完毕用户点击关闭(取消播放)
        
     } else if ([[Info objectForKey:@"status"] isEqualToString:@"19"]) {
         //视频播放失败

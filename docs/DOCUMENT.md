@@ -76,107 +76,113 @@ SDK V1.4开始，同时支持横竖版，并且两版流程不一致，因此在
 **5、Info.plist文件配置，此配置项是为了line，Facebook，Google登录**
 
 ```xml
-          <key>CFBundleURLTypes</key>
-          <array>
-             <dict>
+        <key>CFBundleURLTypes</key>
+        <array>
+            <dict>
                 <key>CFBundleTypeRole</key>
                 <string>Editor</string>
                 <key>CFBundleURLSchemes</key>
                 <array>
-                   <string>line3rdp.$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-               </array>
+                    <string>line3rdp.$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+                </array>
             </dict>
             <dict>
-            <key>CFBundleTypeRole</key>
+                <key>CFBundleTypeRole</key>
                 <string>Editor</string>
                 <key>CFBundleURLName</key>
                 <!---需要替换成对应参数-->
-                  <string>com.googleusercontent.apps.113851800254-5romtcbaom6s49osvik1p1bo5m1b66ju</string>
-             <key>CFBundleURLSchemes</key>
-             <array>
-              <!---需要替换成对应参数-->
-               <string>com.googleusercontent.apps.113851800254-5romtcbaom6s49osvik1p1bo5m1b66ju</string>
-            </array>
+                <string>com.googleusercontent.apps.113851800254-5romtcbaom6s49osvik1p1bo5m1b66ju</string>
+                <key>CFBundleURLSchemes</key>
+                <array>
+                    <!---需要替换成对应参数-->
+                    <string>com.googleusercontent.apps.113851800254-5romtcbaom6s49osvik1p1bo5m1b66ju</string>
+                </array>
             </dict>
             <dict>
-            <key>CFBundleTypeRole</key>
+                <key>CFBundleTypeRole</key>
                 <string>Editor</string>
-                 <key>CFBundleURLSchemes</key>
-                 <array>
-                   <!---需要替换成对应参数-->
-                   <string>fb658714061225851</string>
-                 </array>
-                 </dict>
-         </array>
-
-         <key>FacebookAppID</key>
-           <!---需要替换成对应参数-->
-         <string>658714061225851</string>
-         <key>FacebookDisplayName</key>
-           <!---需要替换成对应参数-->
-         <string>动物战争</string>
-           <!---白名单-->
-         <key>LSApplicationQueriesSchemes</key>
-           <array>
-              <string>fbapi</string>
-              <string>fb-messenger-api</string>
-              <string>fbauth2</string>
-              <string>fbshareextension</string>
-              <string>lineauth2</string>
-           </array>
-           <key>LineSDKConfig</key>
-           <dict>
-           <key>ChannelID</key>
-             <!---需要替换成对应参数-->
-             <string>1564316537</string>
-           </dict> 
-      <key>GADIsAdManagerApp</key>
+                <key>CFBundleURLSchemes</key>
+                <array>
+                    <!---需要替换成对应参数-->
+                    <string>fb658714061225851</string>
+                </array>
+            </dict>
+        </array>
+        
+        <key>FacebookAppID</key>
+        <!---需要替换成对应参数-->
+        <string>658714061225851</string>
+        <key>FacebookDisplayName</key>
+        <!---需要替换成对应参数-->
+        <string>动物战争</string>
+        
+        <!---v1.4.3.1及其以上版本需要添加-->
+        <key>FacebookClientToken</key>
+        <!---需要替换成对应参数-->
+        <string>************************</string>
+        
+        <!---白名单-->
+        <key>LSApplicationQueriesSchemes</key>
+        <array>
+            <string>fbapi</string>
+            <string>fb-messenger-api</string>
+            <string>fbauth2</string>
+            <string>fbshareextension</string>
+            <string>lineauth2</string>
+        </array>
+        <key>LineSDKConfig</key>
+        <dict>
+            <key>ChannelID</key>
+            <!---需要替换成对应参数-->
+            <string>1564316537</string>
+        </dict>
+        <key>GADIsAdManagerApp</key>
         <true/>
-      <key>AppLovinSdkKey</key>
-      <!---需要替换成对应参数-->
-       <string>OixDcmXAyNNGd4zM3r-h0fsGvPzKc8k0sfETQmdM80dn4b77R6qSmfif4f-hpiheMw7ogl9plnZqNhyqomGTQz</string>
-
-<!---admob 广告id-->
-<key>GADApplicationIdentifier</key>
-<string>ca-app-pub-7496069579613989~9003527017</string>
-
-<!---iOS 14以上，SDK版本1.4.1及其以上版本需要设置-->
-<!---与广告相关-->
-<key>SKAdNetworkItems</key>
-	<array>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>su67r6k2v3.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>cstr6suwn9.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>ludvb6z3bs.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>v9wttpbfk9.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>n38lu8286q.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>4dzt52r2t5.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>gta9lk7p23.skadnetwork</string>
-		</dict>
-	</array>
-
-<key>NSUserTrackingUsageDescription</key>
-<!---广告追踪权限，需要替换成对应描述文本-->
-	<string>相关描述文本</string>
+        <key>AppLovinSdkKey</key>
+        <!---需要替换成对应参数-->
+        <string>OixDcmXAyNNGd4zM3r-h0fsGvPzKc8k0sfETQmdM80dn4b77R6qSmfif4f-hpiheMw7ogl9plnZqNhyqomGTQz</string>
+        
+        <!---admob 广告id-->
+        <key>GADApplicationIdentifier</key>
+        <string>ca-app-pub-7496069579613989~9003527017</string>
+        
+        <!---iOS 14以上，SDK版本1.4.1及其以上版本需要设置-->
+        <!---与广告相关-->
+        <key>SKAdNetworkItems</key>
+        <array>
+            <dict>
+                <key>SKAdNetworkIdentifier</key>
+                <string>su67r6k2v3.skadnetwork</string>
+            </dict>
+            <dict>
+                <key>SKAdNetworkIdentifier</key>
+                <string>cstr6suwn9.skadnetwork</string>
+            </dict>
+            <dict>
+                <key>SKAdNetworkIdentifier</key>
+                <string>ludvb6z3bs.skadnetwork</string>
+            </dict>
+            <dict>
+                <key>SKAdNetworkIdentifier</key>
+                <string>v9wttpbfk9.skadnetwork</string>
+            </dict>
+            <dict>
+                <key>SKAdNetworkIdentifier</key>
+                <string>n38lu8286q.skadnetwork</string>
+            </dict>
+            <dict>
+                <key>SKAdNetworkIdentifier</key>
+                <string>4dzt52r2t5.skadnetwork</string>
+            </dict>
+            <dict>
+                <key>SKAdNetworkIdentifier</key>
+                <string>gta9lk7p23.skadnetwork</string>
+            </dict>
+        </array>
+        
+        <key>NSUserTrackingUsageDescription</key>
+        <!---广告追踪权限，需要替换成对应描述文本-->
+        <string>相关描述文本</string>
 ```
 
 **6、设置Build Options**
