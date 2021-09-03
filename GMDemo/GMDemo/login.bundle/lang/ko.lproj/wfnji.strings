@@ -185,3 +185,23 @@
 "turn_setting" = "이동하기";
 "time_limit" = "업로드할 영상 길이는 10분 이상을 초과할 수 없습니다";
 "video_load_error" = "광고 재생 오류, 잠시 후 다시 시도 해 주세요.";
+
+"order_fix" = "주문서 복구";
+"deliver_sucess" = "지급 성공";
+"deliver_sucess_tip" = "귀하의 주문서 상품이 발송되었으니, 게임으로 돌아가 상품을 확인하시기 바랍니다.";
+"deliver_fail" = "지급 실패";
+"deliver_fail_tip" = "상품 발송 실패,주문서 복구 화면으로 이동해 주세요.\n도움이 필요하면 고객 서비스에 연락해 주십시오.";
+"turn_order_list" = "주문서 복구";
+"turn_cust" = "고객 서비스";
+"repair_sucess" = "복구 성공";
+"repair_sucess_tip" = "귀하의 주문서 상품이 복구되었으니, 게임으로 돌아가 상품을 확인하시기 바랍니다.";
+"repair_fail" = "복구 실패";
+"repair_fail_tip" = "상품 복구 실패,도움이 필요하면 고객 서비스에 연락해 주십시오.";
+"try_again" = "잠시후 다시 시도해 주세요.";
+"choose_goods" = "상품을 선택해 주세요.";
+"choose_goods_tip" = "다수의 유사 상품이 확인되었습니다.지급하실 상품을 선택해 주세요.";
+"choose_sure" = "확인";
+"unchoose" = "먼저 상품을 선택해 주시기 바랍니다.";
+"repair_order" = "중복된 주문서";
+"repeat_tip" = "주문서 이상이 감지되었습니다. 먼저 주문서를 복구하신 후 결제 진행하시기 바랍니다.";
+"turn_order_repair" = "주문서 복구";

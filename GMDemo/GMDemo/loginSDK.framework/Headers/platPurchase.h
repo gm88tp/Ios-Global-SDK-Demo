@@ -31,6 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
  notifyURL：回调地址 可传可不传，不传使用默认
  */
 + (void) purchase:(purchaseModel *)payInfo CallBack:(id<PurchaseCallBack>) callBack;
+
++ (void)purchaseRepairView;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -178,3 +178,23 @@
 "turn_setting" = "Go";
 "time_limit" = "The length of the uploaded video should not exceed 10 minutes";
 "video_load_error" = "Video fails to play, please try again later";
+
+"order_fix" = "Order Repair";
+"deliver_sucess" = "Shipped successfully";
+"deliver_sucess_tip" = "Your items have been shipped, please check in game";
+"deliver_fail" = "Fail to ship";
+"deliver_fail_tip" = "Your order has not yet been shipped, please go to Order Repair\n If you need help, please contact customer service";
+"turn_order_list" = "Go to view";
+"turn_cust" = "Go to Customer Service";
+"repair_sucess" = "Repaired successfully";
+"repair_sucess_tip" = "Your order has been resent, please check the items in game";
+"repair_fail" = "Fail to repair";
+"repair_fail_tip" = "Your order is not repaired, if you need help, please contact customer service";
+"try_again" = "Please try again later";
+"choose_goods" = "Please select the item to be shipped";
+"choose_goods_tip" = "Multiple related orders have been detected, please select the items you want to ship";
+"choose_sure" = "Confirm shipping";
+"unchoose" = "Please select the item first";
+"repair_order" = "Duplicate orders";
+"repeat_tip" = "An order exception has been detected, please repair the order first and then proceed to payment";
+"turn_order_repair" = "Go to Order Repair";

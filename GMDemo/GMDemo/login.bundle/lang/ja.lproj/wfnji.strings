@@ -178,3 +178,23 @@
 "turn_setting" = "移動";
 "time_limit" = "再生時間10分以上のビデオはアップロードできません";
 "video_load_error" = "再生異常、時間を置いてからもう一度試し下さい";
+
+"order_fix" = "異常注文修復";
+"deliver_sucess" = "購入成功";
+"deliver_sucess_tip" = "ご注文したアイテムは配布されました。ゲームに戻ってご確認ください。";
+"deliver_fail" = "購入失敗";
+"deliver_fail_tip" = "決算中の注文が確認されました。注文修復よりご確認ください。\nヘルプがご要望する場合はcsまでご連絡ください。";
+"turn_order_list" = "確認へ";
+"turn_cust" = "CSへ";
+"repair_sucess" = "注文修復成功";
+"repair_sucess_tip" = "異常注文の修復に成功しました。";
+"repair_fail" = "注文修復失敗";
+"repair_fail_tip" = "注文の修復に失敗しました。CSまでご連絡ください。";
+"try_again" = "時間を置いてからお試し下さい";
+"choose_goods" = "配布するアイテムを選択して下さい";
+"choose_goods_tip" = "重複注文が確認されました。決算する注文を選択して下さい。";
+"choose_sure" = "アイテム配布";
+"unchoose" = "アイテムを選択して下さい";
+"repair_order" = "重複注文";
+"repeat_tip" = "異常注文が確認されました。注文を確認してからお支払いください。";
+"turn_order_repair" = "注文修復へ移動";

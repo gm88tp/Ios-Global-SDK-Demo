@@ -177,3 +177,23 @@
 "turn_setting" = "Đi tới";
 "time_limit" = "Thời lượng video tải lên không được vượt quá 10 phút";
 "video_load_error" = "Phát video lỗi, vui lòng thử lại sau";
+
+"order_fix" = "Khắc Phục Đơn Hàng";
+"deliver_sucess" = "Giao Vật Phẩm Thành Công";
+"deliver_sucess_tip" = "Đơn hàng của bạn đã được gửi, vui lòng quay lại game để nhận";
+"deliver_fail" = "Giao Vật Phẩm Thất Bại";
+"deliver_fail_tip" = "Đơn hàng của bạn chưa được gửi, vui lòng chuyển đến Khắc Phục Đơn Hàng \n Nếu cần trợ giúp, vui lòng liên hệ CSKH";
+"turn_order_list" = "Đi tới kiểm tra";
+"turn_cust" = "Đi tới CSKH";
+"repair_sucess" = "Khắc Phục Thành Công";
+"repair_sucess_tip" = "Đơn hàng của bạn đã được khắc phục, vui lòng quay lại game để nhận";
+"repair_fail" = "Khắc Phục Thất Bại";
+"repair_fail_tip" = "Đơn hàng của bạn chưa được khắc phục, nếu cần trợ giúp, vui lòng liên hệ CSKH";
+"try_again" = "Vui lòng thử lại sau";
+"choose_goods" = "Vui lòng chọn vật phẩm";
+"choose_goods_tip" = "Phát hiện bạn có nhiều đơn hàng liên quan, vui lòng chọn đơn hàng bạn muốn";
+"choose_sure" = "Xác nhận gửi hàng";
+"unchoose" = "Vui lòng chọn vật phẩm trước";
+"repair_order" = "Đơn Hàng Trùng Lặp";
+"repeat_tip" = "Phát hiện đơn hàng của bạn bất thường, vui lòng tới Khắc Phục Đơn Hàng trước, sau đó tiến hành thanh toán";
+"turn_order_repair" = "Đi tới Khắc Phục Đơn Hàng";

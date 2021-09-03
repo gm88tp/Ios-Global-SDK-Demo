@@ -187,3 +187,23 @@
 "time_limit" = "上传的视频时长不可超过10分钟";
 
 "video_load_error" = "视频播放异常，请稍后再试";
+
+"order_fix" = "订单修复";
+"deliver_sucess" = "发货成功";
+"deliver_sucess_tip" = "您的订单已发货，请返回游戏查收商品";
+"deliver_fail" = "发货失败";
+"deliver_fail_tip" = "您的订单尚未发货，请前往订单修复\n如需帮助，请联系客服";
+"turn_order_list" = "前往查看";
+"turn_cust" = "前往客服";
+"repair_sucess" = "修复成功";
+"repair_sucess_tip" = "您的订单已修复，请返回游戏查收商品";
+"repair_fail" = "修复失败";
+"repair_fail_tip" = "您的订单未修复，如需帮助，请联系客服";
+"try_again" = "请稍后重试";
+"choose_goods" = "请选择商品发货";
+"choose_goods_tip" = "检测到您有多笔相关订单，请选择您要发货的商品";
+"choose_sure" = "确认发货";
+"unchoose" = "请先选择商品";
+"repair_order" = "重复订单";
+"repeat_tip" = "检测到您有订单异常，请先修复订单，再进行支付";
+"turn_order_repair" = "前往订单修复";

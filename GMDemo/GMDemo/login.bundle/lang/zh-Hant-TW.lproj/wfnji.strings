@@ -179,3 +179,23 @@
 "turn_setting" = "前往";
 "time_limit" = "上傳的視頻時長不可超過10分鐘";
 "video_load_error" = "視頻播放錯誤，請稍後重試";
+
+"order_fix" = "訂單修復";
+"deliver_sucess" = "發貨成功";
+"deliver_sucess_tip" = "您的訂單已發貨，請返回遊戲查收商品";
+"deliver_fail" = "發貨失敗";
+"deliver_fail_tip" = "您的訂單尚未發貨，請前往訂單修復\n如需幫助，請聯系客服";
+"turn_order_list" = "前往查看";
+"turn_cust" = "前往客服";
+"repair_sucess" = "修復成功";
+"repair_sucess_tip" = "您的訂單已修復，請返回遊戲查收商品";
+"repair_fail" = "修復失敗";
+"repair_fail_tip" = "您的訂單未修復，如需幫助，請聯系客服";
+"try_again" = "請稍後重試";
+"choose_goods" = "請選擇商品發貨";
+"choose_goods_tip" = "檢測到您有多筆相關訂單，請選擇您要發貨的商品";
+"choose_sure" = "確認發貨";
+"unchoose" = "請先選擇商品";
+"repair_order" = "重復訂單";
+"repeat_tip" = "檢測到您有訂單異常，請先修復訂單，再進行支付";
+"turn_order_repair" = "前往訂單修復";
