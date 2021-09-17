@@ -1232,3 +1232,40 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 [platTools deviceInfo];
 ```
 
+
+
+## Firebase Crash接入
+
+### 接入步骤：
+
+1、将给到的run和upload-symbols导入项目根目录。
+
+直接将上述文件拖入Xcode工程目录结构中，在弹出的界面中勾选**Copy items into destination group's folder(if needed)**，并确保**Add To Targets勾选相应target**。
+
+2、如图：
+
+![flags](assets/images/p8.png)
+
+选中TARGETS 你的项目 -> Build Phases -> Run Script  
+
+* 1、在Shell 脚本处添加：
+
+  ```objectivec
+  "${PROJECT_DIR}/${PROJECT_NAME}/run"
+  ```
+
+* 2、在Input Files，点击+，添加：
+
+  ```objectivec
+  ${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}
+  ```
+
+  和
+
+  ```objectivec
+  $(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)
+  ```
+
+ 注意：如果你没有发现Run Script ，可以点击“+”，选择New Run Script Phase即可。
+
+![flags](assets/images/p9.png)

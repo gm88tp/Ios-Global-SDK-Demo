@@ -31,12 +31,12 @@
 	<string>1</string>
 	<key>FacebookAppID</key>
 	<string>fb应用id</string>
+	<key>FacebookClientToken</key>
+	<string>fb的clienttoken</string>
 	<key>FacebookDisplayName</key>
 	<string>fb应用名称</string>
-    <key>FacebookClientToken</key>
-    <string>fb的clienttoken</string>
-    <key>GADApplicationIdentifier</key>
-    <string>ca-app-pub-7496069579613989~8545461470</string>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-7496069579613989~8545461470</string>
 	<key>GADIsAdManagerApp</key>
 	<true/>
 	<key>LSApplicationQueriesSchemes</key>
@@ -56,41 +56,41 @@
 		<string>twitter</string>
 		<string>twitterauth</string>
 	</array>
-    <key>NSUserTrackingUsageDescription</key>
-    <string>请求使用你的广告id</string>
-    <key>SKAdNetworkItems</key>
-    <array>
-        <dict>
-            <key>SKAdNetworkIdentifier</key>
-            <string>su67r6k2v3.skadnetwork</string>
-        </dict>
-        <dict>
-            <key>SKAdNetworkIdentifier</key>
-            <string>cstr6suwn9.skadnetwork</string>
-        </dict>
-        <dict>
-            <key>SKAdNetworkIdentifier</key>
-            <string>ludvb6z3bs.skadnetwork</string>
-        </dict>
-        <dict>
-            <key>SKAdNetworkIdentifier</key>
-            <string>v9wttpbfk9.skadnetwork</string>
-        </dict>
-        <dict>
-            <key>SKAdNetworkIdentifier</key>
-            <string>n38lu8286q.skadnetwork</string>
-        </dict>
-        <dict>
-            <key>SKAdNetworkIdentifier</key>
-            <string>4dzt52r2t5.skadnetwork</string>
-        </dict>
-        <dict>
-            <key>SKAdNetworkIdentifier</key>
-            <string>gta9lk7p23.skadnetwork</string>
-        </dict>
-    </array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>请求使用你的广告id</string>
+	<key>SKAdNetworkItems</key>
+	<array>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>su67r6k2v3.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>cstr6suwn9.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>ludvb6z3bs.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>v9wttpbfk9.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>n38lu8286q.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>4dzt52r2t5.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>gta9lk7p23.skadnetwork</string>
+		</dict>
+	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
