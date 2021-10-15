@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface platInit : NSObject
+
++(platInit*)getInstance;
 
 /**
  AppDelegate.h内的接口,主要用去.后台返回用
