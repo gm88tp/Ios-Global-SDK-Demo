@@ -25,13 +25,15 @@ NS_ASSUME_NONNULL_BEGIN
  @param serverID 区服
  @param status 状态值默认选择<3>: 1:创建角色 2:完成新手引导 3:等级升级
  @param vipLevel 游戏VIP等级
+ @param zone 大区,没有大区，请默认输入@"0"
  */
 + (void)platRoleName:(NSString *)name
             gameLevel:(NSString *)level
              serverID:(NSString *)serverID
                roleID:(NSString *)roleID
                status:(NSString *)status
-             vipLevel:(NSString *)vipLevel;
+             vipLevel:(NSString *)vipLevel
+                zone:(NSString *)zone;
 
  
 /**
@@ -97,6 +99,12 @@ style 1 至 5
  @param info      参数，没有可以传空
  */
 + (void)LogInfo:(NSString *)eventName EventDic:(NSDictionary *)info;
+
++ (void)LogFBInfo:(NSString *)eventName EventDic:(NSDictionary *)info;
+
++ (void)LogAFInfo:(NSString *)eventName EventDic:(NSDictionary *)info;
+
++ (void)LogFirbaseInfo:(NSString *)eventName EventDic:(NSDictionary *)info;
 
 
 /**
@@ -257,12 +265,12 @@ style 1 至 5
 /*
  *vip客服
  */
-+ (void)VIPCustomService;
+//+ (void)VIPCustomService;
 
 /*
  *是否可以显示vip
  */
-+ (void)isCanVip;
+//+ (void)isCanVip;
 
 /*
  *日志，是否开启日志
@@ -271,13 +279,16 @@ style 1 至 5
 
 /*
  *客服入口
+ 接口废弃
  */
-+ (void)showCustomView;
+//+ (void)showCustomView;
 
 /*
  *常见问题入口
+ 接口废弃
  */
-+ (void)showFAQView;
+//+ (void)showFAQView;
+
 
 /**
  打开入口
@@ -299,6 +310,16 @@ style 1 至 5
  @param str 视频地址
  */
 + (void)playVideo:(NSString *)str;
+
+/**
+用户中心
+ */
++ (void)userCenter;
+
+/**
+ 帮助中心
+ */
++ (void)helpCenter;
 
 @end
 

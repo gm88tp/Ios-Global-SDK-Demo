@@ -35,7 +35,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifitionCenter:)  name:@"SDKCenterNotifition" object:nil];
     
     //demo
-    self.dataArray = @[@"登录",@"登出",@"切换账号",@"支付",@"广告",@"社交",@"分享",@"客服中心",@"常见问题",@"vip客服",@"角色信息上报",@"自定义打点上报",@"打开webview",@"其他",@"播放视频"];
+    self.dataArray = @[@"登录",@"登出",@"切换账号",@"支付",@"广告",@"社交",@"分享",@"帮助中心",@"个人中心",@"角色信息上报",@"自定义打点上报",@"单渠道打点上报（示例Facebook打点上报）",@"打开webview",@"其他",@"播放视频"];
 }
 
 #pragma mark - SDKCenterNotifition 通知回调结果
@@ -65,13 +65,19 @@
                 NSString *str = [Info objectForKey:@"translate"];
                NSLog(@"翻译完内容：%@",str);
            }
-    }else if ([[Info objectForKey:@"status"] isEqualToString:@"13"]) {
+    }
+    /*
+     已废弃
+    else if ([[Info objectForKey:@"status"] isEqualToString:@"13"]) {
         //vip客服不可显示
     }else if ([[Info objectForKey:@"status"] isEqualToString:@"14"]) {
         //vip客服可显示
     }else if ([[Info objectForKey:@"status"] isEqualToString:@"15"]) {
         //vip客服已关闭
-    }else if ([[Info objectForKey:@"status"] isEqualToString:@"16"]) {
+    }
+     */
+    
+    else if ([[Info objectForKey:@"status"] isEqualToString:@"16"]) {
         //ip限制
     }else if ([[Info objectForKey:@"status"] isEqualToString:@"17"]) {
         //播放完成后用户点击关闭
@@ -257,17 +263,17 @@
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"上报角色打点" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *ad1 = [UIAlertAction actionWithTitle:@"新手引导" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //新手引导
-        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" roleID:@"1" status:@"2" vipLevel:@""];
+        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" roleID:@"1" status:@"2" vipLevel:@"" zone:@"0"];
     }];
         
     UIAlertAction *ad2 = [UIAlertAction actionWithTitle:@"角色等级" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //角色等级
-        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" roleID:@"1" status:@"3" vipLevel:@""];
+        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" roleID:@"1" status:@"3" vipLevel:@"" zone:@"0"];
     }];
     
     UIAlertAction *ad3 = [UIAlertAction actionWithTitle:@"创建角色" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //创建角色
-        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" roleID:@"1" status:@"1" vipLevel:@""];
+        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" roleID:@"1" status:@"1" vipLevel:@"" zone:@"0"];
     }];
     
 
@@ -289,6 +295,20 @@
     //自定义打点名称+参数
     [platTools LogInfo:event EventDic:@{}];
    
+}
+
+#pragma 单渠道打点上报FB
+- (void)upEventFB:(NSString *)event {
+    [platTools LogFBInfo:event EventDic:@{}];
+    
+    /*
+     其他渠道打点接入方法，请按需接入
+    //firebase
+    [platTools LogFirbaseInfo:event EventDic:@{}]
+    //appsflyer
+    [platTools LogAFInfo:event EventDic:@{}];
+     
+     */
 }
 
 #pragma 打开社交平台
@@ -321,20 +341,17 @@
     [platTools translateText:@"要翻译的文案" identifier:@"2"];
 }
 
-#pragma 客服中心
+#pragma 帮助中心
 - (void)service {
-    [platTools showCustomView];
+    [platTools helpCenter];
 }
 
-#pragma vip客服
-- (void)vipCS {
-    //vip客服
-    [platTools VIPCustomService];
-}
+#pragma vip客服 --废弃
 
-#pragma 常见问题
-- (void)FAQ {
-    [platTools showFAQView];
+
+#pragma 用户中心
+- (void)usercenter {
+    [platTools userCenter];
 }
 
 #pragma 播放视频
@@ -453,18 +470,15 @@
         //分享
         [self share];
     } else if (indexPath.row == 7) {
-        //客服中心
+        //帮助中心
         [self service];
     } else if (indexPath.row == 8) {
-        //常见问题
-        [self FAQ];
+        //用户中心
+        [self usercenter];
     } else if (indexPath.row == 9) {
-        //vip客服
-        [self vipCS];
-    } else if (indexPath.row == 10) {
         //角色信息上报
         [self role];
-    } else if (indexPath.row == 11) {
+    } else if (indexPath.row == 10) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"自定义打点" message:@"请输入点名" preferredStyle:UIAlertControllerStyleAlert];
         __block UITextField *input;
         [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
@@ -474,6 +488,27 @@
         UIAlertAction *up = [UIAlertAction actionWithTitle:@"上报" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             //自定义打点上报
             [self upEvent:input.text];
+        }];
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                
+        }];
+        [alert addAction:up];
+        [alert addAction:cancel];
+        
+        alert.popoverPresentationController.sourceView = self.mTable;
+        alert.popoverPresentationController.sourceRect = CGRectMake(10, 10, 100, 100);
+        
+        [self presentViewController:alert animated:YES completion:nil];
+    } else if (indexPath.row == 11) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"自定义打点" message:@"请输入点名" preferredStyle:UIAlertControllerStyleAlert];
+        __block UITextField *input;
+        [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+            input = textField;
+        }];
+        
+        UIAlertAction *up = [UIAlertAction actionWithTitle:@"上报" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            //自定义打点上报
+            [self upEventFB:input.text];
         }];
         UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                 

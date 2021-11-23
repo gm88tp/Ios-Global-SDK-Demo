@@ -16,27 +16,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    //初始化有两个接口，如下,请选择其中一种进行初始化，  推荐使用方式一，详见接入文档
+    //详见接入文档
     /**
-     *方式一：
+     *初始化sdk
      *参数全部在bundle中
      **/
     [platInit initSDKapplication:application didFinishLaunchingWithOptions:launchOptions Applede:self];
     
-    /**
-    *方式二：
-    * 自行传入相关参数
-     此方法已废弃
-    **/
-//    [wfnjiPlat
-//    initSDK : @"游戏id"
-//    setPromote : @"17"
-//    application : application
-//    didFinishLaunchingWithOptions : launchOptions
-//    appsFlyerDevKey : @"appflyer的devkey"
-//    appleAppID : @"苹果id"
-//    GGkClientID : @"google id"
-//    Applede:self];
     return YES;
 }
 

@@ -11,6 +11,18 @@
 
 ## 更新日志
 
+* 2021-11-15    v2.0
+
+1、客服模块所有接口全部废弃
+
+2、新增帮助中心接口
+
+3、新增个人中心接口
+
+4、新增Facebook打点，Appsflyer打点，Firebase打点接口
+
+5、角色信息变更接口增加大区zone
+
 * 2021-09-03      v1.4.5
 
 支付优化，新增接口：订单修复
@@ -257,7 +269,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 | issueVersion     | String   | 发布版本                                                     | 1634011                                                      |
 | consumerSecret   | String   | twitter的Secret                                              | lGoFe4yYVug52LcNiAptoABgb14k5seN9XMJq6L0ggSzUmIevP           |
 | ConsumerKey      | String   | twitter的key（如果无需twitter相关功能，这两个参数可以不修改） | SALb45SZfATPS8ILSYAvnB4ic                                    |
-| sdkVersion       | String   | 此为SDK版本号，无需修改                                      | 1.4.3                                                        |
+| sdkVersion       | String   | 此为SDK版本号，无需修改                                      | 2.0                                                          |
 | iconControl      | String   | 登录页面是否显示app的icon，1表示使用应用icon，其他表示使用默认图片。 | 1                                                            |
 | admobInit        | String   | 广告是否使用admob，1表示使用admob，其他表示使用ironsource    | 1                                                            |
 
@@ -284,28 +296,28 @@ SDK使用通知来接收部分接口的结果，涉及的接口包括：
 
 **状态值**
 
-| 状态值 | 含义                  |
-| ------ | --------------------- |
-| 0      | 广告失败              |
-| 1      | 广告成功              |
-| 2      | 分享失败              |
-| 3      | 分享成功              |
-| 4      | 绑定失败              |
-| 5      | 绑定成功              |
-| 6      | 未绑定                |
-| 7      | 已绑定                |
-| 8      | 绑定取消              |
-| 9      | 取消广告              |
-| 10     | 返回product多语言     |
-| 11     | 返回product多语言失败 |
-| 12     | 返回翻译              |
-| 13     | VIP专属客服不可显示   |
-| 14     | VIP专属客服可显示     |
-| 15     | VIP专属客服关闭       |
-| 16     | ip限制                |
-| 17     | 视频播放完成并关闭    |
-| 18     | 视频取消播放          |
-| 19     | 视频播放失败          |
+| 状态值 | 含义                             |
+| ------ | -------------------------------- |
+| 0      | 广告失败                         |
+| 1      | 广告成功                         |
+| 2      | 分享失败                         |
+| 3      | 分享成功                         |
+| 4      | 绑定失败                         |
+| 5      | 绑定成功                         |
+| 6      | 未绑定                           |
+| 7      | 已绑定                           |
+| 8      | 绑定取消                         |
+| 9      | 取消广告                         |
+| 10     | 返回product多语言                |
+| 11     | 返回product多语言失败            |
+| 12     | 返回翻译                         |
+| 13     | VIP专属客服不可显示 （废弃）     |
+| 14     | VIP专属客服可显示     （废弃）   |
+| 15     | VIP专属客服关闭         （废弃） |
+| 16     | ip限制                           |
+| 17     | 视频播放完成并关闭               |
+| 18     | 视频取消播放                     |
+| 19     | 视频播放失败                     |
 
 **示例**
 
@@ -625,13 +637,15 @@ platPurchase purchase:mPayInfo CallBack:self];
   * @param roleid   角色ID
   * @param status   1:创建角色 2:完成新手引导 3:等级升级  状态值默认选择<3>
   * @param vipLevel 游戏VIP等级
+  * @param zone 大区,没有大区，请默认输入@"0"
   */
 + (void)platRoleName:(NSString *)name
             gameLevel:(NSString *)level
              serverID:(NSString *)serverID
                roleID:(NSString *)roleid
                status:(NSString *)status
-         vipLevel:(NSString *)vipLevel;
+         vipLevel:(NSString *)vipLevel
+           zone:(NSString *)zone;
 ```
 
 **参数**
@@ -649,7 +663,7 @@ platPurchase purchase:mPayInfo CallBack:self];
 此处示例为角色升级
 
 ```objectivec
-[platTools platRoleName:@"角色名字" gameLevel:@"角色等级" serverID:@"区服ID" roleID:@"角色ID" status:@"3" vipLevel:@""];
+[platTools platRoleName:@"角色名字" gameLevel:@"角色等级" serverID:@"区服ID" roleID:@"角色ID" status:@"3" vipLevel:@"" zone:@"0"];
 ```
 
 # 分享
@@ -832,9 +846,45 @@ platPurchase purchase:mPayInfo CallBack:self];
 
 **注：v1.4.1及其以上版本，广告新增回调16，表明用户的ip所属地区限制广告加载（无广告）。**
 
-# 客服
 
-## 客服中心
+
+# 帮助中心
+
+此接口用于显示帮助中心。
+
+```objectivec
++ (void)helpCenter;
+```
+
+**示例**
+
+```objectivec
+[platTools helpCenter];
+```
+
+
+
+# 个人中心
+
+此接口用于显示用户中心。
+
+```objectivec
++ (void)userCenter;
+```
+
+**示例**
+
+```objectivec
+[platTools userCenter];
+```
+
+
+
+
+
+# ~~客服(已废弃)~~
+
+## ~~客服中心(已废弃)~~
 
 此接口用于显示客服中心
 
@@ -842,31 +892,17 @@ platPurchase purchase:mPayInfo CallBack:self];
 + (void)showCustomView;
 ```
 
-**示例**
 
-```objectivec
-[platTools showCustomView];
-```
 
-**响应**
+## ~~VIP专属客服(已废弃)~~
 
-打开客服页面。
-
-## VIP专属客服
-
-### 查询是否可显示VIP客服
+### ~~查询是否可显示VIP客服(已废弃)~~
 
 - 此接口用于查询是否可显示VIP专属客服（只有符合相关条件的vip，才会返回可以显示）
 - 结果在通知中，通知名称为@"SDKCenterNotifition"，详见**SDK通知**
 
 ```objectivec
 + (void)isCanVip;
-```
-
-**示例**
-
-```objectivec
-[platTools isCanVip];
 ```
 
 **响应**
@@ -878,19 +914,13 @@ platPurchase purchase:mPayInfo CallBack:self];
 | 13  | VIP专属客服不可显示 |
 | 14  | VIP专属客服可显示  |
 
-### VIP专属客服
+### ~~VIP专属客服(已废弃)~~
 
 - 此接口用于显示VIP专属客服
 - 结果在通知中，通知名称为@"SDKCenterNotifition"，详见**SDK通知**
 
 ```objectivec
 + (void)VIPCustomService;
-```
-
-**示例**
-
-```objectivec
-[platTools VIPCustomService];
 ```
 
 **响应**
@@ -903,7 +933,7 @@ platPurchase purchase:mPayInfo CallBack:self];
 | 14  | VIP专属客服可显示  |
 | 15  | VIP专属客服关闭   |
 
-## 常见问题
+## ~~常见问题(已废弃)~~
 
 此接口用于打开常见问题页面。
 
@@ -911,15 +941,7 @@ platPurchase purchase:mPayInfo CallBack:self];
 + (void)showFAQView;
 ```
 
-**示例**
 
-```objectivec
-[platTools showFAQView];
-```
-
-**响应**
-
-显示常见问题页面。
 
 # 数据打点
 
@@ -945,6 +967,83 @@ platPurchase purchase:mPayInfo CallBack:self];
 [platTools LogInfo:@"achieve xxx"  EventDic:nil];
 
 ```
+
+## Facebook打点
+
+此为facebook打点接口，如有该打点有facebook专门的点名或者参数，可以单独调用此接口打点。
+
+```objectivec
++ (void)LogFBInfo:(NSString *)eventName EventDic:(NSDictionary *)info;
+```
+
+**参数**
+
+| 参数名    | 类型         | 描述                                   | 示例              |
+| --------- | ------------ | -------------------------------------- | ----------------- |
+| eventName | NSString     | 事件名称                               | @"enter game"     |
+| info      | NSDictionary | 事件其他参数，用于细分数据(如无可传空) | @{@"userId":@"1"} |
+
+**示例**
+
+```objectivec
+//如无其他额外信息，EventDic请传nil(空)
+[platTools LogFBInfo:@"achieve xxx"  EventDic:nil];
+
+```
+
+
+
+## Appsflyer打点
+
+此为Appsflyer打点接口，如有该打点有Appsflyer专门的点名或者参数，可以单独调用此接口打点。
+
+```objectivec
++ (void)LogAFInfo:(NSString *)eventName EventDic:(NSDictionary *)info;
+```
+
+**参数**
+
+| 参数名    | 类型         | 描述                                   | 示例              |
+| --------- | ------------ | -------------------------------------- | ----------------- |
+| eventName | NSString     | 事件名称                               | @"enter game"     |
+| info      | NSDictionary | 事件其他参数，用于细分数据(如无可传空) | @{@"userId":@"1"} |
+
+**示例**
+
+```objectivec
+//如无其他额外信息，EventDic请传nil(空)
+[platTools LogAFInfo:@"achieve xxx"  EventDic:nil];
+
+```
+
+
+
+## Firebase打点
+
+此为Firebase打点接口，如有该打点有Firebase专门的点名或者参数，可以单独调用此接口打点。
+
+```objectivec
++ (void)LogFirbaseInfo:(NSString *)eventName EventDic:(NSDictionary *)info;
+```
+
+**参数**
+
+| 参数名    | 类型         | 描述                                   | 示例              |
+| --------- | ------------ | -------------------------------------- | ----------------- |
+| eventName | NSString     | 事件名称                               | @"enter game"     |
+| info      | NSDictionary | 事件其他参数，用于细分数据(如无可传空) | @{@"userId":@"1"} |
+
+**示例**
+
+```objectivec
+//如无其他额外信息，EventDic请传nil(空)
+[platTools LogFirbaseInfo:@"achieve xxx"  EventDic:nil];
+
+```
+
+
+
+
 
 # 推送
 
@@ -1234,7 +1333,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 
 
-## Firebase Crash接入
+# Firebase Crash接入
 
 ### 接入步骤：
 
