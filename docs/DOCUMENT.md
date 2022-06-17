@@ -938,3 +938,61 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 #pragma  =====获取当前安装的平台line,instagram,twitter,facebook ========
 -(NSArray *)shareplatType;
 ```
+
+
+
+## 设置应用方向
+
+SDK V1.4开始，同时支持横竖版，并且两版流程不一致，因此在出包之前必须设置应用方向。
+
+### 1、横版游戏
+
+
+
+**【General】—>【Deployment Info】—>【Device Orientation】**，勾选Landscape Left和Landscape Right。
+
+  ![p7](/Users/cm/Documents/iOS-work/sdk对外demo和文档/Ios-Global-SDK-Demo/docs/assets/images/p7.png)
+
+### 2、竖版游戏
+
+**【General】—>【Deployment Info】—>【Device Orientation】**，勾选Portrait。
+
+![p6](/Users/cm/Documents/iOS-work/sdk对外demo和文档/Ios-Global-SDK-Demo/docs/assets/images/p6.png)
+
+
+
+# Firebase Crash接入
+
+### 接入步骤：
+
+1、将给到的run和upload-symbols导入项目根目录。
+
+直接将上述文件拖入Xcode工程目录结构中，在弹出的界面中勾选**Copy items into destination group's folder(if needed)**，并确保**Add To Targets勾选相应target**。
+
+2、如图：
+
+![flags](/Users/cm/Desktop/翻译/2.0wendang/assets/images/p8.png)
+
+选中TARGETS 你的项目 -> Build Phases -> Run Script  
+
+* 1、在Shell 脚本处添加：
+
+  ```objectivec
+  "${PROJECT_DIR}/${PROJECT_NAME}/run"
+  ```
+
+* 2、在Input Files，点击+，添加：
+
+  ```objectivec
+  ${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}
+  ```
+
+  和
+
+  ```objectivec
+  $(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)
+  ```
+
+ 注意：如果你没有发现Run Script ，可以点击“+”，选择New Run Script Phase即可。
+
+![flags](assets/images/p9.png)
