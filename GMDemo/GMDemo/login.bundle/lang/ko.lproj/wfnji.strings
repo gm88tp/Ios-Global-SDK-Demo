@@ -64,8 +64,8 @@
 "account_s" = "계정 만들기 성공!";
 "code_err" = "인증 코드가 틀렸습니다";
 "email" = "올바른 이메일 주소를 입력해 주세요";
-"pass" = "6~30자 영문,숫자,기호가 포함된 비밀번호를 입력해 주세요";
-"pass_re" = "비밀번호는 6~30자 영문,숫자,기호 조합입니다. 다시 입력해 주세요";
+"pass" = "6~16자 영문,숫자,기호가 포함된 비밀번호를 입력해 주세요";
+"pass_re" = "비밀번호는 6~16자 영문,숫자,기호 조합입니다. 다시 입력해 주세요";
 "tran_load" = "로그인 하기";
 "reset_pas" = "비밀번호 재설정";
 "paspromotsec" = "비밀번호를 다시 입력하십시오";
@@ -205,3 +205,232 @@
 "repair_order" = "중복된 주문서";
 "repeat_tip" = "주문서 이상이 감지되었습니다. 먼저 주문서를 복구하신 후 결제 진행하시기 바랍니다.";
 "turn_order_repair" = "주문서 복구";
+
+"help_center" = "고객센터";
+
+/*Tips*/
+"dialog_tips_title" = "도움말";
+
+/*Please make sure you have read and agreed to User Agreement and Privacy Notice*/
+"agreements_tip" = "이용약관 및 개인 정보 처리 방침을 확인하고 동의하세요.";
+
+/*User Agreement*/
+"user_agreement" = "이용약관";
+
+/*Privacy Notice*/
+"privacy_notice" = "개인 정보 처리 방침";
+
+/*Decline*/
+"privacy_decline_btn" = "거절";
+
+/*accept*/
+"privacy_accept_btn" = "동의";
+
+/*To ensure the security of your account, you need to bind the email address so that you can use the password reset function. You can also bind other third-party accounts*/
+"account_binding_tips" = "계정 안전을 위해 비밀번호 변경 기능을 사용하시려면 먼저 이메일 계정 또는 기타 계정을 연동하셔야 합니다.";
+
+/*not binding email*/
+"account_not_binding" = "이메일 계정 미연동";
+
+/*Topic Category*/
+"help_center_topic_category" = "이슈 분류";
+
+/*Please select topic you want to see*/
+"help_center_topic_category_hint" = "상황에 맞는 이슈를 선택해주세요.";
+
+/*Account Problem*/
+"help_center_account_problem" = "계정 이슈";
+
+/*Payment Problem*/
+"help_center_payment_problem" = "충전 이슈";
+
+/*Game Related*/
+"help_center_game_related" = "게임 이슈";
+
+/*Issue*/
+"help_center_issue" = "이슈 제기";
+
+/*you can contact by issues*/
+"help_center_issue_hint" = "이슈 제기를 통해 저희와 연락할 수 있습니다.";
+
+/*I want feedback*/
+"help_center_want_feedback_btn" = "제기하기";
+
+/*Feedback history*/
+"help_center_feedback_history_btn" = "제출 기록";
+
+/*Feedback*/
+"feedback_title" = "이슈";
+
+/*Title*/
+"feedback_title_tag" = "제목";
+
+/*Take a title for feedback*/
+"feedback_title_hint" = "제목을 입력해 주세요.";
+
+/*Description:*/
+"feedback_description" = "내용";
+
+/*Please fill in the problem description*/
+"feedback_description_hint" = "이슈 설명을 남겨주세요.";
+
+/*Photo or Video\n(limited to two)*/
+"feedback_upload_hint" = "최대 2장의 사진과 동영상 첨부 가능";
+
+/*Title must be 4-20 characters*/
+"feedback_title_error_hint" = "제목은4-20자 사이로 입력해 주세요.";
+
+/*Description is required*/
+"feedback_description_error_hint" = "이슈 설명이 비었습니다.";
+
+/*Account and Role:*/
+"feedback_account_role" = "계정과 캐릭터";
+
+/*Server & Charactor:*/
+"feedback_server_charactor" = "서버와 캐릭터";
+
+/*Feedback Category*/
+"feedback_category" = "분류";
+
+/*Account*/
+"feedback_category_account" = "계정";
+
+/*Payment*/
+"feedback_category_payment" = "충전";
+
+/*Game*/
+"feedback_category_game" = "게임";
+
+/*Other*/
+"feedback_category_other" = "기타";
+
+/*Role Name*/
+"feedback_role_name" = "캐릭터 닉네임";
+
+/*Feedback the details*/
+"feedback_detail" = "이슈 설명";
+
+/*Account Feedback*/
+"feedback_detail_actfeedback" = "계정 설명";
+
+/*Unfold*/
+"feedback_detail_unfold" = "더보기";
+
+/*Put away*/
+"feedback_detail_putaway" = "접기";
+
+/*Reply to Custom Service*/
+"feedback_reply_title" = "회신";
+
+/*What you want to say*/
+"feedback_reply_hint" = "이슈 설명";
+
+/*Reply*/
+"feedback_reply_btn" = "회신";
+
+/*My feedback*/
+"feedback_my_feedback_title" = "나의 이슈";
+
+/*RT Talk*/
+"feedback_rttalk_btn" = "1:1 채팅";
+
+/*There is no feedback problem for the time being*/
+"feedback_empty_hint" = "이슈 없음";
+
+/*User Center*/
+"user_center_title" = "고객센터";
+
+/*View all orders*/
+"user_center_view_all_orders" = "전체 ";
+
+/*View All Feedbacks*/
+"user_center_view_all_feedbacks" = "전체 이슈 보기";
+
+/*Orders*/
+"order_title" = "주문서";
+
+/*No orders*/
+"order_empty_hint" = "충전 내역이 없습니다.";
+
+/*Unusual*/
+"order_unusual" = "주문서 오류";
+
+/*Finished*/
+"order_finished" = "완료";
+
+/*Next*/
+"next_btn" = "다음";
+
+/*Payment feedback*/
+"feedback_detail_payfeedback" = "충전 이슈";
+
+/*Game Feedback*/
+"feedback_detail_gamefeedback" = "게임 이슈";
+
+/*Other Feedback*/
+"feedback_detail_otherfeedback" = "기타 이슈";
+"user_center_no_feedback" = "이슈 없음";
+"order_copy_id" = "주문서 복사";
+"order_repair_ignore" = "뛰어넘기";
+
+/*Review Game*/
+"review_game" = "평가";
+
+/*not binding email*/
+"not_binding_email" = "연동한 이메일이 없습니다.";
+
+/*To ensure the security of your account, you need to bind the email address so that you can use the password reset function. You can also bind other third-party accounts*/
+"bind_hint" = "계정 안전을 위해 비밀번호 변경 기능을 사용하시려면 먼저 이메일 계정 또는 기타 계정을 연동하셔야 합니다.";
+
+/*Third party*/
+"third_party" = "기타 계정";
+
+/*Please bind the email first*/
+"bind_email_first" = "먼저 이메일 연동을 해주세요.";
+
+/*step*/
+"step" = "단계";
+
+/*Submitted successfully*/
+"feedback_submit_succ" = "제출 성공";
+
+/*Back to Help Center*/
+"back_to_helpcenter" = "고객센터로 돌아가기";
+
+/*View feedback*/
+"view_feedback" = "이슈 보기";
+
+/*Please select the feedback type*/
+"unselect_feedback_type" = "먼저 이슈 분류를 선택해 주세요.";
+
+/*Back to game*/
+"back_to_game" = "게임으로 돌아가기";
+
+/*Submitting*/
+"submitting" = "제출 중";
+
+/*submit*/
+"submit" = "제출";
+
+/*no more data*/
+"no_more_data" = "데이터 없음";
+
+/*go to help center*/
+"go_helpcenter" = "고객센터로 이동";
+
+/*agreement*/
+"agreement" = "약관";
+"sign_in_with" = "로그인 방식";
+"or" = "혹은";
+"keyboard_finish" = "완료";
+"feedback_video_long_time" = "업로드할 영상의 길이는 60초를 넘으면 안 됩니다.";
+"feedback_account_title" = "계정";
+"usercenter_switch_text" = "계정을 교체하시겠습니까?";
+"login_help" = "도움이 필요하시나요?";
+"message_pic" = "[그림]";
+"no_role_hint" = "캐릭터 정보 없음";
+
+"delete_account" = "계정삭제(주의)";
+"notice_title" = "공지";
+"notice_pay_tip" = "구매 완료 게임내에서 구매한 상품을 확인해 주세요.";
+"success" = "성공";

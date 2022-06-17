@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param name 角色名字
  @param level 游戏等级
  @param serverID 区服
- @param status 状态值默认选择<3>: 1:创建角色 2:完成新手引导 3:等级升级
+ @param status 状态值默认选择<3>: 1:创建角色 2:完成新手引导 3:等级升级 4:每次进入游戏
  @param vipLevel 游戏VIP等级
  @param zone 大区,没有大区，请默认输入@"0"
  */
@@ -184,13 +184,11 @@ style 1 至 5
                  10 返回product多语言
                  11 返回product多语言失败
                  12 返回翻译
-                 13 返回VIP客服不可显示
-                 14 返回vip客服可显示
-                 15 返回vip客服关闭
-                 16 国内ip
-                 17 视频播放完成并点击关闭
-                 18 用户取消播放
-                 19 视频播放失败
+                 13 广告开始播放
+                 14 accsetoken 获取成功
+                 15 accsetoken 获取失败
+                 16 国内ip禁止播放广告
+               
 
  */
 

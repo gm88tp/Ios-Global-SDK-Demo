@@ -27,6 +27,16 @@ NS_ASSUME_NONNULL_BEGIN
 + (void) logout;
 
 /**
+ 删除账号
+ */
++ (void)deleteAccount;
+
+/**
+ 应用退出账号自动显示历史账号页面
+ */
++ (void) WithInApplicationLogout;
+
+/**
  查看当前的登录状态
  @return true or false
  */
@@ -78,6 +88,75 @@ NS_ASSUME_NONNULL_BEGIN
  应用内切换账号
  */
 + (void) WithInApplicationSwitch;
+
+
+
++ (void)authAssToken;
+
+/**
+ Facebook登录
+ */
++ (void)FaceBookLogin ;
+
+/**
+ Line登录
+ */
++ (void)LineLogin;
+
+/**
+ Twiiter登录
+ */
++ (void)TwitterLogin ;
+
+/**
+ Google登录
+ */
++ (void)GoogleLogin ;
+
+/**
+ 游客登录
+ */
++ (void)GuestLogin ;
+
+/**
+ Apple登录
+ */
++ (void)AppleLogin ;
+
+/**
+ 邮箱登录
+ */
++ (void)EmailLogin;
+
+/**
+ 绑定Facebook
+ */
++ (void)FaceBookBind ;
+
+/**
+ 绑定Line
+ */
++ (void)LineBind;
+
+/**
+ 绑定Twitter
+ */
++ (void)TwitterBind;
+
+/**
+ 绑定Google
+ */
++ (void)GoogleBind ;
+
+/**
+ 绑定Apple
+ */
++ (void)AppleBind;
+
+/**
+ 绑定Email
+ */
++ (void)EmailBinb;
 @end
 
 NS_ASSUME_NONNULL_END

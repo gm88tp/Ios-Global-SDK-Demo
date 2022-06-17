@@ -64,8 +64,8 @@
 "account_s" = "Registration complete!";
 "code_err" = "Incorrect Code";
 "email" = "Enter correct email address";
-"pass" = "The password is between 6-30 letters, digits and symbols, please enter.";
-"pass_re" = "The password is between 6-30 letters,digits and symbols, please re-enter.";
+"pass" = "The password is between 6-16 letters, digits and symbols, please enter.";
+"pass_re" = "The password is between 6-16 letters,digits and symbols, please re-enter.";
 "tran_load" = "Login Page";
 "reset_pas" = "Reset Password";
 "paspromotsec" = "Confirm Password";
@@ -184,7 +184,7 @@
 "deliver_fail" = "Fail to ship";
 "deliver_fail_tip" = "Your order has not yet been shipped, please go to Order Repair\n If you need help, please contact customer service";
 "turn_order_list" = "Go to view";
-"turn_cust" = "Go to Customer Service";
+"turn_cust" = "Go to Support";
 "repair_sucess" = "Repaired successfully";
 "repair_sucess_tip" = "Your order has been resent, please check the items in game";
 "repair_fail" = "Fail to repair";
@@ -197,3 +197,235 @@
 "repair_order" = "Duplicate orders";
 "repeat_tip" = "An order exception has been detected, please repair the order first and then proceed to payment";
 "turn_order_repair" = "Go to Order Repair";
+
+/*Fuzzy*/
+"login_cant_login" = "Cannot login？";
+"help_center" = "help center";
+
+/*Tips*/
+"dialog_tips_title" = "Tips";
+
+/*Please make sure you have read and agreed to User Agreement and Privacy Notice*/
+"agreements_tip" = "Please make sure you have read and agreed to User Agreement and";
+
+/*User Agreement*/
+"user_agreement" = "User Agreement";
+
+/*Privacy Notice*/
+"privacy_notice" = "Privacy Notice";
+
+/*Decline*/
+"privacy_decline_btn" = "Decline";
+
+/*accept*/
+"privacy_accept_btn" = "Accept";
+
+/*To ensure the security of your account, you need to bind the email address so that you can use the password reset function. You can also bind other third-party accounts*/
+"account_binding_tips" = "To ensure the security of your account, you need to bind the em";
+
+/*not binding email*/
+"account_not_binding" = "not binding email";
+
+/*Topic Category*/
+"help_center_topic_category" = "Topic Category";
+
+/*Please select topic you want to see*/
+"help_center_topic_category_hint" = "Please select topic you want to see";
+
+/*Account Problem*/
+"help_center_account_problem" = "Account Problem";
+
+/*Payment Problem*/
+"help_center_payment_problem" = "Payment Issue";
+
+/*Game Related*/
+"help_center_game_related" = "Game Issue";
+
+/*Issue*/
+"help_center_issue" = "Issue";
+
+/*you can contact by issues*/
+"help_center_issue_hint" = "you can contact by issues";
+
+/*I want feedback*/
+"help_center_want_feedback_btn" = "I want feedback";
+
+/*Feedback history*/
+"help_center_feedback_history_btn" = "Feedback history";
+
+/*Feedback*/
+"feedback_title" = "Feedback";
+
+/*Title*/
+"feedback_title_tag" = "Title";
+
+/*Take a title for feedback*/
+"feedback_title_hint" = "Take a title for feedback";
+
+/*Description:*/
+"feedback_description" = "Description";
+
+/*Please fill in the problem description*/
+"feedback_description_hint" = "Please fill in the problem description";
+
+/*Photo or Video\n(limited to two)*/
+"feedback_upload_hint" = "Limited in 2";
+
+/*Title must be 4-20 characters*/
+"feedback_title_error_hint" = "Title must be 4-20 characters";
+
+/*Description is required*/
+"feedback_description_error_hint" = "Description is required";
+
+/*Account and Role:*/
+"feedback_account_role" = "Account and Role";
+
+/*Server & Charactor:*/
+"feedback_server_charactor" = "Server & Charactor";
+
+/*Feedback Category*/
+"feedback_category" = "Feedback Category";
+
+/*Account*/
+"feedback_category_account" = "Account";
+
+/*Payment*/
+"feedback_category_payment" = "Payment";
+
+/*Game*/
+"feedback_category_game" = "Game";
+
+/*Other*/
+"feedback_category_other" = "Other";
+
+/*Role Name*/
+"feedback_role_name" = "Role Name";
+
+/*Feedback the details*/
+"feedback_detail" = "Feedback the details";
+
+/*Account Feedback*/
+"feedback_detail_actfeedback" = "Account Feedback";
+
+/*Unfold*/
+"feedback_detail_unfold" = "Expand";
+
+/*Put away*/
+"feedback_detail_putaway" = "Collapse";
+
+/*Reply to Custom Service*/
+"feedback_reply_title" = "Reply";
+
+/*What you want to say*/
+"feedback_reply_hint" = "What you want to say";
+
+/*Reply*/
+"feedback_reply_btn" = "Reply";
+
+/*My feedback*/
+"feedback_my_feedback_title" = "My feedback";
+
+/*RT Talk*/
+"feedback_rttalk_btn" = "RT Talk";
+
+/*There is no feedback problem for the time being*/
+"feedback_empty_hint" = "There is no feedback problem for the time being";
+
+/*User Center*/
+"user_center_title" = "User Center";
+
+/*View all orders*/
+"user_center_view_all_orders" = "View all orders";
+
+/*View All Feedbacks*/
+"user_center_view_all_feedbacks" = "View All Feedbacks";
+
+/*Orders*/
+"order_title" = "Orders";
+
+/*No orders*/
+"order_empty_hint" = "No orders";
+
+/*Unusual*/
+"order_unusual" = "Unusual";
+
+/*Finished*/
+"order_finished" = "Finished";
+
+/*Next*/
+"next_btn" = "Next";
+
+/*Payment feedback*/
+"feedback_detail_payfeedback" = "Payment Feedback";
+
+/*Game Feedback*/
+"feedback_detail_gamefeedback" = "Game Feedback";
+
+/*Other Feedback*/
+"feedback_detail_otherfeedback" = "Other Issue";
+"user_center_no_feedback" = "No Feedbacks";
+"order_copy_id" = "Copy ID";
+"order_repair_ignore" = "Ignore";
+
+/*Review Game*/
+"review_game" = "Review Game";
+
+/*not binding email*/
+"not_binding_email" = "not binding email";
+
+/*To ensure the security of your account, you need to bind the email address so that you can use the password reset function. You can also bind other third-party accounts*/
+"bind_hint" = "To ensure the security of your account, you need to bind the email address so that you can use the password reset function. You can also bind other third-party accounts";
+
+/*Third party*/
+"third_party" = "Third party";
+
+/*Please bind the email first*/
+"bind_email_first" = "Please bind the email first";
+
+/*step*/
+"step" = "step";
+
+/*Submitted successfully*/
+"feedback_submit_succ" = "Submitted successfully";
+
+/*Back to Help Center*/
+"back_to_helpcenter" = "Back to Help Center";
+
+/*View feedback*/
+"view_feedback" = "View feedback";
+
+/*Please select the feedback type*/
+"unselect_feedback_type" = "Please select the feedback type";
+
+/*Back to game*/
+"back_to_game" = "Back to game";
+
+/*Submitting*/
+"submitting" = "Submitting";
+
+/*submit*/
+"submit" = "submit";
+
+/*no more data*/
+"no_more_data" = "no more data";
+
+/*go to help center*/
+/*Fuzzy*/
+"go_helpcenter" = "go to help center";
+
+/*agreement*/
+"agreement" = "agreement";
+"sign_in_with" = "Login Method";
+"or" = "or";
+"keyboard_finish" = "Done";
+"feedback_video_long_time" = "The uploaded video can't exceed 60 seconds";
+"feedback_account_title" = "Account";
+"usercenter_switch_text" = "Confirm to switch accounts?";
+"login_help" = "Encounter issues?";
+"message_pic" = "[picture]";
+"no_role_hint" = "No character info";
+
+"delete_account" = "Delete Account (Dangerous operation)";
+"notice_title" = "Announcement";
+"notice_pay_tip" = "Thank you for your purchase, please check your purchased items in the game.";
+"success" = "Success";

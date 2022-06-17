@@ -9,7 +9,7 @@
 "login_fast" = "遊客訪問";
 "userinfo" = "尊敬的使用者：";
 "email_info" = "如果您有任何問題，請發郵件聯繫我們，我們很樂意為您提供幫助。";
-"email_address" = "郵箱地址：";
+"email_address" = "郵箱：";
 "login_fast_tips" = "以遊客訪問方式登入，在卸載APP或是重新安裝遊戲，將會丟失遊戲內所有數據，確定以遊客訪問登入嗎？";
 "login_cancel" = "取消";
 "exit_tips" = "溫馨提醒";
@@ -64,8 +64,8 @@
 "account_s" = "賬號註冊成功！";
 "code_err" = "輸入的驗證碼錯誤";
 "email" = "請輸入正確的郵箱";
-"pass" = "請輸入6-30位數字、字母或符號的密碼";
-"pass_re" = "密碼是6-30位數字、字母或符號，請重新輸入";
+"pass" = "請輸入6-16位數字、字母或符號的密碼";
+"pass_re" = "密碼是6-16位數字、字母或符號，請重新輸入";
 "tran_load" = "前往登入";
 "reset_pas" = "重置密碼";
 "paspromotsec" = "請再次輸入密碼";
@@ -198,3 +198,233 @@
 "repair_order" = "重復訂單";
 "repeat_tip" = "檢測到您有訂單異常，請先修復訂單，再進行支付";
 "turn_order_repair" = "前往訂單修復";
+
+
+"help_center" = "幫助中心";
+
+/*Tips*/
+"dialog_tips_title" = "溫馨提示";
+
+/*Please make sure you have read and agreed to User Agreement and Privacy Notice*/
+"agreements_tip" = "請閱讀並同意用戶協議和隱私條款";
+
+/*User Agreement*/
+"user_agreement" = "用戶協議";
+
+/*Privacy Notice*/
+"privacy_notice" = "隱私條款";
+
+/*Decline*/
+"privacy_decline_btn" = "拒絕";
+
+/*accept*/
+"privacy_accept_btn" = "同意";
+
+/*To ensure the security of your account, you need to bind the email address so that you can use the password reset function. You can also bind other third-party accounts*/
+"account_binding_tips" = "為了保證您的賬號安全，您必須綁定郵箱後才能使用密碼重置功能，您也可以選擇綁定其他第三方賬號";
+
+/*not binding email*/
+"account_not_binding" = "郵箱未綁定";
+
+/*Topic Category*/
+"help_center_topic_category" = "話題分類";
+
+/*Please select topic you want to see*/
+"help_center_topic_category_hint" = "請選擇您關心的話題分類";
+
+/*Account Problem*/
+"help_center_account_problem" = "賬號問題";
+
+/*Payment Problem*/
+"help_center_payment_problem" = "支付問題";
+
+/*Game Related*/
+"help_center_game_related" = "遊戲問題";
+
+/*Issue*/
+"help_center_issue" = "反饋";
+
+/*you can contact by issues*/
+"help_center_issue_hint" = "您可以通過反饋聯繫我們";
+
+/*I want feedback*/
+"help_center_want_feedback_btn" = "我要反饋";
+
+/*Feedback history*/
+"help_center_feedback_history_btn" = "反饋歷史";
+
+/*Feedback*/
+"feedback_title" = "反饋";
+
+/*Title*/
+"feedback_title_tag" = "標題";
+
+/*Take a title for feedback*/
+"feedback_title_hint" = "為反饋指定一個標題";
+
+/*Description:*/
+"feedback_description" = "問題描述";
+
+/*Please fill in the problem description*/
+"feedback_description_hint" = "請描述您遇到的問題";
+
+/*Photo or Video\n(limited to two)*/
+"feedback_upload_hint" = "最多只能上傳2個圖片和視頻";
+
+/*Title must be 4-20 characters*/
+"feedback_title_error_hint" = "標題必須是4-20個字";
+
+/*Description is required*/
+"feedback_description_error_hint" = "問題描述是必須的";
+
+/*Account and Role:*/
+"feedback_account_role" = "賬號與角色";
+
+/*Server & Charactor:*/
+"feedback_server_charactor" = "服務器和角色";
+
+/*Feedback Category*/
+"feedback_category" = "分類";
+
+/*Account*/
+"feedback_category_account" = "賬號類別";
+
+/*Payment*/
+"feedback_category_payment" = "支付類別";
+
+/*Game*/
+"feedback_category_game" = "遊戲類別";
+
+/*Other*/
+"feedback_category_other" = "其他類別";
+
+/*Role Name*/
+"feedback_role_name" = "角色名";
+
+/*Feedback the details*/
+"feedback_detail" = "反饋詳情";
+
+/*Account Feedback*/
+"feedback_detail_actfeedback" = "賬號類別";
+
+/*Unfold*/
+"feedback_detail_unfold" = "展開";
+
+/*Put away*/
+"feedback_detail_putaway" = "收起";
+
+/*Reply to Custom Service*/
+"feedback_reply_title" = "回复";
+
+/*What you want to say*/
+"feedback_reply_hint" = "您想要回复客服的內容";
+
+/*Reply*/
+"feedback_reply_btn" = "回复";
+
+/*My feedback*/
+"feedback_my_feedback_title" = "我的反饋";
+
+/*RT Talk*/
+"feedback_rttalk_btn" = "實時聊天";
+
+/*There is no feedback problem for the time being*/
+"feedback_empty_hint" = "當前沒有反饋";
+
+/*User Center*/
+"user_center_title" = "用戶中心";
+
+/*View all orders*/
+"user_center_view_all_orders" = "查看所有訂單";
+
+/*View All Feedbacks*/
+"user_center_view_all_feedbacks" = "查看所有反饋";
+
+/*Orders*/
+"order_title" = "訂單";
+
+/*No orders*/
+"order_empty_hint" = "您還沒有訂單";
+
+/*Unusual*/
+"order_unusual" = "異常訂單";
+
+/*Finished*/
+"order_finished" = "已完成";
+
+/*Next*/
+"next_btn" = "下一步";
+
+/*Payment feedback*/
+"feedback_detail_payfeedback" = "支付問題";
+
+/*Game Feedback*/
+"feedback_detail_gamefeedback" = "遊戲問題";
+
+/*Other Feedback*/
+"feedback_detail_otherfeedback" = "其他問題";
+"user_center_no_feedback" = "當前沒有反饋";
+"order_copy_id" = "複製ID";
+"order_repair_ignore" = "忽略";
+
+/*Review Game*/
+"review_game" = "評價";
+
+/*not binding email*/
+"not_binding_email" = "未綁定郵箱";
+
+/*To ensure the security of your account, you need to bind the email address so that you can use the password reset function. You can also bind other third-party accounts*/
+"bind_hint" = "為了保證您的賬號安全，您必須綁定郵箱後才能使用重置密碼功能，當然，您也可以綁定第三方賬號";
+
+/*Third party*/
+"third_party" = "第三方";
+
+/*Please bind the email first*/
+"bind_email_first" = "請先綁定郵箱";
+
+/*step*/
+"step" = "步驟";
+
+/*Submitted successfully*/
+"feedback_submit_succ" = "提交成功";
+
+/*Back to Help Center*/
+"back_to_helpcenter" = "返回幫助中心";
+
+/*View feedback*/
+"view_feedback" = "查看反饋";
+
+/*Please select the feedback type*/
+"unselect_feedback_type" = "請先選擇反饋類別";
+
+/*Back to game*/
+"back_to_game" = "返回游戲";
+
+/*Submitting*/
+"submitting" = "提交中";
+
+/*submit*/
+"submit" = "提交";
+
+/*no more data*/
+"no_more_data" = "沒有數據";
+
+/*go to help center*/
+"go_helpcenter" = "去幫助中心";
+
+/*agreement*/
+"agreement" = "協議";
+"sign_in_with" = "登錄方式";
+"or" = "或";
+"keyboard_finish" = "完成";
+"feedback_video_long_time" = "上傳的視頻不能超過60s哦";
+"feedback_account_title" = "賬號";
+"usercenter_switch_text" = "是否確認切換賬號？";
+"login_help" = "遇到問題？";
+"message_pic" = "[圖片]";
+"no_role_hint" = "無角色資訊";
+
+"delete_account" = "刪除賬號（危險操作）";
+"notice_title" = "公告";
+"notice_pay_tip" = "感謝您的購買，請在遊戲內查詢您購買的商品";
+"success" = "成功";

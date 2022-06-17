@@ -1,679 +1,678 @@
-# 海外SDK IOS 使用文档
+### 海外SDK接入文档
 
-# 环境要求
+### 准备工作 需要联系我方运营获取参数和配置文件
 
-> - Mac OS X 11.0以上版本
-> - Xcode 12.0以上版本
-> - iOS 9.0以上版本
+导入SDK
 
-- SDK集成了登录，支付等功能。本文档详细说明相关功能在技术对接与使用过程中需要注意的地方，以便贵方能快速对接。阅读后如有疑问，请联系GM88游戏相关技术支持。
-- SDK目前支持语言有：简体中文，繁体中文，繁体中文（台湾），繁体中文（香港），英语，西班牙语，德语，法语，印度尼西亚语，越南语，韩语，日语，意大利语，马来语，葡萄牙语，俄语，泰语
+##### 将lognSDK.framework 和login.bundle导入到您的工程中。 项目参数配置 1.login.bundle内的infoset.plist
 
-## 更新日志
+如没有拿到参数使用默认即可
 
-* 2021-11-15    v2.0
+| 参数名             | 类型     | 默认值                       | 说明                                |
+| --------------- | ------ | ------------------------- | --------------------------------- |
+| gameid          | string | 1700                      | 提供的游戏ID                           |
+| issueVersion    | string | 1700001                   | 每次更新包需要修改                         |
+| sdkVersion      | string | 2.0                       | 更新SDK不想整体替换login.bundle需要注意是否需要修改 |
+| requestUrl      | string |                           | 游戏需要使用特殊域名填入给到域名默认为空              |
+| appleAppID      | string | 1475870720                | 苹果默认应用id                          |
+| appsFlyerDevKey | string | g7ZP9TqQ4S8AF9zeQD9Koe    | appsFlyer的key                     |
+| GGkClientID     | string | 728..33nej...juerv.nt.com | 谷歌的ClientID                       |
+| ConsumerKey     | string | SALb45SZfATPS8ILSYAvnB4ic | Twitter的key                       |
+| consumerSecret  | string | lGoFe4yYVug52LcNiAptoAB   | Twitter的Secret                    |
+| loginType       | string | 0                         | 不使用SDK登陆使用登陆方法开启填入1               |
 
-1、客服模块所有接口全部废弃
+##### 2.项目info.plist参数添加
 
-2、新增帮助中心接口
+| 参数名                                                 | 类型         | 默认值                                                                                    | 说明             |
+| --------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------- | -------------- |
+| AppLovinSdkKey                                      | string     | OixDcmXAyNNGd4zM3r-h0fsGvPzKc8k0sfETQmdM80dn4b77R6qSmfif4f-hpiheMw7ogl9plnZqNhyqomGTQz | 广告，没有提供使用默认值即可 |
+| FacebookAppID                                       | string     | 434430780481846                                                                        | fb应用id         |
+| FacebookClientToken                                 | string     | 65a34cf1b4b4ab393d6fbb5c994cbfdc                                                       | fbtoken        |
+| FacebookDisplayName                                 | string     | 仙命決                                                                                    | 基本和应用同名        |
+| GADIsAdManagerApp                                   | bool       | 1                                                                                      | 不添加会引起崩溃       |
+| GADApplicationIdentifier                            | string     | ca-app-pub-7496069579613989~8545461470                                                 | 谷歌广告应用ID       |
+| Privacy - Photo Library Additions Usage Description | string     | For better service，please authorize Photo Album                                        | 权限             |
+| Privacy - Photo Library Usage Description           | string     | For better service，please authorize Photo Album                                        | 权限             |
+| Privacy - Tracking Usage Description                | string     | The ads will be matched to your preferences for better gaming experience.              | 权限             |
+| URL types                                           | array      |                                                                                        | scheme         |
+| LSApplicationQueriesSchemes                         | array      |                                                                                        | 白名单            |
+| SKAdNetworkItems                                    | array      |                                                                                        | 广告             |
+| LineSDKConfig                                       | dictionary |                                                                                        | lineID         |
 
-3、新增个人中心接口
+##### 可用Source Code 模式打来info.plist 进行添加
 
-4、新增Facebook打点，Appsflyer打点，Firebase打点接口
+##### URL types
 
-5、角色信息变更接口增加大区zone
-
-* 2021-09-03      v1.4.5
-
-支付优化，新增接口：订单修复
-
-
-
-# 准备工作
-
-## 导入SDK
-
-```
-将(给到的SDK).framework、GoogleSignIn.bundle、LineSDKReesource.bundle和(根据给到SDK添加).bundle导入到您的工程中。
-```
-
-操作：
-
-方式一：在工程目录结构中，右键选择Add Files to...，在弹出的页面中选择 `(根据给到SDK添加).framework`，`GoogleSignIn.bundle`，`LineSDKReesource.bundle`和`(根据给到SDK添加).bundle`，勾选**Copy items into destination group's folder(if needed)**，并确保**Add To Targets勾选相应target**。
-
-方式二：直接将上述文件拖入Xcode工程目录结构中，在弹出的界面中勾选**Copy items into destination group's folder(if needed)**，并确保**Add To Targets勾选相应target**。
-
-## 设置应用方向
-
-SDK V1.4开始，同时支持横竖版，并且两版流程不一致，因此在出包之前必须设置应用方向。
-
-### 1、横版游戏
-
-
-
-**【General】—>【Deployment Info】—>【Device Orientation】**，勾选Landscape Left和Landscape Right。
-
- ![flags](assets/images/p7.png)
-
-  
-
-### 2、竖版游戏
-
-**【General】—>【Deployment Info】—>【Device Orientation】**，勾选Portrait。
-
-![flags](assets/images/p6.png)
-
-
-
-## 添加工程依赖库
-
-当前版本SDK不需要额外依赖库。
-
-## 工程设置
-
-**1、在工程的 Build Setting 中找到 Other Linker Flags 添加  -ObjC**
-
-![flags](assets/images/p1.png)
-
-**2、在工程的 Build Setting 中找到 Enable Bitcode  设置成NO**
-
-![bitcode](assets/images/p2.png)
-
-**3、由于iOS 9 改为https，如果您的项目有使用http，可在Info.plist中添加如下代码：**（右键Info.plist用source code打开）
-
-```xml
-<key>NSAppTransportSecurity</key> 
-<dict> <key>NSAllowsArbitraryLoads</key> <true/> 
-</dict> 
-```
-
-**4、如有游戏需要推送，请开启推送Capabilities中打开Background Modes（勾选Remote notifications）和Push Notifications**如下图所示：
-
-![background](assets/images/p3.png)
-
-![push](assets/images/p4.png)
-
-**5、Info.plist文件配置，此配置项是为了line，Facebook，Google登录**
-
-```xml
-        <key>CFBundleURLTypes</key>
-        <array>
-            <dict>
-                <key>CFBundleTypeRole</key>
-                <string>Editor</string>
-                <key>CFBundleURLSchemes</key>
-                <array>
-                    <string>line3rdp.$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-                </array>
-            </dict>
-            <dict>
-                <key>CFBundleTypeRole</key>
-                <string>Editor</string>
-                <key>CFBundleURLName</key>
-                <!---需要替换成对应参数-->
-                <string>com.googleusercontent.apps.113851800254-5romtcbaom6s49osvik1p1bo5m1b66ju</string>
-                <key>CFBundleURLSchemes</key>
-                <array>
-                    <!---需要替换成对应参数-->
-                    <string>com.googleusercontent.apps.113851800254-5romtcbaom6s49osvik1p1bo5m1b66ju</string>
-                </array>
-            </dict>
-            <dict>
-                <key>CFBundleTypeRole</key>
-                <string>Editor</string>
-                <key>CFBundleURLSchemes</key>
-                <array>
-                    <!---需要替换成对应参数-->
-                    <string>fb658714061225851</string>
-                </array>
-            </dict>
-        </array>
-        
-        <key>FacebookAppID</key>
-        <!---需要替换成对应参数-->
-        <string>658714061225851</string>
-        <key>FacebookDisplayName</key>
-        <!---需要替换成对应参数-->
-        <string>动物战争</string>
-        
-        <!---v1.4.3.1及其以上版本需要添加-->
-        <key>FacebookClientToken</key>
-        <!---需要替换成对应参数-->
-        <string>************************</string>
-        
-        <!---白名单-->
-        <key>LSApplicationQueriesSchemes</key>
-        <array>
-            <string>fbapi</string>
-            <string>fb-messenger-api</string>
-            <string>fbauth2</string>
-            <string>fbshareextension</string>
-            <string>lineauth2</string>
-        </array>
-        <key>LineSDKConfig</key>
+```objectivec
+<key>CFBundleURLTypes</key>
+    <array>
         <dict>
-            <key>ChannelID</key>
-            <!---需要替换成对应参数-->
-            <string>1564316537</string>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLName</key>
+
+            <!-- 谷歌 clientSecret   -->
+            <string>com.googleusercontent.apps.726483388833-nejr29g354f0p3sieg18gmehkhljuerv</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+         <!-- 谷歌 clientSecret   -->
+                <string>com.googleusercontent.apps.726483388833-nejr29g354f0p3sieg18gmehkhljuerv</string>
+            </array>
         </dict>
-        <key>GADIsAdManagerApp</key>
-        <true/>
-        <key>AppLovinSdkKey</key>
-        <!---需要替换成对应参数-->
-        <string>OixDcmXAyNNGd4zM3r-h0fsGvPzKc8k0sfETQmdM80dn4b77R6qSmfif4f-hpiheMw7ogl9plnZqNhyqomGTQz</string>
-        
-        <!---admob 广告id-->
-        <key>GADApplicationIdentifier</key>
-        <string>ca-app-pub-7496069579613989~9003527017</string>
-        
-        <!---iOS 14以上，SDK版本1.4.1及其以上版本需要设置-->
-        <!---与广告相关-->
-        <key>SKAdNetworkItems</key>
-        <array>
-            <dict>
-                <key>SKAdNetworkIdentifier</key>
-                <string>su67r6k2v3.skadnetwork</string>
-            </dict>
-            <dict>
-                <key>SKAdNetworkIdentifier</key>
-                <string>cstr6suwn9.skadnetwork</string>
-            </dict>
-            <dict>
-                <key>SKAdNetworkIdentifier</key>
-                <string>ludvb6z3bs.skadnetwork</string>
-            </dict>
-            <dict>
-                <key>SKAdNetworkIdentifier</key>
-                <string>v9wttpbfk9.skadnetwork</string>
-            </dict>
-            <dict>
-                <key>SKAdNetworkIdentifier</key>
-                <string>n38lu8286q.skadnetwork</string>
-            </dict>
-            <dict>
-                <key>SKAdNetworkIdentifier</key>
-                <string>4dzt52r2t5.skadnetwork</string>
-            </dict>
-            <dict>
-                <key>SKAdNetworkIdentifier</key>
-                <string>gta9lk7p23.skadnetwork</string>
-            </dict>
-        </array>
-        
-        <key>NSUserTrackingUsageDescription</key>
-        <!---广告追踪权限，需要替换成对应描述文本-->
-        <string>相关描述文本</string>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+      <!--  line 默认形式即可 -->
+                <string>line3rdp.$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+            </array>
+        </dict>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                   <!--  fb+fb应用id -->
+                <string>fb434430780481846</string>
+            </array>
+        </dict>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                  <!--  twitter+Twitter的key -->
+                <string>twitterkit-SALb45SZfATPS8ILSYAvnB4ic</string>
+            </array>
+        </dict>
+    </array>
 ```
 
-**6、设置Build Options**
-
-- 自v1.2.17版本起，SDK中包含swift部分，因此需要在项目中设置Build Options
-  
-  **在项目的Build Settings中找到Always Embed Swift Standard Libraries 设置成Yes**
-
-# 初始化
-
-- 简介：执行全局设置，用于应用启动后，初始化SDK。（必接接口）
-
-## 引入头文件
+##### LSApplicationQueriesSchemes
 
 ```objectivec
+<key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>instagram-stories</string>
+        <string>facebook-stories</string>
+        <string>lobi</string>
+        <string>fb</string>
+        <string>lineauth2</string>
+        <string>instagram</string>
+        <string>lineauth</string>
+        <string>line3rdp.$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+        <string>line</string>
+        <string>fbapi</string>
+        <string>fbapi20130214</string>
+        <string>fbapi20130410</string>
+        <string>fbapi20130702</string>
+        <string>fbapi20131010</string>
+        <string>fbapi20131219</string>
+        <string>fbapi20140410</string>
+        <string>fbapi20140116</string>
+        <string>fbapi20150313</string>
+        <string>fbapi20150629</string>
+        <string>fbapi20160328</string>
+        <string>fbauth</string>
+        <string>fb-messenger-share-api</string>
+        <string>fbauth2</string>
+        <string>fbshareextension</string>
+        <string>naversearchapp</string>
+        <string>naversearchthirdlogin</string>
+        <string>twitter</string>
+        <string>twitterauth</string>
+    </array>
+```
+
+##### SKAdNetworkItems
+
+```objectivec
+<key>SKAdNetworkItems</key>
+    <array>
+        <dict>
+            <key>SKAdNetworkIdentifier</key>
+            <string>su67r6k2v3.skadnetwork</string>
+        </dict>
+        <dict>
+            <key>SKAdNetworkIdentifier</key>
+            <string>cstr6suwn9.skadnetwork</string>
+        </dict>
+        <dict>
+            <key>SKAdNetworkIdentifier</key>
+            <string>ludvb6z3bs.skadnetwork</string>
+        </dict>
+        <dict>
+            <key>SKAdNetworkIdentifier</key>
+            <string>v9wttpbfk9.skadnetwork</string>
+        </dict>
+        <dict>
+            <key>SKAdNetworkIdentifier</key>
+            <string>n38lu8286q.skadnetwork</string>
+        </dict>
+        <dict>
+            <key>SKAdNetworkIdentifier</key>
+            <string>4dzt52r2t5.skadnetwork</string>
+        </dict>
+        <dict>
+            <key>SKAdNetworkIdentifier</key>
+            <string>gta9lk7p23.skadnetwork</string>
+        </dict>
+    </array>
+```
+
+##### LineSDKConfig
+
+```objectivec
+<key>LineSDKConfig</key>
+    <dict>
+        <key>ChannelID</key>
+        <string>1605284534</string>
+    </dict>
+```
+
+##### 工程配置
+
+**1、在工程的 Build Setting 中找到 Other Linker Flags 添加 -ObjC**
+
+**2、在工程的 Build Setting 中找到 Enable Bitcode 设置成NO**
+
+**3、在项目的Build Settings中找到Always Embed Swift Standard Libraries 设置成Yes**
+
+**4、Apple登陆，请开启推送Capabilities中打开Sign in with Apple**
+
+**5、推送，请开启推送Capabilities中打开Background Modes（勾选Remote notifications）和Push Notification**
+
+##### 代码接入
+
+##### 项目启动Main函数之后
+
+```objectivec
+#import "AppDelegate.h"
 #import <loginSDK/platInit.h>
+#import <loginSDK/platTools.h>
+
+@interface AppDelegate ()
+
+@end
+
+@implementation AppDelegate
+
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //SDK初始化
+    [platInit initSDKapplication:application didFinishLaunchingWithOptions:launchOptions Applede:self];
+    //SDKlog开关。出提审包请关闭   
+    [platTools openLog:YES];
+    return YES;
+}
+
+
+- (void)applicationWillResignActive:(UIApplication *)application {
+    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+}
+
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    [platInit applicationDidEnterBackground:application];
+}
+
+
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    [platInit applicationWillEnterForeground:application];
+}
+
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [platInit applicationDidBecomeActive:application];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+
+
+    return [platInit application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+
+
+
+    return [platInit application:app openURL:url options:options];
+}
+
+
+
+- (void)applicationWillTerminate:(UIApplication *)application {
+    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    [platInit application:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+}
+
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [platInit application:application didReceiveRemoteNotification:userInfo];
+}
+
+
+
+@end 
 ```
 
-## 调用初始化
-
-方法：
-
-> 此方法默认读取bundle中的参数，如使用此初始化方法，请确认给到的SDK的bundle中的infoset.plist所有参数是否与提供的参数表一致。
+##### rootViewController内容
 
 ```objectivec
+#import "ViewController.h"
+#import <loginSDK/platPurchase.h>
+#import <loginSDK/platLogin.h>
+#import <loginSDK/platTools.h>
+#import <loginSDK/purchaseModel.h>
+@interface ViewController ()<PurchaseCallBack,LoginCallBack>
+@end
+@implementation ViewController
+- (void)viewDidLoad {
+    [super viewDidLoad];
+//注册通知
+    [[NSNotificationCenter defaultCenter] 
+     addObserver:self 
+     selector:@selector(notifitionCenter:) 
+     name:@"SDKCenterNotifition" object:nil];
+
+}
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    //进行登陆
+        __weak typeof(self)weakself = self;
+        static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+         [platLogin login:weakself];
+
+    });
+
+}
+#pragma mark - callback
+
+- (void)loginOnFinish:(loginStatus)code Data:(NSDictionary *)Data {
+
+
+
+    if(code==LOGIN_SUCCESS){
+  //     表示当前账号的绑定信息头像，昵称，性别 如果绑定了多个三方账号会有多个绑定信息
+  bindAccounInfo =     (
+                {
+            "loginType" = "facebook";
+            "open_face" = "http://graph.facebook.com/499630864180382/picture?type=large";
+            "open_nickname" = "Yuting Xiao";
+            "open_sex" = "";
+        }
+    );
+// 账号注册天数
+ //   days = 303;
+//游戏地址
+ //   gameUrl = "https://s1game.fangpian-h5.com/xiuxian-gcathk/youke2Index.php?accessToken=ea8e98f558ab5586659e1d09df039c9b";
+//当前登陆账号类型 loginType 类型有1.ios 2.google 3.twitter 4.line 5.facebook 6.fastlogin(游客) 7.login(邮箱) 
+ //   loginType = twitter;
+//是否是线上环境
+ //   online = 1;
+//token
+  //  token = OWViMDJ6VnM1WGw3SGZHTi1TLWgtUy1nb25jRnpreVJLWlFGOVMwOUt6U3ZicTFZQS1QLVBtUXdPamJGejdaWWd2eVByVTUtUC1DTEI2dUUxZWlw;
+//用户id
+ //   uid = 1194171;
+    }
+
+else if(code ==LOGIN_VIEW){
+    //首次登陆 显示登陆页面
+    }else if(code ==LOGIN_SILENT_FAILURE){
+// 非首次登陆自动登陆失败 显示登录页面
+    }
+else if(code ==LOGIN_SWITCH){
+//调用 [platLogin WithInApplicationSwitch]; 账号切换页面可取消 账号切换成功回调在此处
+    }else if(code== LOGOUT_SUCCESS){
+//调用  [platLogin WithInApplicationLogout];直接退出并自动弹出登陆页面，退出在此回调        
+    }else if (code == LOGIN_UNUSE) {
+    //封号退出程序
+     exit(0);
+    }
+}
+
+- (void)purchaseOnFinish:(purchaseStatus)code Data:(NSDictionary *)Data {
+    if (code == PURCHASE_SUCCESS){
+// 支付成功
+        [platTools toastInfo:[platTools setlaugulgString:@"p_success"]];
+   } else if (code == PURCHASE_FAILED){
+//支付失败
+        [platTools toastInfo:[platTools setlaugulgString:@"p_failure"]];
+    } else if (code == PURCHASE_CANCEL){
+//支付取消
+        [platTools toastInfo:[platTools setlaugulgString:@"P_cancel"]];
+    } else if (code == PURCHASE_UNKNOWN){
+//支付失败
+        [platTools toastInfo:[platTools setlaugulgString:@"P_cancel"]];
+
+    }
+}
+
+
+#pragma mark - 通知回调事件
+
+
+/**
+返回参数：status 返回参数：status 
+0 广告播放失败1 广告播放成功9 取消播放广告16 国内ip2 分享失败3 分享成功4 绑定失败5 绑定成功8 绑定取消
+6 当前账号未绑定7 当前账号已绑定10 返回当前苹果id商店商品显示11 返回当前苹果id商店商品显示失败12 返回翻译文本
+
+ */
+- (void)notifitionCenter :(NSNotification *)notification{
+      NSDictionary * Info = (NSDictionary *)notification.object;
+    NSLog(@"info==%@",Info);
+    if([[Info objectForKey:@"status"] isEqualToString:@"0"]){
+        //  [platTools choseADPlatForm];播放广告方法，监听 0，1，9，16
+        // 0 广告播放失败
+    }else  if([[Info objectForKey:@"status"] isEqualToString:@"1"]) {
+       // 1 广告播放成功
+    } else  if([[Info objectForKey:@"status"] isEqualToString:@"9"]) {
+       //  9 取消播放广告  广告未播放完
+    }else  if([[Info objectForKey:@"status"] isEqualToString:@"16"]) {
+        //当前国内ip 不播放广告
+    } else  if([[Info objectForKey:@"status"] isEqualToString:@"2"]) {
+       // 分享方法   2 分享失败
+    }else  if([[Info objectForKey:@"status"] isEqualToString:@"3"]) {
+       // 分享方法   3 分享成功
+    }else  if([[Info objectForKey:@"status"] isEqualToString:@"4"]) {
+       //绑定账号 4 绑定失败
+    }else  if([[Info objectForKey:@"status"] isEqualToString:@"5"]) {
+      //绑定账号  5 绑定成功
+    }else  if([[Info objectForKey:@"status"] isEqualToString:@"8"]) {
+      //绑定账号  8 绑定取消
+    }else  if([[Info objectForKey:@"status"] isEqualToString:@"6"]) {
+      // 查询当前账号绑定状态  6 当前账号未绑定
+
+    }else  if([[Info objectForKey:@"status"] isEqualToString:@"7"]) {
+       // 查询当前账号绑定状态   7 当前账号已绑定
+  // bindTypeArr =     (
+  //            {
+  //        "open_face" = "https://pbs.twimg.com/profile_images/1156805601944465409/2V2m5vlH_normal.jpg";
+  //        "open_nickname" = xiaoyuting;
+  //        "open_sex" = "";
+  //        type = twitter;
+  //     }
+  // );
+  // product = isBind;
+  // status = 7;
+    }else  if([[Info objectForKey:@"status"] isEqualToString:@"10"]) {
+         //[platTools setPurchaseInfo]; 获取商品信息的方法
+         //获取商品信息成功  10 返回当前苹果id商店商品显示语言
+         // purchaselist =     ( 返回的商品信息数组
+         //       {
+         //   employID = 1101;   苹果后台设置ID
+         //   originalID = 1101; 原始传入ID
+          //  price = "USD 0.99"; 价格符号+价格
+       // },
+
+
+
+    }else  if([[Info objectForKey:@"status"] isEqualToString:@"11"]) {
+
+        //获取商品信息失败  11 返回当前苹果id商店商品显示失败
+    }else  if([[Info objectForKey:@"status"] isEqualToString:@"12"]) {
+      //    调用方法 [platTools translateText:shareName.text identifier:@"2"];  
+      //    12 返回翻译文本 
+
+    } 
+
+
+}
+
+//如果接受了通知，在dealloc方法中移除通知；
+- (void)dealloc
+{
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
+}
+//支付方法
+-(void)payID:(NSString * )payID payName:(NSString * )payName gameReceipts:(NSString *)receipts payPrice:(NSString *)price
+{
+
+
+    purchaseModel* mPayInfo = [[purchaseModel alloc] init];
+    /** 商品id */
+    mPayInfo.productID=payID;
+    /** Y 商品名 */
+    mPayInfo.productName=payName;
+    /** Y 商品价格 */
+    mPayInfo.productPrice=price;
+    /** 商品描述（不传则使用productName） */
+    mPayInfo.productDes=payName;
+    /** 游戏传入的有关用户的区id，服务器id，角色id,订单等，属于透传数据功能 */
+    mPayInfo.gameReceipts=receipts;
+    /** Y 游戏角色id */
+    mPayInfo.roleID=@"";
+    /** Y 游戏角色名 */
+    mPayInfo.roleName=@"";
+    /** 游戏角色等级 */
+    mPayInfo.roleLevel=@"";
+    /** Y Vip等级 */
+    mPayInfo.vipLevel=@"";
+    /** Y 帮派、公会等 */
+    mPayInfo.partyName=@"";
+    /** Y 服务器id，若无填“1” */
+    mPayInfo.zoneID=@"";
+    /** Y 服务器名 */
+    mPayInfo.zoneName=@"";
+    /** N 扩展字段 */
+    mPayInfo.text=@"";
+    /**
+     回调地址 可传可不传，不传使用默认
+     */
+     mPayInfo. notifyURL = @"1234567890-123456789";
+
+    [platPurchase purchase:mPayInfo CallBack:self];
+}
+```
+
+##### SDK公开类
+
+##### 初始化platInit
+
+```objectivec
+/**
+ AppDelegate.h内的接口,主要用去.后台返回用
+ @param application application
+ */
++(void)applicationWillEnterForeground:(UIApplication *)application;
+
+/**
+ AppDelegate.h内的接口, 游戏从后台返回用
+ */
++(void)applicationDidEnterBackground:(UIApplication *)application ;
+
+
+/**
+ AppDelegate.
+ @param app app
+ @param url url
+ @param options options
+ @return BOOL
+ */
++(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options;
+
+/**
+ AppDelegate.h内的接口
+ @param application application
+ @param url url
+ @param sourceApplication sourceApplication
+ @param annotation annotation
+ @return BOOL
+ */
++(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
+/**
+ AppDelegate.h内的接口
+
+ @param app application
+  需要调用一些事件激活
+ */
++ (void)applicationDidBecomeActive:(UIApplication *)app;
+
+/** 
+#pragma 必须最先接入的方法  平台初始化方法2 参数在login.bundle中设置
 + (void) initSDKapplication:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
                     Applede:(id) app;
+#pragma 推送相关
++ (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
+
+#pragma 推送相关
++ (void)application:(UIApplication *)application  didReceiveRemoteNotification:(NSDictionary *)userInfo;
 ```
 
-**参数**
-
-| 参数名           | 参数类型          | 是否必需 | 示例            | 描述     |
-| ------------- | ------------- | ---- | ------------- | ------ |
-| application   | UIApplication | 是    | application   | 默认参数   |
-| launchOptions | NSDictionary  | 是    | launchOptions | 默认参数   |
-| app           | AppDelegate   | 是    | self          | 用于数据打点 |
-
-**示例**
+##### platLogin类
 
 ```objectivec
--(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
-   [platInit initSDKapplication:application didFinishLaunchingWithOptions:launchOptions Applede:self];
-    return YES;
-}
-```
-
-## SDK资源
-
-- 此为与SDK一起提供的.bundle文件的配置
-- 配置参数，可以直接按照运营提供的相关参数表，如有疑问，请联系相关运营人员
-- 如对配置参数的key有任何疑问，请联系相关技术人员
-- 详见下表，未出现在表中的参数key，则一般不需要修改，如有疑问，请联系相关技术人员
-
-| 参数名           | 参数类型 | 描述                                                         | 示例                                                         |
-| ---------------- | -------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| gameid           | String   | 游戏id                                                       | 1634                                                         |
-| channel          | String   | 渠道名称，默认GM，一般不需要修改                             | GM                                                           |
-| GGkClientID      | String   | google客户端id                                               | 726483388833-nejr29g354f0p3sieg18gmehkhljuerv.apps.googleusercontent.com |
-| appsFlyerDevKey  | String   | appsflyer的key                                               | g7ZP9TqQ4S8AF9zeQD9Koe                                       |
-| appleAppID       | String   | 苹果应用id                                                   | 1528141305                                                   |
-| Promote          | String   | 渠道id，默认17，代表iOS，无需修改                            | 17                                                           |
-| IronsourceAppKey | String   | ironsource的key                                              | ce0a7e2d                                                     |
-| issueVersion     | String   | 发布版本                                                     | 1634011                                                      |
-| consumerSecret   | String   | twitter的Secret                                              | lGoFe4yYVug52LcNiAptoABgb14k5seN9XMJq6L0ggSzUmIevP           |
-| ConsumerKey      | String   | twitter的key（如果无需twitter相关功能，这两个参数可以不修改） | SALb45SZfATPS8ILSYAvnB4ic                                    |
-| sdkVersion       | String   | 此为SDK版本号，无需修改                                      | 2.0                                                          |
-| iconControl      | String   | 登录页面是否显示app的icon，1表示使用应用icon，其他表示使用默认图片。 | 1                                                            |
-| admobInit        | String   | 广告是否使用admob，1表示使用admob，其他表示使用ironsource    | 1                                                            |
-
-**注：1、issueVersion—发布版本：iOS SDK 1.3版本及其以上版本才有，必须设值，每次出包均需像运营相关人员确认其值；2、version：iOS SDK 1.3版本及其以上版本可以直接设置成1.0；其余版本此值请于相关技术人员确认（v1.4.3已废弃此参数）；3、iconControl：iOS SDK 1.4及其以上版本才有，用于控制登录页面的logo图，请与相关人员联系确认**
-
-
-## 定义通知
-
-SDK使用通知来接收部分接口的结果，涉及的接口包括：
-
-- 帐号绑定
-- 分享
-- 变现广告
-- 获取商品多语言列表
-- 翻译
-- vip客服
-- 视频播放
-
-**定义**
-
-```obj
-@"SDKCenterNotifition"
-```
-
-**状态值**
-
-| 状态值 | 含义                             |
-| ------ | -------------------------------- |
-| 0      | 广告失败                         |
-| 1      | 广告成功                         |
-| 2      | 分享失败                         |
-| 3      | 分享成功                         |
-| 4      | 绑定失败                         |
-| 5      | 绑定成功                         |
-| 6      | 未绑定                           |
-| 7      | 已绑定                           |
-| 8      | 绑定取消                         |
-| 9      | 取消广告                         |
-| 10     | 返回product多语言                |
-| 11     | 返回product多语言失败            |
-| 12     | 返回翻译                         |
-| 13     | VIP专属客服不可显示 （废弃）     |
-| 14     | VIP专属客服可显示     （废弃）   |
-| 15     | VIP专属客服关闭         （废弃） |
-| 16     | ip限制                           |
-| 17     | 视频播放完成并关闭               |
-| 18     | 视频取消播放                     |
-| 19     | 视频播放失败                     |
-
-**示例**
-
-```objectivec
-//在viewDidLoad中添加通知
-[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifitionCenter:)  name:@"SDKCenterNotifition" object:nil];
-
------------------------通知回调方法---------------------------
-//自定义方法
-#pragma mark - 通知回调事件
-
+#pragma 登陆
 /**
-  * 返回参数：status  游戏可以根据状态来获知各功能的回调，具体表示如上述表格              
-   */
-- (void)notifitionCenter :(NSNotification *)notification{
-    NSDictionary * Info = (NSDictionary *)notification.object;
-    NSLog(@"info==%@",Info);
-    if([[Info objectForKey:@"status"] isEqualToString:@"0"]){
-        //广告失败 do something
-    }else  if([[Info objectForKey:@"status"] isEqualToString:@"1"]) {
-        //广告成功 do something
-    }else  if([[Info objectForKey:@"status"] isEqualToString:@"2"]) {
-        //分享失败 do something
-    }else  if([[Info objectForKey:@"status"] isEqualToString:@"3"]) {
-        //分享成功 do something
-    }else  if([[Info objectForKey:@"status"] isEqualToString:@"4"]) {
-        //绑定失败 do something
-    }else  if([[Info objectForKey:@"status"] isEqualToString:@"5"]) {
-        //绑定成功 do something
-    }else  if([[Info objectForKey:@"status"] isEqualToString:@"6"]) {
-        //未绑定 do something
-    }else  if([[Info objectForKey:@"status"] isEqualToString:@"7"]) {
-        //已绑定 do something
-    }else  if([[Info objectForKey:@"status"] isEqualToString:@"8"]) {
-        //绑定取消 do something
-    }else  if([[Info objectForKey:@"status"] isEqualToString:@"16"]) {
-        //广告ip限制
-    }else if ([[Info objectForKey:@"status"] isEqualToString:@"17"]) {
-        //播放完成后用户点击关闭
-    } else if ([[Info objectForKey:@"status"] isEqualToString:@"18"]) {
-        //未播放完毕用户点击关闭（取消播放）
-    } else if ([[Info objectForKey:@"status"] isEqualToString:@"19"]) {
-        //视频播放失败"
-    }
-}
-
----------------------------移除通知--------------------------
-//请最后在dealloc方法中移除通知哦
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-```
-
-# 登录登出
-
-简介：此接口用于登录，登录方式有：平台账号密码登录，游客登录，Facebook登录，Line登录。
-注：1.2.12及其之后版本因加入了Sign in with apple，需要在项目target->signing&Capabilities->"+"->Sign In with Apple。
-
-## 引入头文件
-
-```objectivec
-#import <loginSDK/platLogin>
-```
-
-## 登录（必接）
-
-###### 代理
-
-```objectivec
-LoginCallBack
-```
-
-###### **接口**
-
-```objectivec
+ 必须接入的方法  登录
+ @param mLoginCallBack 回调
+ */
 + (void) login:(id<LoginCallBack>)mLoginCallBack;
-```
-
-**示例**
-
-```objectivec
-[platLogin login:self];
-```
-
-## 登出
-
-```objectivec
-+ (void)logOut;
-```
-
-**示例**
-
-```objectivec
-[platLogin logOut];
-```
-
-## 重新登陆(切换帐号)
-
-此接口用于游戏中用户可以切换账号的入口，使得用户可以在游戏中切换登录的账号。
-
-```objectivec
-+ (void) WithInApplicationSwitch
-```
-
-**示例**
-
-```objectivec
-[platLogin WithInApplicationSwitch];
-```
-
-## 回调
-
-```objectivec
--(void)loginOnFinish:(loginStatus)code   Data:(NSDictionary*)Data
-{
-    NSLog(@"回调状态值：%ld",(long)code);
 
 
-    NSLog(@"回调：%@",Data);
-    if(code==LOGIN_SUCCESS){
-       //登陆成功
-    }else if(code ==LOGIN_SWITCH){
-       //切换账号无需特殊处理
-    }else if(code== LOGOUT_SUCCESS){
-       //退出账号 需要主动拉起登陆
-    }else if (code == LOGIN_UNUSE) {
-      //封号退出程序
-      exit(0);
-    }
-}
-```
-
-# 帐号绑定
-
-## 拉起帐号绑定页面
-
-- 此接口用于显示绑定页面，游客可以绑定GM88账号
-
-- 绑定结果在通知中，通知名称为@"SDKCenterNotifition"，详见**SDK通知**
-  
-  ##### 接口
-
-```objectivec
+/**
+ 显示绑定页面
+ */
 + (void)userInfoBindView;
+
+/**
+ 是否可以绑定
+ 结果在通知中回调
+ */
++ (void) isCanBind ;
+
+/**
+ 应用内切换账号
+ */
++ (void) WithInApplicationSwitch;
+/**
+ 应用退出账号自动显示历史账号页面
+ */
++ (void) WithInApplicationLogout;
+
+/**
+ Facebook登录
+ */
++ (void)FaceBookLogin ;
+
+/**
+ Line登录
+ */
++ (void)LineLogin;
+
+/**
+ Twiiter登录
+ */
++ (void)TwitterLogin ;
+
+/**
+ Google登录
+ */
++ (void)GoogleLogin ;
+
+/**
+ 游客登录
+ */
++ (void)GuestLogin ;
+
+/**
+ Apple登录
+ */
++ (void)AppleLogin ;
+
+/**
+ 邮箱登录
+ */
++ (void)EmailLogin;
+
+/**
+ 绑定Facebook
+ */
++ (void)FaceBookBind ;
+
+/**
+ 绑定Line
+ */
++ (void)LineBind;
+
+/**
+ 绑定Twitter
+ */
++ (void)TwitterBind;
+
+/**
+ 绑定Google
+ */
++ (void)GoogleBind ;
+
+/**
+ 绑定Apple
+ */
++ (void)AppleBind;
+
+/**
+ 绑定Email
+ */
++(void)EmailBinb;
+
+/**
+ 删除账号
+ */
++ (void)deleteAccount;
 ```
 
-**示例**
-
-```objectivec
-[platLogin userInfoBindView];
-```
-
-**响应** 使用通知来接收回调，请参考[通知](#%E5%AE%9A%E4%B9%89%E9%80%9A%E7%9F%A5)
-
-| 状态值 | 含义   |
-| --- | ---- |
-| 4   | 绑定失败 |
-| 5   | 绑定成功 |
-| 8   | 绑定取消 |
-
-## 查询帐号绑定状态
-
-- 此接口用于查询账号是否已绑定，（绑定邮箱，三方之类，只要绑定任何一项即返回绑定状态）
-  
-```objectivec
-+ (void) isCanBind;
-```
-
-**示例**
-
-```objectivec
-[platLogin isCanBind];
-```
-
-**响应** 使用通知来接收回调，请参考[通知](#%E5%AE%9A%E4%B9%89%E9%80%9A%E7%9F%A5)
-
-| 状态值 | 含义  |
-| --- | --- |
-| 6   | 未绑定 |
-| 7   | 已绑定 |
-
-# 支付
-
-## 引入头文件
-
-```objectivec
-#import <loginSDK/platPurchase.h>
-```
-
-## 发起支付（必接）
-
-###### 代理
-
-```objectivec
-PurchaseCallBack
-```
-
-此接口用于苹果支付，需要传递相关信息进行支付操作。
-
-**定义**
-
-```objectivec
-+ (void) purchase:(purchaseModel *)payInfo CallBack:(id<PurchaseCallBack>) callBack;
-```
-
-**参数**
-
-| 参数名          | 类型     | 是否必需 | 描述                                    |
-| ------------ | ------ | ---- | ------------------------------------- |
-| productID    | string | 是    | 商品ID                                  |
-| productName  | string | 是    | 商品名称                                  |
-| productPrice | string | 是    | 商品价格                                  |
-| productDes   | string | 是    | 商品描述（没有可传递商品名称）                       |
-| gameReceipts | string | 是    | 游戏传入的有关用户的区id，服务器id，角色id,订单等，属于透传数据功能 |
-| roleID       | string | 否    | 角色ID                                  |
-| roleName     | string | 否    | 角色名称                                  |
-| roleLevel    | string | 否    | 角色等级                                  |
-| vipLevel     | string | 否    | vip等级                                 |
-| zoneID       | string | 是    | 服务器ID，若无，请填写“1”                       |
-| zoneName     | string | 否    | 服务器名称                                 |
-| text         | string | 否    | 文本                                    |
-| notifyURL    | string | 否    | 回调地址，可传可不传，不传会使用后台配置的回调地址，请将地址提供给运营   |
-
-**示例代码**
-
-```objectivec
-purchaseModel* mPayInfo = [[purchaseModel alloc] init];
-mPayInfo.productID=@"xxxxx";
-mPayInfo.productName=@"商品名称";
-mPayInfo.productPrice=@"6";
-mPayInfo.productDes=@"商品描述";
-mPayInfo.gameReceipts=receipts;
-mPayInfo.roleID=@"";
-mPayInfo.roleName=@"";
-mPayInfo.roleLevel=@"";
-mPayInfo.vipLevel=@"";
-mPayInfo.partyName=@"";
-mPayInfo.zoneID=@"服务器id";
-mPayInfo.zoneName=@"";
-mPayInfo.text=@"";
-mPayInfo.notifyURL = @"http://demo.wfnji88.com/ok.php?gameid=1156&promote=2";
-platPurchase purchase:mPayInfo CallBack:self];
-```
-
-###### 回调
-
-```objectivec
-- (void)purchaseOnFinish:(purchaseStatus)code Data:(NSDictionary *)Data{
- if (code ==PURCHASE_SUCCESS){
- //支付成功
- } else if (code== PURCHASE_FAILED){
- //支付失败
- } else if (code==PURCHASE_CANCEL){
- //支付取消
- } else if (code==PURCHASE_UNKNOWN){
- //支付未知
- }
-}
-```
-
-## 订单修复
-
-此接口用于显示需要修复的订单
-
-**接口**
-
-```objectivec
-+ (void)purchaseRepairView;
-```
-
-**示例**
-
-```objectivec
-[platPurchase purchaseRepairView];
-```
-
-
-
-## 引入头文件
-
-```objectivec
-#import <loginSDK/platTools.h>
-```
-
-## 查询商品币种
-
-调用此接口，可以返回相应的商品多语言列表。
-
-**接口**
-
-```objectivec
-+ (void)setPurchaseInfo;
-```
-
-**响应**
-
-使用通知来接收回调，请参考[通知](#定义通知)
-
-| 状态值 | 含义                               |
-| --- | -------------------------------- |
-| 10  | 返回商品列表失败                         |
-| 11  | 返回商品列表成功，@“product”中的值为商品多语言列表内容 |
-
-# 角色
-
-## 角色信息变更（必接）
-
-- 上传和角色相关的打点，状态值：1、创建角色，2、完成新手引导，3、等级升级
+##### platTools类
 
 ```objectivec
 /**
-  * 当前游戏的角色打点
-  * @param name     角色名字
-  * @param level    游戏等级
-  * @param serverID 区服ID
-  * @param roleid   角色ID
-  * @param status   1:创建角色 2:完成新手引导 3:等级升级  状态值默认选择<3>
-  * @param vipLevel 游戏VIP等级
-  * @param zone 大区,没有大区，请默认输入@"0"
-  */
+ 获取当前游戏的角色
+ @param name 角色名字
+ @param level 游戏等级
+ @param serverID 区服
+ @param status 状态值默认选择<3>: 1:创建角色 2:完成新手引导 3:等级升级 4:每次进入游戏
+ @param vipLevel 游戏VIP等级
+ @param zone 大区,没有大区，请默认输入@"0"
+ */
 + (void)platRoleName:(NSString *)name
             gameLevel:(NSString *)level
              serverID:(NSString *)serverID
-               roleID:(NSString *)roleid
+               roleID:(NSString *)roleID
                status:(NSString *)status
-         vipLevel:(NSString *)vipLevel
-           zone:(NSString *)zone;
-```
-
-**参数**
-| 参数名   | 类型   | 必需 | 说明                                 |
-| -------- | ------ | ---- | ------------------------------------ |
-| name     | string | 是   | 角色名                               |
-| level    | string | 是   | 等级                                 |
-| severID  | string | 是   | 区服ID                               |
-| roleID   | string | 是   | 角色ID                               |
-| status   | string | 是   | 1:创建角色 2:完成新手引导 3:等级升级 |
-| vipLevel | string | 否   | 游戏内vip等级，如果没有，可以传空    |
+             vipLevel:(NSString *)vipLevel
+                zone:(NSString *)zone;
 
 
-**示例**
-此处示例为角色升级
 
-```objectivec
-[platTools platRoleName:@"角色名字" gameLevel:@"角色等级" serverID:@"区服ID" roleID:@"角色ID" status:@"3" vipLevel:@"" zone:@"0"];
-```
+/**
+ 数据打点
+ 第一个是三个平台一起打点主要使用
+ @param eventName 事件名称
+ @param info      参数，没有可以传空
+ */
++ (void)LogInfo:(NSString *)eventName EventDic:(NSDictionary *)info;
 
-# 分享
++ (void)LogFBInfo:(NSString *)eventName EventDic:(NSDictionary *)info;
 
-## 发起分享
++ (void)LogAFInfo:(NSString *)eventName EventDic:(NSDictionary *)info;
 
-- 此接口用于接入分享
-- 分享的结果在通知中，通知名称为@"SDKCenterNotifition"，详见**SDK通知**
++ (void)LogFirbaseInfo:(NSString *)eventName EventDic:(NSDictionary *)info;
 
-```objectivec
+
 /**
  分享使用的方法
 
@@ -689,39 +688,12 @@ platPurchase purchase:mPayInfo CallBack:self];
                    shareUname:(NSString *)share_uname
                   shareServer:(NSString *)share_server
                    shareCode :(NSString *)share_code;
-```
 
-**示例**
-
-> 相关参数如有不清楚，请与相关人员联系
-
-```objectivec
-[platTools ShareInfoName:@"分享" ShareInfoID:@"1" shareUname:@"w" shareServer:@"w" shareCode:@"w"];
-```
-
-**响应**
-
-使用通知来接收回调，请参考[通知](#定义通知)
-
-| 状态值 | 含义   |
-| --- | ---- |
-| 2   | 分享失败 |
-| 3   | 分享成功 |
-
-
-
-## 分享方式
-
-此接口用于接入分享
-
-分享的结果在通知中，通知名称为@"SDKCenterNotifition"，详见**SDK通知**
-
-```objectivec
 /**
  分享使用的方法
- 
+
  @param text 分享文本
- @param image 图片，可以传空，传一张
+ @param image 图片列表，可以传空，传一张
  @param link 分享链接
  @param type 分享类型：1 引文分享（链接），2 图片分享,3 使用SDK后台配置分享
  @param info SDK后台配置分享，需要传入参数格式如下：
@@ -730,641 +702,239 @@ platPurchase purchase:mPayInfo CallBack:self];
              @"shareUName":@"角色名",
             @"shareServer":@"角色区服",
               @"shareCode":@"角色code"
- 
+
              }
  */
 + (void)shareInfo:(NSString *)text image:(UIImage *)image link:(NSString *)link type:(NSString *)type otherInfo:(NSDictionary *)info;
 
-```
-
-参数
-
-| 参数名 | 类型         | 说明                                                         |
-| ------ | ------------ | ------------------------------------------------------------ |
-| type   | NSString     | 分享类型：1、 引文分享（链接分享），2、图片分享，3、使用SDK后台配置的分享 |
-| text   | NSString     | 分享文本（没有可以传空）                                     |
-| image  | UIImage      | 图片（没有可以传空，分享类型为2、图片分享时，请传递图片）    |
-| link   | NSString     | 分享链接                                                     |
-| info   | NSDictionary | 分享类型为3时，必须设置相关内容SDK后台配置分享，需要传入参数格式如下：<br/>            @{@"shareName":@"分享名称",<br/>                       @"shareID":@"分享ID",<br/>             @"shareUName":@"角色名",<br/>               @"shareServer":@"角色区服",<br/>                 @"shareCode":@"角色code" }<br/>其余类型时可以传空。 |
-
-**示例**
-
-> 相关参数如有不清楚，请与相关人员联系
-
-```objectivec
-[platTools shareInfo:@"分享测试" image:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"wait" ofType:@"png"]] link:@"https://www.baidu.com" type:@"2" otherInfo:@{}];
-```
-
-**响应**
-
-使用通知来接收回调，请参考[通知](#定义通知)
-
-| 状态值 | 含义     |
-| ------ | -------- |
-| 2      | 分享失败 |
-| 3      | 分享成功 |
-
-
-
-# 变现广告
-
-## 拉起激励视频接口
-
-此接口是用于接入广告的，目前只用于激励视频。
-
-```objectivec
+/**
+ 调用广告
+ */
 + (void)choseADPlatForm;
-```
 
-**示例**
 
-```objectivec
-[platTools choseADPlatForm];
-```
-
-**响应**
-
-使用通知来接收回调，请参考[通知](#定义通知)
-
-| 状态值 | 含义     |
-| ------ | -------- |
-| 0      | 广告失败 |
-| 1      | 广告成功 |
-| 9      | 取消广告 |
-| 16     | ip限制   |
-
-**注：v1.4.1及其以上版本，广告新增回调16，表明用户的ip所属地区限制广告加载（无广告）。**
-
-## 设置广告次数接口
-
-此接口用于设置广告剩余次数，用于减少广告预加载。不设置，默认加载。
-
-```objectivec
-+ (void)ADCounts:(NSString *)str;
-```
-
-**示例**
-
-```objectivec
-[platTools ADCounts:@"3"];
-```
-
-## 拉起广告接口
-
-此接口适用于接入广告的。
-
-```objectivec
-+ (void)choseADPlatForm:(NSInteger)type;
-```
-
-**参数**
-
-传入的type值，及其含义如下表所示：
-
-| 参数值 | 含义   |
-| --- | ---- |
-| 0   | 激励视频 |
-| 1   | 插页广告 |
-| 2   | 横幅广告 |
-
-**示例**
-
-```objectivec
-[platTools choseADPlatForm:0];
-```
-
-**响应**
-
-使用通知来接收回调，请参考[通知](#定义通知)
-
-| 状态值 | 含义     |
-| ------ | -------- |
-| 0      | 广告失败 |
-| 1      | 广告成功 |
-| 9      | 取消广告 |
-| 16     | ip限制   |
-
-**注：v1.4.1及其以上版本，广告新增回调16，表明用户的ip所属地区限制广告加载（无广告）。**
-
-
-
-# 帮助中心
-
-此接口用于显示帮助中心。
-
-```objectivec
-+ (void)helpCenter;
-```
-
-**示例**
-
-```objectivec
-[platTools helpCenter];
-```
-
-
-
-# 个人中心
-
-此接口用于显示用户中心。
-
-```objectivec
-+ (void)userCenter;
-```
-
-**示例**
-
-```objectivec
-[platTools userCenter];
-```
-
-
-
-
-
-# ~~客服(已废弃)~~
-
-## ~~客服中心(已废弃)~~
-
-此接口用于显示客服中心
-
-```objectivec
-+ (void)showCustomView;
-```
-
-
-
-## ~~VIP专属客服(已废弃)~~
-
-### ~~查询是否可显示VIP客服(已废弃)~~
-
-- 此接口用于查询是否可显示VIP专属客服（只有符合相关条件的vip，才会返回可以显示）
-- 结果在通知中，通知名称为@"SDKCenterNotifition"，详见**SDK通知**
-
-```objectivec
-+ (void)isCanVip;
-```
-
-**响应**
-
-使用通知来接收回调，请参考[通知](#定义通知)
-
-| 状态值 | 含义          |
-| --- | ----------- |
-| 13  | VIP专属客服不可显示 |
-| 14  | VIP专属客服可显示  |
-
-### ~~VIP专属客服(已废弃)~~
-
-- 此接口用于显示VIP专属客服
-- 结果在通知中，通知名称为@"SDKCenterNotifition"，详见**SDK通知**
-
-```objectivec
-+ (void)VIPCustomService;
-```
-
-**响应**
-
-使用通知来接收回调，请参考[通知](#定义通知)
-
-| 状态值 | 含义          |
-| --- | ----------- |
-| 13  | VIP专属客服不可显示 |
-| 14  | VIP专属客服可显示  |
-| 15  | VIP专属客服关闭   |
-
-## ~~常见问题(已废弃)~~
-
-此接口用于打开常见问题页面。
-
-```objectivec
-+ (void)showFAQView;
-```
-
-
-
-# 数据打点
-
-## 游戏内行为打点
-
-- 除特定打点外，所有自定义打点的事件都通过此接口传递。
-
-```objectivec
-+ (void)LogInfo:(NSString *)eventName EventDic:(NSDictionary *)info;
-```
-
-**参数**
-
-| 参数名       | 类型           | 描述                   | 示例                |
-| --------- | ------------ | -------------------- | ----------------- |
-| eventName | NSString     | 事件名称                 | @"enter game"     |
-| info      | NSDictionary | 事件其他参数，用于细分数据(如无可传空) | @{@"userId":@"1"} |
-
-**示例**
-
-```objectivec
-//如无其他额外信息，EventDic请传nil(空)
-[platTools LogInfo:@"achieve xxx"  EventDic:nil];
-
-```
-
-## Facebook打点
-
-此为facebook打点接口，如有该打点有facebook专门的点名或者参数，可以单独调用此接口打点。
-
-```objectivec
-+ (void)LogFBInfo:(NSString *)eventName EventDic:(NSDictionary *)info;
-```
-
-**参数**
-
-| 参数名    | 类型         | 描述                                   | 示例              |
-| --------- | ------------ | -------------------------------------- | ----------------- |
-| eventName | NSString     | 事件名称                               | @"enter game"     |
-| info      | NSDictionary | 事件其他参数，用于细分数据(如无可传空) | @{@"userId":@"1"} |
-
-**示例**
-
-```objectivec
-//如无其他额外信息，EventDic请传nil(空)
-[platTools LogFBInfo:@"achieve xxx"  EventDic:nil];
-
-```
-
-
-
-## Appsflyer打点
-
-此为Appsflyer打点接口，如有该打点有Appsflyer专门的点名或者参数，可以单独调用此接口打点。
-
-```objectivec
-+ (void)LogAFInfo:(NSString *)eventName EventDic:(NSDictionary *)info;
-```
-
-**参数**
-
-| 参数名    | 类型         | 描述                                   | 示例              |
-| --------- | ------------ | -------------------------------------- | ----------------- |
-| eventName | NSString     | 事件名称                               | @"enter game"     |
-| info      | NSDictionary | 事件其他参数，用于细分数据(如无可传空) | @{@"userId":@"1"} |
-
-**示例**
-
-```objectivec
-//如无其他额外信息，EventDic请传nil(空)
-[platTools LogAFInfo:@"achieve xxx"  EventDic:nil];
-
-```
-
-
-
-## Firebase打点
-
-此为Firebase打点接口，如有该打点有Firebase专门的点名或者参数，可以单独调用此接口打点。
-
-```objectivec
-+ (void)LogFirbaseInfo:(NSString *)eventName EventDic:(NSDictionary *)info;
-```
-
-**参数**
-
-| 参数名    | 类型         | 描述                                   | 示例              |
-| --------- | ------------ | -------------------------------------- | ----------------- |
-| eventName | NSString     | 事件名称                               | @"enter game"     |
-| info      | NSDictionary | 事件其他参数，用于细分数据(如无可传空) | @{@"userId":@"1"} |
-
-**示例**
-
-```objectivec
-//如无其他额外信息，EventDic请传nil(空)
-[platTools LogFirbaseInfo:@"achieve xxx"  EventDic:nil];
-
-```
-
-
-
-
-
-# 推送
-
-推送是服务端用特定的条件（比如：给特定用户）发送消息，可以在用户关闭应用或者在开启时收到特定的消息（比如：最新活动等）。用户点击即可打开相关内容页。
-
-## 推送工程设置
-
-接入推送，需要在工程中开启推送的开关，请参考[工程设置](#工程设置)
-
-## 发送推送接口
-
-```objectivec
-// 推送相关，注册设备信息
-+ (void)application:(UIApplication *)application
-didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
-// 推送相关，接收推送信息
-+ (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo;
-```
-
-**示例**
-
-- 原生项目的AppDelegate（或者是引擎生成类似方法）如下方法中调用SDK的推送相关的接口
-
-```objectivec
-//注册远程通知的设备token
--(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    [platInit application:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
-}
-
-//获取远程通知
--(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    [platInit application:application didReceiveRemoteNotification:userInfo];
-}
-```
-
-# 其他接口（必接）
-
-- 所有接口都必须接入，每个接口具体含义，请看示例代码
-
-## 示例代码
-
-```objectivec
-//这些方法需在AppDelegate（引擎生成相对应的类）中实现，这些方法必须接入，不接入会影响数据打点，推送以及Facebook等相关功能
-//记录应用进入后台
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-     //此接口用于应用进入后台，功能结合打点，推送等
-     [platInit applicationDidBecomeActive:application];
-}
-
-//记录应用即将进入前台
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-     [platInit applicationWillEnterForeground:application];
-}
-
-//应用被激活
-- (void)applicationDidBecomeActive:(UIApplication *)application {      
-     [platInit applicationDidBecomeActive:application];
-}
-
-//跳转链接两接口均需接入
-//跳转链接，此接口用于比如Facebook登录时的跳转iOS9之后的方法
--(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
-    return [platInit application:app openURL:url options:options];
-}
-
-//跳转链接，此接口用于比如Facebook登录时的跳转iOS9之前的方法
--(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-    return  [platInit application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
-}
-```
-
-# 工具型接口
-
-## 获取当前手机系统语言和地区
-
-```objectivec
+/**
+ 显示评价
+ */
++ (void)showMarkView;
+
+/*
+ 广告 ，分享 ，绑定，翻译，播放视频 使用一个通知
+ 通知名：SDKCenterNotifition
+ 返回参数：status  0 广告失败
+                 1 广告成功
+                 2 分享失败
+                 3 分享成功
+                 4 绑定失败
+                 5 绑定成功
+                 6 未绑定
+                 7 已绑定
+                 8 绑定取消
+                 9 取消广告
+                 10 返回product多语言
+                 11 返回product多语言失败
+                 12 返回翻译
+
+                 16 国内ip
+
+
+ */
+/**
+ 弹出文字提示
+ @param text 文本内容
+ */
++ (void) toastInfo:(NSString *)text;
+
+
+// 返回设备号
++ (NSString *) returnIDFV;
+
+/*
+ * 返回广告ID
+ */
++ (NSString *) returnIDFA;
+
++ (NSString *)returnIDFVNomal;
+
+/*
+ * 获取内购列表
+ */
++ (void) setPurchaseInfo;
+
+/*
+ * 返回时区
+ */
++ (NSString *)returnTimeZome ;
+
+/*
+ * 返回语言码
+ */
 + (NSString *)returnLanguageCode;
-```
 
-**响应**
 
-返回示例: "zh-CN"。
 
-其中，前半部分表示语言，zh代表中文，后半部分代码地区，CN代表中国。如果只要按语言判断，请只判断前半部分，如果只需按地区判断，请只判断后半部分。因为一种语言会在多个地区出现，一个地区也会有多种语言。
-
-语言码的ISO标准： [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
-
-地区码的ISO标准：[ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2)
-
-> 注意，由于Apple并没有完全按ISO标准返回，各厂商系统给出的语言地区码也不完全按ISO标准返回，建议做后端判断，方便兼容
-> 常见的不兼容是，中文简体使用的语言码是zh-Hans
-
-## 获取SDK版本
-
-- 此接口用来获取当前SDK的版本，请按需接入
-
-```objectivec
-+(NSString*)versions;
-```
-
-**示例**
-
-```objectivec
-//返回版本号，是string类型
-[platTools versions];
-```
-
-## 打开社交平台
-
-```objectivec
-方式一：
-+ (void) toastplatformCode:(NSString *)code Info:(NSString *)info  pageID:(NSString *)pageid;
-```
-
-**参数**
-
-| 字段     | 类型     | 说明                            |
-| ------ | ------ | ----------------------------- |
-| code   | string | code : 2 Facebook 3 洛比 4 应用商店 |
-| info   | string | 链接地址/包名/应用ID (无参数默认给个空字符)     |
-| pageid | sring  | 粉丝页ID(无参数默认给个空字符)             |
-
-**示例**
-
-```objectivec
-[platTools toastplatformCode:@"2" Info:@"https://123" pageID:[info objectForKey:@"12345678"]]
-```
-
-```objectivec
-方式二：
-+ (void)showMarkViewType:(NSInteger)type;
-```
-
-**参数**
-
-| 字段   | 类型  | 说明            |
-| ---- | --- | ------------- |
-| type | int | 1：应用商店；2：三方平台 |
-
-**示例**
-
-```objectivec
-[platTools showMarkViewType:2];
-```
-
-## 获得手机所在的时区
-
-当游戏需要获取当前用户手机时间所在时区时，调用此方法
-
-```objectivec
-+ (NSString *)returnTimeZome
-```
-
-**示例**
-
-```objectivec
-[platTools returnTimeZome ];
-```
-
-## 翻译文本
-
-当需要翻译文字时，请调用此方法
-
-第一个参数text是传入需要的翻译的文本，identifier是cp传来的透传字段。
-
-```objectivec
+/**
+ 翻译
+ @param text 需要翻译的文本
+ @param identifier 文本标识符（透传字段）
+ 结果在通知中回调
+ */
 + (void)translateText:(NSString *)text identifier:(NSString *)identifier;
-```
 
-**参数**
 
-| 参数         | 类型     | 必须  | 说明     |
-| ---------- | ------ | --- | ------ |
-| text       | string | 是   | 需要翻译文本 |
-| identifier | string | 否   | 文本标识符  |
+/**
+ 打开社交平台方法一
+ @param code 2、Facebook;3、lobi；4、应用商店
+ @param info 链接地址/包名/应用ID (无参数默认给个空字符)
+ @param pageid 粉丝页ID(无参数默认给个空字符)
+ */
++ (void) toastplatformCode:(NSString *)code Info:(NSString *)info  pageID:(NSString *)pageid;
 
-**示例**
+/**
+ 打开社交平台方法二
+ @param type 1：商店；2：三方平台+浏览器
+ */
++ (void)showMarkViewType:(NSInteger)type;
 
-```objectivec
-[platTools translateText:@"你好" identifier:@"2"];
-```
 
-**响应**
 
-结果回调在通知中，会包含状态值，翻译后的文本，文本标识符。
+/**
+ 广告剩余显示次数
+ @param str 次数，没有限制可不调用此方法
+ */
++ (void)ADCounts:(NSString *)str;
 
-## 日志
 
-当接入需要开启日志时，请调用此方法
-
-```objectivec
+/*
+ *日志，是否开启日志 出提审包关闭
+ */
 + (void)openLog:(BOOL)isOn;
-```
 
-**参数**
-
-| 参数   | 类型   | 必须  | 说明     |
-| ---- | ---- | --- | ------ |
-| isOn | BOOL | 是   | 是否开启日志 |
-
-**示例**
-
-```objectivec
-[platTools openLog:YES];
-```
-
-**响应**
-
-开启日志，运行时，控制台输出日志；关闭日志，运行时，控制台不输出日志。
-
-## 打开网页
-
-当需要在游戏内打点某个链接，请调用此方法
-
-```objectivec
+/**
+ 打开入口
+ @param str 链接
+ */
 + (void)showViewWithStr:(NSString *)str;
-```
 
-**参数**
-
-| 参数 | 类型     | 必须 | 说明           |
-| ---- | -------- | ---- | -------------- |
-| str  | NSString | 是   | 需要打开的链接 |
-
-**示例**
-
-```objectivec
-[platTools showViewWithStr:@"链接"];
-```
-
-**响应**
-
-在游戏中弹出链接指向web页面。
-
-## 播放视频
-
-当游戏内需要播放本地或者网络视频时，可调用此方法
-
-暂不支持webm格式
-
-```objectivec
-+ (void)playVideo:(NSString *)str;
-```
-
-**参数**
-
-| 参数 | 类型     | 必须 | 说明     |
-| ---- | -------- | ---- | -------- |
-| str  | NSString | 是   | 视频地址 |
-
-**示例**
-
-```objectivec
-[platTools playVideo:[[NSBundle mainBundle] pathForResource:@"1" ofType:@"mp4"]];
-```
-
-**响应**
-
-使用通知来接收回调，请参考[通知](#定义通知)
-
-| 状态值 | 含义             |
-| ------ | ---------------- |
-| 17     | 视频播放完成关闭 |
-| 18     | 取消视频播放     |
-| 19     | 视频播放失败     |
-
-## 设备信息
-
-返回用户的设备型号，系统版本和idfv
-
-```objectivec
 /**
  返回设备信息
  @return @{
           @"system":设备系统信息,
-          @"model": 设备型号,
-          @"idfv":  设备idfv  }
+          @"model":  设备型号,
+          @"idfv":      设备idfv  }
  */
 + (NSDictionary *)deviceInfo;
+
+/**
+播放视频
+ @param str 视频地址
+ */
++ (void)playVideo:(NSString *)str;
+
+/**
+用户中心
+ */
++ (void)userCenter;
+
+/**
+ 帮助中心
+ */
++ (void)helpCenter;
 ```
 
-**示例**
+##### platPurchase类
 
 ```objectivec
-[platTools deviceInfo];
+/*
+ <purchaseModel>
+ productID： id <必传>
+ productName： 名<必传>
+ productPrice：价格，可能有的SDK只支持整数<必传>
+ productDes： 描述
+ gameReceipts： 透传参数，订单信息<必传>
+ roleID：游戏角色id
+ roleName：游戏角色名
+ roleLevel： 游戏角色等级
+ vipLevel：Vip等级
+ partyName： 帮派、公会等
+ zoneID： 服务器id，若无填1
+ zoneName： 服务器名
+ text：扩展字段
+ notifyURL：回调地址 可传可不传，不传使用默认
+ */
++ (void) purchase:(purchaseModel *)payInfo CallBack:(id<PurchaseCallBack>) callBack;
+//订单异常页面
++ (void)purchaseRepairView;
 ```
 
+##### platShare类
+
+```objectivec
+//单利
++(platShare*)getInstance;
+#pragma  ====================FB分享到动态图片和视频分为两种方式传入1.链接2.本地存储路径=====================
+// 链接
+-(void)FaceBookShareURL:(NSString*)url  Hashtag:(NSString*)tag  Quote:(NSString*)quote;
+// 图片
+-(void)FaceBookShareURL:(NSString*)url   PhotoUrl:(NSString*)photoUrl Hashtag:(NSString*)tag ;
+
+-(void)FaceBookShareURL:(NSString*)url   PhotoPath:(NSString*)photoPath Hashtag:(NSString*)tag ;
+// 视频
+-(void)FaceBookShareURL:(NSString*)url  VideoUrl:(NSString *)videoUrl   Hashtag:(NSString*)tag ;
+
+-(void)FaceBookShareURL:(NSString*)url  VideoPath:(NSString *)videoPath  Hashtag:(NSString*)tag;
+
+#pragma  ====================FB分享到快拍图片和视频分为两种方式传入1.data类型2.本地存储路径=====================
+- (void)FaceBookShareStoriesVideo:(NSData*)videoData;
+- (void)FaceBookShareStoriesVideoPath:(NSString*)videoPath;
+
+- (void)FaceBookShareStoriesPhoto:(NSData*)photoData;
+
+- (void)FaceBookShareStoriesPhotoPath:(NSString*)photoPath;
+
+#pragma  ====================twitter分享到快拍图片和视频分为两种方式传入1.链接2.本地存储路径=====================
+- (void)TwitterShareUrl:(NSString*)url ContentTxt:(NSString*)txt  ;
+
+- (void)TwitterShareUrl:(NSString*)url ContentTxt:(NSString*)txt ImageUrl:(NSString*)imgUrl;
+
+- (void)TwitterShareUrl:(NSString*)url ContentTxt:(NSString*)txt ImagePath:(NSString*)imgPath;
 
 
-# Firebase Crash接入
+- (void)TwitterShareUrl:(NSString *)url ContentTxt:(NSString *)txt VideoUrl:(NSString *)videoUrl;
+- (void)TwitterShareUrl:(NSString *)url ContentTxt:(NSString *)txt VideoPath:(NSString *)videoPath;
 
-### 接入步骤：
 
-1、将给到的run和upload-symbols导入项目根目录。
+#pragma  ====================Instagram分享到快拍图片和视频分为两种方式传入1.data类型2.本地存储路径=====================
+- (void)InstagramShareStoriesPhoto:(NSData*)photoData;
+- (void)InstagramShareStoriesVideo:(NSData*)videoData;
 
-直接将上述文件拖入Xcode工程目录结构中，在弹出的界面中勾选**Copy items into destination group's folder(if needed)**，并确保**Add To Targets勾选相应target**。
+- (void)InstagramShareStoriesPhotoPath:(NSString*)photoPath;
+- (void)InstagramShareStoriesVideoPath:(NSString*)videoPath;
 
-2、如图：
+#pragma  ====================Instagram分享到动态图片和视频分为两种方式传入1.链接2.本地存储路径 使用系统共享文件不建议使用=====================
+- (void)InstagramSharePhotoPath:(NSString *)photoPath ;
+- (void)InstagramShareVideoPath:(NSString *)videoPath ;
+/**
+ Line
+ @param txt  分享文本
+ @param url  传入分享链接/图片链接/视屏链接==（只能选择一种）
 
-![flags](assets/images/p8.png)
+ */
+- (void)LineShareTxt:(NSString *)txt ShareUrl:(NSString *)url;
 
-选中TARGETS 你的项目 -> Build Phases -> Run Script  
+/**
+ Line
+ @param imgPath 分享图片路径
+ */
+- (void)LineShareImgPath:(NSString *)imgPath;
 
-* 1、在Shell 脚本处添加：
+#pragma  ====================系统分享图片+链接+tag+引文建议line,Instagram使用=====================
+-(void)ShareURL:(NSString*)url   PhotoPath:(NSString*)photoPath Hashtag:(NSString*)tag Quote:(NSString *)quote;
 
-  ```objectivec
-  "${PROJECT_DIR}/${PROJECT_NAME}/run"
-  ```
-
-* 2、在Input Files，点击+，添加：
-
-  ```objectivec
-  ${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}
-  ```
-
-  和
-
-  ```objectivec
-  $(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)
-  ```
-
- 注意：如果你没有发现Run Script ，可以点击“+”，选择New Run Script Phase即可。
-
-![flags](assets/images/p9.png)
+#pragma  ====================系统分享视频+链接+tag+引文建议line,Instagram使用=====================
+-(void)ShareURL:(NSString*)url  VideoPath:(NSString *)videoPath  Hashtag:(NSString*)tag Quote:(NSString *)quote;
+#pragma  ====================系统分享视频+图片+链接+tag+引文建议line,Instagram使用=====================
+-(void)ShareURL:(NSString*)url photoPath:(NSString *)imagePath VideoPath:(NSString *)videoPath  Hashtag:(NSString*)tag Quote:(NSString *)quote;
+#pragma  =====获取当前安装的平台line,instagram,twitter,facebook ========
+-(NSArray *)shareplatType;
+```

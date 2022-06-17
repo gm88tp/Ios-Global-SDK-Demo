@@ -15,7 +15,10 @@
 typedef NS_ENUM(NSInteger,loginStatus) {
     /** 登陆成功 */
     LOGIN_SUCCESS = 0,
-   
+    /**显示登录页面***/
+    LOGIN_VIEW=1,
+    /**静默自动登录失败***/
+    LOGIN_SILENT_FAILURE=2,
     /** 切换账号*/
     LOGIN_SWITCH = 4,
     /** 退出成功*/

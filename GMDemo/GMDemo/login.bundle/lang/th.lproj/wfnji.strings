@@ -65,8 +65,8 @@
 "account_s" = "ลงทะเบียนบัญชีสำเร็จ！";
 "code_err" = "รหัสยืนยันที่ใส่ไม่ถูกต้อง";
 "email" = "โปรดใส่อีเมลที่ถูกต้อง";
-"pass" = "โปรดใส่รหัสผ่าน6-30หลักตัวเลข ตัวอักษรหรือเครื่องหมาย";
-"pass_re" = "รหัสผ่านคือ6-30หลักตัวเลข ตัวอักษรหรือเครื่องหมาย โปรดใส่อีกครั้ง";
+"pass" = "โปรดใส่รหัสผ่าน6-16หลักตัวเลข ตัวอักษรหรือเครื่องหมาย";
+"pass_re" = "รหัสผ่านคือ6-16หลักตัวเลข ตัวอักษรหรือเครื่องหมาย โปรดใส่อีกครั้ง";
 "tran_load" = "ไปที่ล็อกอิน";
 "reset_pas" = "รีเซ็ตรหัสผ่าน";
 "paspromotsec" = "โปรดใส่รหัสผ่านอีกครั้ง";
@@ -199,3 +199,233 @@
 "repair_order" = "คำสั่งซื้อที่ซ้ำกัน";
 "repeat_tip" = "ตรวจพบว่าคำสั่งซื้อของคุณผิดปกติ โปรดแก้ไขปัญหาการสั่งซื้อก่อนแล้วชำระเงิน";
 "turn_order_repair" = "แก้ไขปัญหาการสั่งซื้อ";
+
+"help_center" = "ศูนย์ช่วยเหลือ";
+
+/*Tips*/
+"dialog_tips_title" = "โต้ตอบ ทิป หัวข้อ";
+
+/*Please make sure you have read and agreed to User Agreement and Privacy Notice*/
+"agreements_tip" = "โปรดอ่านและยอมรับข้อตกลงผู้ใช้และเงื่อนไขความเป็นส่วนตัว";
+
+/*User Agreement*/
+"user_agreement" = "ข้อตกลงผู้ใช้";
+
+/*Privacy Notice*/
+"privacy_notice" = "เงื่อนไขความเป็นส่วนตัว";
+
+/*Decline*/
+"privacy_decline_btn" = "ปฏิเสธ";
+
+/*accept*/
+"privacy_accept_btn" = "ยอมรับ";
+
+/*To ensure the security of your account, you need to bind the email address so that you can use the password reset function. You can also bind other third-party accounts*/
+"account_binding_tips" = "เพื่อความปลอดภัยบัญชีของคุณ ต้องผูกมัดเมล์ก่อนถึงสามารถใช้ฟังก์ชันรีเซ็ตรหัสผ่านได้คุณก็สามารถเลือกผูกมัดบัญชี3rd partyได้";
+
+/*not binding email*/
+"account_not_binding" = "ยังไม่ผูกมัดเมล์";
+
+/*Topic Category*/
+"help_center_topic_category" = "หัวข้อแบ่งประเภท";
+
+/*Please select topic you want to see*/
+"help_center_topic_category_hint" = "กรุณาเลือกหัวข้อประเภทที่คุณสนใจ";
+
+/*Account Problem*/
+"help_center_account_problem" = "ปัญหาบัญชี";
+
+/*Payment Problem*/
+"help_center_payment_problem" = "ปัญหาการชำระเงิน";
+
+/*Game Related*/
+"help_center_game_related" = "ปัญหาเกม";
+
+/*Issue*/
+"help_center_issue" = "ฟีดแบค";
+
+/*you can contact by issues*/
+"help_center_issue_hint" = "คุณสามารถติดต่อกับเราผ่านการฟีดแบค";
+
+/*I want feedback*/
+"help_center_want_feedback_btn" = "ฉันอยากฟีดแบค";
+
+/*Feedback history*/
+"help_center_feedback_history_btn" = "ประวัติศาสตร์";
+
+/*Feedback*/
+"feedback_title" = "ฟีดแบค";
+
+/*Title*/
+"feedback_title_tag" = "หัวข้อ";
+
+/*Take a title for feedback*/
+"feedback_title_hint" = "ตั้งชื่อหัวข้อฟีดแบค";
+
+/*Description:*/
+"feedback_description" = "คำอธิบายปัญหา";
+
+/*Please fill in the problem description*/
+"feedback_description_hint" = "กรุณาอธิบายปัญหาที่คุณติด";
+
+/*Photo or Video\n(limited to two)*/
+"feedback_upload_hint" = "มากสุด2รูปภาพ วิดีโอ";
+
+/*Title must be 4-20 characters*/
+"feedback_title_error_hint" = "ชื่อหัวข้อต้องมี 4-20 คำ";
+
+/*Description is required*/
+"feedback_description_error_hint" = "จำเป็นต้องมีคำอธิบายปัญหา";
+
+/*Account and Role:*/
+"feedback_account_role" = "บัญชีและตัวละคร";
+
+/*Server & Charactor:*/
+"feedback_server_charactor" = "เซิร์ฟและตัวละคร";
+
+/*Feedback Category*/
+"feedback_category" = "ประเภท";
+
+/*Account*/
+"feedback_category_account" = "บัญชี";
+
+/*Payment*/
+"feedback_category_payment" = "จ่ายเงิน";
+
+/*Game*/
+"feedback_category_game" = "เกม";
+
+/*Other*/
+"feedback_category_other" = "ประเภทอื่น";
+
+/*Role Name*/
+"feedback_role_name" = "ชื่อตัวละคร";
+
+/*Feedback the details*/
+"feedback_detail" = "รายละเอียด";
+
+/*Account Feedback*/
+"feedback_detail_actfeedback" = "ประเภทบัญชี";
+
+/*Unfold*/
+"feedback_detail_unfold" = "แฉ";
+
+/*Put away*/
+"feedback_detail_putaway" = "เก็บ";
+
+/*Reply to Custom Service*/
+"feedback_reply_title" = "ตอบ";
+
+/*What you want to say*/
+"feedback_reply_hint" = "เนื้อหาที่คุณอยากตอบกลับCS";
+
+/*Reply*/
+"feedback_reply_btn" = "ตอบ";
+
+/*My feedback*/
+"feedback_my_feedback_title" = "ฟีดแบคของฉัน";
+
+/*RT Talk*/
+"feedback_rttalk_btn" = "แชท";
+
+/*There is no feedback problem for the time being*/
+"feedback_empty_hint" = "ไม่มีฟีดแบค";
+
+/*User Center*/
+"user_center_title" = "ศูนย์ผู้ใช้";
+
+/*View all orders*/
+"user_center_view_all_orders" = "ดูออเดอร์ทั้งหมด";
+
+/*View All Feedbacks*/
+"user_center_view_all_feedbacks" = "ดูฟีดแบคทั้งหมด";
+
+/*Orders*/
+"order_title" = "ออเดอร์";
+
+/*No orders*/
+"order_empty_hint" = "ยังไม่มีออเดอร์";
+
+/*Unusual*/
+"order_unusual" = "ผิดปกติ";
+
+/*Finished*/
+"order_finished" = "สำเร็จ";
+
+/*Next*/
+"next_btn" = "ต่อไป";
+
+/*Payment feedback*/
+"feedback_detail_payfeedback" = "ปัญหาการชำระเงิน";
+
+/*Game Feedback*/
+"feedback_detail_gamefeedback" = "ปัญหาเกม";
+
+/*Other Feedback*/
+"feedback_detail_otherfeedback" = "ปัญหาอื่น";
+"user_center_no_feedback" = "ไม่มีฟีดแบค";
+"order_copy_id" = "สำเนา";
+"order_repair_ignore" = "ละเลย";
+
+/*Review Game*/
+"review_game" = "ให้คะแนน";
+
+/*not binding email*/
+"not_binding_email" = "ยังไม่ผูกมัดเมล์";
+
+/*To ensure the security of your account, you need to bind the email address so that you can use the password reset function. You can also bind other third-party accounts*/
+"bind_hint" = "เพื่อความปลอดภัยของบัญชี คุณต้องผูกมัดเมล์ก่อนใช้ฟังก์ชั่นรีเซ็ตรหัสผ่าน คุณก็สามารถผูกบัญชี 3rd party ได้";
+
+/*Third party*/
+"third_party" = "3rd party";
+
+/*Please bind the email first*/
+"bind_email_first" = "กรุณาผูกมัดเมล์ก่อน";
+
+/*step*/
+"step" = "ขั้นตอน";
+
+/*Submitted successfully*/
+"feedback_submit_succ" = "ส่งฟีดแบคสำเร็จ";
+
+/*Back to Help Center*/
+"back_to_helpcenter" = "กลับศูนย์ช่วยเหลือ";
+
+/*View feedback*/
+"view_feedback" = "ดูฟีดแบค";
+
+/*Please select the feedback type*/
+"unselect_feedback_type" = "กรุณาเลือกประเภท";
+
+/*Back to game*/
+"back_to_game" = "กลับเกม";
+
+/*Submitting*/
+"submitting" = "กำลังส่ง";
+
+/*submit*/
+"submit" = "ส่ง";
+
+/*no more data*/
+"no_more_data" = "ไม่มีข้อมูล";
+
+/*go to help center*/
+"go_helpcenter" = "ไปศูนย์ช่วยเหลือ";
+
+/*agreement*/
+"agreement" = "ข้อตกลง";
+"sign_in_with" = "วิธีล็อกอิน";
+"or" = "หรือ";
+"keyboard_finish" = "สำเร็จ";
+"feedback_video_long_time" = "วิดีโอที่อัพโหลดไม่นานกว่า60s";
+"feedback_account_title" = "บัญชี";
+"usercenter_switch_text" = "ตกลงที่จะสลับบัญชีไหม";
+"login_help" = "ติดปัญหา";
+"message_pic" = "[รูปภาพ]";
+
+"no_role_hint" = "ไม่มีข้อมูลตัวละคร";
+
+"delete_account" = "ลบบัญชี(ดำเนินการอันตราย)";
+"notice_title" = "ประกาศ";
+"notice_pay_tip" = "ขอบคุณ โปรดตรวจสอบรายการที่ซื้อในเกม";
+"success" = "สำเร็จ";

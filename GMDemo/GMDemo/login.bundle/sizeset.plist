@@ -5,7 +5,7 @@
 	<key>darkGrayColor</key>
 	<string>#a9a9a9</string>
 	<key>darkViewColor</key>
-	<string>#000000</string>
+	<string>#282828</string>
 	<key>lightViewColor</key>
 	<string>#FFFFFF</string>
 	<key>versions</key>
@@ -17,7 +17,7 @@
 	<key>fbpageid</key>
 	<string>107228963954619</string>
 	<key>proaccBtnColor</key>
-	<string>#FF9F00</string>
+	<string>#5680fa</string>
 	<key>markH</key>
 	<string>330</string>
 	<key>promptH</key>
@@ -83,7 +83,7 @@
 	<key>promptbgAlpha</key>
 	<string>0</string>
 	<key>promotline</key>
-	<string>1</string>
+	<string>0</string>
 	<key>LineShow</key>
 	<string>1</string>
 	<key>btnImgradio</key>
@@ -91,7 +91,7 @@
 	<key>btntitleColor</key>
 	<string>#000000</string>
 	<key>promotradio</key>
-	<string>8</string>
+	<string>15</string>
 	<key>promotbtnradio</key>
 	<string>8</string>
 	<key>promotheadtitleColor</key>
@@ -99,9 +99,9 @@
 	<key>promotcontentitleColor</key>
 	<string>#000000</string>
 	<key>promotYescolor</key>
-	<string>#FF9F00</string>
+	<string>#5680FA</string>
 	<key>promotNocolor</key>
-	<string>#FF9F00</string>
+	<string>#ffffff</string>
 	<key>facebookxn</key>
 	<string>199</string>
 	<key>facebookyn</key>
@@ -141,7 +141,7 @@
 	<key>textfieldlinecolor</key>
 	<string>#E0E0E0</string>
 	<key>textViewBtncolor</key>
-	<string>#FF9F00</string>
+	<string>#5680fa</string>
 	<key>textViewBtnTxtcolor</key>
 	<string>#ffffff</string>
 	<key>textfieldTextcolor</key>
@@ -151,9 +151,9 @@
 	<key>agreemcolor</key>
 	<string>#000000</string>
 	<key>agreetcolor</key>
-	<string>#FF9F00</string>
+	<string>#5680FA</string>
 	<key>linebtncolor</key>
-	<string>#FF9F00</string>
+	<string>#5680FA</string>
 	<key>textViewBtnzRadio</key>
 	<string>4</string>
 	<key>bingcontroHN</key>
@@ -163,7 +163,7 @@
 	<key>markbgColor</key>
 	<string>#ffffff</string>
 	<key>markbtnradio</key>
-	<string>3</string>
+	<string>17</string>
 	<key>markYescolor</key>
 	<string>#ffffff</string>
 	<key>markNocolor</key>
@@ -220,5 +220,15 @@
 	<string>213</string>
 	<key>accountLViewh</key>
 	<string>57</string>
+	<key>sublabcolor</key>
+	<string>#999999</string>
+	<key>mainlabcolor</key>
+	<string>#333333</string>
+	<key>mainlabdark</key>
+	<string>#f6f6f6</string>
+	<key>subviewdarkcolor</key>
+	<string>#404040</string>
+	<key>subviewlightcolor</key>
+	<string>#eef1f3</string>
 </dict>
 </plist>

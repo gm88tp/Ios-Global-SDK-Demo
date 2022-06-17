@@ -64,8 +64,8 @@
 "account_s" = "Đăng nhập tài khoản thành công";
 "code_err" = "Mã xác minh không chính xác";
 "email" = "Mời đăng nhập chính xác email";
-"pass" = "Vui lòng nhập 6-30 số hoặc kí tự";
-"pass_re" = "Mật khẩu gồm 6-30 số hoặc kí tự, hãy nhập lại";
+"pass" = "Vui lòng nhập 6-16 số hoặc kí tự";
+"pass_re" = "Mật khẩu gồm 6-16 số hoặc kí tự, hãy nhập lại";
 "tran_load" = "Đăng nhập";
 "reset_pas" = "Cài đặt lại mật khẩu";
 "paspromotsec" = "Mời nhập lại mật khẩu";
@@ -197,3 +197,233 @@
 "repair_order" = "Đơn Hàng Trùng Lặp";
 "repeat_tip" = "Phát hiện đơn hàng của bạn bất thường, vui lòng tới Khắc Phục Đơn Hàng trước, sau đó tiến hành thanh toán";
 "turn_order_repair" = "Đi tới Khắc Phục Đơn Hàng";
+
+
+"help_center" = "Trung tâm hỗ trợ";
+
+/*Tips*/
+"dialog_tips_title" = "Tips";
+
+/*Please make sure you have read and agreed to User Agreement and Privacy Notice*/
+"agreements_tip" = "Vui lòng đảm bảo rằng bạn đã đọc và đồng ý với Thoả thuận người dùng và Chính sách quyền riêng tư";
+
+/*User Agreement*/
+"user_agreement" = "Thoả thuận người dùng";
+
+/*Privacy Notice*/
+"privacy_notice" = "Chính sách quyền riêng tư";
+
+/*Decline*/
+"privacy_decline_btn" = "Từ chối";
+
+/*accept*/
+"privacy_accept_btn" = "Đồng ý";
+
+/*To ensure the security of your account, you need to bind the email address so that you can use the password reset function. You can also bind other third-party accounts*/
+"account_binding_tips" = "Để đảm bảo an toàn cho tài khoản của bạn, bạn cần liên kết địa chỉ email để có thể sử dụng chức năng đặt lại mật khẩu. Bạn cũng có thể liên kết tài khoản qua bên thứ ba.";
+
+/*not binding email*/
+"account_not_binding" = "Chưa liên kết email";
+
+/*Topic Category*/
+"help_center_topic_category" = "Nhóm chủ đề";
+
+/*Please select topic you want to see*/
+"help_center_topic_category_hint" = "Vui lòng chọn chủ đề bạn muốn xem";
+
+/*Account Problem*/
+"help_center_account_problem" = "Vấn đề tài khoản";
+
+/*Payment Problem*/
+"help_center_payment_problem" = "Lỗi thanh toán";
+
+/*Game Related*/
+"help_center_game_related" = "Lỗi game";
+
+/*Issue*/
+"help_center_issue" = "Vấn đề";
+
+/*you can contact by issues*/
+"help_center_issue_hint" = "Bạn có thể liên hệ khi gặp vấn đề";
+
+/*I want feedback*/
+"help_center_want_feedback_btn" = "Tôi muốn phản hồi";
+
+/*Feedback history*/
+"help_center_feedback_history_btn" = "Lịch sử phản hồi";
+
+/*Feedback*/
+"feedback_title" = "Phản hồi";
+
+/*Title*/
+"feedback_title_tag" = "Tiêu đề";
+
+/*Take a title for feedback*/
+"feedback_title_hint" = "Gợi ý tiêu đề đánh giá";
+
+/*Description:*/
+"feedback_description" = "Mô tả";
+
+/*Please fill in the problem description*/
+"feedback_description_hint" = "Vui lòng mô tả vấn đề";
+
+/*Photo or Video\n(limited to two)*/
+"feedback_upload_hint" = "Giới hạn upload 2 ảnh và video";
+
+/*Title must be 4-20 characters*/
+"feedback_title_error_hint" = "Tiêu đề giới hạn 4-20 ký tự";
+
+/*Description is required*/
+"feedback_description_error_hint" = "Bắt buộc phải điền mô tả";
+
+/*Account and Role:*/
+"feedback_account_role" = "Tài khoản và nhân vật";
+
+/*Server & Charactor:*/
+"feedback_server_charactor" = "Ký tự Server";
+
+/*Feedback Category*/
+"feedback_category" = "Phân loại phản hồi";
+
+/*Account*/
+"feedback_category_account" = "Loại Acc";
+
+/*Payment*/
+"feedback_category_payment" = "Trả tiền";
+
+/*Game*/
+"feedback_category_game" = "Game";
+
+/*Other*/
+"feedback_category_other" = "Khác";
+
+/*Role Name*/
+"feedback_role_name" = "Tên nhân vật";
+
+/*Feedback the details*/
+"feedback_detail" = "Chi tiết phản hồi";
+
+/*Account Feedback*/
+"feedback_detail_actfeedback" = "Loại Acc";
+
+/*Unfold*/
+"feedback_detail_unfold" = "Mở rộng";
+
+/*Put away*/
+"feedback_detail_putaway" = "Thu gọn";
+
+/*Reply to Custom Service*/
+"feedback_reply_title" = "Trả lời CSKH";
+
+/*What you want to say*/
+"feedback_reply_hint" = "Bạn muốn phản hồi gì?";
+
+/*Reply*/
+"feedback_reply_btn" = "Trả lời";
+
+/*My feedback*/
+"feedback_my_feedback_title" = "Phản hồi của tôi";
+
+/*RT Talk*/
+"feedback_rttalk_btn" = "Live Chat";
+
+/*There is no feedback problem for the time being*/
+"feedback_empty_hint" = "Hiện tại không có lỗi để phản hồi";
+
+/*User Center*/
+"user_center_title" = "Trung Tâm Khách Hàng";
+
+/*View all orders*/
+"user_center_view_all_orders" = "Xem tất cả đơn hàng";
+
+/*View All Feedbacks*/
+"user_center_view_all_feedbacks" = "Xem tất cả phản hồi";
+
+/*Orders*/
+"order_title" = "Đơn hàng";
+
+/*No orders*/
+"order_empty_hint" = "Không có đơn hàng";
+
+/*Unusual*/
+"order_unusual" = "Bất thường";
+
+/*Finished*/
+"order_finished" = "Đã hoàn tất";
+
+/*Next*/
+"next_btn" = "Tiếp";
+
+/*Payment feedback*/
+"feedback_detail_payfeedback" = "Phản hồi thanh toán";
+
+/*Game Feedback*/
+"feedback_detail_gamefeedback" = "Lỗi game";
+
+/*Other Feedback*/
+"feedback_detail_otherfeedback" = "Lỗi khác";
+"user_center_no_feedback" = "Hiện tại không có phản hồi";
+"order_copy_id" = "Copy ";
+"order_repair_ignore" = "Bỏ qua";
+
+/*Review Game*/
+"review_game" = "Đánh giá";
+
+/*not binding email*/
+"not_binding_email" = "Chưa liên kết email";
+
+/*To ensure the security of your account, you need to bind the email address so that you can use the password reset function. You can also bind other third-party accounts*/
+"bind_hint" = "Để giữ tài khoản an toàn, vui lòng liên kết emai sau đó mới có thể sử dụng chức năng đặt lại mật khẩu, bạn cũng có thể liên kết tài khoản thông qua bên thứ ba.";
+
+/*Third party*/
+"third_party" = "Bên thứ 3";
+
+/*Please bind the email first*/
+"bind_email_first" = "Vui lòng liên kết email\n";
+
+/*step*/
+"step" = "Trình tự";
+
+/*Submitted successfully*/
+"feedback_submit_succ" = "Gửi thành công";
+
+/*Back to Help Center*/
+"back_to_helpcenter" = "Quay lại Trung tâm hỗ trợ";
+
+/*View feedback*/
+"view_feedback" = "Xem phản hồi";
+
+/*Please select the feedback type*/
+"unselect_feedback_type" = "Vui lòng chọn loại phản hồi";
+
+/*Back to game*/
+"back_to_game" = "Quay lại game";
+
+/*Submitting*/
+"submitting" = "Đang gửi";
+
+/*submit*/
+"submit" = "Gửi";
+
+/*no more data*/
+"no_more_data" = "Không có dữ liệu";
+
+/*go to help center*/
+"go_helpcenter" = "Tới Trung tâm hỗ trợ";
+
+/*agreement*/
+"agreement" = "Thoả thuận";
+"sign_in_with" = "Phương thức đăng nhập";
+"or" = "hoặc ";
+"keyboard_finish" = "Hoàn thành";
+"feedback_video_long_time" = "Video tải lên không thể quá 60s";
+"feedback_account_title" = "Tài khoản";
+"usercenter_switch_text" = "Xác nhận đổi tài khoản?";
+"login_help" = "Gặp vấn đề?";
+"message_pic" = "[bức ảnh]";
+"no_role_hint" = "Không có thông tin nhân vật";
+
+"delete_account" = "Xoá tài khoản (Thao tác nguy hiểm)";
+"notice_title" = "Thông Báo";
+"notice_pay_tip" = "Cảm ơn bạn đã mua hàng, xin vui lòng vào trò chơi để kiểm tra sản phẩm bạn đã mua.";
+"success" = "Thành công";

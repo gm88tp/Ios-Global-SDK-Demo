@@ -35,7 +35,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifitionCenter:)  name:@"SDKCenterNotifition" object:nil];
     
     //demo
-    self.dataArray = @[@"登录",@"登出",@"切换账号",@"支付",@"广告",@"社交",@"分享",@"帮助中心",@"个人中心",@"角色信息上报",@"自定义打点上报",@"单渠道打点上报（示例Facebook打点上报）",@"打开webview",@"其他",@"播放视频"];
+    self.dataArray = @[@"登录",@"登出",@"切换账号",@"支付",@"广告",@"社交",@"分享",@"帮助中心",@"个人中心",@"角色信息上报",@"自定义打点上报",@"单渠道打点上报（示例Facebook打点上报）",@"打开webview",@"其他",@"播放视频",@"删除账号"];
 }
 
 #pragma mark - SDKCenterNotifition 通知回调结果
@@ -545,6 +545,9 @@
         [self tools];
     } else if (indexPath.row == 14) {
         [self playVideo];
+    } else if (indexPath.row == 15) {
+        //删除账号
+        [platLogin deleteAccount];
     }
 }
 
