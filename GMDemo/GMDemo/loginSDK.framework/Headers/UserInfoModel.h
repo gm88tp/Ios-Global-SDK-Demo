@@ -70,6 +70,8 @@
 
 @property (nonatomic, strong) NSString *time;//存储时间
 
+@property (nonatomic, strong) NSString *last_login;//首次登录时间
+
 /**
  UserInfo转NSDictionary
 

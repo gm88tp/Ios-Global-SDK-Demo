@@ -35,7 +35,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifitionCenter:)  name:@"SDKCenterNotifition" object:nil];
     
     //demo
-    self.dataArray = @[@"登录",@"登出",@"切换账号",@"支付",@"广告",@"社交",@"分享",@"帮助中心",@"个人中心",@"角色信息上报",@"自定义打点上报",@"单渠道打点上报（示例Facebook打点上报）",@"打开webview",@"其他",@"播放视频",@"删除账号"];
+    self.dataArray = @[@"登录",@"登出",@"切换账号",@"支付",@"广告",@"社交",@"分享",@"帮助中心",@"个人中心",@"角色信息上报",@"自定义打点上报",@"单渠道打点上报（示例Facebook打点上报）",@"打开webview",@"其他",@"播放视频",@"删除账号",@"预约"];
 }
 
 #pragma mark - SDKCenterNotifition 通知回调结果
@@ -87,6 +87,10 @@
        
     } else if ([[Info objectForKey:@"status"] isEqualToString:@"19"]) {
         //视频播放失败
+    } else if ([[Info objectForKey:@"status"] isEqualToString:@"20"]) {
+       //获取预约失败
+    } else if ([[Info objectForKey:@"status"] isEqualToString:@"21"]) {
+        //获取预约成功
     }
 }
 
@@ -263,17 +267,17 @@
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"上报角色打点" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *ad1 = [UIAlertAction actionWithTitle:@"新手引导" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //新手引导
-        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" roleID:@"1" status:@"2" vipLevel:@"" zone:@"0"];
+        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" roleID:@"1" globalRoleId:@"1" status:@"2" vipLevel:@"" zone:@"0"];
     }];
         
     UIAlertAction *ad2 = [UIAlertAction actionWithTitle:@"角色等级" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //角色等级
-        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" roleID:@"1" status:@"3" vipLevel:@"" zone:@"0"];
+        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" roleID:@"1" globalRoleId:@"1" status:@"3" vipLevel:@"" zone:@"0"];
     }];
     
     UIAlertAction *ad3 = [UIAlertAction actionWithTitle:@"创建角色" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //创建角色
-        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" roleID:@"1" status:@"1" vipLevel:@"" zone:@"0"];
+        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" roleID:@"1" globalRoleId:@"1" status:@"1" vipLevel:@"" zone:@"0"];
     }];
     
 
@@ -548,6 +552,9 @@
     } else if (indexPath.row == 15) {
         //删除账号
         [platLogin deleteAccount];
+    } else if (indexPath.row == 16) {
+        //预约
+        [platTools checkPreOrder:@"1" serverId:@"1" notifyUrl:@"https://xxxx" extra:@"aaaa"];
     }
 }
 

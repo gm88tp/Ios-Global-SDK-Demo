@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param name 角色名字
  @param level 游戏等级
  @param serverID 区服
+ @param roleID 角色id
+ @param globalRoleId 全局唯一的角色id
  @param status 状态值默认选择<3>: 1:创建角色 2:完成新手引导 3:等级升级 4:每次进入游戏
  @param vipLevel 游戏VIP等级
  @param zone 大区,没有大区，请默认输入@"0"
@@ -31,9 +33,21 @@ NS_ASSUME_NONNULL_BEGIN
             gameLevel:(NSString *)level
              serverID:(NSString *)serverID
                roleID:(NSString *)roleID
+        globalRoleId:(NSString *)globalRoleId
                status:(NSString *)status
              vipLevel:(NSString *)vipLevel
                 zone:(NSString *)zone;
+
+/**
+ 获取当前角色是否预约
+ @param serverID 区服
+ @param roleID 角色id
+ @param notifyUrl 通知地址
+ @param extra 额外信息
+ */
++ (void)checkPreOrder:(NSString *)roleId serverId:(NSString *)serverId notifyUrl:(NSString *)notifyUrl extra:(NSString *)extra;
+
+
 
  
 /**

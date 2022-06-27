@@ -39,6 +39,6 @@
 	<key>admobInit</key>
 	<string>1</string>
 	<key>sdkVersion</key>
-	<string>2.2</string>
+	<string>2.3</string>
 </dict>
 </plist>
