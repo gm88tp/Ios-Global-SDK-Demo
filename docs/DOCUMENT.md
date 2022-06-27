@@ -425,7 +425,11 @@ else if(code ==LOGIN_SWITCH){
       //    调用方法 [platTools translateText:shareName.text identifier:@"2"];  
       //    12 返回翻译文本 
 
-    } 
+    } else if ([[Info objectForKey:@"status"] isEqualToString:@"20"]) {
+        //预约失败：（该角色无预约；用户未登录等等原因）
+    } else if ([[Info objectForKey:@"status"] isEqualToString:@"21"]) {
+        //预约成功
+    }
 
 
 }
@@ -644,6 +648,8 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
  @param name 角色名字
  @param level 游戏等级
  @param serverID 区服
+ @param roleID 角色id
+ @param globalRoleId 全局唯一的角色id
  @param status 状态值默认选择<3>: 1:创建角色 2:完成新手引导 3:等级升级 4:每次进入游戏
  @param vipLevel 游戏VIP等级
  @param zone 大区,没有大区，请默认输入@"0"
@@ -652,9 +658,23 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
             gameLevel:(NSString *)level
              serverID:(NSString *)serverID
                roleID:(NSString *)roleID
+        globalRoleId:(NSString *)globalRoleId
                status:(NSString *)status
              vipLevel:(NSString *)vipLevel
                 zone:(NSString *)zone;
+
+/**
+ 获取当前角色是否预约
+ @param serverID 区服
+ @param roleID 角色id
+ @param notifyUrl 通知地址
+ @param extra 额外信息
+ 结果返回在SDKCenterNotifition中返回
+ */
++ (void)checkPreOrder:(NSString *)roleId 
+  serverId:(NSString *)serverId 
+    notifyUrl:(NSString *)notifyUrl 
+      extra:(NSString *)extra;
 
 
 
