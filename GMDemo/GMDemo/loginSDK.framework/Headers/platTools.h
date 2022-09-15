@@ -38,10 +38,18 @@ NS_ASSUME_NONNULL_BEGIN
              vipLevel:(NSString *)vipLevel
                 zone:(NSString *)zone;
 
+
++ (void)platRoleName:(NSString *)name
+            gameLevel:(NSString *)level
+             serverID:(NSString *)serverID
+               roleID:(NSString *)roleID
+               status:(NSString *)status
+             vipLevel:(NSString *)vipLevel;
+
 /**
  获取当前角色是否预约
- @param serverID 区服
- @param roleID 角色id
+ @param serverId 区服
+ @param roleId 角色id
  @param notifyUrl 通知地址
  @param extra 额外信息
  */
@@ -149,9 +157,7 @@ style 1 至 5
                 @"shareID":@"分享ID",
              @"shareUName":@"角色名",
             @"shareServer":@"角色区服",
-              @"shareCode":@"角色code"
- 
-             }
+              @"shareCode":@"角色code" }
  */
 + (void)shareInfo:(NSString *)text image:(UIImage *)image link:(NSString *)link type:(NSString *)type otherInfo:(NSDictionary *)info;
 
@@ -162,6 +168,8 @@ style 1 至 5
  */
 + (NSString *)returnChannelID;
 
+/** 预加载广告 */
++ (void)preloadAD;
 /**
  调用广告
  */
@@ -180,7 +188,7 @@ style 1 至 5
  */
 + (void)showMarkView;
 
-+ (void)showWinLog;
+ 
 
 /*
  广告 ，分享 ，绑定，翻译，vip客服，播放视频 使用一个通知
@@ -202,8 +210,9 @@ style 1 至 5
                  14 accsetoken 获取成功
                  15 accsetoken 获取失败
                  16 国内ip禁止播放广告
-               
-
+                 17 取消分享
+                 18 预加载成功
+                 19 预加载失败
  */
 
 
@@ -293,13 +302,13 @@ style 1 至 5
  *客服入口
  接口废弃
  */
-//+ (void)showCustomView;
++ (void)showCustomView;
 
 /*
  *常见问题入口
  接口废弃
  */
-//+ (void)showFAQView;
++ (void)showFAQView;
 
 
 /**
@@ -307,6 +316,8 @@ style 1 至 5
  @param str 链接
  */
 + (void)showViewWithStr:(NSString *)str;
+
+ 
 
 /**
  返回设备信息
@@ -333,6 +344,8 @@ style 1 至 5
  */
 + (void)helpCenter;
 
++(void)openWinLog:(BOOL)isOn;
++(void)logInfoStr:(id)name;
 @end
 
 NS_ASSUME_NONNULL_END

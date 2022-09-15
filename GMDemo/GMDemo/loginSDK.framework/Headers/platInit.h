@@ -83,6 +83,9 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 #pragma 推送相关
 + (void)application:(UIApplication *)application  didReceiveRemoteNotification:(NSDictionary *)userInfo;
 
++ (void)FirebaseAd:(UIViewController *)viewController ;
++ (void)MaxbaseAd ;
+
 @end
 
 NS_ASSUME_NONNULL_END

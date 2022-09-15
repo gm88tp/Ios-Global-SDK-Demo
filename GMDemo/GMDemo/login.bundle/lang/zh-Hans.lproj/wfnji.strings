@@ -21,7 +21,7 @@
 "update" = "更新通知";
 "update_detaile" = "游戏版本更新";
 "update_yes" = "确认";
-"P_cancel" = "取消购买";
+"p_cancel" = "取消购买";
 "p_success" = "购买成功";
 "p_failure" = "购买失败";
 "Line" = "Line";
@@ -437,3 +437,32 @@
 "notice_title" = "公告";
 "notice_pay_tip" = "感谢您的购买，请在游戏内查询您购买的商品";
 "success" = "成功";
+ 
+"home.title" ="账号删除";
+"home.button"="开始删除";
+"home.text1"="账号删除流程";
+"home.text2"="您正在尝试删除您的游戏账号，这会造成您的游戏记录，充值记录等被删除或无痕化。";
+"home.text3"="请确保您确实不再需要它们，否则，不要往下进行。";
+"home.text4"="危险操作，请谨慎。";
+"home.text5"="您将删除账号中包含以下角色：";
+"home.text6"="如果您确实需要删除您的游戏账号，请先确定您要删除的账号中，所包含的游戏角色。";
+"home.role"="角色名";
+"home.server"="服务器";
+"agreement.title"="请同意以下协议";
+"agreement.cancel"="取消";
+"agreement.agree"="同意";
+"email.title"="验证您的邮箱";
+"email.text1"="为了确保是由您本人操作，请进行邮箱验证。";
+"email.text2"="您的邮箱：";
+"email.text3"="请填写验证码：";
+"email.text4"="没有收到验证码？";
+"email.text5"="重新发送";
+"email.text6"="验证码不正确";
+"email.button"="下一步";
+"complete.title"="账号删除";
+"complete.text1"="如果您想要取消删除账号的流程，只需在以上时间之前，登录游戏就会取消账号删除流程。";
+"complete.text2"="在您登出游戏之后，账号删除流程将正式开始，如果您今天登出游戏，则您的账号会在以下时间被删除。";
+"complete.text3"="账号将被删除";
+"complete.text4"="注意：如果您不进行登出操作，将不会开始账号删除流程。";
+"complete.button"="登出";
+ 

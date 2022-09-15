@@ -25,6 +25,13 @@ typedef NS_ENUM(NSInteger,loginStatus) {
     LOGOUT_SUCCESS = 5,
     /** 账号被封*/
     LOGIN_UNUSE = 6,
+    /** 登陆取消*/
+    LOGIN_CANCEL=7,
+    /**登陆报错*/
+    LOGIN_FAILURE =8,
+    /**删除账号*/
+    DEL_ACCOUNT =9
+    
 };
 /**
  登录回调代理
