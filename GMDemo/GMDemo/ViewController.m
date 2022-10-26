@@ -35,7 +35,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifitionCenter:)  name:@"SDKCenterNotifition" object:nil];
     
     //demo
-    self.dataArray = @[@"登录",@"登出",@"切换账号",@"支付",@"广告",@"社交",@"分享",@"帮助中心",@"个人中心",@"角色信息上报",@"自定义打点上报",@"单渠道打点上报（示例Facebook打点上报）",@"打开webview",@"其他",@"播放视频",@"删除账号",@"预约"];
+    self.dataArray = @[@"登录",@"登出",@"切换账号",@"支付",@"广告",@"社交",@"分享",@"帮助中心",@"个人中心",@"角色信息上报",@"自定义打点上报",@"单渠道打点上报（示例Facebook打点上报）",@"打开webview",@"其他",@"播放视频",@"删除账号",@"预约",@"扫一扫"];
 }
 
 #pragma mark - SDKCenterNotifition 通知回调结果
@@ -534,7 +534,7 @@
         
         UIAlertAction *open = [UIAlertAction actionWithTitle:@"打开" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             //打开webview接口
-            [platTools showViewWithStr:input.text];
+            [platTools showViewWithStr:input.text direction:1];
         }];
         UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                 
@@ -555,6 +555,9 @@
     } else if (indexPath.row == 16) {
         //预约
         [platTools checkPreOrder:@"1" serverId:@"1" notifyUrl:@"https://xxxx" extra:@"aaaa"];
+    } else if (indexPath.row == 17) {
+        //扫一扫
+        [platTools scanQRCode];
     }
 }
 

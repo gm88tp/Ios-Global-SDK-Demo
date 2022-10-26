@@ -455,3 +455,12 @@
 "complete.text3"="賬號將被刪除";
 "complete.text4"="注意：如果您不進行登出操作，將不會開始賬號刪除流程。";
 "complete.button"="登出";
+
+"scan.error" = "掃碼失敗，請掃描正確的登錄碼";
+"authorization"="授權";
+"author.acc"="請選擇您的賬號：";
+"author.title" = "授權登入";
+"author.role" = "請選擇您的角色：";
+"author.nodata" = "您還沒有登入，請先去遊戲中登入";
+"author.sub" = "您正在授權登入";
+"camera.set"="請在 設備-隱私-相機 開啟權限";

@@ -457,3 +457,12 @@
 "complete.text3"="Your account will be deleted";
 "complete.text4"="Caution: If you don't log out your account, the account deletion process will not get started.";
 "complete.button"="Log Out";
+
+"scan.error" = "Please scan the correct QR code";
+"authorization"="Authorize";
+"author.acc"="Select account:";
+"author.title" = "Account authorization";
+"author.role" = "Select character";
+"author.nodata" = "Please log in to the game first";
+"author.sub" = "You are authorizing login";
+"camera.set"="Please enable Camera permission in Setting - Privacy - Camera";

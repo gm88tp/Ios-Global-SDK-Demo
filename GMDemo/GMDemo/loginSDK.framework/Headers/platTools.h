@@ -262,9 +262,20 @@ style 1 至 5
 + (UIWindow *)currentWindow;
 
 /**
- 打开社交平台方法一
- @param code 2、Facebook;3、lobi；4、应用商店
- @param info 链接地址/包名/应用ID (无参数默认给个空字符)
+ #pragma 打开社交平台方法一
+ @param code  （2，3，6，7，9，10）会提供info和pageid 内容  其他媒体使用code5
+ code:1 预留接口
+ code:2  Facebook粉丝页或者群组页面
+ code:3  luobi主页
+ code:4  引导应用评价
+ code:5  手机浏览器内打开页面
+ code:6  打开抖音主页
+ code:7  打开ins主页
+ code:8  应用打开页面，注:必须接入项。活动页需要使用
+ code:9  打开youtube主页
+ code:10  打开line群组
+ code:其他 手机浏览器内打开页面
+ @param info 链接地址/包名/应用ID
  @param pageid 粉丝页ID(无参数默认给个空字符)
  */
 + (void) toastplatformCode:(NSString *)code Info:(NSString *)info  pageID:(NSString *)pageid;
@@ -316,8 +327,12 @@ style 1 至 5
  @param str 链接
  */
 + (void)showViewWithStr:(NSString *)str;
-
- 
+/**
+ 打开入口
+ @param str 链接
+ @param direction 0:默认游戏设置方向，1、竖屏，2、横屏
+ */
++ (void)showViewWithStr:(NSString *)str direction:(NSInteger)direction ;
 
 /**
  返回设备信息
@@ -346,6 +361,25 @@ style 1 至 5
 
 +(void)openWinLog:(BOOL)isOn;
 +(void)logInfoStr:(id)name;
+
+
+/**
+ 扫描二维码
+ */
++ (void)scanQRCode;
+
+
++ (NSDictionary *)strTodic:(NSString *)jsonString ;
+   
+
+/**
+ 字典转换为json字符串
+ 
+ @param dic 需要转换的字典
+ @return json 类型的字符串
+ */
++ (NSString *) dicTostr:(NSDictionary *)dic;
+
 @end
 
 NS_ASSUME_NONNULL_END

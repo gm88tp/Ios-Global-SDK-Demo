@@ -171,6 +171,24 @@
     </dict>
 ```
 
+##### 请求权限
+
+相关权限的申请文案按需翻译添加即可
+
+```objectivec
+
+  <key>NSCameraUsageDescription</key>
+	<string>需要使用您的相机</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string></string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>需要使用您的相册</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>请求使用你的广告id</string>
+```
+
+
+
 ##### 工程配置
 
 **1、在工程的 Build Setting 中找到 Other Linker Flags 添加 -ObjC**
@@ -262,7 +280,11 @@
 }
 
 
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    //gameOrientation 游戏方向，0代表竖版游戏，1代表横版游戏
+    return [platInit application:application supportedInterfaceOrientationsForWindow:window gameOrientation:1];
 
+}
 @end 
 ```
 
@@ -837,6 +859,13 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 + (void)showViewWithStr:(NSString *)str;
 
 /**
+ 打开入口
+ @param str 链接
+ @param direction 0:默认游戏设置方向，1、竖屏，2、横屏
+ */
++ (void)showViewWithStr:(NSString *)str direction:(NSInteger)direction ;
+
+/**
  返回设备信息
  @return @{
           @"system":设备系统信息,
@@ -860,6 +889,11 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
  帮助中心
  */
 + (void)helpCenter;
+
+/**
+ 扫描二维码
+ */
++ (void)scanQRCode;
 ```
 
 ##### platPurchase类
@@ -978,6 +1012,29 @@ SDK V1.4开始，同时支持横竖版，并且两版流程不一致，因此在
 **【General】—>【Deployment Info】—>【Device Orientation】**，勾选Portrait。
 
 ![p6](/Users/cm/Documents/iOS-work/sdk对外demo和文档/Ios-Global-SDK-Demo/docs/assets/images/p6.png)
+
+SDK V2.4 开始，由于某些页面需要特定方向，需接入如下方法：
+
+1、在AppDelegate中接入
+
+```objectivec
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    //gameOrientation 游戏方向，0代表竖版游戏，1代表横版游戏
+    return [platInit application:application supportedInterfaceOrientationsForWindow:window gameOrientation:1];
+
+}
+```
+
+2、在打开SDK web页面时调用
+
+```objectivec
+/**
+ 打开入口
+ @param str 链接
+ @param direction 0:默认游戏设置方向，1、竖屏，2、横屏
+ */
++ (void)showViewWithStr:(NSString *)str direction:(NSInteger)direction ;
+```
 
 
 

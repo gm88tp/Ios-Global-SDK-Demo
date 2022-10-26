@@ -465,4 +465,12 @@
 "complete.text3"="账号将被删除";
 "complete.text4"="注意：如果您不进行登出操作，将不会开始账号删除流程。";
 "complete.button"="登出";
- 
+
+"scan.error" = "扫描失败，请扫描正确的登录码";
+"authorization"="授权";
+"author.acc"="请选择您的账号：";
+"author.title" = "授权登录";
+"author.role" = "请选择您的角色：";
+"author.nodata" = "您还没有登录，请先去游戏中登录";
+"author.sub" = "您正在授权登录";
+"camera.set"="请在 设置-隐私-相机 开启权限";

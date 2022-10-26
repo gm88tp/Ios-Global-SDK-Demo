@@ -54,6 +54,14 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)applicationDidBecomeActive:(UIApplication *)app;
 
 /**
+ AppDelegate.h内的接口
+ 游戏方向设置
+ 
+ @param gameOrientation 1表示横屏游戏 0表示竖屏游戏
+ */
++ (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window gameOrientation:(NSInteger)gameOrientation;
+
+/**
  必须最先接入的方法  平台初始化方法
 老版本使用
 gameid 游戏的id
@@ -76,6 +84,11 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 + (void) initSDKapplication:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
                     Applede:(id) app;
+
++ (void) initSDKapplication:(UIApplication *)application
+didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+                    Applede:(id) app
+                     gameID:(NSString *)gameId;
 #pragma 推送相关
 + (void)application:(UIApplication *)application
 didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
@@ -85,6 +98,8 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 + (void)FirebaseAd:(UIViewController *)viewController ;
 + (void)MaxbaseAd ;
+
++ (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler;
 
 @end
 

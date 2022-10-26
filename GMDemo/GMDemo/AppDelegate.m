@@ -72,4 +72,10 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     [platInit application:application didReceiveRemoteNotification:userInfo];
 }
 
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+
+    return [platInit application:application supportedInterfaceOrientationsForWindow:window gameOrientation:1];
+
+}
+
 @end

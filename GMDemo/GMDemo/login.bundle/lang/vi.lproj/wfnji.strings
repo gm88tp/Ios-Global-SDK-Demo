@@ -454,3 +454,12 @@
 "complete.text3"="Tài khoản đã bị xoá";
 "complete.text4"="Lưu ý: Nếu bạn không đăng xuất, quá trình xoá tài khoản sẽ không bắt đầu";
 "complete.button"="Đăng xuất";
+
+"scan.error" = "Quét mã thất bại, vui lòng";
+"authorization"="Cấp quyền";
+"author.acc"="Chọn tài khoản của bạn:";
+"author.title" = "Cấp quyền đăng nhập";
+"author.role" = "Chọn nhân vật của bạn:";
+"author.nodata" = "Bạn vẫn chưa đăng nhập, hãy đăng nhập vào game trước";
+"author.sub" = "Bạn đang cấp quyền đăng nhập";
+"camera.set"="Vui lòng vào Cài Đặt - Quyền Riêng Tư - Camera để cấp quyền";

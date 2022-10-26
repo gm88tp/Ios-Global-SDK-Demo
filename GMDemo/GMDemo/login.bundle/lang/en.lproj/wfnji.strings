@@ -429,7 +429,7 @@
 "notice_title" = "Announcement";
 "notice_pay_tip" = "Thank you for your purchase, please check your purchased items in the game.";
 "success" = "Success";
-<<<<<<< HEAD
+
 "home.title" ="Delete Account";
 "home.button"="Confirm Delete";
 "home.text1"="Account Deletion Process";
@@ -457,12 +457,22 @@
 "complete.text3"="Your account will be deleted";
 "complete.text4"="Caution: If you don't log out your account, the account deletion process will not get started.";
 "complete.button"="Log Out";
-=======
 
-"delete_acc_title" = "Delete Account";
+
+/*
 "delete_acc_tip" = "Account Deletion Process";
 "delete_acc_content" = "You are trying to delete your game account, which will cause your game records, recharge records, etc. to be deleted permanently.";
 
 "delete_acc_contwo"= "Please choose and proceed carefully.";
 "delete_acc_warn" = "Your account will be deleted once this process is complete. Please proceed with caution.";
->>>>>>> 70b3af9fc4e2e532fdc9ed88a3719a50ad24b2b2
+*/
+
+
+"scan.error" = "Please scan the correct QR code";
+"authorization"="Authorize";
+"author.acc"="Select account:";
+"author.title" = "Account authorization";
+"author.role" = "Select character";
+"author.nodata" = "Please log in to the game first";
+"author.sub" = "You are authorizing login";
+"camera.set"="Please enable Camera permission in Setting - Privacy - Camera";

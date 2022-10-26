@@ -456,3 +456,13 @@
 "complete.text3"="アカウントは削除されます";
 "complete.text4"="ご注意：ログアウトしない場合、アカウントの削除プロセスは開始されません。";
 "complete.button"="ログアウト";
+
+
+"scan.error" = "スキャンエラー、コードを確認してください";
+"authorization"="アクセス権限";
+"author.acc"="アカウントを選択してください：";
+"author.title" = "アクセス権限を同意してログイン";
+"author.role" = "キャラーを選択してください：";
+"author.nodata" = "まずはログインしてください";
+"author.sub" = "アクセス権限を請求中";
+"camera.set"="デバイス-プライバシー-カメラで権限を与えてください";
