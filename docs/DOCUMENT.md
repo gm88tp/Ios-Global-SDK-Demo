@@ -547,7 +547,7 @@ else if(code ==LOGIN_SWITCH){
  */
 + (void)applicationDidBecomeActive:(UIApplication *)app;
 
-/** 
+
 #pragma 必须最先接入的方法  平台初始化方法2 参数在login.bundle中设置
 + (void) initSDKapplication:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -558,6 +558,14 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
 
 #pragma 推送相关
 + (void)application:(UIApplication *)application  didReceiveRemoteNotification:(NSDictionary *)userInfo;
+
+/**
+ AppDelegate.h内的接口
+ 游戏方向设置
+ 
+ @param gameOrientation 1表示横屏游戏 0表示竖屏游戏
+ */
++ (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window gameOrientation:(NSInteger)gameOrientation;
 ```
 
 ##### platLogin类
