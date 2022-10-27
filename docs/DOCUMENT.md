@@ -285,6 +285,13 @@
     return [platInit application:application supportedInterfaceOrientationsForWindow:window gameOrientation:1];
 
 }
+
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler
+    {
+
+        return [platInit application:application continueUserActivity:userActivity restorationHandler:restorationHandler];
+}
+
 @end 
 ```
 
@@ -566,6 +573,12 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken ;
  @param gameOrientation 1表示横屏游戏 0表示竖屏游戏
  */
 + (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window gameOrientation:(NSInteger)gameOrientation;
+
+/**
+ AppDelegate.h内的接口
+ 跨端登录必须接入
+ */
++ (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler;
 ```
 
 ##### platLogin类
