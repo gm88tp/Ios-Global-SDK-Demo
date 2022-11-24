@@ -93,6 +93,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)authAssToken;
 
+
+/**
+ uiserid登录
+ */
++ (void)UserIDLogin:(NSString *)uid;
 /**
  Facebook登录
  */

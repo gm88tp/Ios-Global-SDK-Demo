@@ -74,7 +74,7 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
 
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
 
-    return [platInit application:application supportedInterfaceOrientationsForWindow:window gameOrientation:1];
+    return [platInit application:application supportedInterfaceOrientationsForWindow:window gameOrientation:0];
 
 }
 

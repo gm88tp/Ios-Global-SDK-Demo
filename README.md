@@ -8,6 +8,6 @@
 
 ### 文档
 
-文档保存在docs/DOCUMENT.md下
-
+文档地址下
+https://gm88.yuque.com/tsfcgg/doc/skd752?# 《怪猫海外SDK iOS 使用文档》
 

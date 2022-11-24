@@ -258,26 +258,23 @@
 - (void)role {
     /**
     
-    获取当前游戏的角色
-    角色名字：name
-    游戏等级：level
-    区服:   serverID
-    状态值默认选择<3>:status 1:创建角色 2:完成新手引导 3:等级升级
+     
     */
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"上报角色打点" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *ad1 = [UIAlertAction actionWithTitle:@"新手引导" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        //新手引导
-        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" roleID:@"1" globalRoleId:@"1" status:@"2" vipLevel:@"" zone:@"0"];
+        //完成新手引导
+      
+        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" serverName:@"1" roleID:@"1" globalRoleID:@"1" status:@"2" vipLevel:@"1" zoneID:@"1" zoneName:@"0"];
     }];
         
     UIAlertAction *ad2 = [UIAlertAction actionWithTitle:@"角色等级" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //角色等级
-        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" roleID:@"1" globalRoleId:@"1" status:@"3" vipLevel:@"" zone:@"0"];
+        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" serverName:@"1" roleID:@"1" globalRoleID:@"1" status:@"3" vipLevel:@"1" zoneID:@"1" zoneName:@"0"];
     }];
     
     UIAlertAction *ad3 = [UIAlertAction actionWithTitle:@"创建角色" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //创建角色
-        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" roleID:@"1" globalRoleId:@"1" status:@"1" vipLevel:@"" zone:@"0"];
+        [platTools platRoleName:@"a" gameLevel:@"1" serverID:@"1" serverName:@"1" roleID:@"1" globalRoleID:@"1" status:@"1" vipLevel:@"1" zoneID:@"1" zoneName:@"0"];
     }];
     
 

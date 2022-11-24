@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
  partyName： 帮派、公会等
  zoneID： 服务器id，若无填1
  zoneName： 服务器名
+ gameZone： 游戏分区：类似东西区
  text：扩展字段
  notifyURL：回调地址 可传可不传，不传使用默认
  */

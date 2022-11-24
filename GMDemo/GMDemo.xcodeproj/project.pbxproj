@@ -7,19 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		145F6FB7292F6E7E00FEFEF6 /* login.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 145F6FB6292F6E7E00FEFEF6 /* login.bundle */; };
+		145F6FB9292F6E9100FEFEF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 145F6FB8292F6E9100FEFEF6 /* GoogleService-Info.plist */; };
+		145F6FBA292F6E9800FEFEF6 /* loginSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 145F6FB4292F6E6000FEFEF6 /* loginSDK.framework */; };
+		145F6FBB292F6E9800FEFEF6 /* loginSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 145F6FB4292F6E6000FEFEF6 /* loginSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		53BEE58524598FC0006B4C53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BEE58424598FC0006B4C53 /* AppDelegate.m */; };
 		53BEE58B24598FC0006B4C53 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BEE58A24598FC0006B4C53 /* ViewController.m */; };
 		53BEE58E24598FC0006B4C53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53BEE58C24598FC0006B4C53 /* Main.storyboard */; };
 		53BEE59024598FC5006B4C53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53BEE58F24598FC5006B4C53 /* Assets.xcassets */; };
 		53BEE59324598FC5006B4C53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53BEE59124598FC5006B4C53 /* LaunchScreen.storyboard */; };
 		53BEE59624598FC5006B4C53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BEE59524598FC5006B4C53 /* main.m */; };
-		53BEE5A4245A66B6006B4C53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53BEE5A3245A66B5006B4C53 /* GoogleService-Info.plist */; };
-		53D3D78324DBF6F300AD508E /* login.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 53D3D78124DBF6F300AD508E /* login.bundle */; };
-		53D3D78524DBF6F900AD508E /* loginSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53D3D78224DBF6F300AD508E /* loginSDK.framework */; };
-		53D3D78624DBF6F900AD508E /* loginSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 53D3D78224DBF6F300AD508E /* loginSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		83B968D0268D668C008C5B4F /* 1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 83B968CF268D668C008C5B4F /* 1.mp4 */; };
-		83F89E0326F43BB000C279E2 /* upload-symbols in Resources */ = {isa = PBXBuildFile; fileRef = 83F89E0126F43BB000C279E2 /* upload-symbols */; };
-		83F89E0426F43BB000C279E2 /* run in Resources */ = {isa = PBXBuildFile; fileRef = 83F89E0226F43BB000C279E2 /* run */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,7 +27,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				53D3D78624DBF6F900AD508E /* loginSDK.framework in Embed Frameworks */,
+				145F6FBB292F6E9800FEFEF6 /* loginSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,6 +35,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		145F6FB4292F6E6000FEFEF6 /* loginSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = loginSDK.framework; sourceTree = "<group>"; };
+		145F6FB6292F6E7E00FEFEF6 /* login.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = login.bundle; sourceTree = "<group>"; };
+		145F6FB8292F6E9100FEFEF6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		53BEE58024598FC0006B4C53 /* GMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53BEE58324598FC0006B4C53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		53BEE58424598FC0006B4C53 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -47,13 +48,8 @@
 		53BEE59224598FC5006B4C53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53BEE59424598FC5006B4C53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53BEE59524598FC5006B4C53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		53BEE5A3245A66B5006B4C53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		53D3D78124DBF6F300AD508E /* login.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = login.bundle; sourceTree = "<group>"; };
-		53D3D78224DBF6F300AD508E /* loginSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = loginSDK.framework; sourceTree = "<group>"; };
 		53D71A252591D3E5004879DD /* GMDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GMDemo.entitlements; sourceTree = "<group>"; };
 		83B968CF268D668C008C5B4F /* 1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.mp4; sourceTree = "<group>"; };
-		83F89E0126F43BB000C279E2 /* upload-symbols */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "upload-symbols"; sourceTree = "<group>"; };
-		83F89E0226F43BB000C279E2 /* run */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = run; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53D3D78524DBF6F900AD508E /* loginSDK.framework in Frameworks */,
+				145F6FBA292F6E9800FEFEF6 /* loginSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,14 +84,12 @@
 			isa = PBXGroup;
 			children = (
 				53D71A252591D3E5004879DD /* GMDemo.entitlements */,
-				83F89E0226F43BB000C279E2 /* run */,
-				83F89E0126F43BB000C279E2 /* upload-symbols */,
-				53D3D78124DBF6F300AD508E /* login.bundle */,
-				53D3D78224DBF6F300AD508E /* loginSDK.framework */,
-				53BEE5A3245A66B5006B4C53 /* GoogleService-Info.plist */,
 				83B968CF268D668C008C5B4F /* 1.mp4 */,
+				145F6FB8292F6E9100FEFEF6 /* GoogleService-Info.plist */,
 				53BEE58324598FC0006B4C53 /* AppDelegate.h */,
 				53BEE58424598FC0006B4C53 /* AppDelegate.m */,
+				145F6FB4292F6E6000FEFEF6 /* loginSDK.framework */,
+				145F6FB6292F6E7E00FEFEF6 /* login.bundle */,
 				53BEE58924598FC0006B4C53 /* ViewController.h */,
 				53BEE58A24598FC0006B4C53 /* ViewController.m */,
 				53BEE58C24598FC0006B4C53 /* Main.storyboard */,
@@ -167,13 +161,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				53BEE59324598FC5006B4C53 /* LaunchScreen.storyboard in Resources */,
-				53BEE5A4245A66B6006B4C53 /* GoogleService-Info.plist in Resources */,
 				53BEE59024598FC5006B4C53 /* Assets.xcassets in Resources */,
-				53D3D78324DBF6F300AD508E /* login.bundle in Resources */,
+				145F6FB7292F6E7E00FEFEF6 /* login.bundle in Resources */,
 				83B968D0268D668C008C5B4F /* 1.mp4 in Resources */,
-				83F89E0426F43BB000C279E2 /* run in Resources */,
-				83F89E0326F43BB000C279E2 /* upload-symbols in Resources */,
 				53BEE58E24598FC0006B4C53 /* Main.storyboard in Resources */,
+				145F6FB9292F6E9100FEFEF6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +189,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PROJECT_DIR}/${PROJECT_NAME}/run\"\n";
+			shellScript = "#\"${PROJECT_DIR}/${PROJECT_NAME}/run\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -351,7 +343,7 @@
 				CODE_SIGN_ENTITLEMENTS = GMDemo/GMDemo.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ABKWKW7Y7M;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -364,7 +356,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.GMDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GMDe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -378,7 +370,7 @@
 				CODE_SIGN_ENTITLEMENTS = GMDemo/GMDemo.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ABKWKW7Y7M;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -391,7 +383,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.GMDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GMDe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

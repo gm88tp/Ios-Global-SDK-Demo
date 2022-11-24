@@ -58,14 +58,14 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>需要使用您的相机</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string></string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>需要使用您的相册</string>
 	<key>NSUserTrackingUsageDescription</key>
 	<string>请求使用你的广告id</string>
-    <key>NSCameraUsageDescription</key>
-        <string>需要使用您的相机</string>
-        <key>NSPhotoLibraryAddUsageDescription</key>
-        <string></string>
-        <key>NSPhotoLibraryUsageDescription</key>
-        <string>需要使用您的相册</string>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>

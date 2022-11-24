@@ -22,26 +22,31 @@ NS_ASSUME_NONNULL_BEGIN
  获取当前游戏的角色
  @param name 角色名字
  @param level 游戏等级
- @param serverID 区服
+ @param serverID 服id
+ @param serverName 服名称
  @param roleID 角色id
- @param globalRoleId 全局唯一的角色id
+ @param globalRoleID 全局唯一的角色id
  @param status 状态值默认选择<3>: 1:创建角色 2:完成新手引导 3:等级升级 4:每次进入游戏
  @param vipLevel 游戏VIP等级
- @param zone 大区,没有大区，请默认输入@"0"
+ @param zoneID 大区id,没有大区，请默认输入@"0"
+ @param zoneName 大区名称,没有大区，请默认输入@"0"
  */
 + (void)platRoleName:(NSString *)name
             gameLevel:(NSString *)level
              serverID:(NSString *)serverID
+            serverName:(NSString *)serverName
                roleID:(NSString *)roleID
-        globalRoleId:(NSString *)globalRoleId
+        globalRoleID:(NSString *)globalRoleID
                status:(NSString *)status
              vipLevel:(NSString *)vipLevel
-                zone:(NSString *)zone;
+                zoneID:(NSString *)zoneID
+              zoneName:(NSString *)zoneName;
 
 
 + (void)platRoleName:(NSString *)name
             gameLevel:(NSString *)level
              serverID:(NSString *)serverID
+       
                roleID:(NSString *)roleID
                status:(NSString *)status
              vipLevel:(NSString *)vipLevel;
@@ -309,17 +314,7 @@ style 1 至 5
  */
 + (void)openLog:(BOOL)isOn;
 
-/*
- *客服入口
- 接口废弃
- */
-+ (void)showCustomView;
 
-/*
- *常见问题入口
- 接口废弃
- */
-+ (void)showFAQView;
 
 
 /**
@@ -355,7 +350,7 @@ style 1 至 5
 + (void)userCenter;
 
 /**
- 帮助中心
+ 帮助中心 修改成进入客服
  */
 + (void)helpCenter;
 
@@ -379,7 +374,17 @@ style 1 至 5
  @return json 类型的字符串
  */
 + (NSString *) dicTostr:(NSDictionary *)dic;
+/*
+ *客服入口
+ 接口废弃
+ */
++ (void)showCustomView;
 
+/*
+ *常见问题入口
+ 接口废弃
+ */
++ (void)showFAQView;
 @end
 
 NS_ASSUME_NONNULL_END

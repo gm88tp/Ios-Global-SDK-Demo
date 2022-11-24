@@ -1,0 +1,466 @@
+
+/*wfnji.strings
+  loginSDK
+
+  Created by GM on 2019/1/2.
+  Copyright © 2019年 gumo. All rights reserved.*/
+"change_acount" = "切換賬號";
+"choose_logintype" = "請選擇登入方式";
+"login_fast" = "遊客訪問";
+"userinfo" = "尊敬的使用者：";
+"email_info" = "如果您有任何問題，請發郵件聯繫我們，我們很樂意為您提供幫助。";
+"email_address" = "郵箱：";
+"login_fast_tips" = "以遊客訪問方式登入，在卸載APP或是重新安裝遊戲，將會丟失遊戲內所有數據，確定以遊客訪問登入嗎？";
+"login_cancel" = "取消";
+"exit_tips" = "溫馨提醒";
+"loading_tips" = "玩命載入中...";
+"login_loading" = "載入中...";
+"wecolome" = "歡迎進入遊戲";
+"payinfo" = "操作訂單過於頻繁請稍後重試~";
+"orderfailur" = "生成訂單失敗～";
+"update" = "更新通知";
+"update_detaile" = "遊戲版本更新";
+"update_yes" = "確認";
+"p_cancel" = "取消購買";
+"p_success" = "購買成功";
+"p_failure" = "購買失敗";
+"Line" = "Line";
+"FaceBook" = "Facebook";
+"Google" = "Google";
+"Twitter" = "Twitter";
+"load" = "登入";
+"regist" = "賬號註冊";
+"accplaceholder" = "請輸入賬號";
+"pasplaceholder" = "請輸入密碼";
+"emaplaceholder" = "請輸入郵箱";
+"changetologin" = "已有賬號,點擊此處";
+"style" = "其他登入方式";
+"rgeistload" = "註冊並登入";
+"accbind" = "賬號綁定";
+"confimbind" = "確認並綁定";
+"accpromot" = "請輸入賬號";
+"paspromot" = "請輸入密碼";
+"emailpromot" = "請輸入郵箱";
+"jump" = "跳過";
+"strat" = "開始體驗";
+"mark_confirm" = "評價";
+"mark_content" = "您玩了這麼長時間，對我們有什麼想要說的嗎？";
+"end_veiw" = "關閉";
+"bind_account" = "平臺帳號";
+"bind_no" = "此賬號無需綁定";
+"pass_same" = "兩次輸入密碼必須一致";
+"bind_success" = "綁定成功";
+"bind_failed" = "綁定失敗";
+"agree_top" = "登入即代表閱讀並同意";
+"agree_bottom" = "服務協議";
+"nextLogin" = "最近登入";
+"bind" = "去綁定";
+"band" = "已綁定";
+"link" = "賬號註冊綁定";
+"accpwd" = "賬號登入";
+"forget" = "忘記密碼？";
+"wcode" = "請輸入驗證碼";
+"getCode" = "獲取";
+"account_s" = "賬號註冊成功！";
+"code_err" = "輸入的驗證碼錯誤";
+"email" = "請輸入正確的郵箱";
+"pass" = "請輸入6-16位數字、字母或符號的密碼";
+"pass_re" = "密碼是6-16位數字、字母或符號，請重新輸入";
+"tran_load" = "前往登入";
+"reset_pas" = "重置密碼";
+"paspromotsec" = "請再次輸入密碼";
+"equal" = "兩次輸入的密碼不壹致";
+"pass_succ" = "重置密碼成功!";
+"send_email" = "驗證碼已發送";
+"regist_load" = "註冊";
+"user_center" = "客服中心";
+"user_protext" = "如果您有任何問題，請發郵件聯系我們，我們很樂意為您提供幫助。";
+"user_back" = "返回";
+"user_leavefor" = "前往粉絲頁";
+
+"user_question" = "常見問題";
+"question_search" = "搜索";
+"answer_title" = "文章";
+"answer_comment" = "這篇文章是否對您有幫助？";
+"answer_good" = "感謝您的反饋！";
+"answer_bad" = "很抱歉沒有幫助到您";
+"search_noresult" = "沒有找到相關結果";
+"search_notext" = "搜索內容不能為空";
+
+"to_cust" = "聯系客服";
+"to_close_title"="退出遊戲";
+
+"turn_user_role" = "還沒有找到賬戶？點擊查看設備登入角色";
+"user_role_title" = "近期賬戶登入列表";
+"login_error" = "系統檢測到您的登入出現異常，請點擊“查看賬戶列表”，查看過往登入賬戶。";
+"check_user_list" = "查看賬戶列表";
+"role_name" = "角色名";
+"role_serve" = "區服";
+"apple" = "Apple";
+"apple_ulogin" = "您的手機系統不支持此登入方式，請使用其他方式登入";
+
+"user_fix" = "自助問題修復";
+"fix_ord" = "支付問題修復";
+"fix_odsuccess" = "問題修復成功，請重新嘗試支付！";
+
+"vip_title" = "VIP專屬客服";
+"vip_tips" = "尊敬的VIP用戶您好，我們為您挑選了專屬客服，請點擊下方進行溝通";
+"copy_tip" = "已復制";
+"fbui"="請先安裝Facebook App後再嘗試分享，謝謝!";
+
+//H-1.4
+"h_choose_account" = "請選擇賬號";
+"h_add_tip" = "添加新賬號";
+"h_item_tip" = "登入此賬號";
+"h_google" = "使用Google登入";
+"h_facebook" = "使用Facebook登入";
+"h_twitter" = "使用Twitter登入";
+"h_line" = "使用Line登入";
+"h_email" = "使用郵箱登入";
+"h_apple" = "使用Apple登入";
+"h_email_tip" = "請確保您的郵箱可用";
+"h_last_login" = "最後登入於：";
+"h_role" = "角色";
+
+//guest
+"h_guest_tip" = "遊客賬號存在風險，建議您註冊賬號";
+"h_guest_content" = "\t您正在使用遊客登入，這將會在您卸載或重新安裝遊戲時丟失遊戲數據";
+"h_guest_cancel"= "前往註冊";
+"h_guest_sure" = "繼續遊戲";
+
+//email
+"h_email_code" = "請輸入郵件驗證碼";
+"h_email_new_tip_code"= "您的郵箱是首次登入，我們已經向您的郵箱發送了一封驗證郵件，請您查收，並將郵件中的驗證碼填寫到上方的輸入框中。";
+"h_code_no_tip" = "未收到驗證碼？";
+"h_code_again" = "再次發送";
+"h_new_pass_tip" = "為您的賬號指定一個新密碼";
+"h_pass_tip1" = "輸入密碼以完成登入。如果忘記密碼，請";
+"h_email_old_tip" = "為了您的賬號安全，請先驗證郵箱";
+"h_code_tip" = "我們已向您的郵箱中發送了一封驗證郵件，請填入郵件中的驗證碼";
+"h_reset_pass" = "請再次輸入密碼";
+"h_sure_change" = "確認修改";
+"h_change_finish" = "您的密碼已修改完成";
+"h_enter_game" = "返回游戲";
+
+
+"h_mark_tip" = "玩了這麼久的遊戲，您有什麼想說的嗎？";
+"h_center_tip" = "如果您有任何問題，可以通過以下方式得到幫助";
+"h_center_faq" = "查閱FAQ";
+"h_center_fan" = "訪問粉絲頁";
+"h_center_email" = "點擊發送郵件";
+"h_center_fix" = "問題修復";
+"h_fix_content" = "遇到無法登入、無法購買商品或者其它問題時，可嘗試點擊下方的“修復”按鈕進行修復，並嘗試重新啟動遊戲。";
+"h_fix" = "修復";
+"h_fix_sucess" = "問題修復成功。";
+"h_vip_tip" = "尊敬的VIP用戶，您好，我們為您挑選了專屬客服";
+"h_faq_good" = "很有幫助";
+"h_faq_bad" = "毫無幫助";
+"h_feed" = "感谢您的反馈";
+"h_go_feed" = "抱歉沒有幫到您，";
+"h_feed_fan" = "去粉絲頁留言";
+"h_chose_social" = "選擇社交平台";
+"h_real_name_tip" = "按照通知号24/2014/TT-BTTTT，请您填写这些个人信息";
+"h_vi_change" = "更换登录帐号";
+"h_vi_info" = "继续填写信息";
+
+"h_vip_fb" = "Facebook VIP客服";
+"h_vip_twitter" = "Twitter VIP客服";
+"h_vip_line" = "Line VIP客服";
+"h_vip_cafe" = "Cafe VIP客服";
+"h_vip_zalo" = "Zalo VIP客服";
+"h_vip_discord" = "Discord VIP客服";
+
+"limited_tip" = "該地區暫無可播放的廣告。";
+"on_cust" = "在線客服";
+"set_library" = "沒有權限訪問您的相冊，您可以進入系統“設置>隱私>照片”，允許訪問您的相冊";
+"cust_faq_tip" = "請輸入您遇到的問題";
+"time_yesterday" = "昨天";
+"turn_setting" = "前往";
+"time_limit" = "上傳的視頻時長不可超過10分鐘";
+"video_load_error" = "視頻播放錯誤，請稍後重試";
+
+"order_fix" = "訂單修復";
+"deliver_sucess" = "發貨成功";
+"deliver_sucess_tip" = "您的訂單已發貨，請返回遊戲查收商品";
+"deliver_fail" = "發貨失敗";
+"deliver_fail_tip" = "您的訂單尚未發貨，請前往訂單修復\n如需幫助，請聯系客服";
+"turn_order_list" = "前往查看";
+"turn_cust" = "前往客服";
+"repair_sucess" = "修復成功";
+"repair_sucess_tip" = "您的訂單已修復，請返回遊戲查收商品";
+"repair_fail" = "修復失敗";
+"repair_fail_tip" = "您的訂單未修復，如需幫助，請聯系客服";
+"try_again" = "請稍後重試";
+"choose_goods" = "請選擇商品發貨";
+"choose_goods_tip" = "檢測到您有多筆相關訂單，請選擇您要發貨的商品";
+"choose_sure" = "確認發貨";
+"unchoose" = "請先選擇商品";
+"repair_order" = "重復訂單";
+"repeat_tip" = "檢測到您有訂單異常，請先修復訂單，再進行支付";
+"turn_order_repair" = "前往訂單修復";
+
+
+"help_center" = "幫助中心";
+
+/*Tips*/
+"dialog_tips_title" = "溫馨提示";
+
+/*Please make sure you have read and agreed to User Agreement and Privacy Notice*/
+"agreements_tip" = "請閱讀並同意用戶協議和隱私條款";
+
+/*User Agreement*/
+"user_agreement" = "用戶協議";
+
+/*Privacy Notice*/
+"privacy_notice" = "隱私條款";
+
+/*Decline*/
+"privacy_decline_btn" = "拒絕";
+
+/*accept*/
+"privacy_accept_btn" = "同意";
+
+/*To ensure the security of your account, you need to bind the email address so that you can use the password reset function. You can also bind other third-party accounts*/
+"account_binding_tips" = "為了保證您的賬號安全，您必須綁定郵箱後才能使用密碼重置功能，您也可以選擇綁定其他第三方賬號";
+
+/*not binding email*/
+"account_not_binding" = "郵箱未綁定";
+
+/*Topic Category*/
+"help_center_topic_category" = "話題分類";
+
+/*Please select topic you want to see*/
+"help_center_topic_category_hint" = "請選擇您關心的話題分類";
+
+/*Account Problem*/
+"help_center_account_problem" = "賬號問題";
+
+/*Payment Problem*/
+"help_center_payment_problem" = "支付問題";
+
+/*Game Related*/
+"help_center_game_related" = "遊戲問題";
+
+/*Issue*/
+"help_center_issue" = "反饋";
+
+/*you can contact by issues*/
+"help_center_issue_hint" = "您可以通過反饋聯繫我們";
+
+/*I want feedback*/
+"help_center_want_feedback_btn" = "我要反饋";
+
+/*Feedback history*/
+"help_center_feedback_history_btn" = "反饋歷史";
+
+/*Feedback*/
+"feedback_title" = "反饋";
+
+/*Title*/
+"feedback_title_tag" = "標題";
+
+/*Take a title for feedback*/
+"feedback_title_hint" = "為反饋指定一個標題";
+
+/*Description:*/
+"feedback_description" = "問題描述";
+
+/*Please fill in the problem description*/
+"feedback_description_hint" = "請描述您遇到的問題";
+
+/*Photo or Video\n(limited to two)*/
+"feedback_upload_hint" = "最多只能上傳2個圖片和視頻";
+
+/*Title must be 4-20 characters*/
+"feedback_title_error_hint" = "標題必須是4-20個字";
+
+/*Description is required*/
+"feedback_description_error_hint" = "問題描述是必須的";
+
+/*Account and Role:*/
+"feedback_account_role" = "賬號與角色";
+
+/*Server & Charactor:*/
+"feedback_server_charactor" = "服務器和角色";
+
+/*Feedback Category*/
+"feedback_category" = "分類";
+
+/*Account*/
+"feedback_category_account" = "賬號類別";
+
+/*Payment*/
+"feedback_category_payment" = "支付類別";
+
+/*Game*/
+"feedback_category_game" = "遊戲類別";
+
+/*Other*/
+"feedback_category_other" = "其他類別";
+
+/*Role Name*/
+"feedback_role_name" = "角色名";
+
+/*Feedback the details*/
+"feedback_detail" = "反饋詳情";
+
+/*Account Feedback*/
+"feedback_detail_actfeedback" = "賬號類別";
+
+/*Unfold*/
+"feedback_detail_unfold" = "展開";
+
+/*Put away*/
+"feedback_detail_putaway" = "收起";
+
+/*Reply to Custom Service*/
+"feedback_reply_title" = "回复";
+
+/*What you want to say*/
+"feedback_reply_hint" = "您想要回复客服的內容";
+
+/*Reply*/
+"feedback_reply_btn" = "回复";
+
+/*My feedback*/
+"feedback_my_feedback_title" = "我的反饋";
+
+/*RT Talk*/
+"feedback_rttalk_btn" = "實時聊天";
+
+/*There is no feedback problem for the time being*/
+"feedback_empty_hint" = "當前沒有反饋";
+
+/*User Center*/
+"user_center_title" = "用戶中心";
+
+/*View all orders*/
+"user_center_view_all_orders" = "查看所有訂單";
+
+/*View All Feedbacks*/
+"user_center_view_all_feedbacks" = "查看所有反饋";
+
+/*Orders*/
+"order_title" = "訂單";
+
+/*No orders*/
+"order_empty_hint" = "您還沒有訂單";
+
+/*Unusual*/
+"order_unusual" = "異常訂單";
+
+/*Finished*/
+"order_finished" = "已完成";
+
+/*Next*/
+"next_btn" = "下一步";
+
+/*Payment feedback*/
+"feedback_detail_payfeedback" = "支付問題";
+
+/*Game Feedback*/
+"feedback_detail_gamefeedback" = "遊戲問題";
+
+/*Other Feedback*/
+"feedback_detail_otherfeedback" = "其他問題";
+"user_center_no_feedback" = "當前沒有反饋";
+"order_copy_id" = "複製ID";
+"order_repair_ignore" = "忽略";
+
+/*Review Game*/
+"review_game" = "評價";
+
+/*not binding email*/
+"not_binding_email" = "未綁定郵箱";
+
+/*To ensure the security of your account, you need to bind the email address so that you can use the password reset function. You can also bind other third-party accounts*/
+"bind_hint" = "為了保證您的賬號安全，您必須綁定郵箱後才能使用重置密碼功能，當然，您也可以綁定第三方賬號";
+
+/*Third party*/
+"third_party" = "第三方";
+
+/*Please bind the email first*/
+"bind_email_first" = "請先綁定郵箱";
+
+/*step*/
+"step" = "步驟";
+
+/*Submitted successfully*/
+"feedback_submit_succ" = "提交成功";
+
+/*Back to Help Center*/
+"back_to_helpcenter" = "返回幫助中心";
+
+/*View feedback*/
+"view_feedback" = "查看反饋";
+
+/*Please select the feedback type*/
+"unselect_feedback_type" = "請先選擇反饋類別";
+
+/*Back to game*/
+"back_to_game" = "返回游戲";
+
+/*Submitting*/
+"submitting" = "提交中";
+
+/*submit*/
+"submit" = "提交";
+
+/*no more data*/
+"no_more_data" = "沒有數據";
+
+/*go to help center*/
+"go_helpcenter" = "去幫助中心";
+
+/*agreement*/
+"agreement" = "協議";
+"sign_in_with" = "登錄方式";
+"or" = "或";
+"keyboard_finish" = "完成";
+"feedback_video_long_time" = "上傳的視頻不能超過60s哦";
+"feedback_account_title" = "賬號";
+"usercenter_switch_text" = "是否確認切換賬號？";
+"login_help" = "遇到問題？";
+"message_pic" = "[圖片]";
+"no_role_hint" = "無角色資訊";
+
+"delete_account" = "刪除賬號（危險操作）";
+"notice_title" = "公告";
+"notice_pay_tip" = "感謝您的購買，請在遊戲內查詢您購買的商品";
+"success" = "成功";
+"home.title" ="賬號刪除";
+"home.button"="開始刪除";
+"home.text1"="賬號刪除流程";
+"home.text2"="您正在嘗試刪除您的遊戲賬號，這會造成您的遊戲記錄，充值記錄等被刪除或無痕化。";
+"home.text3"="請確保您確實不再需要它們，否則，不要往下進行。";
+"home.text4"="危險操作，請謹慎。";
+"home.text5"="您將刪除賬號中包含以下角色：";
+"home.text6"="如果您確實需要刪除您的遊戲賬號，請先確定您要刪除的賬號中，所包含的遊戲角色。";
+"home.role"="角色名";
+"home.server"="服務器";
+"agreement.title"="請同意以下協議";
+"agreement.cancel"="取消";
+"agreement.agree"="同意";
+"email.title"="驗證您的郵箱";
+"email.text1"="為了確保是由您本人操作，請進行郵箱驗證。";
+"email.text2"="您的郵箱：";
+"email.text3"="請填寫驗證碼：";
+"email.text4"="沒有收到驗證碼？";
+"email.text5"="重新發送";
+"email.text6"="驗證碼不正確";
+"email.button"="下一步";
+"complete.title"="賬號刪除";
+"complete.text1"="如果您想要取消刪除賬號的流程，只需在以上時間之前，登錄遊戲就會取消賬號刪除流程。";
+"complete.text2"="在您登出遊戲之後，賬號刪除流程將正式開始，如果您今天登出遊戲，則您的賬號會在以下時間被刪除。";
+"complete.text3"="賬號將被刪除";
+"complete.text4"="注意：如果您不進行登出操作，將不會開始賬號刪除流程。";
+"complete.button"="登出";
+
+"scan.error" = "掃碼失敗，請掃描正確的登錄碼";
+"authorization"="授權";
+"author.acc"="請選擇您的賬號：";
+"author.title" = "授權登入";
+"author.role" = "請選擇您的角色：";
+"author.nodata" = "您還沒有登入，請先去遊戲中登入";
+"author.sub" = "您正在授權登入";
+"camera.set"="請在 設備-隱私-相機 開啟權限";

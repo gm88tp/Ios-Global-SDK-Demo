@@ -34,7 +34,9 @@
 @property (nonatomic,copy)NSString* zoneID;
 /** Y 服务器名 */
 @property (nonatomic,copy)NSString* zoneName;
-/** N 扩展字段 */
+/** 游戏分区：类似东西区 */
+@property (nonatomic,copy)NSString *gameZone;
+
 @property (nonatomic,copy)NSString* text;
 /** 回调地址 */
 @property (nonatomic,copy)NSString* notifyURL;
