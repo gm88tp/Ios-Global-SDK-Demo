@@ -4,7 +4,12 @@
 //
 //  Created by xy on 2020/11/11.
 //  Copyright © 2020 gumo. All rights reserved.
-//
+//  firebase 10.2.0
+//  fb 13
+//  af 6.4.2
+//  buad 4.6.0.5
+//  fbad 6.11.1
+//  ggad 9.50
 
 #import <Foundation/Foundation.h>
 NS_ASSUME_NONNULL_BEGIN

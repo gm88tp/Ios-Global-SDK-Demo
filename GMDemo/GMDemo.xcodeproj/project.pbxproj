@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14110DA7293DF242000E0B04 /* loginSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14110DA5293DF23F000E0B04 /* loginSDK.framework */; };
+		14110DA8293DF242000E0B04 /* loginSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14110DA5293DF23F000E0B04 /* loginSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		145F6FB7292F6E7E00FEFEF6 /* login.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 145F6FB6292F6E7E00FEFEF6 /* login.bundle */; };
 		145F6FB9292F6E9100FEFEF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 145F6FB8292F6E9100FEFEF6 /* GoogleService-Info.plist */; };
-		145F6FBA292F6E9800FEFEF6 /* loginSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 145F6FB4292F6E6000FEFEF6 /* loginSDK.framework */; };
-		145F6FBB292F6E9800FEFEF6 /* loginSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 145F6FB4292F6E6000FEFEF6 /* loginSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		53BEE58524598FC0006B4C53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BEE58424598FC0006B4C53 /* AppDelegate.m */; };
 		53BEE58B24598FC0006B4C53 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BEE58A24598FC0006B4C53 /* ViewController.m */; };
 		53BEE58E24598FC0006B4C53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53BEE58C24598FC0006B4C53 /* Main.storyboard */; };
@@ -27,7 +27,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				145F6FBB292F6E9800FEFEF6 /* loginSDK.framework in Embed Frameworks */,
+				14110DA8293DF242000E0B04 /* loginSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -35,7 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		145F6FB4292F6E6000FEFEF6 /* loginSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = loginSDK.framework; sourceTree = "<group>"; };
+		14110DA5293DF23F000E0B04 /* loginSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = loginSDK.framework; sourceTree = "<group>"; };
 		145F6FB6292F6E7E00FEFEF6 /* login.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = login.bundle; sourceTree = "<group>"; };
 		145F6FB8292F6E9100FEFEF6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		53BEE58024598FC0006B4C53 /* GMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				145F6FBA292F6E9800FEFEF6 /* loginSDK.framework in Frameworks */,
+				14110DA7293DF242000E0B04 /* loginSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 				145F6FB8292F6E9100FEFEF6 /* GoogleService-Info.plist */,
 				53BEE58324598FC0006B4C53 /* AppDelegate.h */,
 				53BEE58424598FC0006B4C53 /* AppDelegate.m */,
-				145F6FB4292F6E6000FEFEF6 /* loginSDK.framework */,
+				14110DA5293DF23F000E0B04 /* loginSDK.framework */,
 				145F6FB6292F6E7E00FEFEF6 /* login.bundle */,
 				53BEE58924598FC0006B4C53 /* ViewController.h */,
 				53BEE58A24598FC0006B4C53 /* ViewController.m */,

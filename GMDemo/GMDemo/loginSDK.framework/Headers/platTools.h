@@ -173,8 +173,11 @@ style 1 至 5
  */
 + (NSString *)returnChannelID;
 
-/** 预加载广告 */
-+ (void)preloadAD;
+/** 预加载广告
+  
+ type 1 : max   2:admob
+ */
++ (void)preloadADType:(NSString *)type;
 /**
  调用广告
  */

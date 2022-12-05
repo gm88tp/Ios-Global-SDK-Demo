@@ -39,7 +39,7 @@
 	<key>admobInit</key>
 	<string>1</string>
 	<key>preloadad</key>
-	<string>1</string>
+	<string>0</string>
 	<key>sdkVersion</key>
 	<string>2.5</string>
 	<key>aihelpAppkey</key>
