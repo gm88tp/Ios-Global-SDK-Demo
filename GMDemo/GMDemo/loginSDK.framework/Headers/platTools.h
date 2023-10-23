@@ -221,6 +221,8 @@ style 1 至 5
                  17 取消分享
                  18 预加载成功
                  19 预加载失败
+                 20 非预约用户
+                 21 是预约用户
  */
 
 
@@ -388,6 +390,12 @@ style 1 至 5
  接口废弃
  */
 + (void)showFAQView;
+/*
+ name 为firebase 事件的名称
+ */
++(void)remoteConfigName:(NSString *)name Success:(void(^)(NSString *))success Failure:(void(^)(NSError*))failure;
+
++(void)currentIP:(void(^)(NSDictionary * ))ipdic;
 @end
 
 NS_ASSUME_NONNULL_END

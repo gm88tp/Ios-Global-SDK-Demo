@@ -113,6 +113,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)TwitterLogin ;
 
++ (void)TwitterV2Login;
+
 /**
  Google登录
  */
@@ -147,6 +149,7 @@ NS_ASSUME_NONNULL_BEGIN
  绑定Twitter
  */
 + (void)TwitterBind;
++ (void)TwitterV2Bind;
 
 /**
  绑定Google
@@ -162,6 +165,40 @@ NS_ASSUME_NONNULL_BEGIN
  绑定Email
  */
 + (void)EmailBinb;
+
+/**
+ 绑定Facebook
+ */
++ (void)FaceBookNewBind ;
+
+/**
+ 绑定Line
+ */
++ (void)LineNewBind;
+
+/**
+ 绑定Twitter
+ */
++ (void)TwitterNewBind;
++ (void)TwitterV2NewBind ;
+
+/**
+ 绑定Google
+ */
++ (void)GoogleNewBind ;
+
+/**
+ 绑定Apple
+ */
++ (void)AppleNewBind;
+
+/**
+ 绑定Email
+ */
++ (void)EmailNewBinb;
+
+
++ (void)TwitterV2Remove ;
 @end
 
 NS_ASSUME_NONNULL_END

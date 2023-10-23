@@ -43,6 +43,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)FaceBookShareStoriesPhotoUrl:(NSString*)photoUrl;
 - (void)FaceBookShareStoriesPhotoPath:(NSString*)photoPath;
 
+#pragma  ====================新twitter分享到快拍图片和视频分为两种方式传入1.链接2.本地存储路径     media 为图片,gif=====================
+- (void)TwitterUrlShareUrl:(NSString*)url Tag:(NSString*)tag ContentTxt:(NSString*)txt media:(NSString*)mediaUrl;
+- (void)TwitterImageShareUrl:(NSString *)url Tag:(NSString*)tag  ContentTxt:(NSString *)txt Image:(UIImage *)img;
+- (void)TwitterPathShareUrl:(NSString *)url Tag:(NSString*)tag  ContentTxt:(NSString *)txt media:(NSString *)mediaPath;
+
 #pragma  ====================twitter分享到快拍图片和视频分为两种方式传入1.链接2.本地存储路径=====================
 - (void)TwitterShareUrl:(NSString*)url ContentTxt:(NSString*)txt  ;
 
@@ -105,6 +110,8 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)ShareURL:(NSString*)url photoData:(NSData *)imageData VideoData:(NSData *)videoData  Hashtag:(NSString*)tag Quote:(NSString *)quote;
 -(void)ShareURL:(NSString*)url photoUrl:(NSString *)imageUrl VideoUrl:(NSString *)videoUrl  Hashtag:(NSString*)tag Quote:(NSString *)quote;
 
+
+-(void)TwitterShareURL:(NSString*)url photoData:(NSData *)imageData   Hashtag:(NSString*)tag Quote:(NSString *)quote;
 #pragma  =====获取当前安装的平台line,instagram,twitter,facebook ========
 -(NSArray *)shareplatType;
 

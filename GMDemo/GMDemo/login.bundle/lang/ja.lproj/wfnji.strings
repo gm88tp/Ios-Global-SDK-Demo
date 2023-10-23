@@ -466,3 +466,6 @@
 "author.nodata" = "まずはログインしてください";
 "author.sub" = "アクセス権限を請求中";
 "camera.set"="デバイス-プライバシー-カメラで権限を与えてください";
+"tw__card_composer_tweet" = "ツイート";
+
+"COMPOSE_TEXT_VIEW_PLACEHOLDER" = "いまどうしてる？";

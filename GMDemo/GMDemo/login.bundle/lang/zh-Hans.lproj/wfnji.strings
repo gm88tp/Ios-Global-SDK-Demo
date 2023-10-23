@@ -474,3 +474,6 @@
 "author.nodata" = "您还没有登录，请先去游戏中登录";
 "author.sub" = "您正在授权登录";
 "camera.set"="请在 设置-隐私-相机 开启权限";
+
+"tw__card_composer_tweet" = "发推";
+"COMPOSE_TEXT_VIEW_PLACEHOLDER" = "有什么新鲜事？";

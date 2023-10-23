@@ -30,7 +30,7 @@
 "GiveUpReward" = "Sair";
 "ContinueWatching" = "Retomar";
 "CanbeTurnedOffAfter" = "Pular depois de  %ds";
-"CanbeSkipAfter" = "Pular depois de  %ds";
+"CanbeSkipAfter" = "Pular depois de %ds";
 "Get" = "Fazer download";
 "View" = "Visualizar";
 "ContinuePlaying" = "Continuar  executando";

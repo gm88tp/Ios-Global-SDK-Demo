@@ -464,3 +464,5 @@
 "author.nodata" = "您還沒有登入，請先去遊戲中登入";
 "author.sub" = "您正在授權登入";
 "camera.set"="請在 設備-隱私-相機 開啟權限";
+"COMPOSE_TEXT_VIEW_PLACEHOLDER" = "有什麼新鮮事？";
+"tw__card_composer_tweet" = "推文";

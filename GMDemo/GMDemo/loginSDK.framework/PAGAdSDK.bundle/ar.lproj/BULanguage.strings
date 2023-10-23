@@ -30,7 +30,7 @@
 "GiveUpReward" = "مغادرة";
 "ContinueWatching" = "استئناف";
 "CanbeTurnedOffAfter" = "s %d تخطي بعد";
-"CanbeSkipAfter" = "s %d تخطي بعد";
+"CanbeSkipAfter" = "تخطِّي بعد %d ثوانٍ";
 "Get" = "تنزيل";
 "View" = "عرض";
 "ContinuePlaying" = "متابعة التشغيل";

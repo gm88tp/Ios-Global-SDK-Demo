@@ -31,7 +31,7 @@
 "GiveUpReward" = "Ayrıl";
 "ContinueWatching" = "Devam Et";
 "CanbeTurnedOffAfter" = "Skip after %ds";
-"CanbeSkipAfter" = "Skip after %ds";
+"CanbeSkipAfter" = "%d saniye sonra atla";
 "Get" = "Get";
 "View" = "View";
 "ContinuePlaying" = "Keep on";

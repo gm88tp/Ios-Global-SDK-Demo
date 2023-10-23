@@ -465,3 +465,5 @@
 "author.nodata" = "Please log in to the game first";
 "author.sub" = "You are authorizing login";
 "camera.set"="Please enable Camera permission in Setting - Privacy - Camera";
+"tw__card_composer_tweet" = "Tweet";
+"COMPOSE_TEXT_VIEW_PLACEHOLDER" = "Apa yang sedang Berlaku?";

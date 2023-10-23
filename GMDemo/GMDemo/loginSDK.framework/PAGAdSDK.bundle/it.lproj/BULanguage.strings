@@ -30,7 +30,7 @@
 "GiveUpReward" = "Esci";
 "ContinueWatching" = "Riprendi";
 "CanbeTurnedOffAfter" = "Ignora dopo %ds";
-"CanbeSkipAfter" = "Ignora dopo %ds";
+"CanbeSkipAfter" = "Ignora dopo %d sec.";
 "Get" = "Scarica";
 "View" = "Visualizza";
 "ContinuePlaying" = "Continua a  riprodurre";

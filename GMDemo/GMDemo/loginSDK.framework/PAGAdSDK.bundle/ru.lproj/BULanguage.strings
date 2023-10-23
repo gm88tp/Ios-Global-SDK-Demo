@@ -30,7 +30,7 @@
 "GiveUpReward" = "Покинуть";
 "ContinueWatching" = "Продолжить";
 "CanbeTurnedOffAfter" = "Можно пропустить через %d  с";
-"CanbeSkipAfter" = "Можно пропустить через %d  с";
+"CanbeSkipAfter" = "Пропустить через %d с.";
 "Get" = "Скачать";
 "View" = "Вид";
 "ContinuePlaying" = "Продолжить  просмотр";

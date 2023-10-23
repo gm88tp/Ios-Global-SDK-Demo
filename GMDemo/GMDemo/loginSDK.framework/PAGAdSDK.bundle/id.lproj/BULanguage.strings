@@ -29,8 +29,8 @@
 "GetRewardAfterWatching" = "Selesaikan video untuk mengeklaim reward Anda";
 "GiveUpReward" = "Keluar";
 "ContinueWatching" = "Lanjutkan";
-"CanbeTurnedOffAfter" = "Lewati setelah %d  detik";
-"CanbeSkipAfter" = "Lewati setelah %d  detik";
+"CanbeTurnedOffAfter" = "Lewati setelah %d detik";
+"CanbeSkipAfter" = "Lewati setelah %d dtk";
 "Get" = "Unduh";
 "View" = "Lihat";
 "ContinuePlaying" = "Lanjut memutar";

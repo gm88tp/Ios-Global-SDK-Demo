@@ -3,6 +3,18 @@
     "kind": "Root",
     "name": "TopLevel",
     "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "loginSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      }
+    ],
     "json_format_version": 8
   },
   "ConstValues": []
