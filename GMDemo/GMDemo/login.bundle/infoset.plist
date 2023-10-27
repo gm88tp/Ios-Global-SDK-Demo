@@ -3,52 +3,52 @@
 <plist version="1.0">
 <dict>
 	<key>client_id</key>
-	<string>wqe</string>
-	<key>ConsumerKey</key>
-	<string>SALb45SZfATPS8ILSYAvnB4ic</string>
-	<key>GGkClientID</key>
-	<string>726483388833-nejr29g354f0p3sieg18gmehkhljuerv.apps.googleusercontent.com</string>
-	<key>GoogleADID</key>
-	<string>ca-app-pub-7496069579613989~8545461470</string>
-	<key>IronsourceAppKey</key>
-	<string>bf464905</string>
-	<key>Promote</key>
-	<string>17</string>
-	<key>admobInit</key>
-	<string>1</string>
-	<key>aihelpAppId</key>
-	<string>immortaltaoists_platform_876a4aebf8baaac87ae098aea0785750</string>
-	<key>aihelpAppkey</key>
-	<string>immortaltaoists_app_a27205882a404d72ad922e33de529173</string>
-	<key>aihelpDomain</key>
-	<string>immortaltaoists.aihelp.net</string>
-	<key>appleAppID</key>
-	<string>1475870720</string>
-	<key>appsFlyerDevKey</key>
-	<string>g7ZP9TqQ4S8AF9zeQD9Koe</string>
-	<key>channel</key>
-	<string>GM</string>
-	<key>consumerSecret</key>
-	<string>lGoFe4yYVug52LcNiAptoABgb14k5seN9XMJq6L0ggSzUmIevP</string>
-	<key>facebookADID</key>
-	<string>1137373959766493_1137395966430959</string>
-	<key>gameid</key>
-	<string>1700</string>
-	<key>iconControl</key>
-	<string>1</string>
-	<key>issueVersion</key>
-	<string>1700046</string>
+	<string>QTJwWEJMUjdtZjB0Uk1BWGxmd0U6MTpjaQ</string>
 	<key>loginType</key>
-	<string>0</string>
-	<key>preloadad</key>
 	<string>1</string>
 	<key>requestUrl</key>
 	<string></string>
+	<key>consumerSecret</key>
+	<string>JvP7r4vFKjxwaX1ZIwAbJdBEKiYgfVCJ2oUCi4OxHoVUKESjH6</string>
+	<key>ConsumerKey</key>
+	<string>gSyovuQFIVxLYyzmedaWK54Nr</string>
+	<key>dynamicPage</key>
+	<string>https://deeplink.hkpctimes.com/xmj_global.html</string>
+	<key>dynamicLink</key>
+	<string>https://immortals.page.link</string>
+	<key>platAnd</key>
+	<string>qwewqewqewq</string>
+	<key>channel</key>
+	<string>GM</string>
+	<key>gameid</key>
+	<string>1700</string>
+	<key>GGkClientID</key>
+	<string>581465060905-b6r4vl4hlivglgudatc0p89nto4f3m52.apps.googleusercontent.com</string>
+	<key>appsFlyerDevKey</key>
+	<string>g7ZP9TqQ4S8AF9zeQD9Koe</string>
+	<key>appleAppID</key>
+	<string>1475870720</string>
+	<key>Promote</key>
+	<string>17</string>
 	<key>rolelevel</key>
+	<string>0</string>
+	<key>IronsourceAppKey</key>
+	<string>bf464905</string>
+	<key>issueVersion</key>
+	<string>1700026</string>
+	<key>iconControl</key>
+	<string>1</string>
+	<key>admobInit</key>
+	<string>1</string>
+	<key>preloadad</key>
 	<string>0</string>
 	<key>sdkVersion</key>
 	<string>2.5</string>
-	<key>urlScheme</key>
-	<string>dynamic.links</string>
+	<key>aihelpAppkey</key>
+	<string>immortaltaoists_app_a27205882a404d72ad922e33de529173</string>
+	<key>aihelpAppId</key>
+	<string>immortaltaoists_platform_876a4aebf8baaac87ae098aea0785750</string>
+	<key>aihelpDomain</key>
+	<string>immortaltaoists.aihelp.net</string>
 </dict>
 </plist>
