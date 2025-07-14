@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AppLovinSdkKey</key>
+	<string>OixDcmXAyNNGd4zM3r-h0fsGvPzKc8k0sfETQmdM80dn4b77R6qSmfif4f-hpiheMw7ogl9plnZqNhyqomGTQz</string>
+	<key>client_id</key>
+	<string>QTJwWEJMUjdtZjB0Uk1BWGxmd0U6MTpjaQ</string>
+	<key>loginType</key>
+	<string>0</string>
+	<key>requestUrl</key>
+	<string>https://m-xzvn.4t4y.com</string>
+	<key>consumerSecret</key>
+	<string>JvP7r4vFKjxwaX1ZIwAbJdBEKiYgfVCJ2oUCi4OxHoVUKESjH6</string>
+	<key>ConsumerKey</key>
+	<string>gSyovuQFIVxLYyzmedaWK54Nr</string>
+	<key>dynamicPage</key>
+	<string>https://deeplink.hkpctimes.com/xmj_global.html</string>
+	<key>dynamicLink</key>
+	<string>https://immortals.page.link</string>
+	<key>platAnd</key>
+	<string>qwewqewqewq</string>
+	<key>channel</key>
+	<string>GM</string>
+	<key>gameid</key>
+	<string>1831</string>
+	<key>GGkClientID</key>
+	<string>342552140454-28l41mnfr1m1j3kpal4ibp2o5vrhr3s3.apps.googleusercontent.com</string>
+	<key>appsFlyerDevKey</key>
+	<string>g7ZP9TqQ4S8AF9zeQD9Koe</string>
+	<key>appleAppID</key>
+	<string>6745787475</string>
+	<key>Promote</key>
+	<string>17</string>
+	<key>rolelevel</key>
+	<string>0</string>
+	<key>IronsourceAppKey</key>
+	<string>bf464905</string>
+	<key>issueVersion</key>
+	<string>1831003</string>
+	<key>iconControl</key>
+	<string>1</string>
+	<key>admobInit</key>
+	<string>1</string>
+	<key>preloadad</key>
+	<string>0</string>
+	<key>sdkVersion</key>
+	<string>2.5</string>
+	<key>aihelpAppkey</key>
+	<string>2700329_app_dc27679d402c4be08505900efe087399</string>
+	<key>aihelpAppId</key>
+	<string>2700329_platform_1d31eb54fa71e958bbbb6e633c908466</string>
+	<key>aihelpDomain</key>
+	<string>2700329.aihelp.net</string>
+</dict>
+</plist>

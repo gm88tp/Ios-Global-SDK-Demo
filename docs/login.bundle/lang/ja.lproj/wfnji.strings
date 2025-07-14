@@ -1,0 +1,473 @@
+
+/*wfnji.strings
+  loginSDK
+
+  Created by GM on 2019/1/2.
+  Copyright © 2019年 gumo. All rights reserved.*/
+"change_acount" = "アカウントを切り替える";
+"choose_logintype" = "ログイン方法を選択してください";
+"login_fast" = "ゲストログイン";
+"userinfo" = "ユーザー様：";
+"email_info" = "ご不明な点やご質問がありましたら、どうぞメールにてお気軽にご連絡ください。喜んでお答えします。";
+"email_address" = "メールアドレス：";
+"login_fast_tips" = "ゲストとしてログインすると、アプリをアンインストールするまたはゲームを再インストールする場合、ゲームデータが無くなります。本当にゲストとしてログインしますか？";
+"login_cancel" = "キャンセル";
+"exit_tips" = "ヒント";
+"loading_tips" = "ロード中…";
+"login_loading" = "ロード中…";
+"wecolome" = "ゲームへようこそ";
+"payinfo" = "注文申請は頻繁すぎます。あと少しでもう一度注文してください";
+"orderfailur" = "注文失敗～";
+"update" = "アップデート通告";
+"update_detaile" = "ゲームバージョンアップ";
+"update_yes" = "確認";
+"p_cancel" = "キャンセル";
+"p_success" = "購入成功";
+"p_failure" = "購入失敗";
+"Line" = "Line";
+"FaceBook" = "Facebook";
+"Google" = "Google";
+"Twitter" = "Twitter";
+"load" = "ログイン";
+"regist" = "アカウント登録";
+"accplaceholder" = "アカウントをご入力ください";
+"pasplaceholder" = "パスワードをご入力ください";
+"emaplaceholder" = "メールボックスをご入力ください";
+"changetologin" = "既存アカウントでログイン";
+"style" = "その他の登録方法";
+"rgeistload" = "登録してからログインします";
+"accbind" = "アカウント連携状態";
+"confimbind" = "バインディングをご確認ください";
+"accpromot" = "アカウントをご入力ください";
+"paspromot" = "パスワードをご入力ください";
+"emailpromot" = "メールボックスをご入力ください";
+"jump" = "スキップ";
+"strat" = "インストール";
+"mark_confirm" = "評価";
+"mark_content" = "貴方はこんなに長く遊んで、私達に言いたい事がありますか？";
+"end_veiw" = "閉じる";
+"bind_account" = "アカウント連携";
+"bind_no" = "このアカウントは連携する必要はありません";
+"pass_same" = "再入力のパスワードは一度目の入力と一致する必要があります";
+"bind_success" = "データ連携成功";
+"bind_failed" = "データ連携失敗";
+"agree_top" = "利用規約とプライバシーポリシーの";
+"agree_bottom" = "確認";
+"nextLogin" = "最近登録";
+"bind" = "連携実施へ";
+"band" = "連携済";
+"link" = "新規登録と連携";
+"accpwd" = "アカウント";
+"forget" = "パスワードをお忘れですか?";
+"wcode" = "検証コードを入力";
+"getCode" = "送信";
+"account_s" = "登録完了";
+"code_err" = "正しいコードではありません";
+"email" = "メールアドレスを正しく入力して下さい";
+"pass" = "6～16文字以内のパスワードを入力して下さい";
+"pass_re" = "6～16文字以内のパスワードを入力して下さい";
+"tran_load" = "ログインへ";
+"reset_pas" = "パスワードをリセット";
+"paspromotsec" = "パスワードを確認";
+"equal" = "メールアドレスは存在しません";
+"pass_succ" = "パスワードのリセットに成功!";
+"send_email" = "コードは送信されました";
+"regist_load" = "新規登録";
+"user_center" = "お問合せ";
+"user_protext" = "ご疑問がございましたら、何時でもご連絡下さい";
+"user_back" = "リターン";
+"user_leavefor" = "SNSへ移動";
+
+"user_question" = "よくある質問";
+"question_search" = "サーチ";
+"answer_title" = "記事";
+"answer_comment" = "この記事はお役に立てましたか。";
+"answer_good" = "ご意見有難うございます。";
+"answer_bad" = "お役に立たずに申し訳ございません。";
+"search_noresult" = "関連する記事はありません。";
+"search_notext" = "検索内容を入力して下さい";
+
+"to_cust" = "お問合せ";
+"to_close_title"="ゲーム終了";
+
+"turn_user_role" = "アカウントを紛失しましたか？クリックしてログインしたアカウントの履歴を確認できます。";
+"user_role_title" = "最近ログインしたアカウントリスト";
+"login_error" = "ログインに異常が検出しました。「アカウントリストを見る」をクリックして、ログインしたアカウントの履歴をご確認ください。";
+"check_user_list" = "アカウントリストを見る";
+"role_name" = "キャラ―名";
+"role_serve" = "サーバー";
+"apple" = "Apple";
+"apple_ulogin" = "この端末はこのログイン方式をサポートしていません。ほかの方式でログインして下さい。";
+
+"user_fix" = "エラーの修復へ";
+"fix_ord" = "支払いエラーの修復";
+"fix_odsuccess" = "エラーの修復が完了しました。再度支払いをお試しください。";
+
+"vip_title" = "VIP専用サービス";
+"vip_tips" = "VIPのお客様のために、専用の相談サービスをご用意しました。下をクリックしてご利用ください。";
+"copy_tip" = "コピー済み";
+"fbui"="Facebookアプリが必要";
+
+//H-1.4
+"h_choose_account" = "アカウントを選択";
+"h_add_tip" = "新規登録";
+"h_item_tip" = "このアカウントでサインイン";
+"h_google" = "Googleでサインイン";
+"h_facebook" = "Facebookでサインイン";
+"h_twitter" = "Twitterでサインイン";
+"h_line" = "Lineでサインイン";
+"h_email" = "メアドでサインイン";
+"h_apple" = "Appleでサインイン";
+"h_email_tip" = "メアドを正しく入力したかをご確認ください";
+"h_last_login" = "最近ログイン：";
+"h_role" = "キャラ";
+
+//guest
+"h_guest_tip" = "アカウントセキュリティ対策としては新規アカウントを登録するほうがお勧めです";
+"h_guest_content" = "\t指定メアドまで確認コードを送信しました。上記の入力ボックスにメール内の確認コードをご記入ください。";
+"h_guest_cancel"= "登録へ";
+"h_guest_sure" = "コンティニュー";
+
+//email
+"h_email_code" = "確認コードを入力";
+"h_email_new_tip_code"= "このメールアドレスは始めのものですが、確認メールを送信しましたので、それをご確認の上、上記の入力ボックスにメール内の確認コードをご記入ください。";
+"h_code_no_tip" = "確認コードを";
+"h_code_again" = "再度発送";
+"h_new_pass_tip" = "新たなパスワードを設定して下さい";
+"h_pass_tip1" = "パスワードを入力して登録を完遂。";
+"h_email_old_tip" = "アカウント安全の為、まずはメールアドレスを検証して下さい";
+"h_code_tip" = "指定メアドまで確認コードを送信しました。上記の入力ボックスにメール内の確認コードをご記入ください。";
+"h_reset_pass" = "パスワードを確認";
+"h_sure_change" = "確認";
+"h_change_finish" = "パスワード再設定完了";
+"h_enter_game" = "ゲームへ戻る";
+
+
+"h_mark_tip" = "ストアでゲームをいいね！";
+"h_center_tip" = "ご疑問がありましたらご遠慮なく下記方式を通してヘルプを求められます。";
+"h_center_faq" = "FAQを読む";
+"h_center_fan" = "ファンページへ";
+"h_center_email" = "お問合せ先へ";
+"h_center_fix" = "問題修復";
+"h_fix_content" = "ログイン不可、商品購入不可またはほかの問題起こった時、下の「修復」ボタンをクリックして、ゲームを再起動してください。";
+"h_fix" = "修復";
+"h_fix_sucess" = "修復完了";
+"h_vip_tip" = "尊敬するVIPお客様、専属サービスでございます。";
+"h_faq_good" = "役に立つ";
+"h_faq_bad" = "役に立たない";
+"h_feed" = "ご意見ありがとうございます。";
+"h_chose_social" = "SNS選択";
+"h_go_feed" = " ";
+"h_feed_fan" = "コメントを書くへ ";
+
+"h_real_name_tip" = "按照通知号24/2014/TT-BTTTT，请您填写这些个人信息";
+"h_vi_change" = "更换登录帐号";
+"h_vi_info" = "继续填写信息";
+
+"h_vip_fb" = "Facebook vipサービス";
+"h_vip_twitter" = "Twitter vipサービス";
+"h_vip_line" = "Line vipサービス";
+"h_vip_cafe" = "Cafe vipサービス";
+"h_vip_zalo" = "Zalo vipサービス";
+"h_vip_discord" = "Discord vipサービス";
+
+"limited_tip" = "再生できる広告はありません。";
+"on_cust" = "オンラインCS";
+"set_library" = "アルバムを訪問する権限はありません。システム設定よりアプリがアルバムへ訪問できるように設定して下さい。";
+"cust_faq_tip" = "お問合せしたい問題をご入力して下さい";
+"turn_setting" = "移動";
+"time_limit" = "再生時間10分以上のビデオはアップロードできません";
+"video_load_error" = "再生異常、時間を置いてからもう一度試し下さい";
+
+"order_fix" = "異常注文修復";
+"deliver_sucess" = "購入成功";
+"deliver_sucess_tip" = "ご注文したアイテムは配布されました。ゲームに戻ってご確認ください。";
+"deliver_fail" = "購入失敗";
+"deliver_fail_tip" = "決算中の注文が確認されました。注文修復よりご確認ください。\nヘルプがご要望する場合はcsまでご連絡ください。";
+"turn_order_list" = "確認へ";
+"turn_cust" = "CSへ";
+"repair_sucess" = "注文修復成功";
+"repair_sucess_tip" = "異常注文の修復に成功しました。";
+"repair_fail" = "注文修復失敗";
+"repair_fail_tip" = "注文の修復に失敗しました。CSまでご連絡ください。";
+"try_again" = "時間を置いてからお試し下さい";
+"choose_goods" = "配布するアイテムを選択して下さい";
+"choose_goods_tip" = "重複注文が確認されました。決算する注文を選択して下さい。";
+"choose_sure" = "アイテム配布";
+"unchoose" = "アイテムを選択して下さい";
+"repair_order" = "重複注文";
+"repeat_tip" = "異常注文が確認されました。注文を確認してからお支払いください。";
+"turn_order_repair" = "注文修復へ移動";
+
+"login_cant_login" = "アクセス失敗";
+"help_center" = "ヘルプセンター";
+
+/*Tips*/
+"dialog_tips_title" = "ヒント";
+
+/*Please make sure you have read and agreed to User Agreement and Privacy Notice*/
+"agreements_tip" = "利用規約およびプライバシーポリシーを確認してください";
+
+/*User Agreement*/
+"user_agreement" = "利用規約";
+
+/*Privacy Notice*/
+"privacy_notice" = "プライバシーポリシー";
+
+/*Decline*/
+"privacy_decline_btn" = "拒絶";
+
+/*accept*/
+"privacy_accept_btn" = "同意";
+
+/*To ensure the security of your account, you need to bind the email address so that you can use the password reset function. You can also bind other third-party accounts*/
+"account_binding_tips" = "アカウントのセキュリティを確保するために、パスワードリセット機能を使用する前にメアド連携を実行する必要があります。他のサードパーティアカウントと連携することもできます。";
+
+/*not binding email*/
+"account_not_binding" = "メアド未連携";
+
+/*Topic Category*/
+"help_center_topic_category" = "トピック";
+
+/*Please select topic you want to see*/
+"help_center_topic_category_hint" = "トピックを選択してください";
+
+/*Account Problem*/
+"help_center_account_problem" = "アカウントに関する問題";
+
+/*Payment Problem*/
+"help_center_payment_problem" = "支払いに関する問題\n";
+
+/*Game Related*/
+"help_center_game_related" = "ゲームに関する問題";
+
+/*Issue*/
+"help_center_issue" = "フィードバック";
+
+/*you can contact by issues*/
+"help_center_issue_hint" = "フィードバックを通じてお問合せする";
+
+/*I want feedback*/
+"help_center_want_feedback_btn" = "フィードバック送信";
+
+/*Feedback history*/
+"help_center_feedback_history_btn" = "フィードバック記録";
+
+/*Feedback*/
+"feedback_title" = "フィードバック";
+
+/*Title*/
+"feedback_title_tag" = "タイトル";
+
+/*Take a title for feedback*/
+"feedback_title_hint" = "フィードバックのタイトルを記入";
+
+/*Description:*/
+"feedback_description" = "問題の詳細";
+
+/*Please fill in the problem description*/
+"feedback_description_hint" = "お問い合わせする問題をご説明下さい";
+
+/*Photo or Video\n(limited to two)*/
+"feedback_upload_hint" = "最大ファイル数は２件";
+
+/*Title must be 4-20 characters*/
+"feedback_title_error_hint" = "タイトルは4－20文字が必要";
+
+/*Description is required*/
+"feedback_description_error_hint" = "問題の説明が必要";
+
+/*Account and Role:*/
+"feedback_account_role" = "アカウントおよびキャラ";
+
+/*Server & Charactor:*/
+"feedback_server_charactor" = "サーバーおよびキャラ";
+
+/*Feedback Category*/
+"feedback_category" = "分類";
+
+/*Account*/
+"feedback_category_account" = "アカウント";
+
+/*Payment*/
+"feedback_category_payment" = "支払い";
+
+/*Game*/
+"feedback_category_game" = "ゲーム";
+
+/*Other*/
+"feedback_category_other" = "その他";
+
+/*Role Name*/
+"feedback_role_name" = "その他";
+
+/*Feedback the details*/
+"feedback_detail" = "詳しい説明";
+
+/*Account Feedback*/
+"feedback_detail_actfeedback" = "アカウント";
+
+/*Unfold*/
+"feedback_detail_unfold" = "展開";
+
+/*Put away*/
+"feedback_detail_putaway" = "閉じる";
+
+/*Reply to Custom Service*/
+"feedback_reply_title" = "返事";
+
+/*What you want to say*/
+"feedback_reply_hint" = "返信";
+
+/*Reply*/
+"feedback_reply_btn" = "返事";
+
+/*My feedback*/
+"feedback_my_feedback_title" = "履歴";
+
+/*RT Talk*/
+"feedback_rttalk_btn" = "チャット";
+
+/*There is no feedback problem for the time being*/
+"feedback_empty_hint" = "フィードバックはありません";
+
+/*User Center*/
+"user_center_title" = "ユーザーセンター";
+
+/*View all orders*/
+"user_center_view_all_orders" = "注文確認";
+
+/*View All Feedbacks*/
+"user_center_view_all_feedbacks" = "フィードバック確認";
+
+/*Orders*/
+"order_title" = "注文詳細";
+
+/*No orders*/
+"order_empty_hint" = "注文履歴はありません";
+
+/*Unusual*/
+"order_unusual" = "異常注文";
+
+/*Finished*/
+"order_finished" = "完成済";
+
+/*Next*/
+"next_btn" = "次へ";
+
+/*Payment feedback*/
+"feedback_detail_payfeedback" = "支払い";
+
+/*Game Feedback*/
+"feedback_detail_gamefeedback" = "ゲーム";
+
+/*Other Feedback*/
+"feedback_detail_otherfeedback" = "その他";
+"user_center_no_feedback" = "フィードバックはありません";
+"order_copy_id" = "番号複製";
+"order_repair_ignore" = "注文修復を無視";
+
+/*Review Game*/
+"review_game" = "評価";
+
+/*not binding email*/
+"not_binding_email" = "メアド未連携";
+
+/*To ensure the security of your account, you need to bind the email address so that you can use the password reset function. You can also bind other third-party accounts*/
+"bind_hint" = "アカウントのセキュリティを確保するために、パスワードリセット機能を使用する前にメアド連携を実行する必要があります。他のサードパーティアカウントと連携することもできます。";
+
+/*Third party*/
+"third_party" = "サードパーティー";
+
+/*Please bind the email first*/
+"bind_email_first" = "先ずはメアド連携を実行してください";
+
+/*step*/
+"step" = "ステップ";
+
+/*Submitted successfully*/
+"feedback_submit_succ" = "送信成功";
+
+/*Back to Help Center*/
+"back_to_helpcenter" = "戻る";
+
+/*View feedback*/
+"view_feedback" = "フィードバック確認";
+
+/*Please select the feedback type*/
+"unselect_feedback_type" = "フィードバック種類を選択してください";
+
+/*Back to game*/
+"back_to_game" = "ゲームへ戻る";
+
+/*Submitting*/
+"submitting" = "アップロード中";
+
+/*submit*/
+"submit" = "アップロード";
+
+/*no more data*/
+"no_more_data" = "データはありません";
+
+/*go to help center*/
+"go_helpcenter" = "ヘルプセンターへ";
+
+/*agreement*/
+"agreement" = "ポリシー";
+"sign_in_with" = "ログイン方式";
+"or" = "或いは";
+"keyboard_finish" = "完成";
+"feedback_video_long_time" = "1分間以内の録画しかアップロードできません";
+"feedback_account_title" = "アカウント";
+"usercenter_switch_text" = "アカウントを切り替えますか";
+"login_help" = "障害発生";
+"message_pic" = "[写真]";
+"no_role_hint" = "キャラ情報はありません";
+
+"delete_account" = "アカウント削除(リスクが高い操作)";
+"notice_title" = "お知らせ";
+"notice_pay_tip" = "ご購入ありがとうございました。ゲームへ購入した商品を確認してください。";
+"success" = "完了";
+
+"home.title" ="アカウント削除";
+"home.button"="削除する";
+"home.text1"="アカウント削除の手順";
+"home.text2"="アカウントを削除しようとしています。削除すると、ゲームレコード、チャージレコードなどのアカウント情報とデータが失われる恐れがあります。";
+"home.text3"="必要としないことを確認してください、さもなければ、それ以上進まないでください。";
+"home.text4"="リスクが高いですからご慎重に選択してください";
+"home.text5"="削除するアカウントには以下のキャラクターが含まれています：";
+"home.text6"="確実にゲームアカウントを削除する必要がある場合は、最初に、削除するアカウントに含まれているゲームキャラクターを確認してください。";
+"home.role"="キャラクター名";
+"home.server"="サーバー";
+"agreement.title"="以下の規約に同意してください";
+"agreement.cancel"="キャンセル";
+"agreement.agree"="同意";
+"email.title"="メールアドレスの認証";
+"email.text1"="それが本人によって操作されることを確実にするために、メールアドレスを認証してください。";
+"email.text2"="メールアドレス：";
+"email.text3"="ピンコードを入力してください：";
+"email.text4"="ピンコードを受け取りませんでしたか？";
+"email.text5"="再送";
+"email.text6"="不正なピンコード";
+"email.button"="次のステップ";
+"complete.title"="アカウント削除";
+"complete.text1"="アカウント削除プロセスをキャンセルしたい場合は、上記の時間のまえにゲームにログインすれば、アカウント削除プロセスをキャンセルします。";
+"complete.text2"="ゲームからログアウトすると、アカウントの削除プロセスが正式に開始されます。今日ゲームからログアウトすると、以下の時間帯によりアカウントが削除されます。";
+"complete.text3"="アカウントは削除されます";
+"complete.text4"="ご注意：ログアウトしない場合、アカウントの削除プロセスは開始されません。";
+"complete.button"="ログアウト";
+
+
+"scan.error" = "スキャンエラー、コードを確認してください";
+"authorization"="アクセス権限";
+"author.acc"="アカウントを選択してください：";
+"author.title" = "アクセス権限を同意してログイン";
+"author.role" = "キャラーを選択してください：";
+"author.nodata" = "まずはログインしてください";
+"author.sub" = "アクセス権限を請求中";
+"camera.set"="デバイス-プライバシー-カメラで権限を与えてください";
+"tw__card_composer_tweet" = "ツイート";
+
+"COMPOSE_TEXT_VIEW_PLACEHOLDER" = "いまどうしてる？";
+"binddetaile" = "連携により、アカウントのセキュリティが保証されます。アカウント連携におすすめします。";
+"bindtimecheck" = "本日アラームしない";

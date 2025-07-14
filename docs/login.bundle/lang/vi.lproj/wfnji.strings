@@ -1,0 +1,469 @@
+
+/*wfnji.strings
+  loginSDK
+
+  Created by GM on 2019/1/2.
+  Copyright © 2019年 gumo. All rights reserved.*/
+"change_acount" = "Đổi tài khoản";
+"choose_logintype" = "Chọn cổng đăng nhập";
+"login_fast" = "Chơi Ngay";
+"userinfo" = "Xin chào:";
+"email_info" = "Nếu bạn có vấn đề, hãy gửi email đến CSKH, rất vui lòng khi được giúp đỡ bạn";
+"email_address" = "Email:";
+"login_fast_tips" = "Khi chọn cổng Chơi Ngay, sau khi xóa hoặc cài đặt lại App, tất cả dữ liệu tài khoản sẽ bị xóa, bạn có muốn chọn cổng Chơi Ngay không?";
+"login_cancel" = "Hủy";
+"exit_tips" = "Gợi ý";
+"loading_tips" = "Đang cố gắng tải...";
+"login_loading" = "Đang tải...";
+"wecolome" = "Chào mừng vào game";
+"payinfo" = "Thao tác giao dịch quá nhanh hãy thử lại sau~";
+"orderfailur" = "Tạo giao dịch thất bại~";
+"update" = "Cập nhật mới";
+"update_detaile" = "Cập nhật phiên bản";
+"update_yes" = "Xác định";
+"p_cancel" = "Hủy mua";
+"p_success" = "Mua thành công";
+"p_failure" = "Mua thất bại";
+"Line" = "Line";
+"FaceBook" = "Facebook";
+"Google" = "Google";
+"Twitter" = "Twitter";
+"load" = "Đăng Nhập";
+"regist" = "Đăng Ký";
+"accplaceholder" = "Nhập tài khoản";
+"pasplaceholder" = "Nhập mật khẩu";
+"emaplaceholder" = "Nhập email";
+"changetologin" = "Đã có tài khoản, nhấn vào đây";
+"style" = "Cách đăng nhập khác";
+"rgeistload" = "Đăng ký";
+"accbind" = "Cố định tài khoản";
+"confimbind" = "Cố định";
+"accpromot" = "Tài khoản không thể để trống";
+"paspromot" = "Mật khẩu không thể để trống";
+"emailpromot" = "Địa chị email không thể để trống";
+"jump" = "Skip";
+"strat" = "Start";
+"mark_confirm" = "Đánh giá";
+"mark_content" = "Bạn có gì muốn góp ý cho chúng tôi không?";
+"end_veiw" = "Hủy";
+"bind_account" = "tài khoản diễn đàn";
+"bind_no" = "tài khoản này không cần liên kết";
+"pass_same" = "2 lần nhập mật khẩu phải giống nhau";
+"bind_success" = "Cố định thành công";
+"bind_failed" = "Cố định thất bại";
+"agree_top" = "đăng nhập là đã đọc điều khoản và đồng ý";
+"agree_bottom" = "Thỏa thuận dịch vụ";
+"nextLogin" = "Đăng nhập lần cuối";
+"bind" = "Chưa LK";
+"band" = "Đã LK";
+"link" = "Cố định tài khoản đăng ký";
+"accpwd" = "đăng nhập tài khoản";
+"forget" = "Quên mật khẩu?";
+"wcode" = "Nhập mã xác minh";
+"getCode" = "Nhận";
+"account_s" = "Đăng nhập tài khoản thành công";
+"code_err" = "Mã xác minh không chính xác";
+"email" = "Mời đăng nhập chính xác email";
+"pass" = "Vui lòng nhập 6-16 số hoặc kí tự";
+"pass_re" = "Mật khẩu gồm 6-16 số hoặc kí tự, hãy nhập lại";
+"tran_load" = "Đăng nhập";
+"reset_pas" = "Cài đặt lại mật khẩu";
+"paspromotsec" = "Mời nhập lại mật khẩu";
+"equal" = "Hai lần nhập mật khẩu phải khớp";
+"pass_succ" = "Cài đặt mật khẩu thành công";
+"send_email" = "Mã xác minh đã gửi";
+"regist_load" = "Đăng Ký";
+"user_center" = "Trung tâm CSKH";
+"user_protext" = "Nếu có bất kì vấn đề  gì, vui lòng phản hồi tới địa chỉ email của chúng tôi. Rất hân hạnh được phục vụ các bạn.";
+"user_back" = "Quay lại";
+"user_leavefor" = "Đến trang thông tin";
+
+"user_question" = "Vấn đề thường gặp";
+"question_search" = "Tìm kiếm";
+"answer_title" = "Bài viết";
+"answer_comment" = "Bài viết này có hữu ích không?";
+"answer_good" = "Cảm ơn phản hồi của bạn!";
+"answer_bad" = "Rất xin lỗi, không giúp gì được cho bạn";
+"search_noresult" = "Không tìm thấy kết quả";
+"search_notext" = "Nội dung tìm kiếm không được để trống";
+
+"to_cust" = "Liên hệ CSKH";
+"to_close_title"="Thoát game";
+
+"turn_user_role" = "Bạn vẫn chưa tìm thấy tài khoản? Nhấn vào đây để kiểm tra lịch sử thiết bị đăng nhập";
+"user_role_title" = "Danh sách tài khoản đăng nhập gần đây";
+"login_error" = "Hệ thống nhận thấy hoạt động bất thường trong tài khoản của bạn, vui lòng nhấp vào \"Kiểm tra danh sách tài khoản\" để xem tài khoản đăng nhập trước đó.";
+"check_user_list" = "Kiểm tra danh sách tài khoản";
+"role_name" = "Tên nhân vật";
+"role_serve" = "Server";
+"apple" = "Apple";
+"apple_ulogin" = "Điện thoại của bạn không hỗ trợ phương thức đăng nhập này, vui lòng sử dụng cách khác để đăng nhập. ";
+
+"user_fix" = "Tự động khắc phục sự cố";
+"fix_ord" = "Khắc phục lỗi thanh toán";
+"fix_odsuccess" = "Vấn đề đã được khắc phục, vui lòng thử thanh toán lại!";
+
+"vip_title" = "CSKH độc quyền VIP";
+"vip_tips" = "Xin chào VIP, chúng tôi đã dành riêng cho bạn dịch vụ CSKH độc quyền, nhấp bên dưới để liên lạc.";
+"copy_tip" = "Đã sao chép";
+"fbui"="Vui lòng cài đặt Facebook sau đó chia sẻ, cảm ơn!";
+
+//H-1.4
+"h_choose_account" = "Vui lòng chọn tài khoản";
+"h_add_tip" = "Thêm acc";
+"h_item_tip" = "Đăng nhập tài khoản này";
+"h_google" = "Sign in with Google";
+"h_facebook" = "Sign in with Facebook";
+"h_twitter" = "Sign in with Twitter";
+"h_line" = "Sign in with Line";
+"h_email" = "Sign in with Email";
+"h_apple" = "Sign in with Apple";
+"h_email_tip" = "Hãy đảm bảo rằng email của bạn hữu dụng";
+"h_last_login" = "Last login:";
+"h_role" = "Nhân vật";
+
+//guest
+"h_guest_tip" = "Tài khoản khách tồn tại rủi ro, gợi ý bạn nên đăng ký tài khoản";
+"h_guest_content" = "\tBạn đang đăng nhập bằng tài khoản khách, điều này sẽ làm mất dữ liệu khi bạn gỡ cài đặt hoặc tải lại trò chơi";
+"h_guest_cancel"= "Đến đăng ký";
+"h_guest_sure" = "Tiếp tục";
+
+//email
+"h_email_code" = "Vui lòng nhập mã xác minh";
+"h_email_new_tip_code"= "Email của bạn lần đầu đăng nhập, chúng tôi đã gửi mã xác minh tới email của bạn, vui lòng kiểm tra và điền mã xác minh vào ô bên trên";
+"h_code_no_tip" = "Không nhận được mã xác minh? ";
+"h_code_again" = "Gửi lại";
+"h_new_pass_tip" = "Đặt lại mật khẩu mới";
+"h_pass_tip1" = "Nhập mật khẩu để hoàn tất đăng nhập. Nếu quên mật khẩu, vui lòng ";
+"h_email_old_tip" = "Để bảo mật tài khoản, vui lòng xác nhận email";
+"h_code_tip" = "Chúng tôi đã gửi mã xác minh tới email của bạn, vui lòng nhập mã xác minh";
+"h_reset_pass" = "Mời nhập lại mật khẩu";
+"h_sure_change" = "Xác nhận thay đổi";
+"h_change_finish" = "Mật khẩu của bạn đã được thay đổi";
+"h_enter_game" = "Trở lại trò chơi";
+
+
+"h_mark_tip" = "Chơi game lâu như vậy rồi, bạn có điều gì muốn nói không?";
+"h_center_tip" = "Nếu gặp vấn đề có thể nhận trợ giúp bằng những cách sau";
+"h_center_faq" = "Đọc FAQ";
+"h_center_fan" = "Ghé thăm Fanpage";
+"h_center_email" = "Nhấp để gửi email";
+"h_center_fix" = "Sửa lỗi";
+"h_fix_content" = "Khi không thể đăng nhập, không thể mua vật phẩm hoặc gặp các vấn đề khác, có thể nhấp vào \"Khắc phục\" bên dưới và khởi động lại trò chơi.";
+"h_fix" = "Khắc phục";
+"h_fix_sucess" = "Vấn đề khắc phục thành công";
+"h_vip_tip" = "Thân gửi khách hàng VIP, chúng tôi đã chuẩn bị dịch vụ CSKH dành riêng cho bạn";
+"h_faq_good" = "Rất hữu ích";
+"h_faq_bad" = "Không hữu dụng";
+"h_feed" = "Cảm ơn phản hồi của bạn!";
+"h_go_feed" = "Mạng xã hội ";
+"h_feed_fan" = "Inbox Fanpage";
+"h_chose_social" = "Mạng xã hội";
+"h_real_name_tip" = "Theo thông tư Số: 24/2014/TT-BTTT,  bạn vui lòng cập nhật thông tin cá nhân để chơi game";
+"h_vi_change" = "Đổi account";
+"h_vi_info" = "Điền thông tin";
+
+"h_vip_fb" = "CSKH VIP Facebook";
+"h_vip_twitter" = "CSKH VIP Twitter";
+"h_vip_line" = "CSKH VIP Line";
+"h_vip_cafe" = "CSKH VIP Cafe";
+"h_vip_zalo" = "CSKH VIP Zalo";
+"h_vip_discord" = "CSKH VIP Discord";
+
+"limited_tip" = "Khu vực này hiện không có quảng cáo có thể phát";
+"on_cust" = "CSKH trực tuyến";
+"set_library" = "Không được quyền truy cập Thư Viện Ảnh, bạn có thể vào hệ thống \"Cài đặt > Quyền riêng tư > Ảnh\" để cho phép quyền truy cập Thư Viện Ảnh";
+"cust_faq_tip" = "Vui lòng nhập vấn đề bạn gặp phải";
+"turn_setting" = "Đi tới";
+"time_limit" = "Thời lượng video tải lên không được vượt quá 10 phút";
+"video_load_error" = "Phát video lỗi, vui lòng thử lại sau";
+
+"order_fix" = "Khắc Phục Đơn Hàng";
+"deliver_sucess" = "Giao Vật Phẩm Thành Công";
+"deliver_sucess_tip" = "Đơn hàng của bạn đã được gửi, vui lòng quay lại game để nhận";
+"deliver_fail" = "Giao Vật Phẩm Thất Bại";
+"deliver_fail_tip" = "Đơn hàng của bạn chưa được gửi, vui lòng chuyển đến Khắc Phục Đơn Hàng \n Nếu cần trợ giúp, vui lòng liên hệ CSKH";
+"turn_order_list" = "Đi tới kiểm tra";
+"turn_cust" = "Đi tới CSKH";
+"repair_sucess" = "Khắc Phục Thành Công";
+"repair_sucess_tip" = "Đơn hàng của bạn đã được khắc phục, vui lòng quay lại game để nhận";
+"repair_fail" = "Khắc Phục Thất Bại";
+"repair_fail_tip" = "Đơn hàng của bạn chưa được khắc phục, nếu cần trợ giúp, vui lòng liên hệ CSKH";
+"try_again" = "Vui lòng thử lại sau";
+"choose_goods" = "Vui lòng chọn vật phẩm";
+"choose_goods_tip" = "Phát hiện bạn có nhiều đơn hàng liên quan, vui lòng chọn đơn hàng bạn muốn";
+"choose_sure" = "Xác nhận gửi hàng";
+"unchoose" = "Vui lòng chọn vật phẩm trước";
+"repair_order" = "Đơn Hàng Trùng Lặp";
+"repeat_tip" = "Phát hiện đơn hàng của bạn bất thường, vui lòng tới Khắc Phục Đơn Hàng trước, sau đó tiến hành thanh toán";
+"turn_order_repair" = "Đi tới Khắc Phục Đơn Hàng";
+
+
+"help_center" = "Trung tâm hỗ trợ";
+
+/*Tips*/
+"dialog_tips_title" = "Tips";
+
+/*Please make sure you have read and agreed to User Agreement and Privacy Notice*/
+"agreements_tip" = "Vui lòng đảm bảo rằng bạn đã đọc và đồng ý với Thoả thuận người dùng và Chính sách quyền riêng tư";
+
+/*User Agreement*/
+"user_agreement" = "Thoả thuận người dùng";
+
+/*Privacy Notice*/
+"privacy_notice" = "Chính sách quyền riêng tư";
+
+/*Decline*/
+"privacy_decline_btn" = "Từ chối";
+
+/*accept*/
+"privacy_accept_btn" = "Đồng ý";
+
+/*To ensure the security of your account, you need to bind the email address so that you can use the password reset function. You can also bind other third-party accounts*/
+"account_binding_tips" = "Để đảm bảo an toàn cho tài khoản của bạn, bạn cần liên kết địa chỉ email để có thể sử dụng chức năng đặt lại mật khẩu. Bạn cũng có thể liên kết tài khoản qua bên thứ ba.";
+
+/*not binding email*/
+"account_not_binding" = "Chưa liên kết email";
+
+/*Topic Category*/
+"help_center_topic_category" = "Nhóm chủ đề";
+
+/*Please select topic you want to see*/
+"help_center_topic_category_hint" = "Vui lòng chọn chủ đề bạn muốn xem";
+
+/*Account Problem*/
+"help_center_account_problem" = "Vấn đề tài khoản";
+
+/*Payment Problem*/
+"help_center_payment_problem" = "Lỗi thanh toán";
+
+/*Game Related*/
+"help_center_game_related" = "Lỗi game";
+
+/*Issue*/
+"help_center_issue" = "Vấn đề";
+
+/*you can contact by issues*/
+"help_center_issue_hint" = "Bạn có thể liên hệ khi gặp vấn đề";
+
+/*I want feedback*/
+"help_center_want_feedback_btn" = "Tôi muốn phản hồi";
+
+/*Feedback history*/
+"help_center_feedback_history_btn" = "Lịch sử phản hồi";
+
+/*Feedback*/
+"feedback_title" = "Phản hồi";
+
+/*Title*/
+"feedback_title_tag" = "Tiêu đề";
+
+/*Take a title for feedback*/
+"feedback_title_hint" = "Gợi ý tiêu đề đánh giá";
+
+/*Description:*/
+"feedback_description" = "Mô tả";
+
+/*Please fill in the problem description*/
+"feedback_description_hint" = "Vui lòng mô tả vấn đề";
+
+/*Photo or Video\n(limited to two)*/
+"feedback_upload_hint" = "Giới hạn upload 2 ảnh và video";
+
+/*Title must be 4-20 characters*/
+"feedback_title_error_hint" = "Tiêu đề giới hạn 4-20 ký tự";
+
+/*Description is required*/
+"feedback_description_error_hint" = "Bắt buộc phải điền mô tả";
+
+/*Account and Role:*/
+"feedback_account_role" = "Tài khoản và nhân vật";
+
+/*Server & Charactor:*/
+"feedback_server_charactor" = "Ký tự Server";
+
+/*Feedback Category*/
+"feedback_category" = "Phân loại phản hồi";
+
+/*Account*/
+"feedback_category_account" = "Loại Acc";
+
+/*Payment*/
+"feedback_category_payment" = "Trả tiền";
+
+/*Game*/
+"feedback_category_game" = "Game";
+
+/*Other*/
+"feedback_category_other" = "Khác";
+
+/*Role Name*/
+"feedback_role_name" = "Tên nhân vật";
+
+/*Feedback the details*/
+"feedback_detail" = "Chi tiết phản hồi";
+
+/*Account Feedback*/
+"feedback_detail_actfeedback" = "Loại Acc";
+
+/*Unfold*/
+"feedback_detail_unfold" = "Mở rộng";
+
+/*Put away*/
+"feedback_detail_putaway" = "Thu gọn";
+
+/*Reply to Custom Service*/
+"feedback_reply_title" = "Trả lời CSKH";
+
+/*What you want to say*/
+"feedback_reply_hint" = "Bạn muốn phản hồi gì?";
+
+/*Reply*/
+"feedback_reply_btn" = "Trả lời";
+
+/*My feedback*/
+"feedback_my_feedback_title" = "Phản hồi của tôi";
+
+/*RT Talk*/
+"feedback_rttalk_btn" = "Live Chat";
+
+/*There is no feedback problem for the time being*/
+"feedback_empty_hint" = "Hiện tại không có lỗi để phản hồi";
+
+/*User Center*/
+"user_center_title" = "Trung Tâm Khách Hàng";
+
+/*View all orders*/
+"user_center_view_all_orders" = "Xem tất cả đơn hàng";
+
+/*View All Feedbacks*/
+"user_center_view_all_feedbacks" = "Xem tất cả phản hồi";
+
+/*Orders*/
+"order_title" = "Đơn hàng";
+
+/*No orders*/
+"order_empty_hint" = "Không có đơn hàng";
+
+/*Unusual*/
+"order_unusual" = "Bất thường";
+
+/*Finished*/
+"order_finished" = "Đã hoàn tất";
+
+/*Next*/
+"next_btn" = "Tiếp";
+
+/*Payment feedback*/
+"feedback_detail_payfeedback" = "Phản hồi thanh toán";
+
+/*Game Feedback*/
+"feedback_detail_gamefeedback" = "Lỗi game";
+
+/*Other Feedback*/
+"feedback_detail_otherfeedback" = "Lỗi khác";
+"user_center_no_feedback" = "Hiện tại không có phản hồi";
+"order_copy_id" = "Copy ";
+"order_repair_ignore" = "Bỏ qua";
+
+/*Review Game*/
+"review_game" = "Đánh giá";
+
+/*not binding email*/
+"not_binding_email" = "Chưa liên kết email";
+
+/*To ensure the security of your account, you need to bind the email address so that you can use the password reset function. You can also bind other third-party accounts*/
+"bind_hint" = "Để giữ tài khoản an toàn, vui lòng liên kết emai sau đó mới có thể sử dụng chức năng đặt lại mật khẩu, bạn cũng có thể liên kết tài khoản thông qua bên thứ ba.";
+
+/*Third party*/
+"third_party" = "Bên thứ 3";
+
+/*Please bind the email first*/
+"bind_email_first" = "Vui lòng liên kết email\n";
+
+/*step*/
+"step" = "Trình tự";
+
+/*Submitted successfully*/
+"feedback_submit_succ" = "Gửi thành công";
+
+/*Back to Help Center*/
+"back_to_helpcenter" = "Quay lại Trung tâm hỗ trợ";
+
+/*View feedback*/
+"view_feedback" = "Xem phản hồi";
+
+/*Please select the feedback type*/
+"unselect_feedback_type" = "Vui lòng chọn loại phản hồi";
+
+/*Back to game*/
+"back_to_game" = "Quay lại game";
+
+/*Submitting*/
+"submitting" = "Đang gửi";
+
+/*submit*/
+"submit" = "Gửi";
+
+/*no more data*/
+"no_more_data" = "Không có dữ liệu";
+
+/*go to help center*/
+"go_helpcenter" = "Tới Trung tâm hỗ trợ";
+
+/*agreement*/
+"agreement" = "Thoả thuận";
+"sign_in_with" = "Phương thức đăng nhập";
+"or" = "hoặc ";
+"keyboard_finish" = "Hoàn thành";
+"feedback_video_long_time" = "Video tải lên không thể quá 60s";
+"feedback_account_title" = "Tài khoản";
+"usercenter_switch_text" = "Xác nhận đổi tài khoản?";
+"login_help" = "Gặp vấn đề?";
+"message_pic" = "[bức ảnh]";
+"no_role_hint" = "Không có thông tin nhân vật";
+
+"delete_account" = "Xoá tài khoản (Thao tác nguy hiểm)";
+"notice_title" = "Thông Báo";
+"notice_pay_tip" = "Cảm ơn bạn đã mua hàng, xin vui lòng vào trò chơi để kiểm tra sản phẩm bạn đã mua.";
+"success" = "Thành công";
+"home.title" ="Xoá tài khoản";
+"home.button"="Bắt đầu xoá";
+"home.text1"="Các bước xoá tài khoản";
+"home.text2"="Bạn đang cố gắng xoá tài khoản trò chơi của mình, điều này sẽ khiến dữ liệu trò chơi, lịch sử nạp...của bạn sẽ bị xoá hoặc vô giá trị.";
+"home.text3"="Hãy chắc chắn rằng bạn không cần nữa, nếu không, xin đừng tiến hành các bước sau.";
+"home.text4"="Thao tác nguy hiểm, hãy cẩn thận!";
+"home.text5"="Bạn sẽ xoá tài khoản bao hồm nhân vật sau:";
+"home.text6"="Nếu bạn chắc chắn muốn xoá tài khoản trò chơi của mình, trước hết hãy xác nhận các nhân vật mà bạn có trong tài khoản.";
+"home.role"="Tên nhân vật";
+"home.server"="Máy chủ";
+"agreement.title"="Vui lòng đồng ý các điều khoản dưới đây";
+"agreement.cancel"="Huỷ bỏ";
+"agreement.agree"="Đồng ý";
+"email.title"="Email xác nhận của bạn";
+"email.text1"="Để bảo đảm người thao tác là bạn, vui lòng tiến hành xác minh email";
+"email.text2"="Email của bạn:";
+"email.text3"="Vui lòng điền mã xác minh:";
+"email.text4"="Không nhận được mã xác minh?";
+"email.text5"="Gửi lại";
+"email.text6"="Mã xác minh không đúng";
+"email.button"="Bước tiếp theo";
+"complete.title"="Xoá tài khoản";
+"complete.text1"="Nếu muốn huỷ bỏ quá trình xoá tài khoản, bạn chỉ cần đăng nhập vào game trước thời gian trến để huỷ bỏ quá trình xoá tài khoản.";
+"complete.text2"="Sau khi bạn đăng xuất khỏi game, quá trình xoá tài khoản sẽ chính thức bắt đầu; nếu bạn đăng xuất game vào ngày hôm nay thì tài khoản của bạn sẽ xoá vào thời gian dưới đây";
+"complete.text3"="Tài khoản đã bị xoá";
+"complete.text4"="Lưu ý: Nếu bạn không đăng xuất, quá trình xoá tài khoản sẽ không bắt đầu";
+"complete.button"="Đăng xuất";
+
+"scan.error" = "Quét mã thất bại, vui lòng";
+"authorization"="Cấp quyền";
+"author.acc"="Chọn tài khoản của bạn:";
+"author.title" = "Cấp quyền đăng nhập";
+"author.role" = "Chọn nhân vật của bạn:";
+"author.nodata" = "Bạn vẫn chưa đăng nhập, hãy đăng nhập vào game trước";
+"author.sub" = "Bạn đang cấp quyền đăng nhập";
+"camera.set"="Vui lòng vào Cài Đặt - Quyền Riêng Tư - Camera để cấp quyền";
+"COMPOSE_TEXT_VIEW_PLACEHOLDER" = "Chuyện gì đang xảy ra?";
+"tw__card_composer_tweet" = "Đăng Tweet";
+"binddetaile" = "Sau khi liên kết có thể đảm bảo an toàn cho nhân vật tốt hơn, gợi ý bạn liên kết ngay";
+"bindtimecheck" = "Hôm nay không xuất hiện nữa";

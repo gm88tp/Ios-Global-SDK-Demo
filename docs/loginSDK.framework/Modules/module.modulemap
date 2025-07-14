@@ -1,0 +1,4 @@
+framework module loginSDK {
+  header "loginSDK-Swift.h"
+  requires objc
+}

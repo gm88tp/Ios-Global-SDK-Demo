@@ -46,10 +46,7 @@
 	</array>
 	<key>NSPrivacyTrackingDomains</key>
 	<array>
-		<dict>
-			<key>value</key>
-			<string>*</string>
-		</dict>
+		<string>*</string>
 	</array>
 	<key>NSPrivacyTracking</key>
 	<true/>
